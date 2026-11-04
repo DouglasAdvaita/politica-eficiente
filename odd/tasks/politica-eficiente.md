@@ -105,7 +105,7 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - [x] T9 — Panel de brechas ciudadanía vs. cargos · criterio: dos barras por categoría y etiqueta en palabras.
 - [x] T10 — Desempeño configurable del cargo · criterio: puntaje 0-100 y veredicto según umbrales editables en admin.
 - [x] T11 — Estudio UX/UI aplicado · criterio: estilos, plantillas y guía de lectura del mapa.
-- [ ] T12 — Commit inicial y repo remoto · criterio: `git log` con primer commit y `origin` configurado.
+- [x] T12 — Commit inicial y repo remoto · criterio: commit `18375cf` y `origin` en https://github.com/DouglasAdvaita/politica-eficiente
 - [ ] T13 — Despliegue en Render con Neon · criterio: URL pública responde y `/salud` dice `postgres`.
 - [ ] T14 — Ruta de aprobación por instrumento (ley, decreto, resolución, ordenanza) · criterio: cada tema muestra instrumento, vía y pasos con estado.
 - [ ] T15 — APK Android (WebView, actualización por internet) · criterio: instala, abre la app y detecta versión nueva.
