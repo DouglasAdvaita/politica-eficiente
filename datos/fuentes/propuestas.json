@@ -1,0 +1,564 @@
+{
+  "pais": "UY",
+  "generado": "2026-11-04",
+  "propuestas": [
+    {
+      "slug": "hacinamiento-carcelario",
+      "titulo": "Cárceles superpobladas: condiciones de reclusión y reincidencia",
+      "categoria": "Seguridad",
+      "subcategoria": "Sistema penitenciario",
+      "emoji": "🚨",
+      "resumen": "La población privada de libertad cerró 2025 en 16.570 personas, casi el doble que en 2003, y la tasa de prisionalización ronda los 480 por cada 100.000 habitantes. El hacinamiento y la falta de personal derivaron en episodios graves, como el incendio que mató a cuatro reclusos en el módulo 11 de Santiago Vázquez en junio de 2025. El propio Ministerio del Interior reconoce niveles inaceptables de hacinamiento y una debilidad extrema de las medidas alternativas.",
+      "datos_clave": [
+        "16.570 personas privadas de libertad al cierre de 2025, frente a 6.757 en 2003",
+        "Tasa de 480 reclusos por cada 100.000 habitantes, la más alta de América del Sur",
+        "74% de los reclusos señala el empleo como principal demanda para su rehabilitación"
+      ],
+      "propuesta": "Ampliar las medidas alternativas a la prisión con reglas claras y seguimiento, y crear cupos reales de trabajo y estudio en cada establecimiento. Corresponde al Ministerio del Interior y al Instituto Nacional de Rehabilitación, con respaldo del Parlamento para reformar el Código del Proceso Penal.",
+      "urgencia": "alta",
+      "etapa": "en_debate",
+      "fuentes": [
+        {
+          "url": "https://www.subrayado.com.uy/carceles-uruguay-22-anos-la-tasa-prisionalizacion-se-duplico-segun-encuesta-del-ministerio-del-interior-n1020971",
+          "titulo": "Cárceles en Uruguay: en 22 años la tasa de prisionalización se duplicó"
+        },
+        {
+          "url": "https://ladiaria.com.uy/justicia/articulo/2025/6/ministerio-del-interior-va-el-jueves-al-parlamento-por-incendio-en-carcel-y-evalua-medidas-para-modulos-hacinados",
+          "titulo": "Ministerio del Interior va al Parlamento por incendio en cárcel"
+        },
+        {
+          "url": "https://www.amnesty.org/es/location/americas/south-america/uruguay/report-uruguay",
+          "titulo": "Los derechos humanos en Uruguay 2025 - Amnistía Internacional"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "prevencion-del-suicidio",
+      "titulo": "Salud mental: el suicidio sigue siendo un problema de salud pública",
+      "categoria": "Salud",
+      "subcategoria": "Salud mental",
+      "emoji": "🧠",
+      "resumen": "En 2025 se registraron 668 muertes por suicidio, con una tasa de 19,16 por cada 100.000 habitantes, la más baja en diez años. Los intentos de autoeliminación, en cambio, subieron a 6.140 y afectan mayoritariamente a mujeres. El MSP advierte que el descenso es leve y que la respuesta del sistema de salud por sí sola no alcanza.",
+      "datos_clave": [
+        "668 muertes por suicidio en 2025 y una tasa de 19,16 por 100.000 habitantes",
+        "6.140 intentos de autoeliminación registrados, 72% en mujeres",
+        "El 79% de las muertes correspondió a hombres"
+      ],
+      "propuesta": "Garantizar consulta de salud mental en el primer nivel de atención con tiempos máximos de espera y equipos interdisciplinarios en todos los departamentos. La responsabilidad es del MSP y de ASSE, con apoyo de ANEP para la detección temprana en centros educativos.",
+      "urgencia": "alta",
+      "etapa": "en_debate",
+      "fuentes": [
+        {
+          "url": "https://www.gub.uy/ministerio-salud-publica/comunicacion/noticias/encuentro-trabajo-dia-nacional-prevencion-del-suicidio",
+          "titulo": "Encuentro de trabajo por el Día Nacional de Prevención del Suicidio - MSP"
+        },
+        {
+          "url": "https://ladiaria.com.uy/salud/articulo/2026/7/hubo-668-suicidios-en-2025-leve-descenso-en-muertes-pero-aumento-de-intentos-de-autoeliminacion",
+          "titulo": "Hubo 668 suicidios en 2025: leve descenso en muertes pero aumento de intentos"
+        },
+        {
+          "url": "https://www.gub.uy/ministerio-salud-publica/comunicacion/noticias/salud-mental-prioridad-gestion",
+          "titulo": "Salud mental como prioridad de gestión - MSP"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "primera-infancia-y-pobreza",
+      "titulo": "Primera infancia: cobertura de cuidados y pobreza en los primeros años",
+      "categoria": "Social",
+      "subcategoria": "Primera infancia",
+      "emoji": "👶",
+      "resumen": "La atención pública cubre cerca del 79% de la matrícula de cero a dos años, con más de 570 centros financiados con fondos públicos en todo el país. La caída de la natalidad, que llegó a 29.899 nacimientos en 2024, obliga a revisar dónde y cómo se ofrece el servicio. La pobreza sigue concentrándose en los hogares con niños pequeños.",
+      "datos_clave": [
+        "79% de la matrícula de 0 a 2 años tiene financiamiento público en 2025",
+        "29.899 nacimientos en 2024, muy por debajo de los 55.798 de 1988",
+        "Más de 570 centros de primera infancia con financiamiento público en el territorio"
+      ],
+      "propuesta": "Reasignar la oferta existente según la demanda real de cada barrio, priorizando horarios extendidos y cupos para hogares con menores ingresos. Deben coordinarlo INAU, el Plan CAIF y la Dirección de Educación Inicial de ANEP, con financiamiento del Presupuesto Nacional.",
+      "urgencia": "alta",
+      "etapa": "propuesta",
+      "fuentes": [
+        {
+          "url": "https://ladiaria.com.uy/opinion/articulo/2025/9/primera-infancia-y-pobreza-que-estrategia-que-politicas",
+          "titulo": "Primera infancia y pobreza: ¿qué estrategia, qué políticas?"
+        },
+        {
+          "url": "https://www.gub.uy/sistema-cuidados/sites/sistema-cuidados/files/documentos/publicaciones/Plan%20Nacional%20de%20Cuidados%202026-2030.pdf",
+          "titulo": "Plan Nacional de Cuidados 2026-2030"
+        },
+        {
+          "url": "https://www.inau.gub.uy/primera-infancia/centros-de-atencion-la-infancia-y-la-familia-plan-caif",
+          "titulo": "Centros de Atención a la Infancia y la Familia (Plan CAIF) - INAU"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "secundaria-y-utu",
+      "titulo": "Secundaria y UTU: egreso, desvinculación y revinculación",
+      "categoria": "Educacion",
+      "subcategoria": "Educación media",
+      "emoji": "🎓",
+      "resumen": "El egreso de bachillerato subió a 68,6% en 2025, pero todavía tres de cada diez estudiantes no terminan la educación media. La matrícula de ciclo básico de UTU cayó de 38.630 en 2019 a 28.687 en 2025, y la ANEP identificó 5.212 niños y adolescentes fuera del sistema obligatorio. La desvinculación se concentra en los hogares de menores ingresos.",
+      "datos_clave": [
+        "68,6% de egreso de bachillerato en 2025, frente a 60,8% en 2024",
+        "Matrícula de ciclo básico de UTU: de 38.630 en 2019 a 28.687 en 2025",
+        "5.212 personas en edad de cursar educación obligatoria no estaban matriculadas en 2026"
+      ],
+      "propuesta": "Convertir la revinculación en una política permanente con seguimiento nominal de cada estudiante que abandona y tutorías en los primeros años de media. Debe hacerlo ANEP con los ministerios de Desarrollo Social y Educación, articulando asignaciones familiares y apoyo territorial.",
+      "urgencia": "alta",
+      "etapa": "en_debate",
+      "fuentes": [
+        {
+          "url": "https://ladiaria.com.uy/educacion/articulo/2026/9/secundaria-registro-una-mejora-de-casi-ocho-puntos-en-el-egreso-de-educacion-media-superior-en-2025",
+          "titulo": "Secundaria registró una mejora de casi ocho puntos en el egreso en 2025"
+        },
+        {
+          "url": "https://www.gub.uy/presidencia/comunicacion/noticias/revinculacion-educativa-volve-a-los-suenos-anep-estrategia",
+          "titulo": "Revinculación educativa: más de 2.000 estudiantes fueron contactados"
+        },
+        {
+          "url": "https://www.gub.uy/presidencia/comunicacion/noticias/utu-educacion-monitor-formacion",
+          "titulo": "UTU reformulará propuesta de formación básica para mayores de 14 años"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "empleo-juvenil",
+      "titulo": "Empleo juvenil: el primer trabajo como barrera de entrada",
+      "categoria": "Trabajo",
+      "subcategoria": "Empleo juvenil",
+      "emoji": "💼",
+      "resumen": "El desempleo entre los jóvenes de 14 a 24 años se ubicó en 21,6% en setiembre de 2026, casi el triple que el promedio nacional. Unos 235 mil jóvenes de 18 a 29 años no trabajaban en 2025, y 80 mil de ellos buscaban empleo. La falta de experiencia y de ciclo básico completo explica buena parte de esa exclusión.",
+      "datos_clave": [
+        "21,6% de desempleo en jóvenes de 14 a 24 años (setiembre 2026)",
+        "235 mil jóvenes de 18 a 29 años sin trabajo en 2025; 80 mil buscaban empleo",
+        "78 mil jóvenes sin trabajo no completaron el ciclo básico ni tienen experiencia laboral"
+      ],
+      "propuesta": "Crear un sistema de primera experiencia laboral con prácticas formales, remuneradas y con aportes, articulado con formación técnica corta. La responsabilidad recae en el Ministerio de Trabajo, INEFOP y ANEP-UTU, con incentivos a empresas que contraten jóvenes sin experiencia.",
+      "urgencia": "alta",
+      "etapa": "en_debate",
+      "fuentes": [
+        {
+          "url": "https://www.elpais.com.uy/economia-y-mercado/jovenes-y-trabajo-en-uruguay-las-barreras-de-acceso-al-primer-empleo",
+          "titulo": "Jóvenes y trabajo en Uruguay: las barreras de acceso al primer empleo"
+        },
+        {
+          "url": "https://www.prensa-latina.cu/2026/10/24/desempleo-estable-en-uruguay-pero-dispar-para-jovenes-y-mujeres/",
+          "titulo": "Desempleo estable en Uruguay, pero dispar para jóvenes y mujeres"
+        },
+        {
+          "url": "https://documentos.diputados.gub.uy/docs/L50/Repartid/R0606.pdf",
+          "titulo": "Proyecto de ley de promoción del trabajo para colectivos con obstáculos de acceso"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "alquileres-y-vivienda",
+      "titulo": "Alquileres y vivienda: el costo de acceder a un techo",
+      "categoria": "Vivienda",
+      "subcategoria": "Alquiler y déficit habitacional",
+      "emoji": "🏠",
+      "resumen": "El Plan Quinquenal de Vivienda 2025-2029 estima el déficit habitacional en torno a 40.000 viviendas. El alquiler promedio en Montevideo se ubicó en 21.109 pesos en noviembre de 2025 y seis de cada diez búsquedas se concentran por debajo de 35.000 pesos. El gobierno evalúa modificar la Ley de Vivienda Promovida para orientar los beneficios a ingresos medios y bajos.",
+      "datos_clave": [
+        "Déficit habitacional estimado en unas 40.000 viviendas según el Plan Quinquenal",
+        "Alquiler promedio de 21.109 pesos en Montevideo (noviembre 2025)",
+        "60% de la demanda de alquiler se concentra por debajo de 35.000 pesos"
+      ],
+      "propuesta": "Ampliar el alquiler social con garantía estatal y plazo estable, y redirigir los incentivos de vivienda promovida hacia alquileres accesibles. Corresponde al Ministerio de Vivienda y Ordenamiento Territorial y a la Agencia Nacional de Vivienda, con las intendencias en la gestión del suelo.",
+      "urgencia": "alta",
+      "etapa": "en_debate",
+      "fuentes": [
+        {
+          "url": "https://ladiaria.com.uy/verifica/articulo/2026/5/cuantas-viviendas-faltan-en-uruguay",
+          "titulo": "¿Cuántas viviendas faltan en Uruguay?"
+        },
+        {
+          "url": "https://www5.ine.gub.uy/documents/Estad%C3%ADsticasecon%C3%B3micas/HTML/IAI/Alquileres/2025/IAI%20Alquileres%20Noviembre%202025.html",
+          "titulo": "Indicadores de Actividad Inmobiliaria - Mercado de Alquileres, noviembre 2025 (INE)"
+        },
+        {
+          "url": "https://www.gub.uy/presidencia/comunicacion/noticias/vivienda-ministerio-mvot-paseyro-asamblea-ministros",
+          "titulo": "Estrategia para reducir el déficit habitacional - Presidencia"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "agua-y-saneamiento",
+      "titulo": "Agua potable y saneamiento: la brecha que queda en el interior",
+      "categoria": "Ambiente",
+      "subcategoria": "Agua y saneamiento",
+      "emoji": "💧",
+      "resumen": "La cobertura de agua potable urbana llega a 98,67%, pero el saneamiento alcanza apenas a 47,5% de las viviendas con conexión de agua. El abastecimiento del área metropolitana depende de una sola planta y de la cuenca del Santa Lucía, vulnerable a sequías. OSE ejecuta el mayor plan de inversiones de su historia, con la represa de Casupá y una nueva planta potabilizadora.",
+      "datos_clave": [
+        "Cobertura de agua potable urbana de 98,67% en 2025",
+        "Cobertura de saneamiento de 47,5% de las viviendas con agua",
+        "Unos 9.447 hogares sin baño de uso exclusivo según el presupuesto quinquenal"
+      ],
+      "propuesta": "Priorizar la universalización del saneamiento en barrios y localidades sin red, con tarifa social y plan de obras por departamento. Debe liderarlo OSE con el Ministerio de Ambiente y las intendencias, usando el Plan Nacional de Aguas como marco.",
+      "urgencia": "media",
+      "etapa": "en_debate",
+      "fuentes": [
+        {
+          "url": "https://www.ose.com.uy/sites/default/files/2026-08/Informe%20de%20Gesti%C3%B3n%202025.pdf",
+          "titulo": "Informe de Gestión 2025 - OSE"
+        },
+        {
+          "url": "https://www.ose.com.uy/noticia/obras-de-infraestructura-de-ose",
+          "titulo": "El mayor plan de inversiones en la historia de OSE"
+        },
+        {
+          "url": "https://www.elpais.com.uy/suplementos-especiales/agua-potable-y-saneamiento-proyectos-avance-de-obras-y-desafios-de-ose-ante-el-cambio-climatico",
+          "titulo": "Agua potable y saneamiento: proyectos, obras y desafíos de OSE"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "residuos-y-reciclaje",
+      "titulo": "Residuos: recuperar envases y cerrar vertederos a cielo abierto",
+      "categoria": "Ambiente",
+      "subcategoria": "Residuos y economía circular",
+      "emoji": "♻️",
+      "resumen": "La recuperación de envases rondaba el 4% en 2022, muy lejos de la meta de 50% fijada para 2025. El Plan Nacional de Gestión de Residuos acumula convenios con 15 intendencias para cerrar vertederos a cielo abierto. La ley de residuos se reglamentó por corrientes en 2025, pero la valorización sigue atrasada.",
+      "datos_clave": [
+        "Recuperación de envases cercana al 4% en 2022 frente a una meta de 50% para 2025",
+        "Convenios con 15 intendencias para cerrar vertederos a cielo abierto",
+        "Ley 19.829 reglamentada por decreto en octubre de 2025"
+      ],
+      "propuesta": "Fijar metas anuales verificables de recuperación por material y publicar su cumplimiento, junto con un sistema de devolución de envases. Debe impulsarlo el Ministerio de Ambiente con las intendencias y los fabricantes alcanzados por la responsabilidad extendida.",
+      "urgencia": "media",
+      "etapa": "diagnostico",
+      "fuentes": [
+        {
+          "url": "https://www.busqueda.com.uy/informacion/uruguay-muestra-atrasos-significativos-valorizacion-energetica-residuos-y-recuperacion-envases-n5395798",
+          "titulo": "Uruguay muestra atrasos significativos en valorización de residuos y recuperación de envases"
+        },
+        {
+          "url": "https://www.gub.uy/ministerio-ambiente/comunicacion/noticias/avances-plan-nacional-gestion-residuos",
+          "titulo": "Avances en el Plan Nacional de Gestión de Residuos - Ministerio de Ambiente"
+        },
+        {
+          "url": "https://www.impo.com.uy/bases/leyes/19829-2019",
+          "titulo": "Ley N° 19.829 - Gestión integral de residuos"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "transporte-metropolitano",
+      "titulo": "Transporte metropolitano: tarifa, frecuencia y cobertura",
+      "categoria": "Transporte",
+      "subcategoria": "Movilidad urbana",
+      "emoji": "🚌",
+      "resumen": "El boleto de una hora pasó a 52 pesos con tarjeta STM y 64 pesos en efectivo desde enero de 2026. La Intendencia de Montevideo justificó el ajuste en la sostenibilidad financiera del sistema, que arrastra déficit y depende de subsidios. La integración tarifaria con Canelones y San José sigue siendo parcial.",
+      "datos_clave": [
+        "Boleto de una hora: 52 pesos con STM y 64 pesos en efectivo desde enero de 2026",
+        "Combinación metropolitana: 80 pesos",
+        "Devolución de 2 pesos por boleto para usuarios frecuentes desde 40 viajes mensuales"
+      ],
+      "propuesta": "Consolidar un sistema metropolitano único con integración tarifaria entre Montevideo, Canelones y San José, y frecuencias mínimas garantizadas por contrato. Debe acordarlo el MTOP con las intendencias y el área metropolitana, con financiamiento plurianual.",
+      "urgencia": "media",
+      "etapa": "en_debate",
+      "fuentes": [
+        {
+          "url": "https://montevideo.gub.uy/noticias/nuevas-tarifas-del-transporte-colectivo-urbano-0",
+          "titulo": "Nuevas tarifas del transporte colectivo urbano - Intendencia de Montevideo"
+        },
+        {
+          "url": "https://www.gub.uy/ministerio-transporte-obras-publicas/STM",
+          "titulo": "Sistema de Transporte Metropolitano - MTOP"
+        },
+        {
+          "url": "https://montevideo.gub.uy/areas-tematicas/sistema-de-transporte-metropolitano/tarifas-del-transporte-colectivo-urbano",
+          "titulo": "Tarifas del transporte colectivo urbano - IM"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "cuidados-personas-mayores",
+      "titulo": "Personas mayores: cuidados de larga duración y dependencia",
+      "categoria": "Social",
+      "subcategoria": "Cuidados y dependencia",
+      "emoji": "👵",
+      "resumen": "Cerca del 20% de las personas mayores de 65 años, unas 110 mil, se encuentra en situación de dependencia. En 2025 el programa de Asistentes Personales llegaba a unas 5.900 personas, la teleasistencia a 1.100 y había apenas 9 centros de día en el país. El Plan Nacional de Cuidados 2026-2030 reconoce que la cobertura sigue siendo limitada.",
+      "datos_clave": [
+        "Unas 110 mil personas mayores de 65 años en situación de dependencia",
+        "5.900 usuarios de Asistentes Personales y 1.100 de teleasistencia en 2025",
+        "Solo 9 centros de día en todo el territorio nacional"
+      ],
+      "propuesta": "Aumentar la cobertura de centros de día y teleasistencia con metas por departamento, y fiscalizar la calidad de los establecimientos de larga estadía. Corresponde a la Secretaría Nacional de Cuidados y Discapacidad, INMAYORES y el BPS, con asignación presupuestal específica.",
+      "urgencia": "alta",
+      "etapa": "en_debate",
+      "fuentes": [
+        {
+          "url": "https://www.gub.uy/sistema-cuidados/sites/sistema-cuidados/files/documentos/publicaciones/Plan%20Nacional%20de%20Cuidados%202026-2030_web.pdf",
+          "titulo": "Plan Nacional de Cuidados 2026-2030"
+        },
+        {
+          "url": "https://www.gub.uy/sistema-cuidados/sites/sistema-cuidados/files/documentos/publicaciones/b2.%20Servicios%20de%20cuidados%20para%20personas%20mayores%20en%20situaci%C3%B3n%20de%20dependencia%20-%20Salvador.pdf",
+          "titulo": "Servicios de cuidados para personas mayores en situación de dependencia"
+        },
+        {
+          "url": "https://www.movimientoelepem.org.uy/2025/09/23/proclama-por-la-financiacion-adecuada-del-sistema-nacional-integrado-de-cuidados-snic",
+          "titulo": "Proclama por la financiación adecuada del Sistema Nacional Integrado de Cuidados"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "discapacidad-y-empleo",
+      "titulo": "Discapacidad: brechas de empleo y acceso a derechos",
+      "categoria": "Social",
+      "subcategoria": "Discapacidad e inclusión",
+      "emoji": "♿",
+      "resumen": "En Uruguay hay más de 197.000 personas en situación de discapacidad, el 6,6% de la población. Solo el 49% de quienes tienen entre 20 y 64 años accede a un empleo, frente al 78% de quienes no tienen discapacidad, y el desempleo casi duplica al promedio. La cuota de ingreso al Estado sigue por debajo de lo que fija la ley.",
+      "datos_clave": [
+        "197.000 personas en situación de discapacidad, 6,6% de la población",
+        "Tasa de empleo de 49% frente a 78% entre quienes no tienen discapacidad",
+        "Desempleo de 14% frente a 8% en la población sin discapacidad"
+      ],
+      "propuesta": "Fiscalizar el cumplimiento de la cuota de empleo público y ampliar los ajustes razonables y el apoyo técnico a las empresas que contratan. Debe hacerlo el Ministerio de Trabajo con el Instituto Nacional de Discapacidad y la Oficina Nacional del Servicio Civil.",
+      "urgencia": "media",
+      "etapa": "propuesta",
+      "fuentes": [
+        {
+          "url": "https://www.unicef.org/uruguay/infancia-en-datos/Personas-en-situacion-de-discapacidad-en-Uruguay",
+          "titulo": "Personas en situación de discapacidad en Uruguay - UNICEF"
+        },
+        {
+          "url": "https://www.gub.uy/ministerio-economia-finanzas/sites/ministerio-economia-finanzas/files/documentos/publicaciones/ONSC%20%E2%80%93%20Ingreso%20de%20personas%20con%20discapacidad%20en%20el%20Estado.pdf",
+          "titulo": "Ingreso de personas con discapacidad en el Estado - ONSC"
+        },
+        {
+          "url": "https://ladiaria.com.uy/salud/articulo/2025/10/la-mitad-de-los-ninos-y-jovenes-con-discapacidad-vive-en-hogares-con-necesidades-basicas-insatisfechas-segun-informe-del-mides/",
+          "titulo": "La mitad de los niños y jóvenes con discapacidad vive en hogares con NBI"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "brecha-digital",
+      "titulo": "Brecha digital: conectados pero sin habilidades para usar",
+      "categoria": "Social",
+      "subcategoria": "Inclusión digital",
+      "emoji": "📶",
+      "resumen": "El 92% de las personas de 14 años o más usa internet, pero persisten brechas en la calidad del acceso y en las habilidades. Solo 55% de los hogares del quintil más bajo tiene banda ancha fija, frente a 89% del quintil más alto. El 94% de quienes no usan internet tiene más de 50 años y el 74% vive en el interior.",
+      "datos_clave": [
+        "92% de las personas de 14 años o más usa internet; 84% lo hace a diario",
+        "Banda ancha fija: 55% en el quintil más bajo frente a 89% en el más alto",
+        "Solo 16% de las personas con nivel educativo bajo puede usar fórmulas en una planilla"
+      ],
+      "propuesta": "Crear un programa de alfabetización digital para adultos mayores y hogares de bajo nivel educativo, con formación presencial en territorios y dispositivos subsidiados. Debe coordinarlo AGESIC con el MEC, la UTU y las intendencias.",
+      "urgencia": "media",
+      "etapa": "propuesta",
+      "fuentes": [
+        {
+          "url": "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/sites/agencia-gobierno-electronico-sociedad-informacion-conocimiento/files/2025-11/_Informe_EUTIC_2025.pdf",
+          "titulo": "Encuesta de Usos de Tecnologías de la Información y la Comunicación 2024 - AGESIC"
+        },
+        {
+          "url": "https://ladiaria.com.uy/futuro/articulo/2025/11/personas-mayores-y-hogares-de-bajo-nivel-educativo-enfrentan-brechas-estructurales-en-acceso-a-internet",
+          "titulo": "Personas mayores y hogares de bajo nivel educativo enfrentan brechas estructurales"
+        },
+        {
+          "url": "https://www.gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/politicas-y-gestion/plan-gobierno-digital-2025",
+          "titulo": "Plan de Gobierno Digital 2025 - AGESIC"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "transparencia-compras-publicas",
+      "titulo": "Transparencia: compras del Estado y acceso a la información",
+      "categoria": "Gobierno",
+      "subcategoria": "Transparencia y compras públicas",
+      "emoji": "🔍",
+      "resumen": "El Estado registra más de 568.000 procedimientos de compra desde 2018, con 287 organismos compradores y cerca de 750.000 adjudicaciones. Los datos se publican en formato abierto, pero su calidad y comparabilidad siguen siendo desparejas. En paralelo, se registraron 51 casos de amenazas o restricciones al acceso a la información pública entre 2024 y 2025.",
+      "datos_clave": [
+        "568.007 procedimientos de compra y 749.741 adjudicaciones registradas desde 2018",
+        "287 organismos del Estado compradores",
+        "51 casos de amenazas o restricciones al acceso a la información entre abril 2024 y marzo 2025"
+      ],
+      "propuesta": "Publicar cada compra en formato abierto y comparable, con identificador único de proveedor y monto, y auditorías aleatorias de contrataciones directas. Debe hacerlo la Agencia Reguladora de Compras Estatales con la Unidad de Acceso a la Información Pública y el Tribunal de Cuentas.",
+      "urgencia": "media",
+      "etapa": "diagnostico",
+      "fuentes": [
+        {
+          "url": "https://catalogodatos.gub.uy/es/organization/acce",
+          "titulo": "ARCE - Catálogo de Datos Abiertos"
+        },
+        {
+          "url": "https://gubly.com.uy/informe-compras-publicas-uruguay",
+          "titulo": "El mercado de compras públicas de Uruguay en números (datos abiertos de ARCE)"
+        },
+        {
+          "url": "https://www.amnesty.org/es/location/americas/south-america/uruguay/report-uruguay",
+          "titulo": "Los derechos humanos en Uruguay 2025 - Amnistía Internacional"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "descentralizacion-municipios",
+      "titulo": "Municipios: autonomía real para el tercer nivel de gobierno",
+      "categoria": "Gobierno",
+      "subcategoria": "Descentralización",
+      "emoji": "🏛️",
+      "resumen": "Uruguay tiene 136 municipios desde 2025 y cerca del 74% de la población vive en territorios municipalizados. A casi 15 años de su creación, los municipios siguen sin funciones claramente definidas ni autonomía fiscal. Dependen de las partidas que asignan el gobierno nacional y las intendencias.",
+      "datos_clave": [
+        "136 municipios electivos en el país desde 2025",
+        "Aproximadamente 74% de la población vive en territorios municipalizados",
+        "Los municipios no pueden recaudar tributos propios ni designar libremente su personal"
+      ],
+      "propuesta": "Definir por ley las competencias exclusivas de los municipios y asignarles una partida presupuestal estable y previsible. Corresponde al Parlamento y a la Oficina de Planeamiento y Presupuesto, con acuerdo del Congreso de Intendentes y el Plenario de Municipios.",
+      "urgencia": "baja",
+      "etapa": "diagnostico",
+      "fuentes": [
+        {
+          "url": "https://ladiaria.com.uy/politica/articulo/2025/5/tercer-nivel-de-gobierno-arrastra-falencias-que-limitan-su-impacto-aseguran-politologos",
+          "titulo": "Tercer nivel de gobierno arrastra falencias que limitan su impacto"
+        },
+        {
+          "url": "https://www.cepal.org/sites/default/files/presentations/05_02-ury-leiza.pdf",
+          "titulo": "Sistema de transferencias y gobiernos subnacionales en Uruguay - OPP/CEPAL"
+        },
+        {
+          "url": "https://www.opp.gub.uy/es/noticias/sesiono-el-plenario-de-municipios-en-torre-ejecutiva",
+          "titulo": "Sesionó el Plenario de Municipios en Torre Ejecutiva - OPP"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "migracion-e-integracion",
+      "titulo": "Migración: regularización e integración laboral de quienes llegan",
+      "categoria": "Social",
+      "subcategoria": "Migración e integración",
+      "emoji": "🌎",
+      "resumen": "El Censo 2023 registró 107.578 personas nacidas en el exterior, de las cuales 56.906 llegaron entre 2012 y 2023. A enero de 2026 los cotizantes migrantes superaban los 104.000, casi 7% de los trabajadores registrados en el BPS. Persisten demoras en las residencias y brechas laborales para las mujeres migrantes.",
+      "datos_clave": [
+        "107.578 personas nacidas en el exterior según el Censo 2023",
+        "56.906 llegaron entre 2012 y 2023, la mayoría de Venezuela, Argentina y Cuba",
+        "Más de 104.000 cotizantes migrantes en el BPS a enero de 2026"
+      ],
+      "propuesta": "Convertir la residencia por arraigo en una categoría permanente de la ley migratoria y agilizar la validación de títulos y competencias. Debe hacerlo la Dirección Nacional de Migración con el Ministerio de Trabajo y el MEC, junto a los gobiernos departamentales.",
+      "urgencia": "media",
+      "etapa": "en_debate",
+      "fuentes": [
+        {
+          "url": "https://www5.ine.gub.uy/documents/CENSO%202023/Poblaci%C3%B3n%20estimada,%20crecimiento%20intercensal%20y%20estructura%20por%20sexo%20y%20edad.pdf",
+          "titulo": "Población estimada y migración - Censo 2023 (INE)"
+        },
+        {
+          "url": "https://www.gub.uy/presidencia/comunicacion/noticias/trabajo-migrantes-derechos-estudios-uruguay-castillo-pardo",
+          "titulo": "Datos sobre la realidad laboral de migrantes serán insumo para políticas"
+        },
+        {
+          "url": "https://www.gub.uy/ministerio-interior/datos-y-estadisticas/estadisticas/anuario-estadistico-direccion-nacional-migracion-2025",
+          "titulo": "Anuario estadístico de la Dirección Nacional de Migración 2025"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "violencia-de-genero",
+      "titulo": "Violencia de género: denuncias, femicidios y respuesta judicial",
+      "categoria": "Justicia",
+      "subcategoria": "Violencia basada en género",
+      "emoji": "🚺",
+      "resumen": "En 2025 se registraron 18 femicidios y 43.445 denuncias de violencia doméstica y delitos asociados, una cifra similar a la de 2024. Los delitos sexuales llegaron a 3.124 casos y el 76% de las personas atendidas por la Unidad de Víctimas y Testigos de Fiscalía eran víctimas de violencia de género. La ley 19.580 sigue sin aplicación plena.",
+      "datos_clave": [
+        "18 femicidios en 2025, frente a 22 en 2024",
+        "43.445 denuncias de violencia doméstica y delitos asociados en 2025",
+        "3.124 delitos sexuales registrados en 2025"
+      ],
+      "propuesta": "Crear juzgados y equipos técnicos especializados en violencia de género en todos los departamentos, con plazos máximos de respuesta y seguimiento de las medidas cautelares. Corresponde a la Suprema Corte de Justicia, la Fiscalía y el Ministerio del Interior, con presupuesto del Poder Judicial.",
+      "urgencia": "alta",
+      "etapa": "en_debate",
+      "fuentes": [
+        {
+          "url": "https://www.gub.uy/ministerio-interior/datos-y-estadisticas/estadisticas/indicadores-violencia-domestica-genero-informe-enero-octubre-2025",
+          "titulo": "Indicadores de violencia doméstica y de género 2025 - Ministerio del Interior"
+        },
+        {
+          "url": "https://ladiaria.com.uy/verifica/articulo/2026/9/casos-muy-aislados-que-muestran-los-datos-sobre-una-violencia-que-atraviesa-hogares-calles-y-centros-educativos",
+          "titulo": "Qué muestran los datos sobre la violencia de género en Uruguay"
+        },
+        {
+          "url": "https://www.gub.uy/ministerio-desarrollo-social/indicador/cantidad-homicidios-mujeres-violencia-genero",
+          "titulo": "Cantidad de homicidios de mujeres por violencia de género - MIDES"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "adicciones-y-consumo",
+      "titulo": "Adicciones: consumo de alcohol, cannabis y psicofármacos",
+      "categoria": "Salud",
+      "subcategoria": "Drogas y adicciones",
+      "emoji": "🚭",
+      "resumen": "El 80% de los estudiantes universitarios consumió alcohol en el último año y el 10% presenta signos de uso problemático. Uno de cada cuatro consumió cannabis en el último año y el 41% de quienes usan tranquilizantes lo hace sin receta. Uruguay aparece entre los países de mayor prevalencia de la región en varias sustancias.",
+      "datos_clave": [
+        "80% de universitarios consumió alcohol en el último año; 10% con uso problemático",
+        "25% consumió cannabis en el último año; 3,7% con signos de uso problemático",
+        "41% de quienes usan tranquilizantes lo hace sin prescripción médica"
+      ],
+      "propuesta": "Reforzar la prevención en secundaria y UTU y ampliar los dispositivos de tratamiento con base comunitaria, con control de la venta de psicofármacos sin receta. Debe coordinarlo la Junta Nacional de Drogas con el MSP, ANEP y las intendencias.",
+      "urgencia": "media",
+      "etapa": "diagnostico",
+      "fuentes": [
+        {
+          "url": "https://www.gub.uy/junta-nacional-drogas/comunicacion/noticias/ii-estudio-sobre-consumo-drogas-estudiantes-universitarios-uruguay-2024",
+          "titulo": "II Estudio sobre consumo de drogas en estudiantes universitarios 2024"
+        },
+        {
+          "url": "https://www.gub.uy/junta-nacional-drogas/comunicacion/publicaciones/viii-encuesta-nacional-sobre-consumo-drogas-poblacion-general",
+          "titulo": "VIII Encuesta Nacional sobre Consumo de Drogas en Población General"
+        },
+        {
+          "url": "https://www.anep.edu.uy/encuesta-sobre-consumo-de-drogas-en-estudiantes-de-educacion-media",
+          "titulo": "X Encuesta Nacional sobre Consumo de Drogas en Estudiantes de Educación Media"
+        }
+      ],
+      "verificado": true
+    },
+    {
+      "slug": "seguridad-alimentaria",
+      "titulo": "Alimentación: inseguridad alimentaria y precio de la canasta",
+      "categoria": "Economia",
+      "subcategoria": "Alimentación y producción",
+      "emoji": "🥗",
+      "resumen": "El 13,2% de los hogares redujo la cantidad o calidad de los alimentos por falta de dinero en 2025, y la inseguridad alimentaria grave afectó al 1,9%. En hogares con menores de 6 años la inseguridad moderada o grave sube a 18,9%. Uruguay produce alimentos suficientes, pero el problema es el acceso económico.",
+      "datos_clave": [
+        "13,2% de los hogares con inseguridad alimentaria moderada o grave en 2025",
+        "18,9% en hogares con menores de 6 años",
+        "1,9% de los hogares en inseguridad alimentaria grave"
+      ],
+      "propuesta": "Fortalecer la compra pública de alimentos a la producción familiar y ampliar la canasta accesible en territorios con mayor inseguridad alimentaria. Debe hacerlo el Instituto Nacional de Alimentación con el MGAP, MIDES y las intendencias, en el marco de una ley marco del derecho a la alimentación.",
+      "urgencia": "media",
+      "etapa": "diagnostico",
+      "fuentes": [
+        {
+          "url": "https://www.gub.uy/ministerio-desarrollo-social/comunicacion/publicaciones/informe-nacional-prevalencia-inseguridad-alimentaria-hogares-2025",
+          "titulo": "Informe nacional de prevalencia de inseguridad alimentaria en hogares 2025 - MIDES"
+        },
+        {
+          "url": "https://www.nutricion.edu.uy/wp-content/uploads/2025/12/Tercer-Relevamiento-de-OMPs.pdf",
+          "titulo": "Tercer relevamiento nacional de ollas y merenderos populares en Uruguay"
+        },
+        {
+          "url": "https://www.ohchr.org/sites/default/files/documents/issues/food/cfis/interlinkages-land-food/subm-interlinkages-between-land-sta-60-uruguay-input-3.pdf",
+          "titulo": "Aportes del INDA sobre seguridad y soberanía alimentaria"
+        }
+      ],
+      "verificado": true
+    }
+  ]
+}

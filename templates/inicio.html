@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block titulo %}Política Eficiente · entender y participar{% endblock %}
+{% block cuerpo %}
+<section class="hero">
+  <div>
+    <h1>Entendé la política.<br>Sin ruido, sin relato.</h1>
+    <p>
+      Acá se juntan tres cosas que casi nunca se ven juntas: los temas que le importan a la gente,
+      lo que votan y opinan los ciudadanos, y lo que realmente hacen los cargos públicos.
+      Todo con fuente y a la vista.
+    </p>
+    <div class="acciones">
+      {% if yo %}
+        <a class="boton principal" href="{{ url_for('temas') }}">Ver temas para votar</a>
+        <a class="boton" href="{{ url_for('mapa') }}">Abrir el mapa</a>
+      {% else %}
+        <a class="boton principal" href="{{ url_for('registro') }}">Crear mi cuenta gratis</a>
+        <a class="boton" href="{{ url_for('temas') }}">Mirar sin cuenta</a>
+      {% endif %}
+    </div>
+  </div>
+  <div class="datos">
+    <div class="dato"><b>{{ totales.temas }}</b><span>temas</span></div>
+    <div class="dato"><b>{{ totales.politicos }}</b><span>cargos</span></div>
+    <div class="dato"><b>{{ totales.usuarios }}</b><span>ciudadanos</span></div>
+    <div class="dato"><b>{{ totales.votos }}</b><span>votos</span></div>
+    <div class="dato"><b>{{ totales.opiniones }}</b><span>opiniones</span></div>
+    <div class="dato"><b>{{ totales.acciones }}</b><span>actividades</span></div>
+  </div>
+</section>
+
+<section class="pila" style="margin-top:22px">
+  <div class="grid">
+    <div class="panel">
+      <h2>🎯 1. Elegí un tema</h2>
+      <p class="suave">Leyes que no funcionan y propuestas sociales, ordenadas por categoría y urgencia, con datos y fuente.</p>
+    </div>
+    <div class="panel">
+      <h2>🗳️ 2. Votá y opiná</h2>
+      <p class="suave">Cada voto y cada opinión suma puntos, nivel y visibilidad. Sin bots: una cuenta, un voto.</p>
+    </div>
+    <div class="panel">
+      <h2>🔍 3. Compará</h2>
+      <p class="suave">El mapa cruza lo que preocupa a la gente con las actividades de cada cargo. Ahí se ve qué se atiende y qué se descuida.</p>
+    </div>
+  </div>
+</section>
+
+<section style="margin-top:28px">
+  <div class="fila entre">
+    <h2>🔥 Temas con más apoyo</h2>
+    <a class="chip" href="{{ url_for('temas') }}">Ver todos →</a>
+  </div>
+  <div class="grid" style="margin-top:12px">
+    {% for t in destacados %}
+      <article class="tarjeta">
+        <div class="fila entre">
+          <span class="emoji">{{ t.emoji }}</span>
+          <span class="etiqueta {% if t.tipo == 'ley' %}ambar{% else %}verde{% endif %}">
+            {% if t.tipo == 'ley' %}Ley{% else %}Propuesta{% endif %}
+          </span>
+        </div>
+        <h3><a href="{{ url_for('tema', slug=t.slug) }}">{{ t.titulo }}</a></h3>
+        <p class="resumen">{{ (t.resumen or t.problema)|corto }}</p>
+        <div class="barra-apoyo"><i style="width:{{ (100 * t.a_favor / (t.a_favor + t.en_contra)) if (t.a_favor + t.en_contra) else 0 }}%"></i></div>
+        <div class="meta">
+          <span>{{ t.categoria|cat }}</span>
+          <span>👍 {{ t.a_favor }}</span>
+          <span>👎 {{ t.en_contra }}</span>
+        </div>
+      </article>
+    {% else %}
+      <p class="suave">Todavía no hay temas cargados.</p>
+    {% endfor %}
+  </div>
+</section>
+
+<section style="margin-top:28px" class="grid">
+  <div class="panel">
+    <h2>📊 Qué preocupa y qué se atiende</h2>
+    <p class="suave chico">Porcentaje de votos ciudadanos contra porcentaje de actividades declaradas por los cargos.</p>
+    <div class="brecha" style="margin-top:14px">
+      {% for f in brecha %}
+        <div class="brecha-fila">
+          <span>{{ f.categoria|cat }}</span>
+          <span class="brecha-barras">
+            <i class="c" style="width:{{ f.ancho_c|round(1) }}%" title="{{ f.pct_ciudadano|round(1) }}% de los votos"></i>
+            <i class="p" style="width:{{ f.ancho_p|round(1) }}%" title="{{ f.pct_politico|round(1) }}% de las actividades"></i>
+          </span>
+          <span class="chico {% if f.brecha > 0 %}suave{% endif %}">
+            {% if f.brecha > 0 %}{{ f.brecha|round(0)|int }} pts de brecha{% else %}equilibrado{% endif %}
+          </span>
+        </div>
+      {% else %}
+        <p class="suave chico">Cuando haya votos y actividades vas a ver la brecha acá.</p>
+      {% endfor %}
+    </div>
+    <a class="chip" style="margin-top:14px" href="{{ url_for('mapa') }}">Ver el mapa completo →</a>
+  </div>
+
+  <div class="panel">
+    <h2>🏛️ Lo último que hicieron los cargos</h2>
+    {% for a in ultimas %}
+      <div class="actividad">
+        <span class="fecha">{{ a.fecha or 'sin fecha' }}</span>
+        <div>
+          <b>{{ a.emoji }} {{ a.nombre }}</b>
+          <div class="chico suave">{{ a.titulo }}</div>
+        </div>
+        <span class="etiqueta {% if a.estado == 'hecho' %}verde{% elif a.estado == 'en_proceso' %}azul{% else %}ambar{% endif %}">{{ a.estado }}</span>
+      </div>
+    {% else %}
+      <p class="suave chico">Sin actividades cargadas todavía.</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

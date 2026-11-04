@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block titulo %}No encontrado · Política Eficiente{% endblock %}
+{% block cuerpo %}
+<div class="panel centro" style="padding:50px 20px">
+  <div style="font-size:3rem">🧭</div>
+  <h1>Esa página no existe</h1>
+  <p class="suave">Puede que el enlace esté viejo o que el tema se haya movido.</p>
+  <a class="boton principal" href="{{ url_for('inicio') }}">Volver al inicio</a>
+</div>
+{% endblock %}

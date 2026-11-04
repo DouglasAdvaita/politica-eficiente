@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block titulo %}{{ t.titulo }} · Política Eficiente{% endblock %}
+{% block cuerpo %}
+<p class="chico"><a href="{{ url_for('temas') }}">← Todos los temas</a></p>
+
+<article class="panel">
+  <div class="cabecera-tema">
+    <span class="emoji">{{ t.emoji }}</span>
+    <div style="flex:1">
+      <div class="chips" style="margin-bottom:8px">
+        <span class="etiqueta {% if t.tipo == 'ley' %}ambar{% else %}verde{% endif %}">
+          {% if t.tipo == 'ley' %}Ley ineficaz{% else %}Propuesta{% endif %}
+        </span>
+        <span class="etiqueta">{{ t.categoria|cat }}</span>
+        {% if t.subcategoria %}<span class="etiqueta">{{ t.subcategoria }}</span>{% endif %}
+        {% if t.urgencia == 'alta' %}<span class="etiqueta roja">urgencia alta</span>{% endif %}
+        {% if not t.verificado %}<span class="etiqueta ambar">sin verificar</span>{% endif %}
+      </div>
+      <h1>{{ t.titulo }}</h1>
+      {% if t.resumen %}<p class="suave">{{ t.resumen }}</p>{% endif %}
+    </div>
+  </div>
+
+  <div class="votar">
+    {% if yo %}
+      <form method="post" action="{{ url_for('votar', slug=t.slug) }}">
+        <input type="hidden" name="valor" value="1">
+        <button class="boton favor {% if mi_voto == 1 %}activo{% endif %}" type="submit">👍 A favor</button>
+      </form>
+      <form method="post" action="{{ url_for('votar', slug=t.slug) }}">
+        <input type="hidden" name="valor" value="-1">
+        <button class="boton contra {% if mi_voto == -1 %}activo{% endif %}" type="submit">👎 En contra</button>
+      </form>
+      <span class="chico suave">Un voto por tema; podés cambiarlo o quitarlo.</span>
+    {% else %}
+      <a class="boton principal" href="{{ url_for('ingresar', volver=request.path) }}">Ingresá para votar</a>
+      <a class="boton" href="{{ url_for('registro') }}">Crear cuenta (10 pts de regalo)</a>
+    {% endif %}
+  </div>
+
+  <div class="fila entre chico" style="margin-top:6px">
+    <span><b class="conteo" style="color:var(--verde)">👍 {{ t.a_favor }}</b> a favor ·
+          <b class="conteo" style="color:var(--rojo)">👎 {{ t.en_contra }}</b> en contra</span>
+    <span class="suave">{{ t.etapa|replace('_', ' ') }}</span>
+  </div>
+  <div class="barra-apoyo" style="margin-top:6px">
+    <i style="width:{{ (100 * t.a_favor / (t.a_favor + t.en_contra)) if (t.a_favor + t.en_contra) else 0 }}%"></i>
+  </div>
+
+  {% if t.problema and t.tipo == 'ley' %}
+    <div class="bloque problema">
+      <h4>Por qué no funciona</h4>
+      <p>{{ t.problema }}</p>
+    </div>
+  {% endif %}
+  {% if t.evidencia %}
+    <div class="bloque evidencia">
+      <h4>Evidencia y datos</h4>
+      <p>{{ t.evidencia }}</p>
+      {% set datos = t.datos_clave|datos %}
+      {% if datos %}
+        <ul class="chico suave">
+          {% for d in datos %}<li>{{ d }}</li>{% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  {% endif %}
+  {% if t.propuesta %}
+    <div class="bloque propuesta">
+      <h4>Qué se propone</h4>
+      <p>{{ t.propuesta }}</p>
+    </div>
+  {% endif %}
+
+  {% if t.fuente_url %}
+    <p class="chico suave">Fuente: <a href="{{ t.fuente_url }}" target="_blank" rel="noopener">abrir documento original ↗</a></p>
+  {% endif %}
+</article>
+
+{% if posicionados %}
+<section style="margin-top:22px">
+  <h2>Cargos que se pronunciaron</h2>
+  <div class="pila" style="margin-top:10px">
+    {% for p in posicionados %}
+      <div class="panel fila entre">
+        <span><b>{{ p.emoji }} <a href="{{ url_for('politico', slug=p.slug) }}">{{ p.nombre }}</a></b> <span class="suave chico">{{ p.cargo }}</span></span>
+        <span class="etiqueta {% if p.valor > 0 %}verde{% else %}roja{% endif %}">{% if p.valor > 0 %}a favor{% else %}en contra{% endif %}</span>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section style="margin-top:22px" class="grid">
+  <div class="panel" id="foro">
+    <h2>💬 Foro del tema</h2>
+    {% if yo %}
+      <form method="post" action="{{ url_for('opinar', slug=t.slug) }}">
+        <label for="texto">Tu opinión</label>
+        <textarea id="texto" name="texto" maxlength="2000" placeholder="Qué pensás, qué falta, qué cambiarías…" required></textarea>
+        <div class="fila entre" style="margin-top:8px">
+          <span class="chico suave">+{{ 5 }} puntos por opinar</span>
+          <button class="boton principal" type="submit">Publicar</button>
+        </div>
+      </form>
+    {% else %}
+      <p class="suave">Para escribir en el foro necesitás una cuenta. <a href="{{ url_for('registro') }}">Crear cuenta</a> o <a href="{{ url_for('ingresar', volver=request.path) }}">ingresar</a>.</p>
+    {% endif %}
+
+    <div style="margin-top:14px">
+      {% for o in opiniones %}
+        <div class="opinion">
+          <span class="avatar">{{ '🏛️' if o.politico_id else '👤' }}</span>
+          <div>
+            <div class="quien">
+              {{ o.nombre }}
+              {% if o.politico_id %}<span class="etiqueta rosa">cargo verificado · {{ o.politico_cargo }}</span>{% endif %}
+              <span class="chico suave">· {{ o.creado[:10] }}</span>
+            </div>
+            <p class="texto">{{ o.texto }}</p>
+          </div>
+        </div>
+      {% else %}
+        <p class="suave chico">Todavía no hay opiniones. Abrí el debate.</p>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="pila">
+    {% if acciones %}
+      <div class="panel">
+        <h2>🏛️ Actividad relacionada</h2>
+        {% for a in acciones %}
+          <div class="actividad">
+            <span class="fecha">{{ a.fecha or 'sin fecha' }}</span>
+            <div>
+              <b>{{ a.emoji }} {{ a.nombre }}</b>
+              <div class="chico suave">{{ a.titulo }}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if relacionados %}
+      <div class="panel">
+        <h2>🔗 Temas parecidos</h2>
+        <div class="pila" style="margin-top:8px">
+          {% for r in relacionados %}
+            <a class="chip" href="{{ url_for('tema', slug=r.slug) }}">{{ r.emoji }} {{ r.titulo }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block titulo %}Crear cuenta · Política Eficiente{% endblock %}
+{% block cuerpo %}
+<div class="form-angosto panel">
+  <h1>Crear mi cuenta</h1>
+  <p class="suave chico">Gratis, sin datos de más. Sumás 10 puntos al registrarte.</p>
+  <form method="post">
+    <label for="nombre">Nombre visible</label>
+    <input id="nombre" type="text" name="nombre" required maxlength="60" autocomplete="name">
+    <label for="email">Correo</label>
+    <input id="email" type="email" name="email" required autocomplete="email">
+    <label for="clave">Clave (mínimo 8 caracteres)</label>
+    <input id="clave" type="password" name="clave" required minlength="8" autocomplete="new-password">
+    <label for="departamento">Departamento (opcional)</label>
+    <input id="departamento" type="text" name="departamento" maxlength="40">
+    <label>Qué temas te interesan (opcional)</label>
+    <div class="chips" style="margin-top:6px">
+      {% for c in categorias %}
+        <label class="chip" style="cursor:pointer">
+          <input type="checkbox" name="intereses" value="{{ c }}" style="width:auto;margin-right:6px">{{ c|cat }}
+        </label>
+      {% endfor %}
+    </div>
+    <div style="margin-top:18px"><button class="boton principal" type="submit" style="width:100%">Crear cuenta</button></div>
+  </form>
+  <p class="chico suave" style="margin-top:14px">¿Ya tenés cuenta? <a href="{{ url_for('ingresar') }}">Ingresar</a>.</p>
+</div>
+{% endblock %}

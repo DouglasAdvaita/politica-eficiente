@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block titulo %}Cargos públicos · Política Eficiente{% endblock %}
+{% block cuerpo %}
+<h1>Cargos públicos y organismos</h1>
+<p class="suave">Quién es, qué hace y cómo contactarlo por vía oficial. Si el cargo publicó su celular, también aparece.</p>
+
+<form method="get" class="fila" style="margin:16px 0">
+  <input type="text" name="q" value="{{ q }}" placeholder="Buscar por nombre, cargo u organismo" style="max-width:360px">
+  {% if camara != 'todas' %}<input type="hidden" name="camara" value="{{ camara }}">{% endif %}
+  <button class="boton" type="submit">Buscar</button>
+</form>
+
+<div class="chips" style="margin-bottom:18px">
+  <a class="chip {% if camara == 'todas' %}activo{% endif %}" href="{{ url_for('politicos', q=q) }}">Todos</a>
+  {% for c in camaras %}
+    <a class="chip {% if camara == c %}activo{% endif %}" href="{{ url_for('politicos', camara=c, q=q) }}">{{ c }}</a>
+  {% endfor %}
+</div>
+
+<div class="grid">
+  {% for p in politicos %}
+    <article class="tarjeta">
+      <div class="ficha-pol">
+        <span class="avatar">{{ p.emoji }}</span>
+        <div>
+          <h3 style="margin:0"><a href="{{ url_for('politico', slug=p.slug) }}">{{ p.nombre }}</a></h3>
+          <div class="chico suave">{{ p.cargo }}</div>
+        </div>
+      </div>
+      <div class="meta">
+        <span>{{ p.camara }}</span>
+        {% if p.partido %}<span>{{ p.partido }}</span>{% endif %}
+        {% if p.departamento %}<span>{{ p.departamento }}</span>{% endif %}
+      </div>
+      <div class="meta">
+        <span>📌 {{ p.n_acciones }} actividad{% if p.n_acciones != 1 %}es{% endif %}</span>
+        <span>🗳️ {{ p.n_posiciones }} postura{% if p.n_posiciones != 1 %}s{% endif %}</span>
+        {% if p.usuario_id %}<span class="etiqueta verde">cuenta verificada</span>{% endif %}
+        {% if not p.verificado %}<span class="etiqueta ambar">sin verificar</span>{% endif %}
+        {% if p.desempeno and p.desempeno.puntaje is not none %}
+          <span class="etiqueta {% if p.desempeno.estado == 'trabajando' %}verde{% elif p.desempeno.estado == 'irregular' %}ambar{% else %}roja{% endif %}">
+            {{ p.desempeno.texto }} · {{ p.desempeno.puntaje }}
+          </span>
+        {% endif %}
+      </div>
+      <div class="fila" style="margin-top:4px">
+        {% if p.email_publico %}<a class="chip" href="mailto:{{ p.email_publico }}">correo</a>{% endif %}
+        {% if p.telefono_oficina %}<a class="chip" href="tel:{{ p.telefono_oficina }}">oficina</a>{% endif %}
+        {% if p.celular_publico %}<a class="chip" href="tel:{{ p.celular_publico }}">celular</a>{% endif %}
+      </div>
+    </article>
+  {% else %}
+    <div class="panel"><p class="suave">No hay cargos con ese filtro.</p></div>
+  {% endfor %}
+</div>
+{% endblock %}

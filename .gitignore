@@ -1,0 +1,27 @@
+# ===== Politica Eficiente - lo que NO se publica =====
+
+# Secretos y base local
+.env
+.secret
+politica.db
+politica.db-journal
+/datos/clave_admin.txt
+/datos/salida_correos/
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.vscode/
+.idea/
+
+# Respaldos y temporales
+*.bak
+*.bak*
+~$*
+Thumbs.db
+desktop.ini
+*.lnk
+
+# Publicador local
+/PUBLICAR.cmd

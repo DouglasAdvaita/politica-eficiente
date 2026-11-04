@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block titulo %}Mapa de la política · Política Eficiente{% endblock %}
+{% block ancho %}ancho{% endblock %}
+{% block cuerpo %}
+<div class="fila entre">
+  <div>
+    <h1>Mapa de líneas</h1>
+    <p class="suave">Cada línea es una relación: apoyo ciudadano, postura de un cargo o actividad declarada. El grosor dice cuánto pesa.</p>
+  </div>
+  <div class="chips">
+    <a class="chip" href="{{ url_for('mapa') }}">Reiniciar filtros</a>
+  </div>
+</div>
+
+<div class="pila" style="margin:16px 0">
+  <div class="chips">
+    <a class="chip {% if camara == 'todas' %}activo{% endif %}" href="{{ url_for('mapa', categoria=categoria) }}">Todos los cargos</a>
+    {% for c in camaras %}
+      <a class="chip {% if camara == c %}activo{% endif %}" href="{{ url_for('mapa', camara=c, categoria=categoria) }}">{{ c|cat }}</a>
+    {% endfor %}
+  </div>
+  <div class="chips">
+    <a class="chip {% if categoria == 'todas' %}activo{% endif %}" href="{{ url_for('mapa', camara=camara) }}">Todas las categorías</a>
+    {% for c in categorias %}
+      <a class="chip {% if categoria == c %}activo{% endif %}" href="{{ url_for('mapa', camara=camara, categoria=c) }}">{{ c|cat }}</a>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="mapa-caja">{{ dibujo }}</div>
+
+<section class="grid" style="margin-top:20px">
+  <div class="panel">
+    <h2>🧭 Cómo leerlo</h2>
+    <ul class="suave chico" style="line-height:1.8">
+      <li><b style="color:var(--verde)">Verde:</b> el cargo se pronunció a favor del tema.</li>
+      <li><b style="color:var(--rojo)">Rojo:</b> el cargo se pronunció en contra.</li>
+      <li><b style="color:var(--ambar)">Ámbar punteado:</b> tiene actividad declarada en esa categoría, sin postura explícita.</li>
+      <li><b style="color:var(--neon)">Grosor ciudadano:</b> cuánto apoya ese grupo el tema (100% del grupo = línea máxima) y cuántas personas lo integran.</li>
+      <li>Los cargos se agrupan por cámara; los temas, por apoyo ciudadano.</li>
+    </ul>
+    <p class="chico suave">Datos de demostración: {{ d.usuarios_total }} cuentas de ciudadanía, {{ d.temas|length }} temas y {{ d.politicos|length }} cargos en pantalla.</p>
+  </div>
+
+  <div class="panel">
+    <h2>📊 Brecha de prioridades</h2>
+    <p class="suave chico">Verde = % de votos ciudadanos en esa categoría. Rosa = % de actividades de los cargos. Si la verde es mucho más larga, eso se está descuidando.</p>
+    <div class="brecha" style="margin-top:12px">
+      {% for f in brecha %}
+        <div class="brecha-fila">
+          <span>{{ f.categoria|cat }}</span>
+          <span class="brecha-barras">
+            <i class="c" style="width:{{ f.ancho_c|round(1) }}%" title="{{ f.pct_ciudadano|round(1) }}% de los votos"></i>
+            <i class="p" style="width:{{ f.ancho_p|round(1) }}%" title="{{ f.pct_politico|round(1) }}% de las actividades"></i>
+          </span>
+          <span class="chico">
+            {% if f.brecha > 5 %}<span class="etiqueta roja">descuida</span>
+            {% elif f.brecha < -5 %}<span class="etiqueta ambar">sobre-atende</span>
+            {% else %}<span class="etiqueta verde">parejo</span>{% endif %}
+          </span>
+        </div>
+      {% else %}
+        <p class="suave chico">Sin datos suficientes todavía.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

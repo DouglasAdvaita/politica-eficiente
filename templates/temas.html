@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block titulo %}Temas · Política Eficiente{% endblock %}
+{% block cuerpo %}
+<div class="fila entre">
+  <div>
+    <h1>Temas para entender y votar</h1>
+    <p class="suave">Leyes que hoy no funcionan y propuestas para problemas actuales. Cada una con su fuente.</p>
+  </div>
+</div>
+
+<div class="pila" style="margin:18px 0">
+  <div class="chips">
+    <a class="chip {% if categoria == 'todas' %}activo{% endif %}" href="{{ url_for('temas', tipo=tipo, orden=orden) }}">Todas</a>
+    {% for c in categorias %}
+      <a class="chip {% if categoria == c %}activo{% endif %}" href="{{ url_for('temas', categoria=c, tipo=tipo, orden=orden) }}">{{ c|cat }}</a>
+    {% endfor %}
+  </div>
+  <div class="fila">
+    <div class="chips">
+      {% for clave, nombre in [('todos','Todo'), ('ley','Leyes ineficaces'), ('propuesta','Propuestas')] %}
+        <a class="chip {% if tipo == clave %}activo{% endif %}" href="{{ url_for('temas', categoria=categoria, tipo=clave, orden=orden) }}">{{ nombre }}</a>
+      {% endfor %}
+    </div>
+    <div class="chips">
+      {% for clave, nombre in [('apoyo','Más apoyo'), ('debate','Más debate'), ('urgencia','Urgentes'), ('nuevos','Nuevos')] %}
+        <a class="chip {% if orden == clave %}activo{% endif %}" href="{{ url_for('temas', categoria=categoria, tipo=tipo, orden=clave) }}">{{ nombre }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  {% for t in temas %}
+    <article class="tarjeta">
+      <div class="fila entre">
+        <span class="emoji">{{ t.emoji }}</span>
+        <span class="etiqueta {% if t.tipo == 'ley' %}ambar{% else %}verde{% endif %}">
+          {% if t.tipo == 'ley' %}Ley{% else %}Propuesta{% endif %}
+        </span>
+      </div>
+      <h3><a href="{{ url_for('tema', slug=t.slug) }}">{{ t.titulo }}</a></h3>
+      <p class="resumen">{{ (t.resumen or t.problema)|corto(150) }}</p>
+      <div class="barra-apoyo"><i style="width:{{ (100 * t.a_favor / (t.a_favor + t.en_contra)) if (t.a_favor + t.en_contra) else 0 }}%"></i></div>
+      <div class="meta">
+        <span>{{ t.categoria|cat }}</span>
+        <span>👍 {{ t.a_favor }}</span>
+        <span>👎 {{ t.en_contra }}</span>
+        <span>💬 {{ t.opiniones }}</span>
+        {% if t.urgencia == 'alta' %}<span class="etiqueta roja">urgente</span>{% endif %}
+      </div>
+    </article>
+  {% else %}
+    <div class="panel"><p class="suave">No hay temas con ese filtro.</p></div>
+  {% endfor %}
+</div>
+{% endblock %}

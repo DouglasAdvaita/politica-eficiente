@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block titulo %}Administración · Política Eficiente{% endblock %}
+{% block cuerpo %}
+<h1>Administración</h1>
+<p class="suave">Vínculos, correos enviados y estado general.</p>
+
+<div class="datos" style="margin:16px 0">
+  <div class="dato"><b>{{ resumen.temas }}</b><span>temas</span></div>
+  <div class="dato"><b>{{ resumen.politicos }}</b><span>cargos</span></div>
+  <div class="dato"><b>{{ resumen.usuarios }}</b><span>cuentas</span></div>
+  <div class="dato"><b>{{ resumen.votos }}</b><span>votos</span></div>
+  <div class="dato"><b>{{ resumen.sin_contacto }}</b><span>cargos sin correo</span></div>
+</div>
+
+<section class="panel">
+  <h2>📈 Desempeño por cargo</h2>
+  <p class="suave chico">Se mide lo observable en la app: actividades cumplidas, pendientes vencidas, actualidad y posturas declaradas. No mide intenciones.</p>
+  <table style="margin-top:10px">
+    <thead><tr><th>Cargo</th><th>Puntaje</th><th>Estado</th></tr></thead>
+    <tbody>
+      {% for r in ranking %}
+        <tr>
+          <td>{{ r.emoji }} {{ r.nombre }}<br><span class="chico suave">{{ r.cargo }}</span></td>
+          <td>{{ r.desempeno.puntaje if r.desempeno.puntaje is not none else '—' }}</td>
+          <td>
+            <span class="etiqueta {% if r.desempeno.estado == 'trabajando' %}verde{% elif r.desempeno.estado == 'irregular' %}ambar{% elif r.desempeno.estado == 'en_falta' %}roja{% endif %}">
+              {{ r.desempeno.texto }}
+            </span>
+          </td>
+        </tr>
+      {% else %}
+        <tr><td colspan="3" class="suave">Sin cargos cargados.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <form method="post" action="{{ url_for('admin_criterios') }}" style="margin-top:18px">
+    <div class="grid chico">
+      {% for clave, datos in CRITERIOS.items() %}
+        <div>
+          <label for="{{ clave }}">{{ datos[1] }}</label>
+          <input id="{{ clave }}" type="text" name="{{ clave }}" value="{{ criterios[clave]|round(0)|int }}">
+        </div>
+      {% endfor %}
+    </div>
+    <div style="margin-top:12px"><button class="boton principal" type="submit">Guardar criterios</button></div>
+  </form>
+</section>
+
+<section class="panel" style="margin-top:18px">
+  <h2>🪪 Solicitudes de vínculo</h2>
+  <table>
+    <thead><tr><th>Cargo</th><th>Cuenta</th><th>Estado</th><th>Enlace</th><th></th></tr></thead>
+    <tbody>
+      {% for s in solicitudes %}
+        <tr>
+          <td>{{ s.politico }}<br><span class="chico suave">{{ s.cargo }}</span></td>
+          <td>{{ s.usuario }}<br><span class="chico suave">{{ s.email }}</span></td>
+          <td><span class="etiqueta {% if s.estado == 'aprobada' %}verde{% elif s.estado == 'rechazada' %}roja{% else %}ambar{% endif %}">{{ s.estado }}</span></td>
+          <td class="chico"><a href="{{ url_for('vincular', token=s.token) }}">abrir</a></td>
+          <td>
+            {% if s.estado == 'pendiente' %}
+              <form method="post" action="{{ url_for('admin_solicitud', sid=s.id, accion='aprobar') }}" style="display:inline">
+                <button class="boton mini" type="submit">Aprobar</button>
+              </form>
+              <form method="post" action="{{ url_for('admin_solicitud', sid=s.id, accion='rechazar') }}" style="display:inline">
+                <button class="boton mini" type="submit">Rechazar</button>
+              </form>
+            {% endif %}
+          </td>
+        </tr>
+      {% else %}
+        <tr><td colspan="5" class="suave">Sin solicitudes.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section class="grid" style="margin-top:18px">
+  <div class="panel">
+    <h2>📧 Avisos y enlaces</h2>
+    {% for a in avisos %}
+      <div style="padding:8px 0;border-bottom:1px solid rgba(34,55,92,.5)">
+        <b class="chico">{{ a.asunto }}</b>
+        <div class="chico suave">para {{ a.para }} · {{ a.creado[:10] }}</div>
+        {% if a.enlace %}<a class="chico" href="{{ a.enlace }}">{{ a.enlace }}</a>{% endif %}
+      </div>
+    {% else %}
+      <p class="suave chico">Sin avisos.</p>
+    {% endfor %}
+  </div>
+
+  <div class="panel">
+    <h2>👥 Cuentas con más puntos</h2>
+    <table>
+      <thead><tr><th>Nombre</th><th>Correo</th><th>Puntos</th></tr></thead>
+      <tbody>
+        {% for u in usuarios %}
+          <tr><td>{{ u.nombre }}</td><td class="chico suave">{{ u.email }}</td><td>{{ u.puntos }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

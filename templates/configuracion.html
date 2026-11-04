@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block titulo %}Configuración · Política Eficiente{% endblock %}
+{% block cuerpo %}
+<h1>Mi configuración</h1>
+{% set mis = (yo.intereses or '').split(',') %}
+
+<div class="grid" style="margin-top:16px">
+  <div class="panel">
+    <h2>Perfil e intereses</h2>
+    <form method="post">
+      <label for="nombre">Nombre visible</label>
+      <input id="nombre" type="text" name="nombre" value="{{ yo.nombre }}" maxlength="60">
+      <label for="departamento">Departamento</label>
+      <input id="departamento" type="text" name="departamento" value="{{ yo.departamento }}" maxlength="40">
+      <label>Intereses (definen tu grupo en el mapa)</label>
+      <div class="chips" style="margin-top:6px">
+        {% for c in categorias %}
+          <label class="chip" style="cursor:pointer">
+            <input type="checkbox" name="intereses" value="{{ c }}" {% if c in mis %}checked{% endif %} style="width:auto;margin-right:6px">
+            {{ c|cat }}
+          </label>
+        {% endfor %}
+      </div>
+      <div style="margin-top:16px"><button class="boton principal" type="submit">Guardar</button></div>
+    </form>
+  </div>
+
+  <div class="pila">
+    <div class="panel">
+      <h2>🪪 Vínculos con cargos</h2>
+      {% if yo.politico %}
+        <p>Tu cuenta está vinculada con <b>{{ yo.politico.nombre }}</b> ({{ yo.politico.cargo }}). Podés votar, opinar y declarar posturas con tu cargo identificado.</p>
+      {% else %}
+        <p class="suave">Tu cuenta es de ciudadanía. Si sos un cargo público, entrá a tu ficha en <a href="{{ url_for('politicos') }}">Cargos</a> y pedí el vínculo: el sistema manda un enlace al correo público del cargo.</p>
+      {% endif %}
+      {% for s in solicitudes %}
+        <div class="fila entre" style="padding:8px 0;border-bottom:1px solid rgba(34,55,92,.5)">
+          <span class="chico"><a href="{{ url_for('politico', slug=s.slug) }}">{{ s.nombre }}</a> · {{ s.cargo }}</span>
+          <span class="etiqueta {% if s.estado == 'aprobada' %}verde{% elif s.estado == 'rechazada' %}roja{% else %}ambar{% endif %}">{{ s.estado }}</span>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="panel">
+      <h2>📧 Avisos a mi correo</h2>
+      {% for a in avisos %}
+        <div style="padding:8px 0;border-bottom:1px solid rgba(34,55,92,.5)">
+          <b class="chico">{{ a.asunto }}</b>
+          <div class="chico suave">{{ a.creado[:10] }}</div>
+          {% if a.enlace %}<a class="chico" href="{{ a.enlace }}">abrir enlace</a>{% endif %}
+        </div>
+      {% else %}
+        <p class="suave chico">Sin avisos por ahora.</p>
+      {% endfor %}
+      <p class="chico suave" style="margin-top:10px">En producción estos avisos se mandan por correo (SMTP). En local quedan guardados acá y en el panel de administración.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

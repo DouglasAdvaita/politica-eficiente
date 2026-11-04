@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block titulo %}Ingresar · Política Eficiente{% endblock %}
+{% block cuerpo %}
+<div class="form-angosto panel">
+  <h1>Ingresar</h1>
+  <p class="suave chico">Tu cuenta es de ciudadanía. Si además sos un cargo público, podés vincularla después desde la ficha del cargo.</p>
+  <form method="post">
+    <label for="email">Correo</label>
+    <input id="email" type="email" name="email" required autocomplete="email">
+    <label for="clave">Clave</label>
+    <input id="clave" type="password" name="clave" required autocomplete="current-password">
+    <div style="margin-top:18px"><button class="boton principal" type="submit" style="width:100%">Entrar</button></div>
+  </form>
+  <p class="chico suave" style="margin-top:14px">¿No tenés cuenta? <a href="{{ url_for('registro') }}">Crear una gratis</a>.</p>
+</div>
+{% endblock %}

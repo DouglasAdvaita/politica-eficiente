@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}Política Eficiente{% endblock %}</title>
+  <meta name="description" content="Entendé qué pasa en la política uruguaya: temas, cargos, votos ciudadanos y lo que realmente se hace.">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>⚡</text></svg>">
+</head>
+<body>
+<header class="barra">
+  <a class="marca" href="{{ url_for('inicio') }}">⚡ Política <b>Eficiente</b></a>
+  <nav>
+    <a href="{{ url_for('inicio') }}">Inicio</a>
+    <a href="{{ url_for('temas') }}">Temas</a>
+    <a href="{{ url_for('mapa') }}">Mapa</a>
+    <a href="{{ url_for('politicos') }}">Cargos</a>
+    {% if yo and yo.rol == 'admin' %}<a href="{{ url_for('admin') }}">Admin</a>{% endif %}
+  </nav>
+  <div class="cuenta">
+    {% if yo %}
+      <span class="punto">{{ yo.nivel.emoji }} {{ yo.puntos }} pts</span>
+      <a class="chip" href="{{ url_for('perfil') }}">{{ yo.nombre }}</a>
+      <a class="chip" href="{{ url_for('salir') }}">Salir</a>
+    {% else %}
+      <a class="chip" href="{{ url_for('ingresar') }}">Ingresar</a>
+      <a class="boton principal mini" href="{{ url_for('registro') }}">Sumarme</a>
+    {% endif %}
+  </div>
+</header>
+
+{% with mensajes = get_flashed_messages(with_categories=true) %}
+  {% if mensajes %}
+    <div class="avisos">
+      {% for categoria, texto in mensajes %}
+        <div class="aviso {{ categoria }}">{{ texto }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+<main class="{% block ancho %}{% endblock %}">
+  {% block cuerpo %}{% endblock %}
+</main>
+
+<footer>
+  <b>Política Eficiente</b> · proyecto abierto · datos de fuentes públicas, con enlace a cada fuente.
+  <br>Uruguay · {{ ahora }} · <a href="{{ url_for('salud') }}">estado del servicio</a>
+</footer>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

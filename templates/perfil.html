@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block titulo %}Mi perfil · Política Eficiente{% endblock %}
+{% block cuerpo %}
+{% set n = yo.nivel %}
+<div class="panel neon">
+  <div class="nivel-caja">
+    <span class="nivel-emoji">{{ n.emoji }}</span>
+    <div style="flex:1">
+      <h1 style="margin-bottom:2px">{{ yo.nombre }}</h1>
+      <p class="suave" style="margin:0">
+        {{ n.nombre }} · {{ yo.puntos }} puntos
+        {% if n.siguiente %}· te faltan {{ n.falta }} para {{ n.siguiente }}{% endif %}
+        · grupo {{ yo.grupo.emoji }} {{ yo.grupo.nombre }}
+      </p>
+      <div class="progreso" style="margin-top:10px"><i style="width:{{ n.avance }}%"></i></div>
+    </div>
+  </div>
+  <div class="contadores" style="margin-top:16px">
+    <div class="dato"><b>{{ yo.acciones }}</b><span>acciones</span></div>
+    <div class="dato"><b>{{ votos|length }}</b><span>votos</span></div>
+    <div class="dato"><b>{{ opiniones }}</b><span>opiniones</span></div>
+    <div class="dato"><b>{{ yo.puntos }}</b><span>puntos</span></div>
+  </div>
+  <p class="chico suave" style="margin-top:12px">
+    Sumás puntos al registrarte, votar (+2), opinar (+5) y proponer (+15). Los niveles y el grupo cambian tu peso en el mapa.
+    <a href="{{ url_for('configuracion') }}">Editar preferencias</a>
+  </p>
+</div>
+
+<section class="grid" style="margin-top:20px">
+  <div class="panel">
+    <h2>🗳️ Mis votos</h2>
+    {% for v in votos %}
+      <div class="fila entre" style="padding:8px 0;border-bottom:1px solid rgba(34,55,92,.5)">
+        <a href="{{ url_for('tema', slug=v.slug) }}">{{ v.emoji }} {{ v.titulo }}</a>
+        <span class="etiqueta {% if v.valor > 0 %}verde{% else %}roja{% endif %}">{% if v.valor > 0 %}a favor{% else %}en contra{% endif %}</span>
+      </div>
+    {% else %}
+      <p class="suave chico">Todavía no votaste. <a href="{{ url_for('temas') }}">Elegí un tema</a>.</p>
+    {% endfor %}
+  </div>
+
+  <div class="panel">
+    <h2>⚡ Historial</h2>
+    {% for a in historial %}
+      <div class="fila entre" style="padding:6px 0;border-bottom:1px solid rgba(34,55,92,.4)">
+        <span class="chico">{{ a.detalle or a.tipo }}</span>
+        <span class="chico" style="color:var(--neon)">+{{ a.puntos }}</span>
+      </div>
+    {% else %}
+      <p class="suave chico">Sin actividad todavía.</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

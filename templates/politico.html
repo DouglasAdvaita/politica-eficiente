@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block titulo %}{{ p.nombre }} · Política Eficiente{% endblock %}
+{% block cuerpo %}
+<p class="chico"><a href="{{ url_for('politicos') }}">← Todos los cargos</a></p>
+
+<article class="panel">
+  <div class="ficha-pol">
+    <span class="avatar" style="width:70px;height:70px;flex-basis:70px;font-size:2rem">{{ p.emoji }}</span>
+    <div style="flex:1">
+      <h1 style="margin-bottom:2px">{{ p.nombre }}</h1>
+      <p class="suave" style="margin:0">{{ p.cargo }} · {{ p.organismo }}</p>
+      <div class="chips" style="margin-top:8px">
+        <span class="etiqueta">{{ p.camara }}</span>
+        {% if p.partido %}<span class="etiqueta">{{ p.partido }}</span>{% endif %}
+        {% if p.departamento %}<span class="etiqueta">{{ p.departamento }}</span>{% endif %}
+        {% if p.usuario_id %}<span class="etiqueta verde">cuenta verificada</span>{% else %}<span class="etiqueta ambar">cuenta no vinculada</span>{% endif %}
+        {% if p.verificado %}<span class="etiqueta verde">datos con fuente</span>{% else %}<span class="etiqueta ambar">datos sin verificar</span>{% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <h4>Funciones del cargo</h4>
+    <p>{{ p.funciones }}</p>
+  </div>
+
+  <h2 style="margin-top:16px">Contacto oficial</h2>
+  <div class="contacto">
+    {% if p.email_publico %}<span>📧 <a href="mailto:{{ p.email_publico }}">{{ p.email_publico }}</a></span>{% endif %}
+    {% if p.telefono_oficina %}<span>📞 <a href="tel:{{ p.telefono_oficina }}">{{ p.telefono_oficina }}</a> (oficina)</span>{% endif %}    {% if p.celular_publico %}<span>📱 <a href="tel:{{ p.celular_publico }}">{{ p.celular_publico }}</a> (publicado por el cargo)</span>{% endif %}
+    {% if p.web %}<span>🌐 <a href="{{ p.web }}" target="_blank" rel="noopener">{{ p.web }}</a></span>{% endif %}
+    {% if not (p.email_publico or p.telefono_oficina or p.celular_publico) %}
+      <span class="suave">Sin contacto oficial publicado. Se puede completar con fuente.</span>
+    {% endif %}
+  </div>
+  {% if p.contacto_fuente_url %}
+    <p class="chico suave">Fuente del contacto: <a href="{{ p.contacto_fuente_url }}" target="_blank" rel="noopener">ver ↗</a></p>
+  {% endif %}
+
+  {% if cuenta %}
+    <p class="chico suave">Cuenta vinculada: {{ cuenta.nombre }} · {{ cuenta.puntos }} pts</p>
+  {% endif %}
+</article>
+
+<section class="panel" style="margin-top:18px">
+  <h2>📈 Desempeño medido en la app</h2>
+  {% if rendimiento.puntaje is not none %}
+    <div class="fila entre">
+      <span class="etiqueta {% if rendimiento.estado == 'trabajando' %}verde{% elif rendimiento.estado == 'irregular' %}ambar{% else %}roja{% endif %}" style="font-size:.9rem">
+        {{ rendimiento.texto }} · {{ rendimiento.puntaje }}/100
+      </span>
+      <span class="chico suave">
+        {{ rendimiento.hechas }} hechas · {{ rendimiento.pendientes }} pendientes
+        {% if rendimiento.vencidas %}· {{ rendimiento.vencidas }} vencidas{% endif %}
+        {% if rendimiento.dias is not none %}· última actividad hace {{ rendimiento.dias }} días{% endif %}
+      </span>
+    </div>
+    <div class="progreso" style="margin-top:10px"><i style="width:{{ rendimiento.puntaje }}%"></i></div>
+  {% else %}
+    <p class="suave chico">Sin actividades cargadas, no se puede medir. El criterio y sus pesos se configuran en Administración.</p>
+  {% endif %}
+</section>
+
+{% if not p.usuario_id %}
+<section class="panel neon" style="margin-top:18px">
+  <h2>🪪 ¿Sos esta persona?</h2>
+  {% if yo %}
+    {% if mi_solicitud %}
+      <p class="suave">Tu solicitud está pendiente. Se envió un enlace al correo público del cargo ({{ p.email_publico }}). Cuando lo abra, queda vinculado.</p>
+    {% elif p.email_publico %}
+      <p class="suave">Podés pedir el vínculo. El sistema manda un enlace al correo público del cargo; solo quien controle ese correo puede confirmarlo. Tu cuenta sigue siendo una cuenta común, con el cargo asociado.</p>
+      <form method="post" action="{{ url_for('solicitar_vinculo', slug=p.slug) }}" data-confirmar="Se enviará un enlace al correo público del cargo. ¿Continuar?">
+        <button class="boton principal" type="submit">Solicitar vínculo con este cargo</button>
+      </form>
+    {% else %}
+      <p class="suave">Este cargo no tiene correo público cargado, así que no se puede verificar el vínculo todavía.</p>
+    {% endif %}
+  {% else %}
+    <p class="suave"><a href="{{ url_for('ingresar', volver=request.path) }}">Ingresá</a> con tu cuenta común para solicitar el vínculo con este cargo.</p>
+  {% endif %}
+</section>
+{% endif %}
+
+<section style="margin-top:22px" class="grid">
+  <div class="panel">
+    <h2>📌 Actividades públicas</h2>
+    {% for a in acciones %}
+      <div class="actividad">
+        <span class="fecha">{{ a.fecha or 'sin fecha' }}</span>
+        <div style="flex:1">
+          <b>{{ a.titulo }}</b>
+          <div class="chico suave">{{ a.descripcion }}</div>
+          {% if a.fuente_url %}<a class="chico" href="{{ a.fuente_url }}" target="_blank" rel="noopener">fuente ↗</a>{% endif %}
+        </div>
+        <span class="etiqueta {% if a.estado == 'hecho' %}verde{% elif a.estado == 'en_proceso' %}azul{% else %}ambar{% endif %}">{{ a.estado|replace('_',' ') }}</span>
+      </div>
+    {% else %}
+      <p class="suave chico">Sin actividades registradas.</p>
+    {% endfor %}
+  </div>
+
+  <div class="panel">
+    <h2>🗳️ Posturas declaradas</h2>
+    {% for pos in posiciones %}
+      <div class="fila entre" style="padding:8px 0;border-bottom:1px solid rgba(34,55,92,.5)">
+        <a href="{{ url_for('tema', slug=pos.slug) }}">{{ pos.emoji }} {{ pos.titulo }}</a>
+        <span class="etiqueta {% if pos.valor > 0 %}verde{% else %}roja{% endif %}">{% if pos.valor > 0 %}a favor{% else %}en contra{% endif %}</span>
+      </div>
+    {% else %}
+      <p class="suave chico">Todavía no declaró posturas en la app.</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
