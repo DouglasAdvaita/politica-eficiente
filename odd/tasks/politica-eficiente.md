@@ -116,8 +116,10 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - [x] T10 — Desempeño configurable del cargo · criterio: puntaje 0-100 y veredicto según umbrales editables en admin.
 - [x] T11 — Estudio UX/UI aplicado · criterio: estilos, plantillas y guía de lectura del mapa.
 - [x] T12 — Commit inicial y repo remoto · criterio: commit `18375cf` y `origin` en https://github.com/DouglasAdvaita/politica-eficiente
-- [ ] T13 — Despliegue en Render con Neon · criterio: URL pública responde y `/salud` dice `postgres`.
-  Base Neon `politica_eficiente` creada y sembrada (35 temas, 30 cargos). Falta crear el servicio en Render.
+- [x] T13 — Despliegue en Render con Neon · criterio: URL pública responde y `/salud` dice `postgres`.
+  Hecho: https://politica-eficiente.onrender.com (servicio `politica-eficiente`, región Ohio, free tier).
+  `/salud` → {"ok": true, "base": "postgres"}. Mapa, flujos, cargos y temas verificados en vivo.
+  Base de datos: Neon `politica_eficiente`, sembrada con 148 cargos, 35 temas y 25 flujos.
 - [ ] T14 — Ruta de aprobación por instrumento (ley, decreto, resolución, ordenanza) · criterio: cada tema muestra instrumento, vía y pasos con estado.
 - [ ] T15 — APK Android (WebView, actualización por internet) · criterio: instala, abre la app y detecta versión nueva.
 - [ ] T16 — Correo real por SMTP y verificación de dominio del cargo · criterio: aviso enviado y enlace funcional desde el correo.
