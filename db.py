@@ -346,13 +346,13 @@ def _cargar_temas(db):
 
 def _cargar_politicos(db):
     for nombre in ("politicos.json", "senadores.json", "diputados_a_f.json",
-                   "diputados_g_o.json", "diputados_p_z.json"):
+                   "diputados_g_o.json", "diputados_p_z.json", "diputados_faltantes.json"):
         _cargar_politicos_archivo(db, nombre)
 
 
 def _cargar_politicos_archivo(db, nombre):
     datos = _leer(nombre) or {}
-    for p in datos.get("politicos", []):
+    for p in datos.get("politicos") or datos.get("faltantes") or []:
         db.ejecutar(
             """INSERT INTO politicos (slug, nombre, cargo, camara, organismo, partido,
                    departamento, emoji, funciones, email_publico, telefono_oficina,

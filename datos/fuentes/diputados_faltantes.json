@@ -1,0 +1,63 @@
+{
+  "pais": "UY",
+  "camara": "Diputados",
+  "generado": "2026-11-05",
+  "faltantes": [
+    {
+      "slug": "rodrigo-goni-reyes",
+      "nombre": "Rodrigo Goñi Reyes",
+      "cargo": "Diputado",
+      "camara": "Diputados",
+      "organismo": "Cámara de Representantes",
+      "partido": "Partido Nacional",
+      "departamento": "Montevideo",
+      "emoji": "🏛️",
+      "funciones": "Preside la Cámara de Representantes desde el 1 de marzo de 2026 y es representante titular por Montevideo por el Partido Nacional. Integra las comisiones de Asuntos Laborales y Seguridad Social, y Especial de Futuros de la Asamblea General.",
+      "email_publico": "rgonir@parlamento.gub.uy",
+      "telefono_oficina": null,
+      "celular_publico": null,
+      "web": "https://twitter.com/DipRodrigoGoni",
+      "contacto_fuente_url": "https://parlamento.gub.uy/camarasycomisiones/legisladores/5938",
+      "actividades": [],
+      "verificado": true
+    },
+    {
+      "slug": "eduardo-antonini",
+      "nombre": "Eduardo Antonini",
+      "cargo": "Diputado",
+      "camara": "Diputados",
+      "organismo": "Cámara de Representantes",
+      "partido": "Frente Amplio",
+      "departamento": "Maldonado",
+      "emoji": "🏛️",
+      "funciones": "Representante titular por Maldonado por el Frente Amplio en la legislatura 2025-2030. Desde marzo de 2025 ejerce como senador y su banca en la Cámara es ocupada por un suplente.",
+      "email_publico": "eduardo.antonini@parlamento.gub.uy",
+      "telefono_oficina": null,
+      "celular_publico": null,
+      "web": "https://twitter.com/antonini_edu",
+      "contacto_fuente_url": "https://parlamento.gub.uy/camarasycomisiones/legisladores/12659",
+      "actividades": [],
+      "verificado": true
+    },
+    {
+      "slug": "zulimar-ferreira-rodriguez",
+      "nombre": "Zulimar Ferreira Rodríguez",
+      "cargo": "Diputada",
+      "camara": "Diputados",
+      "organismo": "Cámara de Representantes",
+      "partido": "Frente Amplio",
+      "departamento": "Tacuarembó",
+      "emoji": "🌾",
+      "funciones": "Representante titular por Tacuarembó por el Frente Amplio en la legislatura 2025-2030. Desde julio de 2025 ejerce como senadora y su banca en la Cámara es ocupada por un suplente.",
+      "email_publico": "zferreira@parlamento.gub.uy",
+      "telefono_oficina": null,
+      "celular_publico": null,
+      "web": null,
+      "contacto_fuente_url": "https://parlamento.gub.uy/camarasycomisiones/legisladores/9997",
+      "actividades": [],
+      "verificado": true
+    }
+  ],
+  "sobrantes": [],
+  "total_oficial": 99
+}

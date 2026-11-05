@@ -18,7 +18,21 @@ ARCHIVOS = [
     "diputados_a_f.json",
     "diputados_g_o.json",
     "diputados_p_z.json",
+    "diputados_faltantes.json",
 ]
+
+# Personas que ya tienen un cargo cargado a mano (Poder Ejecutivo, organismos,
+# intendentes o vicepresidencia): manda ese registro y se saltean en los archivos
+# de cámaras, porque quien asume el Ejecutivo deja la banca al suplente.
+def _cargos_curados():
+    ruta = os.path.join(dbm.CARPETA_FUENTES, "politicos.json")
+    if not os.path.exists(ruta):
+        return set()
+    with open(ruta, encoding="utf-8") as f:
+        return {p.get("slug") for p in json.load(f).get("politicos", []) if p.get("slug")}
+
+
+NO_PISAR = _cargos_curados()
 
 CAMPOS = (
     "nombre", "cargo", "camara", "organismo", "partido", "departamento",
@@ -28,11 +42,8 @@ CAMPOS = (
 
 
 def _slug_unico(db, base, usados):
-    slug = base or "sin-nombre"
-    if slug in usados:
-        return None
-    usados.add(slug)
-    return slug
+    """El slug identifica a la persona: si aparece en dos archivos, se actualiza."""
+    return base or "sin-nombre"
 
 
 def importar():
@@ -46,10 +57,11 @@ def importar():
                 continue
             with open(ruta, encoding="utf-8") as f:
                 datos = json.load(f)
-            for p in datos.get("politicos", []):
+            gente = datos.get("politicos") or datos.get("faltantes") or []
+            for p in gente:
                 slug = _slug_unico(db, p.get("slug"), usados)
-                if not slug:
-                    print("salteado por slug repetido:", p.get("nombre"))
+                if archivo != "politicos.json" and slug in NO_PISAR:
+                    print("se mantiene el cargo ejecutivo de:", p.get("nombre"))
                     continue
                 valores = [p.get(c) or "" for c in CAMPOS]
                 existe = db.uno("SELECT id FROM politicos WHERE slug = ?", (slug,))

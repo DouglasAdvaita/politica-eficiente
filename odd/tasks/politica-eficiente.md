@@ -142,6 +142,9 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - `demo.py crear` / `demo.py limpiar`: datos de demostración para ver el mapa con volumen.
 - `python importar_politicos.py` → 30 cargos actualizados sin duplicar (3 diputados, 3 intendentes,
   8 organismos, 10 poder ejecutivo, 6 senadores).
+- T18: **99 diputados** cargados (96 + 3 faltantes detectados por auditoría), todos con correo
+  institucional y fuente. Los cargos del Ejecutivo mandan sobre la banca: quien asume un ministerio
+  queda con ese cargo y no se duplica como legislador.
 
 ## Progreso
 - Sesión 1 (2026-11-04): esqueleto completo, datos de leyes, propuestas y cargos, mapa SVG, brecha,
