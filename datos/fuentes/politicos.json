@@ -146,7 +146,7 @@
       "partido": "Frente Amplio - El Abrazo",
       "departamento": null,
       "emoji": "🏥",
-      "funciones": "Conduce la autoridad sanitaria nacional y la regulación del sistema de salud. Define políticas de prevención, vigilancia epidemiológica y fiscalización de prestadores. Preside la Junta Nacional de Salud y coordina con ASSE y el FONASA.",
+      "funciones": "Conduce la autoridad sanitaria nacional y la regulación del sistema de salud. Define políticas de prevención, vigilancia epidemiológica y fiscalización de prestadores. Preside la Junta Nacional de Salud y coordina con ASSE y el FONASA. Electa senadora para 2025-2030; su banca la ejerce una persona suplente mientras está al frente del ministerio.",
       "email_publico": "ministra@msp.gub.uy",
       "telefono_oficina": null,
       "celular_publico": null,
@@ -173,7 +173,7 @@
       "partido": "Frente Amplio",
       "departamento": null,
       "emoji": "🎓",
-      "funciones": "Coordina la política educativa, cultural y de ciencia del país. Preside el Consejo Nacional de Educación y articula con ANEP y la Universidad de la República. Administra programas de cultura, derechos humanos y patrimonio.",
+      "funciones": "Coordina la política educativa, cultural y de ciencia del país. Preside el Consejo Nacional de Educación y articula con ANEP y la Universidad de la República. Administra programas de cultura, derechos humanos y patrimonio. Electo diputado para 2025-2030; su banca la ejerce una persona suplente mientras está al frente del ministerio.",
       "email_publico": "secministro@mec.gub.uy",
       "telefono_oficina": null,
       "celular_publico": null,
@@ -200,7 +200,7 @@
       "partido": "Frente Amplio - MPP",
       "departamento": null,
       "emoji": "🎖️",
-      "funciones": "Conduce la política de defensa y la administración de las Fuerzas Armadas. Supervisa las misiones de paz, el servicio militar y la industria de defensa. Coordina con el Ministerio del Interior en seguridad y fronteras.",
+      "funciones": "Conduce la política de defensa y la administración de las Fuerzas Armadas. Supervisa las misiones de paz, el servicio militar y la industria de defensa. Coordina con el Ministerio del Interior en seguridad y fronteras. Electa senadora para 2025-2030; su banca la ejerce una persona suplente mientras está al frente del ministerio.",
       "email_publico": "ministra@mdn.gub.uy",
       "telefono_oficina": "(+598) 2487 2828",
       "celular_publico": null,
@@ -254,7 +254,7 @@
       "partido": "Frente Amplio - Vertiente Artiguista",
       "departamento": null,
       "emoji": "🌿",
-      "funciones": "Conduce la política ambiental, el control de la contaminación y la gestión de áreas protegidas. Otorga autorizaciones ambientales y fiscaliza proyectos de infraestructura y energía. Coordina la respuesta ante emergencias ambientales y el cambio climático.",
+      "funciones": "Conduce la política ambiental, el control de la contaminación y la gestión de áreas protegidas. Otorga autorizaciones ambientales y fiscaliza proyectos de infraestructura y energía. Coordina la respuesta ante emergencias ambientales y el cambio climático. Electo senador para 2025-2030; su banca la ejerce una persona suplente mientras está al frente del ministerio.",
       "email_publico": "ministroma@ambiente.gub.uy",
       "telefono_oficina": "2917 3380",
       "celular_publico": null,
@@ -295,141 +295,6 @@
           "fecha": "2026-10-30",
           "tema": "Transporte",
           "fuente_url": "https://www.gub.uy/ministerio-transporte-obras-publicas/comunicacion/noticias/uruguay-paraguay-bolivia-acuerdan-avanzar-logistica-regional-integrada"
-        }
-      ],
-      "verificado": true
-    },
-    {
-      "slug": "pedro-bordaberry",
-      "nombre": "Pedro Bordaberry",
-      "cargo": "Senador",
-      "camara": "Senadores",
-      "organismo": "Cámara de Senadores",
-      "partido": "Partido Colorado - Vamos Uruguay",
-      "departamento": null,
-      "emoji": "🔵",
-      "funciones": "Legislador de la Cámara de Senadores por el Partido Colorado. Presenta proyectos de ley, integra comisiones y controla al Poder Ejecutivo mediante pedidos de informe. Vota las leyes y los ascensos y designaciones que requieren venia del Senado.",
-      "email_publico": "pedro.bordaberry@parlamento.gub.uy",
-      "telefono_oficina": null,
-      "celular_publico": null,
-      "web": "https://parlamento.gub.uy/camarasycomisiones/legisladores/922",
-      "contacto_fuente_url": "https://parlamento.gub.uy/camarasycomisiones/legisladores/922",
-      "actividades": [
-        {
-          "titulo": "Proyecto de transparencia en tiempos de espera",
-          "descripcion": "Presentó un proyecto de ley en el marco de la Rendición de Cuentas 2025 para publicar los tiempos de espera en el sistema de salud.",
-          "estado": "pendiente",
-          "fecha": "2026-09-22",
-          "tema": "Salud",
-          "fuente_url": "https://parlamento.gub.uy/camarasycomisiones/legisladores/922/iniciativas-legislador"
-        }
-      ],
-      "verificado": true
-    },
-    {
-      "slug": "graciela-bianchi",
-      "nombre": "Graciela Bianchi",
-      "cargo": "Senadora",
-      "camara": "Senadores",
-      "organismo": "Cámara de Senadores",
-      "partido": "Partido Nacional - Aire Fresco",
-      "departamento": null,
-      "emoji": "⚪",
-      "funciones": "Legisladora de la Cámara de Senadores por el Partido Nacional. Integra comisiones y presenta proyectos de ley y pedidos de informe. Fiscaliza la gestión del Poder Ejecutivo y participa de las votaciones del Senado.",
-      "email_publico": "gbianchi@parlamento.gub.uy",
-      "telefono_oficina": null,
-      "celular_publico": null,
-      "web": "https://parlamento.gub.uy/camarasycomisiones/legisladores/8879",
-      "contacto_fuente_url": "https://parlamento.gub.uy/camarasycomisiones/legisladores/8879",
-      "actividades": [
-        {
-          "titulo": "Control previo de concursos en entes autónomos",
-          "descripcion": "Presentó una propuesta en la Rendición de Cuentas 2025 para establecer el control previo de los concursos en los entes autónomos.",
-          "estado": "pendiente",
-          "fecha": "2026-09-22",
-          "tema": "Gobierno",
-          "fuente_url": "https://parlamento.gub.uy/camarasycomisiones/legisladores/8879/iniciativas-legislador"
-        }
-      ],
-      "verificado": true
-    },
-    {
-      "slug": "martin-lema",
-      "nombre": "Martín Lema",
-      "cargo": "Senador",
-      "camara": "Senadores",
-      "organismo": "Cámara de Senadores",
-      "partido": "Partido Nacional - Aire Fresco",
-      "departamento": null,
-      "emoji": "🟦",
-      "funciones": "Senador del Partido Nacional y referente en materia de seguridad y justicia. Presenta proyectos de ley, integra comisiones y controla al Ministerio del Interior. Vota las leyes y las designaciones que pasan por el Senado.",
-      "email_publico": "mlema@parlamento.gub.uy",
-      "telefono_oficina": null,
-      "celular_publico": null,
-      "web": "https://parlamento.gub.uy/camarasycomisiones/legisladores/11125",
-      "contacto_fuente_url": "https://parlamento.gub.uy/camarasycomisiones/legisladores/11125",
-      "actividades": [
-        {
-          "titulo": "Reforma del Código del Proceso Penal",
-          "descripcion": "Presentó un proyecto de reforma del Código del Proceso Penal, ingresado el 9 de junio de 2026 y remitido a comisión.",
-          "estado": "en_proceso",
-          "fecha": "2026-06-09",
-          "tema": "Justicia",
-          "fuente_url": "https://parlamento.gub.uy/camarasycomisiones/legisladores/11125/iniciativas-legislador"
-        }
-      ],
-      "verificado": true
-    },
-    {
-      "slug": "oscar-andrade",
-      "nombre": "Óscar Andrade",
-      "cargo": "Senador",
-      "camara": "Senadores",
-      "organismo": "Cámara de Senadores",
-      "partido": "Frente Amplio - Partido Comunista",
-      "departamento": null,
-      "emoji": "🔴",
-      "funciones": "Senador del Frente Amplio por el Partido Comunista. Integra comisiones vinculadas al trabajo y la producción y presenta proyectos de ley. Controla al Poder Ejecutivo y vota las iniciativas que llegan al plenario.",
-      "email_publico": "oandrade@parlamento.gub.uy",
-      "telefono_oficina": null,
-      "celular_publico": null,
-      "web": "https://parlamento.gub.uy/camarasycomisiones/legisladores/9917",
-      "contacto_fuente_url": "https://parlamento.gub.uy/camarasycomisiones/legisladores/9917",
-      "actividades": [
-        {
-          "titulo": "Regulación de la pesca artesanal",
-          "descripcion": "Presentó un proyecto para regular el trabajo en la pesca artesanal y de pequeña escala, ingresado el 26 de agosto de 2026.",
-          "estado": "pendiente",
-          "fecha": "2026-08-26",
-          "tema": "Trabajo",
-          "fuente_url": "https://parlamento.gub.uy/camarasycomisiones/legisladores/9917/iniciativas-legislador"
-        }
-      ],
-      "verificado": true
-    },
-    {
-      "slug": "tabare-viera",
-      "nombre": "Tabaré Viera",
-      "cargo": "Senador",
-      "camara": "Senadores",
-      "organismo": "Cámara de Senadores",
-      "partido": "Partido Colorado - Vamos Uruguay",
-      "departamento": null,
-      "emoji": "🔷",
-      "funciones": "Senador del Partido Colorado con foco en salud y turismo. Presenta proyectos de ley, integra comisiones y formula pedidos de informe. Participa de las votaciones del Senado y del control del gabinete.",
-      "email_publico": "tviera@parlamento.gub.uy",
-      "telefono_oficina": null,
-      "celular_publico": null,
-      "web": "https://parlamento.gub.uy/camarasycomisiones/legisladores/196",
-      "contacto_fuente_url": "https://parlamento.gub.uy/camarasycomisiones/legisladores/196",
-      "actividades": [
-        {
-          "titulo": "Alerta por el avance de la sífilis",
-          "descripcion": "En la media hora previa del Senado mostró su preocupación por los 6.635 casos de sífilis registrados en Uruguay desde el inicio de 2026.",
-          "estado": "hecho",
-          "fecha": "2026-11-04",
-          "tema": "Salud",
-          "fuente_url": "https://parlamento.gub.uy/noticiasyeventos/noticias/senadores/982810"
         }
       ],
       "verificado": true

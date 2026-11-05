@@ -122,9 +122,10 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - [ ] T15 — APK Android (WebView, actualización por internet) · criterio: instala, abre la app y detecta versión nueva.
 - [ ] T16 — Correo real por SMTP y verificación de dominio del cargo · criterio: aviso enviado y enlace funcional desde el correo.
 - [ ] T17 — Carga de actividades desde fuentes oficiales (IMPO, Parlamento) · criterio: importación repetible sin duplicados.
-- [ ] T18 — Completar todos los senadores y diputados · criterio: 30 senadores + 99 diputados con cargo, partido, contacto oficial con fuente y actividades.
-  En curso: cuatro estudios en paralelo (senadores y diputados por rango A-F, G-O, P-Z). El importador
-  `importar_politicos.py` ya actualiza por slug sin duplicar.
+- [x] T18 — Completar todos los senadores y diputados · criterio: 30 senadores + 99 diputados con cargo, partido, contacto oficial con fuente y actividades.
+  Hecho: 99 diputados y los 30 senadores electos (27 en ejercicio + 3 que están en ministerios, con la
+  aclaración de que su banca la ejerce un suplente). Total 148 cargos. Contacto: 99/99 diputados y
+  27/28 senadores con correo institucional; sin teléfonos porque las fichas no los publican.
 - [ ] T19 — Biografía, familia, vínculos y amistades documentadas de cada legislador · criterio: cada dato con fuente y una línea de tiempo de su vida.
 - [ ] T20 — Transcripciones del Parlamento · criterio: sesiones del Senado y de Diputados descargadas, buscables y enlazadas al tema que tratan.
 - [ ] T21 — Línea de tiempo de noticias con contraste de datos · criterio: cada noticia con cifras comparables, causas y fuentes; sin afirmaciones sin respaldo.
