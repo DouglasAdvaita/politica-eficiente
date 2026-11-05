@@ -20,6 +20,10 @@ venv/
 # Respaldos y temporales
 *.bak
 *.bak*
+_prueba.db
+_prueba.db-*
+_*.py
+_*.ps1
 ~$*
 Thumbs.db
 desktop.ini

@@ -79,3 +79,11 @@ print("/admin", resp.status_code, len(resp.data))
 for r in ["/mapa?camara=Senadores", "/mapa?categoria=Salud", "/temas?tipo=ley&orden=urgencia"]:
     resp = c.get(r)
     print(r, resp.status_code, len(resp.data))
+
+# Limpieza: la base de prueba no queda en el proyecto.
+for sufijo in ("", "-journal", "-wal", "-shm"):
+    try:
+        os.remove(RUTA_PRUEBA + sufijo)
+    except OSError:
+        pass
+print("limpio")
