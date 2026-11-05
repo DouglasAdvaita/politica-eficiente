@@ -161,6 +161,10 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
   quede pisado por el punto.
 - Commit `b464186` subido a `origin/main`. Neon ya tiene los 63 registros. La ficha pública sigue
   con el código anterior: Render no tomó el commit en los primeros 25 minutos.
+- Administrador de la app: `admin@politicaeficiente.uy` era un buzón inventado. `cambiar_admin.py`
+  pasó el administrador al correo real del usuario (local: cuenta existente promovida y la genérica
+  degradada; Neon: cuenta genérica renombrada) y alineó la clave con `ADMIN_CLAVE`. Login verificado
+  en SQLite y en Postgres. El correo no se escribe en el repo: va por `ADMIN_EMAIL` en el entorno.
 
 ## Progreso
 - Sesión 1 (2026-11-04): esqueleto completo, datos de leyes, propuestas y cargos, mapa SVG, brecha,
