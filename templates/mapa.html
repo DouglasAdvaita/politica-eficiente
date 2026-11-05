@@ -5,7 +5,13 @@
 <div class="fila entre">
   <div>
     <h1>Mapa de líneas</h1>
-    <p class="suave">Cada línea es una relación: apoyo ciudadano, postura de un cargo o actividad declarada. El grosor dice cuánto pesa.</p>
+    <p class="suave">
+      {% if d.usuarios_total %}
+        Cada línea es una relación: apoyo ciudadano, postura de un cargo o actividad declarada. El grosor dice cuánto pesa.
+      {% else %}
+        Cada línea es una relación entre un cargo y un tema. El color y el trazo dicen qué tipo de vínculo es.
+      {% endif %}
+    </p>
   </div>
   <div class="chips">
     <a class="chip" href="{{ url_for('mapa') }}">Reiniciar filtros</a>
@@ -36,12 +42,18 @@
       <li><b style="color:var(--verde)">Verde:</b> el cargo se pronunció a favor del tema.</li>
       <li><b style="color:var(--rojo)">Rojo:</b> el cargo se pronunció en contra.</li>
       <li><b style="color:var(--ambar)">Ámbar punteado:</b> tiene actividad declarada en esa categoría, sin postura explícita.</li>
-      <li><b style="color:var(--neon)">Grosor ciudadano:</b> cuánto apoya ese grupo el tema (100% del grupo = línea máxima) y cuántas personas lo integran.</li>
+      {% if d.usuarios_total %}
+        <li><b style="color:var(--neon)">Grosor ciudadano:</b> cuánto apoya ese grupo el tema (100% del grupo = línea máxima) y cuántas personas lo integran.</li>
+      {% endif %}
       <li>Los cargos se agrupan por cámara; los temas, por apoyo ciudadano.</li>
     </ul>
-    <p class="chico suave">Datos de demostración: {{ d.usuarios_total }} cuentas de ciudadanía, {{ d.temas|length }} temas y {{ d.politicos|length }} cargos en pantalla.</p>
+    {% if d.usuarios_total %}
+      <p class="chico suave">{{ d.usuarios_total }} cuentas, {{ d.temas|length }} temas y {{ d.politicos|length }} cargos en pantalla.</p>
+    {% endif %}
   </div>
 
+  {% set con_votos = brecha|selectattr("votos")|list %}
+  {% if con_votos %}
   <div class="panel">
     <h2>📊 Brecha de prioridades</h2>
     <p class="suave chico">Verde = % de votos ciudadanos en esa categoría. Rosa = % de actividades de los cargos. Si la verde es mucho más larga, eso se está descuidando.</p>
@@ -59,10 +71,9 @@
             {% else %}<span class="etiqueta verde">parejo</span>{% endif %}
           </span>
         </div>
-      {% else %}
-        <p class="suave chico">Sin datos suficientes todavía.</p>
       {% endfor %}
     </div>
   </div>
+  {% endif %}
 </section>
 {% endblock %}

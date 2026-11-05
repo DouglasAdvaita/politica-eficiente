@@ -159,7 +159,6 @@ def svg(d):
         f'<rect width="{ANCHO}" height="{altura}" fill="url(#fondo)"/>',
         f'<text x="{X_TEMAS}" y="50" fill="#8fb8ff" font-size="14" font-weight="700" letter-spacing="1.5">TEMAS QUE PREOCUPAN</text>',
         f'<text x="{X_POL}" y="50" fill="#ffb4d1" font-size="14" font-weight="700" letter-spacing="1.5">CARGOS PÚBLICOS</text>',
-        f'<text x="410" y="{y_usuarios - 16}" fill="#63f5c8" font-size="12" font-weight="700" letter-spacing="1.2">CIUDADANÍA POR GRUPO</text>',
     ]
 
     pos_y = {}
@@ -232,6 +231,10 @@ def svg(d):
 
     lineas_usuario = []
     if grupos:
+        piezas.append(
+            f'<text x="410" y="{y_usuarios - 16}" fill="#63f5c8" font-size="12" '
+            f'font-weight="700" letter-spacing="1.2">CIUDADANÍA POR GRUPO</text>'
+        )
         ancho_grupo = 90
         gap = 8
         total_ancho = len(grupos) * ancho_grupo + (len(grupos) - 1) * gap
@@ -262,13 +265,19 @@ def svg(d):
 
     piezas.extend(lineas_usuario)
     piezas.extend(lineas)
-    piezas.append(
-        f'<g class="leyenda"><text x="{X_TEMAS}" y="{altura - 20}" fill="#8fb8ff" font-size="10.5">'
+    leyenda = (
         f'<tspan fill="#39ff88">━</tspan> cargo a favor   '
         f'<tspan fill="#ff3b6b">━</tspan> cargo en contra   '
-        f'<tspan fill="#ffb84c">┅</tspan> actividad declarada   '
-        f'<tspan fill="#63f5c8">━</tspan> apoyo ciudadano (grosor = % del grupo)'
-        f'</text></g>'
+        f'<tspan fill="#ffb84c">┅</tspan> actividad declarada'
+    )
+    if grupos:
+        leyenda += (
+            '   <tspan fill="#63f5c8">━</tspan> apoyo ciudadano '
+            '(grosor = % del grupo)'
+        )
+    piezas.append(
+        f'<g class="leyenda"><text x="{X_TEMAS}" y="{altura - 20}" fill="#8fb8ff" '
+        f'font-size="10.5">{leyenda}</text></g>'
     )
     piezas.append("</svg>")
     return "".join(piezas)

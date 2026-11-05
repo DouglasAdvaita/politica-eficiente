@@ -76,6 +76,7 @@
 </section>
 
 <section style="margin-top:28px" class="grid">
+  {% if brecha|selectattr("votos")|list %}
   <div class="panel">
     <h2>📊 Qué preocupa y qué se atiende</h2>
     <p class="suave chico">Porcentaje de votos ciudadanos contra porcentaje de actividades declaradas por los cargos.</p>
@@ -91,12 +92,11 @@
             {% if f.brecha > 0 %}{{ f.brecha|round(0)|int }} pts de brecha{% else %}equilibrado{% endif %}
           </span>
         </div>
-      {% else %}
-        <p class="suave chico">Cuando haya votos y actividades vas a ver la brecha acá.</p>
       {% endfor %}
     </div>
     <a class="chip" style="margin-top:14px" href="{{ url_for('mapa') }}">Ver el mapa completo →</a>
   </div>
+  {% endif %}
 
   <div class="panel">
     <h2>🏛️ Lo último que hicieron los cargos</h2>

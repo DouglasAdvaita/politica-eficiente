@@ -34,6 +34,11 @@ tema, ver la actividad de cada cargo y medir el desvío.
 - Mismo camino que RAVE: git, Render (gunicorn + `render.yaml`), estética neón, APK después.
 - SQL con `?` traducido a `%s`: el mismo esquema corre en SQLite y Postgres/Neon.
 - Sin datos personales inventados. Todo contacto lleva fuente y marca de verificación.
+- **Sin datos ficticios en pantalla.** Si no hay usuarios, votos o noticias, la sección no se muestra;
+  no se dibujan líneas de ejemplo ni se explica por qué falta.
+- **Neutralidad editorial.** Una afirmación controvertida se muestra como afirmación, con su fuente y
+  con la posición contraria si existe. Nunca se publica como hecho establecido algo que no está
+  verificado (por ejemplo, "proliferación de denuncias falsas" u "operación de inteligencia").
 - La app **no es vinculante**: informa, ordena y compara; no reemplaza ningún órgano del Estado.
 
 ## Diseño UX/UI (estudio)
@@ -112,6 +117,12 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - [ ] T15 — APK Android (WebView, actualización por internet) · criterio: instala, abre la app y detecta versión nueva.
 - [ ] T16 — Correo real por SMTP y verificación de dominio del cargo · criterio: aviso enviado y enlace funcional desde el correo.
 - [ ] T17 — Carga de actividades desde fuentes oficiales (IMPO, Parlamento) · criterio: importación repetible sin duplicados.
+- [ ] T18 — Completar todos los senadores y diputados · criterio: 30 senadores + 99 diputados con cargo, partido, contacto oficial con fuente y actividades.
+- [ ] T19 — Biografía, familia, vínculos y amistades documentadas de cada legislador · criterio: cada dato con fuente y una línea de tiempo de su vida.
+- [ ] T20 — Transcripciones del Parlamento · criterio: sesiones del Senado y de Diputados descargadas, buscables y enlazadas al tema que tratan.
+- [ ] T21 — Línea de tiempo de noticias con contraste de datos · criterio: cada noticia con cifras comparables, causas y fuentes; sin afirmaciones sin respaldo.
+- [ ] T22 — Contexto y preguntas abiertas por tema · criterio: cada propuesta explica cómo se llegó a la situación y plantea 2 a 4 preguntas que el ciudadano debe poder responder.
+- [ ] T23 — Glosario con ventanas emergentes · criterio: palabras difíciles (subsidio, derogar, sanción, presunción de inocencia) con explicación simple al pasar el mouse o tocar.
 
 ## Evidencia
 - `python probar_app.py` → `/`, `/temas`, `/mapa`, `/politicos`, `/registro`, `/ingresar`, `/salud`,
@@ -125,7 +136,12 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 ## Progreso
 - Sesión 1 (2026-11-04): esqueleto completo, datos de leyes, propuestas y cargos, mapa SVG, brecha,
   desempeño con confianza por cantidad de datos, vínculo por correo, UX/UI aplicada y revisada en pantalla.
-  Falta el primer commit (T12) y el despliegue (T13).
+  Repo público y base Neon `politica_eficiente` sembrada.
+- Sesión 2 (2026-11-05): app probada contra Postgres, una conexión por pedido, `/salud` en postgres.
+  Se quitaron todos los datos de demostración de la interfaz: sin usuarios ni votos, el mapa no dibuja
+  sección ciudadana ni brecha. Se agregaron T18 a T23 (legisladores completos, biografías, transcripciones,
+  noticias con contraste, preguntas abiertas y glosario). Falta el servicio de Render.
 
 ## Próximo paso
-Primer commit local, después repo remoto y despliegue en Render con Neon.
+Crear el servicio en Render (pestaña abierta, falta el ingreso del usuario), verificar `/salud` público
+y arrancar T18 con el padrón completo de legisladores.
