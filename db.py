@@ -175,10 +175,43 @@ CREATE TABLE IF NOT EXISTS config (
     descripcion TEXT NOT NULL DEFAULT ''
 );
 
+CREATE TABLE IF NOT EXISTS biografias (
+    id {AUTO},
+    politico_id INTEGER UNIQUE NOT NULL,
+    resumen TEXT NOT NULL DEFAULT '',
+    nacimiento_fecha TEXT NOT NULL DEFAULT '',
+    nacimiento_lugar TEXT NOT NULL DEFAULT '',
+    profesion TEXT NOT NULL DEFAULT '',
+    formacion TEXT NOT NULL DEFAULT '',
+    fuente_url TEXT,
+    origen TEXT NOT NULL DEFAULT 'wikipedia',
+    actualizado TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS hitos (
+    id {AUTO},
+    politico_id INTEGER NOT NULL,
+    anio INTEGER,
+    texto TEXT NOT NULL,
+    fuente_url TEXT,
+    creado TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS vinculos (
+    id {AUTO},
+    politico_id INTEGER NOT NULL,
+    tipo TEXT NOT NULL DEFAULT 'familiar',
+    descripcion TEXT NOT NULL,
+    fuente_url TEXT,
+    creado TEXT NOT NULL
+);
+
 CREATE INDEX IF NOT EXISTS idx_votos_tema ON votos (tema_id);
 CREATE INDEX IF NOT EXISTS idx_acciones_pol ON acciones (politico_id);
 CREATE INDEX IF NOT EXISTS idx_opiniones_tema ON opiniones (tema_id);
 CREATE INDEX IF NOT EXISTS idx_actividad_usuario ON actividad (usuario_id);
+CREATE INDEX IF NOT EXISTS idx_hitos_pol ON hitos (politico_id);
+CREATE INDEX IF NOT EXISTS idx_vinculos_pol ON vinculos (politico_id);
 """
 
 
@@ -432,6 +465,49 @@ def _cargar_flujos(db):
         )
 
 
+def _cargar_biografias(db):
+    """Carga el JSON de biografias. Idempotente por slug."""
+    datos = _leer("biografias.json") or {}
+    total = hitos = vinculos = 0
+    for b in datos.get("legisladores") or []:
+        fila = db.uno("SELECT id FROM politicos WHERE slug = ?", (b.get("slug"),))
+        if not fila:
+            continue
+        db.ejecutar(
+            """INSERT INTO biografias (politico_id, resumen, nacimiento_fecha,
+                   nacimiento_lugar, profesion, formacion, fuente_url, origen, actualizado)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+               ON CONFLICT (politico_id) DO UPDATE SET
+                   resumen = ?, nacimiento_fecha = ?, nacimiento_lugar = ?,
+                   profesion = ?, formacion = ?, fuente_url = ?, origen = ?, actualizado = ?""",
+            (
+                fila["id"], b.get("resumen") or "", b.get("nacimiento_fecha") or "",
+                b.get("nacimiento_lugar") or "", b.get("profesion") or "",
+                b.get("formacion") or "", b.get("url"), "wikipedia", ahora(),
+                b.get("resumen") or "", b.get("nacimiento_fecha") or "",
+                b.get("nacimiento_lugar") or "", b.get("profesion") or "",
+                b.get("formacion") or "", b.get("url"), "wikipedia", ahora(),
+            ),
+        )
+        db.ejecutar("DELETE FROM hitos WHERE politico_id = ?", (fila["id"],))
+        for h in b.get("hitos") or []:
+            db.ejecutar(
+                "INSERT INTO hitos (politico_id, anio, texto, fuente_url, creado) VALUES (?, ?, ?, ?, ?)",
+                (fila["id"], h.get("anio"), h.get("texto") or "", b.get("url"), ahora()),
+            )
+            hitos += 1
+        db.ejecutar("DELETE FROM vinculos WHERE politico_id = ?", (fila["id"],))
+        for v in b.get("vinculos") or []:
+            db.ejecutar(
+                "INSERT INTO vinculos (politico_id, tipo, descripcion, fuente_url, creado) VALUES (?, ?, ?, ?, ?)",
+                (fila["id"], v.get("tipo") or "familiar", v.get("descripcion") or "",
+                 b.get("url"), ahora()),
+            )
+            vinculos += 1
+        total += 1
+    return {"biografias": total, "hitos": hitos, "vinculos": vinculos}
+
+
 def clave_admin():
     ruta = os.path.join(BASE, "datos", "clave_admin.txt")
     if os.environ.get("ADMIN_CLAVE"):
@@ -456,6 +532,8 @@ def sembrar():
             _cargar_politicos(db)
         if not db.valor("SELECT COUNT(*) FROM flujos"):
             _cargar_flujos(db)
+        if not db.valor("SELECT COUNT(*) FROM biografias"):
+            _cargar_biografias(db)
         if not db.valor("SELECT COUNT(*) FROM usuarios"):
             from werkzeug.security import generate_password_hash
 

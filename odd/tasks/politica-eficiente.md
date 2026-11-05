@@ -128,13 +128,14 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
   Hecho: 99 diputados y los 30 senadores electos (27 en ejercicio + 3 que están en ministerios, con la
   aclaración de que su banca la ejerce un suplente). Total 148 cargos. Contacto: 99/99 diputados y
   27/28 senadores con correo institucional; sin teléfonos porque las fichas no los publican.
-- [ ] T19 — Biografía, familia, vínculos y amistades documentadas de cada legislador · criterio: cada dato con fuente y una línea de tiempo de su vida.
+- [ ] T19 — Biografía, familia, vínculos y amistades documentadas de cada legislador · criterio: cada dato con fuente y una línea de tiempo de su vida; si no hay artículo enciclopédico, la biografía se arma con las noticias de lo que impulsó, votó o protagonizó, cada hecho con fecha y enlace. (En curso: 63 de 127 con Wikipedia, 435 hitos y 82 vínculos; faltan 64 por noticias.)
 - [ ] T20 — Transcripciones del Parlamento · criterio: sesiones del Senado y de Diputados descargadas, buscables y enlazadas al tema que tratan.
 - [ ] T21 — Línea de tiempo de noticias con contraste de datos · criterio: cada noticia con cifras comparables, causas y fuentes; sin afirmaciones sin respaldo.
 - [ ] T24 — Comparador de muertes y volumen en redes · criterio: feminicidios, homicidios, siniestros y suicidios en la misma escala y período, y conteo de menciones por tema en redes con fecha y método.
 - [x] T25 — Flujos de capital del Estado · criterio: Sankey con ingresos y gastos en % del PIB, panel de claves y comparación por país. (25 flujos, 24 comparaciones, 4 países)
 - [ ] T22 — Contexto y preguntas abiertas por tema · criterio: cada propuesta explica cómo se llegó a la situación y plantea 2 a 4 preguntas que el ciudadano debe poder responder.
 - [ ] T23 — Glosario con ventanas emergentes · criterio: palabras difíciles (subsidio, derogar, sanción, presunción de inocencia) con explicación simple al pasar el mouse o tocar.
+- [ ] T26 — Comparador visual de actividad e iniciativas · criterio: comparar acciones importantes y no importantes de cada cargo, y la evolución de una iniciativa o tema en el tiempo, con la misma escala y la fuente de cada hecho.
 
 ## Evidencia
 - `python probar_app.py` → `/`, `/temas`, `/mapa`, `/politicos`, `/registro`, `/ingresar`, `/salud`,
@@ -149,6 +150,15 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - T18: **99 diputados** cargados (96 + 3 faltantes detectados por auditoría), todos con correo
   institucional y fuente. Los cargos del Ejecutivo mandan sobre la banca: quien asume un ministerio
   queda con ese cargo y no se duplica como legislador.
+- T19: `traer_biografias.py` busca el artículo, valida identidad (dos apellidos, nombre de pila y
+  mención de Uruguay) y rechaza homónimos; `importar_biografias.py` carga sin duplicar. Resultado:
+  **63 biografías, 435 hitos y 82 vínculos**; 59 en fichas de legisladores y 4 en cargos del
+  Ejecutivo. Los artículos se guardan en `datos/cache_wikipedia/` (fuera de git).
+- Neon: consulta directa confirma 63 biografías, 435 hitos y 82 vínculos, con el enlace de fuente
+  de cada ficha.
+- Ficha de Pablo Abdala revisada en pantalla (captura 1200 px): resumen, nacimiento, profesión,
+  familia, línea de tiempo y nota de fuente secundaria. Se corrigió la línea para que el año no
+  quede pisado por el punto.
 
 ## Progreso
 - Sesión 1 (2026-11-04): esqueleto completo, datos de leyes, propuestas y cargos, mapa SVG, brecha,
@@ -159,7 +169,11 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
   sección ciudadana ni brecha. Se agregaron T18 a T24. Falta el servicio de Render.
 - Sesión 3 (2026-11-05): login de Render completado y formulario del Blueprint abierto (nombre y rama
   cargados). T18 en curso con cuatro estudios en paralelo e importador idempotente listo.
+- Sesión 4 (2026-11-05): T19 con recolector de Wikipedia, validación de homónimos, tablas
+  `biografias`, `hitos` y `vinculos`, ficha con línea de tiempo y carga en Neon. Decisión del
+  usuario: las 64 fichas sin artículo se armarán con noticias (hechos, iniciativas, votos) y cada
+  hecho con fecha y enlace; queda pedido el comparador visual de actividad (T26).
 
 ## Próximo paso
-Crear el servicio en Render (pestaña abierta, falta el ingreso del usuario), verificar `/salud` público
-y arrancar T18 con el padrón completo de legisladores.
+Completar las 64 biografías sin artículo con noticias fechadas y enlazadas, y después T26
+(comparador visual de acciones e iniciativas).

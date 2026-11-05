@@ -42,6 +42,66 @@
   {% endif %}
 </article>
 
+{% if bio %}
+<section class="panel" style="margin-top:18px">
+  <div class="fila entre" style="align-items:flex-start">
+    <h2 style="margin:0">🧬 Biografía</h2>
+    <span class="etiqueta">fuente secundaria</span>
+  </div>
+  {% if bio.resumen %}<p>{{ bio.resumen }}</p>{% endif %}
+
+  <div class="datos-bio">
+    {% if bio.nacimiento_fecha or bio.nacimiento_lugar %}
+      <div><span>Nacimiento</span>
+        <b>{{ bio.nacimiento_fecha or 'fecha sin dato' }}{% if bio.nacimiento_lugar %} · {{ bio.nacimiento_lugar }}{% endif %}</b>
+      </div>
+    {% endif %}
+    {% if bio.profesion %}<div><span>Profesión</span><b>{{ bio.profesion }}</b></div>{% endif %}
+    {% if bio.formacion %}<div><span>Formación</span><b>{{ bio.formacion }}</b></div>{% endif %}
+  </div>
+
+  {% if vinculos %}
+    <h4 style="margin:18px 0 6px">Familia y vínculos documentados</h4>
+    {% for v in vinculos %}
+      <div class="vinculo">
+        <span class="etiqueta {% if v.tipo == 'familiar' %}ambar{% endif %}">
+          {% if v.tipo == 'familiar' %}familia{% else %}vínculo{% endif %}
+        </span>
+        <span>{{ v.descripcion }}</span>
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  {% if hitos %}
+    <h4 style="margin:18px 0 6px">Línea de tiempo de su vida</h4>
+    <ol class="linea-tiempo">
+      {% for h in hitos %}
+        <li>
+          <span class="anio">{{ h.anio or 's/f' }}</span>
+          <p>{{ h.texto }}</p>
+        </li>
+      {% endfor %}
+    </ol>
+  {% else %}
+    <p class="suave chico" style="margin-top:14px">La fuente no trae fechas suficientes para armar la línea de tiempo.</p>
+  {% endif %}
+
+  {% if bio.fuente_url %}
+    <p class="chico suave" style="margin-top:12px">
+      Fuente de esta biografía y de su línea de tiempo:
+      <a href="{{ bio.fuente_url }}" target="_blank" rel="noopener">Wikipedia en español ↗</a>
+      (CC BY-SA 4.0). Es una enciclopedia abierta: cada dato se puede contrastar en el enlace
+      y en los registros del Parlamento.
+    </p>
+  {% endif %}
+</section>
+{% else %}
+<section class="panel" style="margin-top:18px">
+  <h2>🧬 Biografía</h2>
+  <p class="suave chico">Todavía no hay biografía con fuente para este cargo. Se completa solo con datos publicados y su enlace, nunca con suposiciones.</p>
+</section>
+{% endif %}
+
 <section class="panel" style="margin-top:18px">
   <h2>📈 Desempeño medido en la app</h2>
   {% if rendimiento.puntaje is not none %}

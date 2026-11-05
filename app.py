@@ -360,7 +360,8 @@ def politicos():
     with dbm.abrir() as db:
         filas = db.todos(
             f"""SELECT p.*, (SELECT COUNT(*) FROM acciones a WHERE a.politico_id = p.id) AS n_acciones,
-                       (SELECT COUNT(*) FROM posiciones po WHERE po.politico_id = p.id) AS n_posiciones
+                       (SELECT COUNT(*) FROM posiciones po WHERE po.politico_id = p.id) AS n_posiciones,
+                       (SELECT COUNT(*) FROM biografias b WHERE b.politico_id = p.id) AS n_bio
                 FROM politicos p {filtro}
                 ORDER BY CASE camara WHEN 'Poder Ejecutivo' THEN 0 WHEN 'Senadores' THEN 1
                          WHEN 'Diputados' THEN 2 WHEN 'Intendencias' THEN 3 ELSE 4 END, nombre""",
@@ -400,9 +401,20 @@ def politico(slug):
                 (p["id"], yo["id"]),
             )
         rendimiento = desempeno.de_politico(db, p["id"])
+        bio = db.uno("SELECT * FROM biografias WHERE politico_id = ?", (p["id"],))
+        hitos = db.todos(
+            """SELECT * FROM hitos WHERE politico_id = ?
+               ORDER BY anio, id""",
+            (p["id"],),
+        )
+        vinculos = db.todos(
+            "SELECT * FROM vinculos WHERE politico_id = ? ORDER BY tipo, id",
+            (p["id"],),
+        )
     return render_template(
         "politico.html", p=p, acciones=acciones, posiciones=posiciones,
         cuenta=cuenta, mi_solicitud=mi_solicitud, rendimiento=rendimiento,
+        bio=bio, hitos=hitos, vinculos=vinculos,
     )
 
 

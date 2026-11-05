@@ -36,6 +36,19 @@ if pol:
     resp = c.get(f"/politico/{pol['slug']}")
     print("politico", resp.status_code, len(resp.data))
 
+with dbm.abrir() as db:
+    con_bio = db.uno(
+        """SELECT p.slug FROM politicos p JOIN biografias b ON b.politico_id = p.id
+           WHERE EXISTS (SELECT 1 FROM hitos h WHERE h.politico_id = p.id) LIMIT 1"""
+    )
+    total_bio = db.valor("SELECT COUNT(*) FROM biografias")
+if con_bio:
+    resp = c.get(f"/politico/{con_bio['slug']}")
+    html = resp.get_data(as_text=True)
+    print("/politico con biografia", resp.status_code,
+          "Biografía" in html, "Línea de tiempo" in html, "Wikipedia" in html)
+print("biografias en base", total_bio)
+
 resp = c.post("/registro", data={
     "nombre": "Prueba Ciudadana", "email": "prueba@ejemplo.uy",
     "clave": "clave12345", "departamento": "Montevideo",

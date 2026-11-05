@@ -191,6 +191,20 @@ textarea { min-height: 96px; resize: vertical; }
 .actividad:last-child { border-bottom: 0; }
 .actividad .fecha { flex: 0 0 74px; font-size: .78rem; color: var(--suave); padding-top: 2px; }
 
+/* ---------- biografía y línea de tiempo ---------- */
+.datos-bio { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-top: 12px; }
+.datos-bio > div { background: #0a1424; border: 1px solid var(--borde); border-radius: 10px; padding: 9px 12px; }
+.datos-bio span { display: block; font-size: .74rem; letter-spacing: .6px; text-transform: uppercase; color: var(--suave); }
+.datos-bio b { font-size: .93rem; font-weight: 600; }
+.vinculo { display: flex; gap: 9px; align-items: flex-start; padding: 6px 0; border-bottom: 1px solid rgba(34, 55, 92, .45); font-size: .9rem; }
+.vinculo:last-child { border-bottom: 0; }
+.linea-tiempo { list-style: none; margin: 0; padding: 0 0 0 4px; position: relative; }
+.linea-tiempo::before { content: ""; position: absolute; left: 63px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(180deg, rgba(99,245,200,.55), rgba(34,55,92,.2)); }
+.linea-tiempo li { display: flex; gap: 30px; padding: 7px 0; position: relative; }
+.linea-tiempo .anio { flex: 0 0 46px; text-align: right; font-weight: 700; font-size: .85rem; color: var(--neon); position: relative; z-index: 1; }
+.linea-tiempo li::before { content: ""; position: absolute; left: 54px; top: 14px; width: 10px; height: 10px; border-radius: 50%; background: var(--panel); border: 2px solid var(--neon); z-index: 2; }
+.linea-tiempo p { margin: 0; font-size: .9rem; color: var(--texto); }
+
 /* ---------- mapa ---------- */
 .mapa-caja { overflow-x: auto; border: 1px solid var(--borde); border-radius: var(--radio); background: #070c18; }
 .mapa-svg { display: block; width: 100%; min-width: 1080px; height: auto; }

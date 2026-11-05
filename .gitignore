@@ -31,3 +31,7 @@ desktop.ini
 
 # Publicador local
 /PUBLICAR.cmd
+
+# Cotilleo de datos: cache de articulos para no repetir descargas
+/datos/cache_wikipedia/
+/datos/biografias_recoleccion.log

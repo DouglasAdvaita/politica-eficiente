@@ -35,6 +35,7 @@
       <div class="meta">
         <span>📌 {{ p.n_acciones }} actividad{% if p.n_acciones != 1 %}es{% endif %}</span>
         <span>🗳️ {{ p.n_posiciones }} postura{% if p.n_posiciones != 1 %}s{% endif %}</span>
+        {% if p.n_bio %}<span class="etiqueta">📖 biografía</span>{% endif %}
         {% if p.usuario_id %}<span class="etiqueta verde">cuenta verificada</span>{% endif %}
         {% if not p.verificado %}<span class="etiqueta ambar">sin verificar</span>{% endif %}
         {% if p.desempeno and p.desempeno.puntaje is not none %}
