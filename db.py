@@ -407,7 +407,8 @@ def sembrar():
             email = os.environ.get("ADMIN_EMAIL") or "admin@politicaeficiente.uy"
             db.ejecutar(
                 """INSERT INTO usuarios (email, nombre, clave_hash, rol, puntos, creado)
-                   VALUES (?, ?, ?, 'admin', 0, ?)""",
+                   VALUES (?, ?, ?, 'admin', 0, ?)
+                   ON CONFLICT (email) DO NOTHING""",
                 (email, "Administración", generate_password_hash(clave_admin()), ahora()),
             )
         import desempeno
