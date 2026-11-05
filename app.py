@@ -16,6 +16,7 @@ from markupsafe import Markup
 import auth
 import db as dbm
 import desempeno
+import flujos as flujosmod
 import gamificacion
 import mapa as mapamod
 
@@ -583,6 +584,20 @@ def admin_solicitud(sid, accion):
             )
             flash("Solicitud rechazada.", "ok")
     return redirect(url_for("admin"))
+
+
+@app.route("/flujos")
+def flujos():
+    anio = request.args.get("anio")
+    anio = int(anio) if (anio or "").isdigit() else None
+    with dbm.abrir() as db:
+        d = flujosmod.datos(db, anio=anio)
+        cl = flujosmod.claves(d)
+        comparacion = d["comparacion"]
+    dibujo = Markup(flujosmod.svg(d)) if d["hay_datos"] else ""
+    return render_template(
+        "flujos.html", d=d, dibujo=dibujo, claves=cl, comparacion=comparacion
+    )
 
 
 @app.route("/salud")

@@ -130,6 +130,7 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - [ ] T20 — Transcripciones del Parlamento · criterio: sesiones del Senado y de Diputados descargadas, buscables y enlazadas al tema que tratan.
 - [ ] T21 — Línea de tiempo de noticias con contraste de datos · criterio: cada noticia con cifras comparables, causas y fuentes; sin afirmaciones sin respaldo.
 - [ ] T24 — Comparador de muertes y volumen en redes · criterio: feminicidios, homicidios, siniestros y suicidios en la misma escala y período, y conteo de menciones por tema en redes con fecha y método.
+- [x] T25 — Flujos de capital del Estado · criterio: Sankey con ingresos y gastos en % del PIB, panel de claves y comparación por país. (25 flujos, 24 comparaciones, 4 países)
 - [ ] T22 — Contexto y preguntas abiertas por tema · criterio: cada propuesta explica cómo se llegó a la situación y plantea 2 a 4 preguntas que el ciudadano debe poder responder.
 - [ ] T23 — Glosario con ventanas emergentes · criterio: palabras difíciles (subsidio, derogar, sanción, presunción de inocencia) con explicación simple al pasar el mouse o tocar.
 

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block titulo %}Flujos de capital · Política Eficiente{% endblock %}
+{% block ancho %}ancho{% endblock %}
+{% block cuerpo %}
+<div class="fila entre">
+  <div>
+    <h1>Flujo del dinero público</h1>
+    <p class="suave">De dónde viene el dinero del Estado, a dónde va y qué proporción queda en sueldos, en infraestructura y en transferencias. Con fuente y en una sola vista.</p>
+  </div>
+</div>
+
+{% if d.anios %}
+<div class="chips" style="margin:16px 0">
+  {% for a in d.anios %}
+    <a class="chip {% if a == d.anio %}activo{% endif %}" href="{{ url_for('flujos', anio=a) }}">{{ a }}</a>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if d.hay_datos %}
+  <div class="mapa-caja">{{ dibujo }}</div>
+
+  <section class="grid" style="margin-top:20px">
+    <div class="panel">
+      <h2>🧭 Cómo leerlo</h2>
+      <ul class="suave chico" style="line-height:1.8">
+        <li><b style="color:var(--azul)">Ingresos (izquierda):</b> impuestos y aportes que entran al Tesoro.</li>
+        <li><b style="color:var(--neon)">Estado (centro):</b> el Tesoro Nacional, que recibe y redistribuye.</li>
+        <li><b style="color:var(--rosa)">Gastos (derecha):</b> en qué se usa el dinero.</li>
+        <li>El grosor de cada banda es proporcional al monto. Los montos están en millones de pesos uruguayos o en % del PIB.</li>
+        <li>Cada barra tiene su fuente al pasar el mouse.</li>
+      </ul>
+      {% if d.usuarios_total %}{% endif %}
+    </div>
+
+    <div class="panel">
+      <h2>🔑 Claves</h2>
+      <div class="contadores" style="margin-top:10px">
+        <div class="dato"><b>{{ '{:,.0f}'.format(claves.total_i).replace(',', '.') }}</b><span>ingresos (% del PIB)</span></div>
+        <div class="dato"><b>{{ '{:,.0f}'.format(claves.total_g).replace(',', '.') }}</b><span>gastos (% del PIB)</span></div>
+        {% if claves.ratio_sueldos_infra %}
+          <div class="dato"><b>{{ claves.ratio_sueldos_infra|round(1) }}x</b><span>sueldos vs infraestructura</span></div>
+        {% endif %}
+      </div>
+      <h3 style="margin-top:16px">Mayor ingreso</h3>
+      {% for f in claves.top_ingresos %}
+        <div class="fila entre chico" style="padding:4px 0"><span>{{ f.emoji }} {{ f.nombre }}</span><span class="suave">{{ f.monto|round(0)|int }} M</span></div>
+      {% endfor %}
+      <h3 style="margin-top:12px">Mayor gasto</h3>
+      {% for f in claves.top_gastos %}
+        <div class="fila entre chico" style="padding:4px 0"><span>{{ f.emoji }} {{ f.nombre }}</span><span class="suave">{{ f.monto|round(0)|int }} M</span></div>
+      {% endfor %}
+      {% if claves.ratio_sueldos_infra and claves.ratio_sueldos_infra > 3 %}
+        <p class="chico" style="color:var(--ambar);margin-top:12px">⚠️ Los sueldos públicos superan {{ claves.ratio_sueldos_infra|round(1) }} veces a la inversión en infraestructura. Esa es la principal tensión del presupuesto.</p>
+      {% endif %}
+    </div>
+  </section>
+
+  {% if comparacion %}
+  <section class="panel" style="margin-top:20px">
+    <h2>🌍 Comparación con países de referencia (% del PIB)</h2>
+    <p class="suave chico">Mismo rubro, misma unidad, para ver dónde está Uruguay frente a otros.</p>
+    <div style="overflow-x:auto;margin-top:12px">
+      <table>
+        <thead><tr><th>País</th><th>Rubro</th><th>% del PIB</th></tr></thead>
+        <tbody>
+          {% for f in comparacion %}
+            <tr>
+              <td>{{ f.pais }}</td>
+              <td>{{ f.emoji }} {{ f.nombre }}</td>
+              <td>{{ f.monto }}%</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  {% endif %}
+{% else %}
+  <div class="panel centro" style="padding:50px 20px;margin-top:20px">
+    <div style="font-size:3rem">💰</div>
+    <h2>Sin datos de flujos todavía</h2>
+    <p class="suave">Cuando haya cifras oficiales cargadas (Presupuesto Nacional, Rendición de Cuentas, MEF) vas a ver el flujo acá, sin números inventados.</p>
+  </div>
+{% endif %}
+{% endblock %}

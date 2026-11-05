@@ -153,6 +153,22 @@ CREATE TABLE IF NOT EXISTS avisos (
     creado TEXT NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS flujos (
+    id {AUTO},
+    slug TEXT UNIQUE NOT NULL,
+    nombre TEXT NOT NULL,
+    tipo TEXT NOT NULL DEFAULT 'ingreso',
+    categoria TEXT NOT NULL DEFAULT 'Otros',
+    emoji TEXT NOT NULL DEFAULT '💰',
+    monto REAL NOT NULL DEFAULT 0,
+    unidad TEXT NOT NULL DEFAULT 'uyu_m',
+    pais TEXT NOT NULL DEFAULT 'UY',
+    anio INTEGER,
+    fuente_url TEXT,
+    verificado SMALLINT NOT NULL DEFAULT 0,
+    creado TEXT NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS config (
     clave TEXT PRIMARY KEY,
     valor TEXT NOT NULL,
@@ -385,6 +401,37 @@ def _cargar_politicos_archivo(db, nombre):
             )
 
 
+def _cargar_flujos(db):
+    datos = _leer("flujos.json") or {}
+    for f in datos.get("flujos", []):
+        db.ejecutar(
+            """INSERT INTO flujos (slug, nombre, tipo, categoria, emoji, monto, unidad,
+                   pais, anio, fuente_url, verificado, creado)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+               ON CONFLICT (slug) DO NOTHING""",
+            (
+                f.get("slug"), f.get("nombre", ""), f.get("tipo", "ingreso"),
+                f.get("categoria", "Otros"), f.get("emoji", "💰"),
+                f.get("monto", 0), f.get("unidad", "uyu_m"), f.get("pais", "UY"),
+                f.get("anio"), f.get("fuente_url"),
+                1 if f.get("verificado") else 0, ahora(),
+            ),
+        )
+    for c in datos.get("comparacion", []):
+        slug = f"{(c.get('pais') or 'uy').lower()}-{(c.get('categoria') or 'otros').lower().replace(' ', '-')}"
+        db.ejecutar(
+            """INSERT INTO flujos (slug, nombre, tipo, categoria, emoji, monto, unidad,
+                   pais, anio, fuente_url, verificado, creado)
+               VALUES (?, ?, ?, ?, ?, ?, 'pct_pib', ?, ?, ?, 1, ?)
+               ON CONFLICT (slug) DO NOTHING""",
+            (
+                slug, c.get("categoria", ""), c.get("tipo", "gasto"),
+                c.get("categoria", "Otros"), "🌍", c.get("pct_pib", 0),
+                c.get("pais", "UY"), c.get("anio"), c.get("fuente_url"), ahora(),
+            ),
+        )
+
+
 def clave_admin():
     ruta = os.path.join(BASE, "datos", "clave_admin.txt")
     if os.environ.get("ADMIN_CLAVE"):
@@ -407,6 +454,8 @@ def sembrar():
             _cargar_temas(db)
         if not db.valor("SELECT COUNT(*) FROM politicos"):
             _cargar_politicos(db)
+        if not db.valor("SELECT COUNT(*) FROM flujos"):
+            _cargar_flujos(db)
         if not db.valor("SELECT COUNT(*) FROM usuarios"):
             from werkzeug.security import generate_password_hash
 
