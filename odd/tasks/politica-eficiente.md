@@ -36,9 +36,14 @@ tema, ver la actividad de cada cargo y medir el desvío.
 - Sin datos personales inventados. Todo contacto lleva fuente y marca de verificación.
 - **Sin datos ficticios en pantalla.** Si no hay usuarios, votos o noticias, la sección no se muestra;
   no se dibujan líneas de ejemplo ni se explica por qué falta.
-- **Neutralidad editorial.** Una afirmación controvertida se muestra como afirmación, con su fuente y
-  con la posición contraria si existe. Nunca se publica como hecho establecido algo que no está
-  verificado (por ejemplo, "proliferación de denuncias falsas" u "operación de inteligencia").
+- **Neutralidad editorial con contraste obligatorio.** Ninguna cifra se muestra sola: cada dato va con
+  su universo comparable (por ejemplo, muertes por feminicidio frente al total de homicidios, siniestros
+  de tránsito y suicidios del mismo período) y con la fuente de cada número.
+- Lo que no está en un registro oficial se muestra como **testimonio o tendencia de redes**, con fecha,
+  volumen y la aclaración de que no es una muestra representativa.
+- Una tesis discutida (denuncias falsas, injerencia extranjera, sesgo de una ley) puede aparecer siempre
+  que esté **atribuida** a quien la sostiene, con la evidencia disponible y la posición contraria. No se
+  presenta como hecho ni se le inventan cifras.
 - La app **no es vinculante**: informa, ordena y compara; no reemplaza ningún órgano del Estado.
 
 ## Diseño UX/UI (estudio)
@@ -121,6 +126,7 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - [ ] T19 — Biografía, familia, vínculos y amistades documentadas de cada legislador · criterio: cada dato con fuente y una línea de tiempo de su vida.
 - [ ] T20 — Transcripciones del Parlamento · criterio: sesiones del Senado y de Diputados descargadas, buscables y enlazadas al tema que tratan.
 - [ ] T21 — Línea de tiempo de noticias con contraste de datos · criterio: cada noticia con cifras comparables, causas y fuentes; sin afirmaciones sin respaldo.
+- [ ] T24 — Comparador de muertes y volumen en redes · criterio: feminicidios, homicidios, siniestros y suicidios en la misma escala y período, y conteo de menciones por tema en redes con fecha y método.
 - [ ] T22 — Contexto y preguntas abiertas por tema · criterio: cada propuesta explica cómo se llegó a la situación y plantea 2 a 4 preguntas que el ciudadano debe poder responder.
 - [ ] T23 — Glosario con ventanas emergentes · criterio: palabras difíciles (subsidio, derogar, sanción, presunción de inocencia) con explicación simple al pasar el mouse o tocar.
 
