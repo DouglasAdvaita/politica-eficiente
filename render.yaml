@@ -3,17 +3,20 @@ services:
     name: politica-eficiente
     env: python
     plan: free
+    region: ohio
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    startCommand: gunicorn app:app --workers 2 --timeout 60
+    healthCheckPath: /salud
+    autoDeploy: true
     envVars:
+      # sync: false = se carga a mano en el panel de Render y no queda en el repo.
       - key: DATABASE_URL
         sync: false
       - key: SECRET_KEY
         sync: false
-      - key: ADMIN_EMAIL
-        sync: false
       - key: ADMIN_CLAVE
         sync: false
+      # Opcional: sin SMTP, los avisos quedan guardados en la base y se ven en /admin
       - key: SMTP_HOST
         sync: false
       - key: SMTP_PORT

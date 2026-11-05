@@ -6,6 +6,8 @@
 politica.db
 politica.db-journal
 /datos/clave_admin.txt
+/datos/dsn_neon.txt
+/datos/valores_render.txt
 /datos/salida_correos/
 
 # Python

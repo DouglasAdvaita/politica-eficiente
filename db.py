@@ -6,9 +6,13 @@ DATABASE_URL. Los placeholders se escriben con '?' y se traducen a '%s'.
 import json
 import os
 import secrets
+import socket
 import sqlite3
 from contextlib import contextmanager
 from datetime import datetime, timezone
+from urllib.parse import urlparse
+
+from flask import g, has_app_context
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 RUTA_DB = os.environ.get("POLITICA_DB") or os.path.join(BASE, "politica.db")
@@ -166,13 +170,45 @@ def conectar():
     if ES_PG:
         import psycopg2
         import psycopg2.extras
-        c = psycopg2.connect(URL, cursor_factory=psycopg2.extras.RealDictCursor)
+        c = psycopg2.connect(
+            _url_postgres(),
+            cursor_factory=psycopg2.extras.RealDictCursor,
+            connect_timeout=15,
+            application_name="politica-eficiente",
+        )
         c.autocommit = False
         return c
     c = sqlite3.connect(RUTA_DB, timeout=15)
     c.row_factory = sqlite3.Row
     c.execute("PRAGMA foreign_keys = ON")
     return c
+
+
+_URL_PG = None
+
+
+def _url_postgres():
+    """En Windows fija la IP IPv4: la espera de IPv6 cuelga la conexión.
+
+    En Linux (Render) se usa la URL tal cual, que resuelve bien.
+    """
+    global _URL_PG
+    if _URL_PG:
+        return _URL_PG
+    url = URL
+    if os.name == "nt":
+        try:
+            partes = urlparse(url)
+            if partes.hostname and "hostaddr=" not in url:
+                infos = socket.getaddrinfo(
+                    partes.hostname, partes.port or 5432, socket.AF_INET, socket.SOCK_STREAM
+                )
+                ip = infos[0][4][0]
+                url = f"{url}{'&' if partes.query else '?'}hostaddr={ip}"
+        except Exception:
+            pass
+    _URL_PG = url
+    return url
 
 
 def _traducir(sql):
@@ -216,6 +252,18 @@ class DB:
 
 @contextmanager
 def abrir():
+    """Una conexion por pedido: clave para no agotar Neon."""
+    if has_app_context():
+        if "db" not in g:
+            g.db = DB()
+        db = g.db
+        try:
+            yield db
+            db.commit()
+        except Exception:
+            db.rollback()
+            raise
+        return
     db = DB()
     try:
         yield db
@@ -356,7 +404,7 @@ def sembrar():
         if not db.valor("SELECT COUNT(*) FROM usuarios"):
             from werkzeug.security import generate_password_hash
 
-            email = os.environ.get("ADMIN_EMAIL", "admin@politicaeficiente.uy")
+            email = os.environ.get("ADMIN_EMAIL") or "admin@politicaeficiente.uy"
             db.ejecutar(
                 """INSERT INTO usuarios (email, nombre, clave_hash, rol, puntos, creado)
                    VALUES (?, ?, ?, 'admin', 0, ?)""",

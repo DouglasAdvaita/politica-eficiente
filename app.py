@@ -9,7 +9,7 @@ import smtplib
 from email.message import EmailMessage
 
 from flask import (
-    Flask, abort, flash, redirect, render_template, request, session, url_for,
+    Flask, abort, flash, g, redirect, render_template, request, session, url_for,
 )
 from markupsafe import Markup
 
@@ -125,6 +125,13 @@ def cabeceras(resp):
     return resp
 
 
+@app.teardown_appcontext
+def cerrar_base(_excepcion=None):
+    conexion = g.pop("db", None)
+    if conexion is not None:
+        conexion.cerrar()
+
+
 def _slug_de_tema(slug):
     with dbm.abrir() as db:
         return db.uno("SELECT * FROM temas WHERE slug = ?", (slug,))
@@ -209,16 +216,18 @@ def temas():
     orden_sql = {
         "apoyo": "a_favor DESC, a_favor + en_contra DESC",
         "debate": "opiniones DESC, a_favor DESC",
-        "nuevos": "t.id DESC",
-        "urgencia": "CASE t.urgencia WHEN 'alta' THEN 0 WHEN 'media' THEN 1 ELSE 2 END",
+        "nuevos": "id DESC",
+        "urgencia": "CASE urgencia WHEN 'alta' THEN 0 WHEN 'media' THEN 1 ELSE 2 END",
     }.get(orden, "a_favor DESC")
     with dbm.abrir() as db:
         filas = db.todos(
-            f"""SELECT t.*,
-                   (SELECT COUNT(*) FROM votos v WHERE v.tema_id = t.id AND v.valor = 1) AS a_favor,
-                   (SELECT COUNT(*) FROM votos v WHERE v.tema_id = t.id AND v.valor = -1) AS en_contra,
-                   (SELECT COUNT(*) FROM opiniones o WHERE o.tema_id = t.id) AS opiniones
-                FROM temas t {filtro} ORDER BY {orden_sql}""",
+            f"""SELECT * FROM (
+                   SELECT t.*,
+                          (SELECT COUNT(*) FROM votos v WHERE v.tema_id = t.id AND v.valor = 1) AS a_favor,
+                          (SELECT COUNT(*) FROM votos v WHERE v.tema_id = t.id AND v.valor = -1) AS en_contra,
+                          (SELECT COUNT(*) FROM opiniones o WHERE o.tema_id = t.id) AS opiniones
+                   FROM temas t {filtro}
+                ) q ORDER BY {orden_sql}""",
             tuple(params),
         )
     return render_template(
