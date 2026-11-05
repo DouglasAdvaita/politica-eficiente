@@ -123,6 +123,8 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - [ ] T16 — Correo real por SMTP y verificación de dominio del cargo · criterio: aviso enviado y enlace funcional desde el correo.
 - [ ] T17 — Carga de actividades desde fuentes oficiales (IMPO, Parlamento) · criterio: importación repetible sin duplicados.
 - [ ] T18 — Completar todos los senadores y diputados · criterio: 30 senadores + 99 diputados con cargo, partido, contacto oficial con fuente y actividades.
+  En curso: cuatro estudios en paralelo (senadores y diputados por rango A-F, G-O, P-Z). El importador
+  `importar_politicos.py` ya actualiza por slug sin duplicar.
 - [ ] T19 — Biografía, familia, vínculos y amistades documentadas de cada legislador · criterio: cada dato con fuente y una línea de tiempo de su vida.
 - [ ] T20 — Transcripciones del Parlamento · criterio: sesiones del Senado y de Diputados descargadas, buscables y enlazadas al tema que tratan.
 - [ ] T21 — Línea de tiempo de noticias con contraste de datos · criterio: cada noticia con cifras comparables, causas y fuentes; sin afirmaciones sin respaldo.
@@ -138,6 +140,8 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - Base sembrada: 17 leyes + 18 propuestas (11 categorías), 30 cargos y 30 actividades.
 - Revisión visual en Firefox: portada, mapa (con 40 cuentas demo), ficha de cargo, listado y detalle de tema.
 - `demo.py crear` / `demo.py limpiar`: datos de demostración para ver el mapa con volumen.
+- `python importar_politicos.py` → 30 cargos actualizados sin duplicar (3 diputados, 3 intendentes,
+  8 organismos, 10 poder ejecutivo, 6 senadores).
 
 ## Progreso
 - Sesión 1 (2026-11-04): esqueleto completo, datos de leyes, propuestas y cargos, mapa SVG, brecha,
@@ -145,8 +149,9 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
   Repo público y base Neon `politica_eficiente` sembrada.
 - Sesión 2 (2026-11-05): app probada contra Postgres, una conexión por pedido, `/salud` en postgres.
   Se quitaron todos los datos de demostración de la interfaz: sin usuarios ni votos, el mapa no dibuja
-  sección ciudadana ni brecha. Se agregaron T18 a T23 (legisladores completos, biografías, transcripciones,
-  noticias con contraste, preguntas abiertas y glosario). Falta el servicio de Render.
+  sección ciudadana ni brecha. Se agregaron T18 a T24. Falta el servicio de Render.
+- Sesión 3 (2026-11-05): login de Render completado y formulario del Blueprint abierto (nombre y rama
+  cargados). T18 en curso con cuatro estudios en paralelo e importador idempotente listo.
 
 ## Próximo paso
 Crear el servicio en Render (pestaña abierta, falta el ingreso del usuario), verificar `/salud` público
