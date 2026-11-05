@@ -159,6 +159,8 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - Ficha de Pablo Abdala revisada en pantalla (captura 1200 px): resumen, nacimiento, profesión,
   familia, línea de tiempo y nota de fuente secundaria. Se corrigió la línea para que el año no
   quede pisado por el punto.
+- Commit `b464186` subido a `origin/main`. Neon ya tiene los 63 registros. La ficha pública sigue
+  con el código anterior: Render no tomó el commit en los primeros 25 minutos.
 
 ## Progreso
 - Sesión 1 (2026-11-04): esqueleto completo, datos de leyes, propuestas y cargos, mapa SVG, brecha,
@@ -175,5 +177,6 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
   hecho con fecha y enlace; queda pedido el comparador visual de actividad (T26).
 
 ## Próximo paso
-Completar las 64 biografías sin artículo con noticias fechadas y enlazadas, y después T26
-(comparador visual de acciones e iniciativas).
+1. Forzar el despliegue en Render y verificar la ficha pública con biografía.
+2. Completar las 64 biografías sin artículo con noticias fechadas y enlazadas.
+3. T26: comparador visual de acciones e iniciativas.
