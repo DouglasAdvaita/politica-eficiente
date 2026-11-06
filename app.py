@@ -409,6 +409,7 @@ def politicos():
         filas = db.todos(
             f"""SELECT p.*, (SELECT COUNT(*) FROM acciones a WHERE a.politico_id = p.id) AS n_acciones,
                        (SELECT COUNT(*) FROM posiciones po WHERE po.politico_id = p.id) AS n_posiciones,
+                       (SELECT COUNT(*) FROM hitos h WHERE h.politico_id = p.id) AS n_hitos,
                        (SELECT COUNT(*) FROM biografias b WHERE b.politico_id = p.id) AS n_bio
                 FROM politicos p {filtro}
                 ORDER BY CASE camara WHEN 'Poder Ejecutivo' THEN 0 WHEN 'Senadores' THEN 1

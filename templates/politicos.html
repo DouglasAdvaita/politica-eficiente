@@ -34,6 +34,7 @@
       </div>
       <div class="meta">
         <span>📌 {{ p.n_acciones }} actividad{% if p.n_acciones != 1 %}es{% endif %}</span>
+        {% if p.n_hitos %}<span>🧭 {{ p.n_hitos }} hecho{% if p.n_hitos != 1 %}s{% endif %} con fecha</span>{% endif %}
         <span>🗳️ {{ p.n_posiciones }} postura{% if p.n_posiciones != 1 %}s{% endif %}</span>
         {% if p.n_bio %}<span class="etiqueta">📖 biografía</span>{% endif %}
         {% if p.usuario_id %}<span class="etiqueta verde">cuenta verificada</span>{% endif %}
