@@ -1,11 +1,12 @@
-"""Importa los datos editoriales de cada tema: responsable, fecha, critica y
-el indice de personas y organismos involucrados (participantes).
+"""Importa los datos editoriales de cada tema: responsable, fecha, critica,
+contexto, preguntas abiertas y el indice de personas y organismos.
 
 Idempotente: actualiza el tema y reemplaza sus participantes.
 
 Uso:
     python importar_editorial.py
 """
+import json
 import sys
 
 import db as dbm
@@ -28,9 +29,10 @@ def importar():
                     continue
                 total += 1
                 db.ejecutar(
-                    "UPDATE temas SET fecha = ?, responsable = ?, critica = ? WHERE id = ?",
+                    "UPDATE temas SET fecha = ?, responsable = ?, critica = ?, contexto = ?, preguntas = ? WHERE id = ?",
                     (t.get("fecha", ""), t.get("responsable", ""),
-                     t.get("critica", ""), fila["id"]),
+                     t.get("critica", ""), t.get("contexto", ""),
+                     json.dumps(t.get("preguntas") or [], ensure_ascii=False), fila["id"]),
                 )
                 if t.get("responsable"):
                     con_responsable += 1

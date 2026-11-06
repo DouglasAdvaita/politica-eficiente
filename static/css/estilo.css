@@ -193,6 +193,8 @@ textarea { min-height: 96px; resize: vertical; }
 .bloque.problema { border-color: var(--rojo); }
 .bloque.propuesta { border-color: var(--verde); }
 .bloque.evidencia { border-color: var(--ambar); }
+.bloque.contexto { border-color: var(--azul); }
+.bloque.preguntas { border-color: var(--azul); background: #f7f9fc; border-radius: 0 8px 8px 0; }
 .bloque.bandera { border-color: var(--rojo); background: #fbf5f4; padding: 12px 14px; border-radius: 0 8px 8px 0; }
 .bloque.bandera h4 { color: var(--rojo); }
 .bloque h4 { margin: 0 0 4px; font-size: .82rem; letter-spacing: 1px; text-transform: uppercase; color: var(--suave); }

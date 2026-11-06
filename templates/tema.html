@@ -48,6 +48,13 @@
     <i style="width:{{ (100 * t.a_favor / (t.a_favor + t.en_contra)) if (t.a_favor + t.en_contra) else 0 }}%"></i>
   </div>
 
+  {% if t.contexto %}
+    <div class="bloque contexto">
+      <h4>Cómo se llegó acá</h4>
+      <p>{{ t.contexto|glosario }}</p>
+    </div>
+  {% endif %}
+
   {% if t.problema and t.tipo == 'ley' %}
     <div class="bloque problema">
       <h4>Por qué no funciona</h4>
@@ -102,6 +109,17 @@
           </div>
         {% endfor %}
       </div>
+    </div>
+  {% endif %}
+
+  {% set preguntas = t.preguntas|datos %}
+  {% if preguntas %}
+    <div class="bloque preguntas">
+      <h4>❓ Preguntas abiertas</h4>
+      <ol class="chico" style="margin:6px 0 0 18px; line-height:1.7">
+        {% for p in preguntas %}<li>{{ p }}</li>{% endfor %}
+      </ol>
+      <p class="chico suave" style="margin:8px 0 0">Se pueden responder en el foro, más abajo.</p>
     </div>
   {% endif %}
 

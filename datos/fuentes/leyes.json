@@ -47,6 +47,12 @@
           "emoji": "🗺️",
           "nota": "Sin reglamento común, cada una fija criterios propios."
         }
+      ],
+      "contexto": "La ley 19.824 se aprobó en 2019 para unificar las multas de tránsito en todo el país. El capítulo de infracciones quedó esperando un decreto que llegó por partes: primero en 2021 y con la libreta por puntos anunciada recién para 2026. Lo que falta saber es cuántas multas se aplicaron mientras tanto y con qué criterio en cada departamento.",
+      "preguntas": [
+        "¿Cuántas multas se aplicaron desde 2019 y con qué criterio en cada departamento?",
+        "¿Qué artículo impide aplicar la licencia por puntos sin el decreto?",
+        "¿La demora fue técnica o política?"
       ]
     },
     {
@@ -100,6 +106,12 @@
           "emoji": "🗞️",
           "nota": "Puso el tema en agenda."
         }
+      ],
+      "contexto": "La ley 18.795 se aprobó en 2011 para sumar vivienda de interés social con exoneraciones. El régimen se prorrogó por períodos y el precio tope se fija por decreto. La nota aporta el dato de compras para inversión, pero no cuántas unidades se construyeron ni cuántas se alquilaron, que es lo que permitiría saber si la ley cumplió su objetivo.",
+      "preguntas": [
+        "¿Cuántas viviendas se construyeron bajo el régimen y cuántas se alquilaron?",
+        "¿El precio tope permite comprar a un hogar de ingresos medios?",
+        "¿Qué inversión se habría perdido sin la exoneración?"
       ]
     },
     {
@@ -153,6 +165,12 @@
           "emoji": "🗞️",
           "nota": "Puso el tema en agenda."
         }
+      ],
+      "contexto": "El régimen se incluyó en la Ley de Urgente Consideración de 2020 y se votó en bloque junto con cientos de artículos. Antes existía el alquiler sin garantía, pero con los plazos del régimen general. La nota compara plazos legales; falta saber cuántos desalojos se ejecutaron y en cuánto tiempo.",
+      "preguntas": [
+        "¿Cuántos desalojos se ejecutaron bajo el régimen especial y en qué plazo real?",
+        "¿Aumentó la oferta de alquileres sin garantía?",
+        "¿Qué alternativa tiene un hogar que no puede pagar garantía?"
       ]
     },
     {
@@ -200,6 +218,12 @@
           "emoji": "🗞️",
           "nota": "Aporta las cifras de recaudación y renuncia fiscal."
         }
+      ],
+      "contexto": "La ley 16.906 es de 1998 y se aplica mediante comisiones que aprueban proyectos caso por caso. Cada gobierno la usó con criterios propios y el gasto tributario se acumula sin evaluación pública. La nota da el monto exonerado, pero no la inversión ni el empleo atribuibles al régimen.",
+      "preguntas": [
+        "¿Cuánta inversión y empleo se crearon por cada dólar exonerado?",
+        "¿Qué pasaría con esa inversión si se eliminara el beneficio?",
+        "¿Quién controla que la empresa cumpla lo prometido?"
       ]
     },
     {
@@ -253,6 +277,12 @@
           "emoji": "🗞️",
           "nota": "Puso el tema en agenda."
         }
+      ],
+      "contexto": "La ley 19.978 se aprobó en 2021, cuando el teletrabajo se había generalizado por la pandemia. Dejó en el acuerdo individual las herramientas y la conectividad. No hay registro público de cuántas personas teletrabajan ni de cuántas reciben equipos del empleador.",
+      "preguntas": [
+        "¿Cuántas personas teletrabajan y cuántas reciben equipos del empleador?",
+        "¿Quién paga la electricidad y la conexión?",
+        "¿Se puede reclamar una jornada límite sin norma expresa?"
       ]
     },
     {
@@ -306,6 +336,12 @@
           "emoji": "🗞️",
           "nota": "Documentó el estado del instituto."
         }
+      ],
+      "contexto": "La ley 18.471 se aprobó en 2009 con sanciones, pero el Instituto Nacional de Bienestar Animal se creó después y nunca tuvo estructura para todo el país. La nota muestra el déficit de funcionarios; falta el dato de denuncias que terminaron en sanción.",
+      "preguntas": [
+        "¿Cuántas denuncias terminaron en sanción y cuántas se archivaron?",
+        "¿Qué pasaría si las multas se cobraran de verdad?",
+        "¿Alcanza con más funcionarios o hace falta otro procedimiento?"
       ]
     },
     {
@@ -359,6 +395,12 @@
           "emoji": "🌳",
           "nota": "Lo incluyó en el Plan Nacional Ambiental."
         }
+      ],
+      "contexto": "La ley 17.852 se sancionó en 2004 y nunca tuvo decreto reglamentario. Sin reglamento no hay límites nacionales, y cada intendencia fijó su ordenanza. La nota constata el vacío, pero no compara los niveles que se miden en cada departamento.",
+      "preguntas": [
+        "¿Qué límites de decibeles aplica hoy cada intendencia?",
+        "¿Cuántas denuncias por ruido se registran y cuántas se sancionan?",
+        "¿Un reglamento nacional resolvería o solo movería el problema?"
       ]
     },
     {
@@ -406,6 +448,12 @@
           "emoji": "🗞️",
           "nota": "No publica el total de proyectos presentados."
         }
+      ],
+      "contexto": "La ley 18.308 se aprobó en 2008 y creó la evaluación ambiental estratégica. El mecanismo de aprobación ficta existe para que la demora administrativa no bloquee proyectos. La nota documenta diez casos, pero no dice sobre cuántos proyectos presentados.",
+      "preguntas": [
+        "¿Cuántos proyectos se presentaron entre 2020 y 2023?",
+        "¿Qué proyectos se aprobaron con observaciones técnicas?",
+        "¿Eliminar la aprobación ficta no premiaría la demora?"
       ]
     },
     {
@@ -459,6 +507,12 @@
           "emoji": "🗞️",
           "nota": "Documentó el incumplimiento."
         }
+      ],
+      "contexto": "La ley 18.651 es de 2010 y su artículo 83 obliga a las empresas de transporte a trasladar gratis a personas con discapacidad. El decreto que lo reglamentó llegó en 2021, once años después. La nota muestra casos amparados por la Justicia, no el total de beneficiarios.",
+      "preguntas": [
+        "¿Cuántas personas usaron el beneficio desde 2021?",
+        "¿Cuántas empresas lo niegan y con qué argumento?",
+        "¿Quién paga el costo de la gratuidad?"
       ]
     },
     {
@@ -512,6 +566,12 @@
           "emoji": "🏛️",
           "nota": "No se analiza su rol en el resultado."
         }
+      ],
+      "contexto": "La ley 18.437 declaró obligatoria la educación media en 2008. Desde entonces la matrícula creció, pero el egreso no acompañó. El INEEd compara el resultado con la meta legal; falta separar el efecto de la ley del de la gestión y del contexto social.",
+      "preguntas": [
+        "¿Cuántos estudiantes abandonan por año y por qué?",
+        "¿La obligatoriedad se puede exigir sin apoyo económico a las familias?",
+        "¿Qué cambió en la enseñanza entre 2008 y hoy?"
       ]
     },
     {
@@ -565,6 +625,12 @@
           "emoji": "🗺️",
           "nota": "Referentes locales la descartaron por obsoleta."
         }
+      ],
+      "contexto": "La ley 10.071 es de 1941, cuando regía otra idea del derecho penal. Sigue formalmente vigente aunque casi no se aplica. No hay registro público de cuántas personas fueron detenidas bajo esta norma en las últimas décadas.",
+      "preguntas": [
+        "¿Cuántas personas fueron detenidas por esta ley en los últimos diez años?",
+        "¿Qué instituciones la aplican todavía?",
+        "¿Derogarla deja un vacío o solo elimina una norma simbólica?"
       ]
     },
     {
@@ -618,6 +684,12 @@
           "emoji": "📄",
           "nota": "Es la fuente primaria de la norma."
         }
+      ],
+      "contexto": "La ley 9.483 autorizó corridas de toros solo en Colonia en 1935. La plaza se reconvirtió en centro cultural y no hay espectáculos taurinos. La contradicción es normativa: una autorización vigente que nadie usa, frente a las leyes de protección animal.",
+      "preguntas": [
+        "¿Alguien pidió reabrir las corridas en los últimos años?",
+        "¿Qué impide derogar una ley sin uso?",
+        "¿La autorización habilita algo que la normativa animal prohíbe?"
       ]
     },
     {
@@ -671,6 +743,12 @@
           "emoji": "🗞️",
           "nota": "Puso el tema en agenda."
         }
+      ],
+      "contexto": "La ley 17.897 se aprobó en 2005 para facilitar el empleo de personas liberadas. El cupo se incluye en los pliegos de licitación, pero cada organismo controla su cumplimiento. No hay serie pública de cuántos puestos se ocuparon.",
+      "preguntas": [
+        "¿Cuántos puestos del cupo se ocuparon cada año?",
+        "¿Qué organismo debería controlarlo?",
+        "¿Una sanción contractual alcanza si nadie audita el pliego?"
       ]
     },
     {
@@ -724,6 +802,12 @@
           "emoji": "🗞️",
           "nota": "Puso el tema en agenda."
         }
+      ],
+      "contexto": "El artículo 3 de la ley 13.720 fija un preaviso de siete días para huelga o lockout desde 1968. Nunca tuvo consecuencia por incumplimiento. La nota deduce que es letra muerta, pero no muestra un caso concreto.",
+      "preguntas": [
+        "¿Se cumple el preaviso en la práctica?",
+        "¿Qué efecto tuvo la norma en los conflictos de los últimos años?",
+        "¿Derogarla cambiaría algo o solo limpiaría el texto?"
       ]
     },
     {
@@ -777,6 +861,12 @@
           "emoji": "🏛️",
           "nota": "Define los recursos de las unidades instructoras."
         }
+      ],
+      "contexto": "El estatuto 19.121 se aprobó en 2013 y fijó plazos para el sumario, incluida la clausura a los dos años. La ONSC midió 384 días promedio y 2.860 procesos abiertos a fines de 2021. Falta el dato de cuántos se cerraron sin sanción por vencimiento.",
+      "preguntas": [
+        "¿Cuántos sumarios se cerraron sin sanción por el plazo?",
+        "¿Qué falta: instructores, jueces o procedimiento?",
+        "¿La clausura automática protege al funcionario o al Estado?"
       ]
     },
     {
@@ -827,7 +917,13 @@
       ],
       "fuente_url": "https://udelar.edu.uy/noticias/maria-de-la-paz-echetto-situacion-actual-de-la-ley-19580-de-violencia-basada-en-genero",
       "fuente_titulo": "Udelar - María de la Paz Echetto: situación actual de la Ley 19.580",
-      "verificado": true
+      "verificado": true,
+      "contexto": "La ley 19.580 se aprobó en 2017 y se reglamentó en 2019. Creó juzgados especializados, licencias y prestaciones para las víctimas. La fuente evalúa su aplicación, pero no aporta la serie de denuncias, condenas ni medidas cautelares.",
+      "preguntas": [
+        "¿Cuántos juzgados especializados existen y cuántos faltan?",
+        "¿Cuántas víctimas accedieron a vivienda y trabajo?",
+        "¿Las tobilleras fallan por el aparato o por el tiempo de respuesta?"
+      ]
     },
     {
       "slug": "datos-personales-sin-presupuesto",
@@ -880,6 +976,12 @@
           "emoji": "🗞️",
           "nota": "Puso el tema en agenda."
         }
+      ],
+      "contexto": "La ley 18.331 es de 2008 y creó la Unidad Reguladora de Datos Personales, que depende de Agesic. La nota la califica de excelente en el texto y la critica por su presupuesto. Falta saber cuántas denuncias recibió y cuántas resolvió.",
+      "preguntas": [
+        "¿Cuántas denuncias recibió la URCDP y cuántas resolvió?",
+        "¿Qué haría con más presupuesto?",
+        "¿La ley protege igual los datos del Estado y los de las empresas?"
       ]
     }
   ]

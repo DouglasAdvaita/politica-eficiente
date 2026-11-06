@@ -92,6 +92,8 @@ CREATE TABLE IF NOT EXISTS temas (
     fecha TEXT NOT NULL DEFAULT '',
     responsable TEXT NOT NULL DEFAULT '',
     critica TEXT NOT NULL DEFAULT '',
+    contexto TEXT NOT NULL DEFAULT '',
+    preguntas TEXT NOT NULL DEFAULT '',
     fuente_url TEXT,
     verificado SMALLINT NOT NULL DEFAULT 0,
     creado TEXT NOT NULL
@@ -373,6 +375,8 @@ def _migrar(db):
         ("fecha", "TEXT NOT NULL DEFAULT ''"),
         ("responsable", "TEXT NOT NULL DEFAULT ''"),
         ("critica", "TEXT NOT NULL DEFAULT ''"),
+        ("contexto", "TEXT NOT NULL DEFAULT ''"),
+        ("preguntas", "TEXT NOT NULL DEFAULT ''"),
     ]
     if ES_PG:
         for nombre, ddl in columnas_nuevas:

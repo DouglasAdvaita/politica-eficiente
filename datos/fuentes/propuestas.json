@@ -66,6 +66,12 @@
           "emoji": "🗞️",
           "nota": "Aporta el dato de 16.570 reclusos."
         }
+      ],
+      "contexto": "La población presa se duplicó desde 2003 sin que creciera la infraestructura. El Ministerio del Interior reconoce el hacinamiento y la debilidad de las alternativas. Falta la tasa de reincidencia, que es la que permitiría saber si la cárcel corrige o solo encierra.",
+      "preguntas": [
+        "¿Cuál es la tasa de reincidencia y cómo se mide?",
+        "¿Cuántas personas podrían cumplir pena fuera de la cárcel?",
+        "¿Qué pasa con la salud y el trabajo dentro de los módulos?"
       ]
     },
     {
@@ -132,6 +138,12 @@
           "emoji": "🧠",
           "nota": "El 72% de los intentos corresponde a mujeres."
         }
+      ],
+      "contexto": "Las muertes por suicidio bajaron levemente en 2025 mientras subieron los intentos. El MSP atribuye parte del descenso a la respuesta del sistema, sin aislar causas. Falta la serie por departamento y por edad para saber dónde intervenir.",
+      "preguntas": [
+        "¿En qué departamentos y edades se concentran las muertes?",
+        "¿Los intentos aumentaron o se registran mejor?",
+        "¿Qué atención recibe quien sale de una crisis?"
       ]
     },
     {
@@ -198,6 +210,12 @@
           "emoji": "🗞️",
           "nota": "Puso el tema en agenda."
         }
+      ],
+      "contexto": "La natalidad cayó a la mitad en tres décadas y la oferta de centros se mantuvo. El 79% de matrícula con fondos públicos mide cobertura, no calidad. Falta saber qué barrios tienen cupos vacíos y cuáles tienen lista de espera.",
+      "preguntas": [
+        "¿Dónde sobran y dónde faltan cupos?",
+        "¿Qué proporción de hogares con niños pequeños está bajo la línea de pobreza?",
+        "¿Los centros funcionan en los horarios en que se trabaja?"
       ]
     },
     {
@@ -264,6 +282,12 @@
           "emoji": "🗞️",
           "nota": "Aporta la serie de bachillerato."
         }
+      ],
+      "contexto": "El egreso mejoró en 2025, pero la matrícula de UTU cayó y miles quedaron fuera del sistema. La desvinculación se concentra en hogares de menores ingresos. Falta saber cuántos de los que abandonan vuelven y cuántos no.",
+      "preguntas": [
+        "¿Cuántos estudiantes abandonan y cuántos vuelven al año siguiente?",
+        "¿La caída de UTU es desvinculación o menos nacimientos?",
+        "¿Qué sostiene a un estudiante que trabaja?"
       ]
     },
     {
@@ -330,6 +354,12 @@
           "emoji": "🗞️",
           "nota": "Aporta los datos de desempleo juvenil."
         }
+      ],
+      "contexto": "El desempleo juvenil triplica el promedio y castiga más a quienes no terminaron el ciclo básico. Hay un proyecto de ley en Diputados para colectivos con obstáculos de acceso. Falta el dato de cuántos de esos empleos son formales y cuántos pasantías sin aportes.",
+      "preguntas": [
+        "¿Cuántos de los 235 mil no buscan trabajo porque estudian o cuidan a alguien?",
+        "¿Las prácticas propuestas tendrían aportes y salario?",
+        "¿Qué pasa con un joven sin ciclo básico ni experiencia?"
       ]
     },
     {
@@ -396,6 +426,12 @@
           "emoji": "🗞️",
           "nota": "Puso el tema en agenda."
         }
+      ],
+      "contexto": "El déficit de vivienda se estima en 40.000 unidades y el alquiler promedio supera los 21.000 pesos. La demanda se concentra por debajo de 35.000. Falta comparar ese precio con el ingreso del hogar y con la oferta real disponible.",
+      "preguntas": [
+        "¿Qué porcentaje del ingreso destina un hogar al alquiler?",
+        "¿Cuántas viviendas vacías hay y por qué no se alquilan?",
+        "¿El alquiler social llega a quien lo necesita?"
       ]
     },
     {
@@ -462,6 +498,12 @@
           "emoji": "🏚️",
           "nota": "Es el grupo que la cobertura promedio oculta."
         }
+      ],
+      "contexto": "La cobertura de agua es casi total, pero el saneamiento llega a menos de la mitad de las viviendas con conexión. El área metropolitana depende de una sola planta y de la cuenca del Santa Lucía. Falta saber cuántas obras están en ejecución y cuándo terminan.",
+      "preguntas": [
+        "¿Cuántas viviendas se conectan por año?",
+        "¿Qué pasa con los hogares sin baño?",
+        "¿La tarifa social cubre a quien no tiene red?"
       ]
     },
     {
@@ -528,6 +570,12 @@
           "emoji": "🏘️",
           "nota": "El texto no recoge su situación."
         }
+      ],
+      "contexto": "La ley de residuos se aprobó en 2019 y se reglamentó por corrientes en 2025. La recuperación de envases ronda el 4% frente a una meta de 50%. Falta saber si la meta se refería a envases o al total de residuos.",
+      "preguntas": [
+        "¿Qué se recupera hoy y qué se entierra?",
+        "¿Cuántos vertederos siguen abiertos?",
+        "¿Quién paga el costo de reciclar?"
       ]
     },
     {
@@ -594,6 +642,12 @@
           "emoji": "💳",
           "nota": "La combinación metropolitana cuesta 80 pesos."
         }
+      ],
+      "contexto": "La tarifa subió en enero de 2026 y el sistema arrastra déficit. La integración con Canelones y San José sigue parcial. Falta el costo por pasajero y cuántos viajes se subsidian.",
+      "preguntas": [
+        "¿Cuánto cuesta cada viaje y cuánto paga el usuario?",
+        "¿Cuánta gente usa el transporte y cuánta lo abandonó?",
+        "¿Qué frecuencia se garantiza en los barrios alejados?"
       ]
     },
     {
@@ -660,6 +714,12 @@
           "emoji": "🏠",
           "nota": "El texto no mide su carga."
         }
+      ],
+      "contexto": "La población mayor crece y la dependencia afecta a unas 110 mil personas. El programa de asistentes personales llega a 5.900 y hay nueve centros de día. Falta saber cuántas personas quedan fuera por criterios de elegibilidad y no por falta de cupo.",
+      "preguntas": [
+        "¿Cuántas personas solicitan asistencia y no la reciben?",
+        "¿Quién cuida cuando no hay servicio?",
+        "¿Cómo se controla la calidad de las residencias?"
       ]
     },
     {
@@ -726,6 +786,12 @@
           "emoji": "🗞️",
           "nota": "Vinculó discapacidad con necesidades básicas."
         }
+      ],
+      "contexto": "La tasa de empleo de las personas con discapacidad es 49% frente a 78%. La cuota de ingreso al Estado sigue por debajo de la ley. Falta ajustar la comparación por edad y educación para saber cuánto explica la discapacidad.",
+      "preguntas": [
+        "¿Cuántos puestos de la cuota se cubrieron?",
+        "¿Qué ajustes piden las empresas y quién los paga?",
+        "¿Qué pasa con quien no puede trabajar?"
       ]
     },
     {
@@ -792,6 +858,12 @@
           "emoji": "🗞️",
           "nota": "Puso el tema en agenda."
         }
+      ],
+      "contexto": "El 92% usa internet, pero la calidad y las habilidades no acompañan. El 94% de quienes no usan internet tiene más de 50 años y vive en el interior. Falta la serie histórica para saber si la brecha se cierra.",
+      "preguntas": [
+        "¿Qué habilidades faltan y para qué trámites?",
+        "¿Quién enseña a un adulto mayor en su casa?",
+        "¿Alcanza con dar dispositivos?"
       ]
     },
     {
@@ -858,6 +930,12 @@
           "emoji": "🏗️",
           "nota": "La comparabilidad de datos los afecta directamente."
         }
+      ],
+      "contexto": "El Estado publica sus compras en formato abierto desde 2018. Hay 568.000 procedimientos y 287 organismos compradores. Falta saber si los datos permiten comparar precios y detectar sobrecostos.",
+      "preguntas": [
+        "¿Se puede comparar el mismo bien entre organismos?",
+        "¿Cuántas contrataciones directas se auditan?",
+        "¿Qué pasa cuando un organismo niega información?"
       ]
     },
     {
@@ -924,6 +1002,12 @@
           "emoji": "🗞️",
           "nota": "Puso el tema en agenda."
         }
+      ],
+      "contexto": "Los municipios existen desde 2010 y hoy son 136. Tienen competencias difusas y no pueden recaudar tributos propios. Falta saber cuánto recibe cada uno y en qué lo gasta.",
+      "preguntas": [
+        "¿Cuánto dinero maneja cada municipio?",
+        "¿Qué competencias podría ejercer sin conflicto?",
+        "¿Quién controla su gestión?"
       ]
     },
     {
@@ -990,6 +1074,12 @@
           "emoji": "🧑‍💼",
           "nota": "Las mujeres migrantes enfrentan brechas adicionales."
         }
+      ],
+      "contexto": "El Censo 2023 registró 107.578 nacidos en el exterior y 104.000 cotizantes migrantes. Persisten demoras en las residencias y brechas para las mujeres migrantes. Falta saber cuánto tarda una residencia y cuántos títulos se validan.",
+      "preguntas": [
+        "¿Cuánto tarda una residencia por arraigo?",
+        "¿Cuántos títulos profesionales se convalidan y cuántos no?",
+        "¿Qué barrera enfrenta una mujer migrante?"
       ]
     },
     {
@@ -1056,6 +1146,12 @@
           "emoji": "📣",
           "nota": "El texto no mide su acceso efectivo a la ley."
         }
+      ],
+      "contexto": "Las denuncias se mantienen estables y los femicidios bajaron de 22 a 18. La ley 19.580 sigue sin aplicación plena según las fuentes. Falta saber cuántas denuncias terminan en condena y cuántas víctimas reciben protección efectiva.",
+      "preguntas": [
+        "¿Cuántas denuncias terminan en condena?",
+        "¿Cuántas medidas cautelares se cumplen?",
+        "¿Qué pasa cuando la víctima retira la denuncia?"
       ]
     },
     {
@@ -1122,6 +1218,12 @@
           "emoji": "🎓",
           "nota": "No representan a la población general."
         }
+      ],
+      "contexto": "El consumo de alcohol y cannabis entre universitarios es alto y cuatro de cada diez usan tranquilizantes sin receta. La comparación regional se cita sin fuente. Falta saber qué pasa fuera de la universidad.",
+      "preguntas": [
+        "¿Cuánto consume la población general y no solo los universitarios?",
+        "¿Quién vende psicofármacos sin receta?",
+        "¿Qué tratamiento hay disponible y con qué espera?"
       ]
     },
     {
@@ -1188,6 +1290,12 @@
           "emoji": "🗺️",
           "nota": "La inseguridad se concentra en territorios específicos."
         }
+      ],
+      "contexto": "El 13,2% de los hogares redujo la cantidad o calidad de lo que come por falta de dinero. En hogares con menores de seis años sube a 18,9%. Falta saber cuánto cuesta la canasta básica frente al ingreso.",
+      "preguntas": [
+        "¿Cuánto cuesta una canasta básica y cuánto gana un hogar típico?",
+        "¿Qué alimentos subieron más?",
+        "¿La ayuda alimentaria llega a tiempo?"
       ]
     }
   ]
