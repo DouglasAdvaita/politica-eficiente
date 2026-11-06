@@ -18,7 +18,36 @@
       "propuesta": "Reglamentar en un plazo fijo el capítulo de infracciones y el régimen de puntos, con cronograma público de implementación y fiscalización.",
       "fuente_url": "https://www.academiadelmolino.com.uy/legislacion-seguridad-vial/decreto-329-021/",
       "fuente_titulo": "Decreto 329/021 - Modificación del Reglamento Nacional de Circulación Vial",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley promulgada en 2019; el decreto que reconoce el vacío es de 2021 y la libreta por puntos se anunció para 2026.",
+      "responsable": "Parlamento, que aprobó la ley en 2019; el Poder Ejecutivo, que debía reglamentarla y lo hizo por partes (decreto 329/021).",
+      "critica": "La fuente es un decreto, no un estudio: prueba que falta reglamentación, pero no que la ley sea inaplicable. El texto mezcla el diseño de la ley con la demora administrativa y no distingue qué artículos sí rigen. El dato disponible prueba la demora, no la causa: no hay registro de por qué se postergó ni de cuántas multas se aplicaron sin reglamento. Sin esa serie, no puede concluirse que el problema sea el diseño legal y no la capacidad de fiscalizar.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó la ley 19.824 en 2019",
+          "emoji": "📜",
+          "nota": "Fijó el sistema de sanciones y la licencia por puntos."
+        },
+        {
+          "nombre": "Poder Ejecutivo",
+          "rol": "Debía reglamentar el capítulo de infracciones",
+          "emoji": "🏛️",
+          "nota": "Reglamentó por partes; el decreto 329/021 admite el vacío."
+        },
+        {
+          "nombre": "Unidad Nacional de Seguridad Vial",
+          "rol": "Anuncia la puesta en marcha del permiso por puntos",
+          "emoji": "🚦",
+          "nota": "Postergó la aplicación a 2026."
+        },
+        {
+          "nombre": "Intendencias",
+          "rol": "Aplican multas y fiscalizan el tránsito",
+          "emoji": "🗺️",
+          "nota": "Sin reglamento común, cada una fija criterios propios."
+        }
+      ]
     },
     {
       "slug": "vivienda-promovida-inversion",
@@ -36,7 +65,42 @@
       "propuesta": "Condicionar las exoneraciones a que un porcentaje mínimo de las unidades se destine a alquiler o venta a hogares de ingresos bajos y medios, con evaluación pública de resultados.",
       "fuente_url": "https://ladiaria.com.uy/economia/articulo/2024/4/ley-de-vivienda-promovida-beneficia-a-inversores-y-a-la-industria-pero-no-facilita-acceso-a-sectores-bajos-y-medios/",
       "fuente_titulo": "La diaria - Ley de vivienda promovida: beneficia a inversores y a la industria, pero no facilita acceso a sectores bajos y medios",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley promulgada en 2011; el informe inmobiliario que sustenta la nota es de 2024.",
+      "responsable": "Parlamento, que aprobó la ley en 2011; el Poder Ejecutivo, que fija los precios máximos por decreto. El dato de inversión proviene de InfoCasas, un portal inmobiliario, difundido por La diaria en 2024.",
+      "critica": "El 83% de compras «para inversión» surge de un portal inmobiliario, no de un registro público: mide operaciones publicadas, no el universo de la ley. La nota usa ese porcentaje para concluir que la ley «no facilita el acceso», pero no compara el precio de las unidades con el tope legal ni con los ingresos de los hogares. Tampoco distingue entre invertir para alquilar, que amplía oferta, e invertir para especular. Sin esas distinciones, el dato no sostiene la conclusión.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó la ley 18.795 en 2011",
+          "emoji": "📜",
+          "nota": "Creó las exoneraciones para vivienda de interés social."
+        },
+        {
+          "nombre": "Ministerio de Vivienda y Ordenamiento Territorial",
+          "rol": "Fija precios máximos y controla el régimen",
+          "emoji": "🏠",
+          "nota": "Define qué unidades califican como promovidas."
+        },
+        {
+          "nombre": "InfoCasas",
+          "rol": "Portal inmobiliario que aportó el dato del 83%",
+          "emoji": "📊",
+          "nota": "Mide operaciones publicadas, no el registro público de la ley."
+        },
+        {
+          "nombre": "FUCVAM",
+          "rol": "Federación de cooperativas de vivienda",
+          "emoji": "🏘️",
+          "nota": "Señaló que los precios quedan fuera del alcance de ingresos bajos."
+        },
+        {
+          "nombre": "La diaria",
+          "rol": "Publicó el informe en 2024",
+          "emoji": "🗞️",
+          "nota": "Puso el tema en agenda."
+        }
+      ]
     },
     {
       "slug": "alquiler-sin-garantia-desalojo",
@@ -54,7 +118,42 @@
       "propuesta": "Revisar los plazos de desalojo del régimen especial y equipararlos a los del régimen general, manteniendo la opción de alquiler sin garantía.",
       "fuente_url": "https://ladiaria.com.uy/luc/articulo/2021/12/la-luc-y-el-regimen-de-alquiler-sin-garantia-entre-el-desalojo-expres-y-un-nuevo-mecanismo-para-quienes-no-acceden-a-vivienda/",
       "fuente_titulo": "La diaria - La LUC y el régimen de alquiler sin garantía: entre el desalojo exprés y un nuevo mecanismo",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley 19.889 (LUC), promulgada en julio de 2020; el análisis citado es de diciembre de 2021.",
+      "responsable": "Parlamento, que aprobó la LUC en 2020; el Poder Ejecutivo, que la promulgó. El análisis crítico es de la Clínica de Litigio Estratégico de la Facultad de Derecho, difundido por La diaria.",
+      "critica": "El artículo compara plazos —30 días contra un año— y concluye que la norma «conspira» contra el derecho a la vivienda, pero no aporta datos de cuántos desalojos se ejecutaron ni en cuánto tiempo. Un plazo legal corto no equivale a un desalojo efectivo: depende de juzgados y de la defensa. Tampoco prueba que la oferta de alquileres no haya aumentado; solo cita opiniones de abogados y organizaciones.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó el régimen dentro de la LUC en 2020",
+          "emoji": "📜",
+          "nota": "Fijó desalojo en 30 días por vencimiento y 6 por mora."
+        },
+        {
+          "nombre": "Clínica de Litigio Estratégico (Facultad de Derecho)",
+          "rol": "Advirtió que el plazo corto afecta el derecho a la vivienda",
+          "emoji": "⚖️",
+          "nota": "Su argumento es jurídico, sin datos de desalojos ejecutados."
+        },
+        {
+          "nombre": "Ministerio de Vivienda y Ordenamiento Territorial",
+          "rol": "Debe ampliar la oferta de alquiler accesible",
+          "emoji": "🏠",
+          "nota": "No se analiza su respuesta al nuevo régimen."
+        },
+        {
+          "nombre": "Organizaciones sociales",
+          "rol": "Denunciaron inseguridad de tenencia",
+          "emoji": "🏘️",
+          "nota": "Aportan testimonio, no medición."
+        },
+        {
+          "nombre": "La diaria",
+          "rol": "Publicó el análisis en diciembre de 2021",
+          "emoji": "🗞️",
+          "nota": "Puso el tema en agenda."
+        }
+      ]
     },
     {
       "slug": "promocion-inversiones-gasto-tributario",
@@ -72,7 +171,36 @@
       "propuesta": "Establecer topes anuales de renuncia fiscal por ley, publicar el monto efectivamente exonerado por empresa y evaluar cada régimen con indicadores de inversión y empleo.",
       "fuente_url": "https://ladiaria.com.uy/economia/articulo/2026/3/promocion-de-inversiones-y-estrategia-nacional-de-desarrollo-entre-la-transformacion-productiva-y-la-reduccion-impositiva/",
       "fuente_titulo": "La diaria - Promoción de inversiones y estrategia nacional de desarrollo",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley promulgada en 1998; los datos fiscales citados son de 2024.",
+      "responsable": "Parlamento, que aprobó la ley en 1998 y sus modificaciones; el Poder Ejecutivo (MEF), que otorga las exoneraciones por comisión. Los datos son de La diaria (2026).",
+      "critica": "El texto pasa de un dato correcto —el gasto tributario ronda 6,7% del PIB— a una conclusión que ese dato no prueba: que el régimen «no tiene resultados». No presenta inversión atribuible al régimen, empleo creado ni comparación con un escenario sin exoneración. Confunde renuncia fiscal con pérdida neta, sin considerar la actividad que la exoneración pudo generar.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó la ley 16.906 en 1998",
+          "emoji": "📜",
+          "nota": "Delegó en el Poder Ejecutivo el otorgamiento de beneficios."
+        },
+        {
+          "nombre": "Ministerio de Economía y Finanzas",
+          "rol": "Otorga las exoneraciones por comisión",
+          "emoji": "💰",
+          "nota": "Es quien podría medir el resultado y no lo publica."
+        },
+        {
+          "nombre": "Comisión de Aplicación de la Ley de Inversiones",
+          "rol": "Evalúa los proyectos presentados",
+          "emoji": "📋",
+          "nota": "Sus actas no se citan en la nota."
+        },
+        {
+          "nombre": "La diaria",
+          "rol": "Publicó el análisis en 2026",
+          "emoji": "🗞️",
+          "nota": "Aporta las cifras de recaudación y renuncia fiscal."
+        }
+      ]
     },
     {
       "slug": "teletrabajo-acuerdo-individual",
@@ -90,7 +218,42 @@
       "propuesta": "Fijar por ley la obligación del empleador de proveer equipos y conectividad, y regular la jornada y la desconexión con topes verificables.",
       "fuente_url": "https://ladiaria.com.uy/trabajo/articulo/2021/8/para-el-catedratico-hugo-barretto-la-ley-de-teletrabajo-es-defectuosa-porque-agudiza-la-individualizacion-de-la-relacion-laboral/",
       "fuente_titulo": "La diaria - Para el catedrático Hugo Barretto la ley de teletrabajo es «defectuosa»",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley promulgada en 2021; la crítica del catedrático Hugo Barretto es de agosto de 2021.",
+      "responsable": "Parlamento, que aprobó la ley en 2021; el Poder Ejecutivo (MTSS), que la reglamentó. La crítica es de Hugo Barretto, catedrático de Derecho del Trabajo, difundida por La diaria.",
+      "critica": "La nota se apoya en una sola voz experta y en la opinión de un sindicato, sin datos de cuántos teletrabajadores hay ni cuántos reciben equipos del empleador. Afirma que la ley «agudiza la desigualdad» sin medir el fenómeno antes y después. El juicio «extremadamente defectuosa» es una opinión calificada, no una medición: sirve como hipótesis, no como prueba.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó la ley 19.978 en 2021",
+          "emoji": "📜",
+          "nota": "Dejó en el acuerdo individual equipos y conectividad."
+        },
+        {
+          "nombre": "Ministerio de Trabajo y Seguridad Social",
+          "rol": "Reglamenta y fiscaliza la modalidad",
+          "emoji": "🏛️",
+          "nota": "No aporta datos de fiscalización en la nota."
+        },
+        {
+          "nombre": "Hugo Barretto",
+          "rol": "Catedrático de Derecho del Trabajo",
+          "emoji": "🎓",
+          "nota": "Calificó la ley de «extremadamente defectuosa»."
+        },
+        {
+          "nombre": "Fuecys",
+          "rol": "Sindicato del sector comercio y servicios",
+          "emoji": "🧑‍🏭",
+          "nota": "Dijo que la ley quedó fuera de la negociación colectiva."
+        },
+        {
+          "nombre": "La diaria",
+          "rol": "Publicó la entrevista en agosto de 2021",
+          "emoji": "🗞️",
+          "nota": "Puso el tema en agenda."
+        }
+      ]
     },
     {
       "slug": "bienestar-animal-sin-recursos",
@@ -108,7 +271,42 @@
       "propuesta": "Dotar al INBA de autonomía, presupuesto propio y funcionarios en el interior, y establecer un procedimiento ejecutivo para cobrar las multas.",
       "fuente_url": "https://www.carasycaretas.com.uy/sociedad/inba-hoy-paga-el-que-quiere-una-reforma-hacer-efectivas-las-multas-maltrato-animal-n98392",
       "fuente_titulo": "Caras y Caretas - INBA: Hoy paga el que quiere",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley promulgada en 2009; la nota de Caras y Caretas que documenta la falta de recursos es de 2025.",
+      "responsable": "Parlamento, que aprobó la ley en 2009; el Poder Ejecutivo (MGAP), del que depende el INBA. La denuncia pública es de Caras y Caretas (2025).",
+      "critica": "La nota prueba una carencia de recursos —21 funcionarios, tres en el interior— pero la usa para concluir que la ley «es obsoleta». Son dos cosas distintas: el texto legal puede ser adecuado y fallar la estructura que lo aplica. No muestra cuántas denuncias terminaron en sanción ni compara el presupuesto del INBA con el de otros organismos de control.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó la ley 18.471 en 2009",
+          "emoji": "📜",
+          "nota": "Creó sanciones sin asignar estructura para aplicarlas."
+        },
+        {
+          "nombre": "Instituto Nacional de Bienestar Animal",
+          "rol": "Recibe 400 a 550 denuncias por mes",
+          "emoji": "🐕",
+          "nota": "Tiene 21 funcionarios; tres cubren el interior."
+        },
+        {
+          "nombre": "Ministerio de Ganadería, Agricultura y Pesca",
+          "rol": "Organismo del que depende el INBA",
+          "emoji": "🏛️",
+          "nota": "Define el presupuesto del instituto."
+        },
+        {
+          "nombre": "Organizaciones animalistas",
+          "rol": "Declararon en el Parlamento",
+          "emoji": "🐾",
+          "nota": "Calificaron la ley de «obsoleta, ineficaz»."
+        },
+        {
+          "nombre": "Caras y Caretas",
+          "rol": "Publicó el informe en 2025",
+          "emoji": "🗞️",
+          "nota": "Documentó el estado del instituto."
+        }
+      ]
     },
     {
       "slug": "contaminacion-acustica-sin-reglamento",
@@ -126,7 +324,42 @@
       "propuesta": "Aprobar el decreto reglamentario con límites de emisión e inmisión y plazos de adecuación, y armonizar las ordenanzas departamentales.",
       "fuente_url": "https://revista.fder.edu.uy/index.php/rfd/article/view/768",
       "fuente_titulo": "Revista de la Facultad de Derecho (Udelar) - Análisis de la Ley 17.852 sobre contaminación acústica",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley sancionada en 2004; el análisis de la Facultad de Derecho que constata la falta de reglamento es posterior.",
+      "responsable": "Parlamento, que aprobó la ley en 2004; el Poder Ejecutivo, que nunca la reglamentó. El diagnóstico es de la Revista de la Facultad de Derecho (Udelar).",
+      "critica": "El análisis académico constata un hecho —no hay reglamento— y de ahí deduce que la gestión del ruido es caótica, pero no mide el ruido ni compara niveles entre departamentos. Tampoco verifica si las ordenanzas municipales cubren el vacío. La conclusión «no existen límites» es demasiado fuerte: existen límites departamentales, lo que falta es un criterio nacional.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó la ley 17.852 en 2004",
+          "emoji": "📜",
+          "nota": "Dejó la reglamentación al Poder Ejecutivo."
+        },
+        {
+          "nombre": "Poder Ejecutivo",
+          "rol": "Nunca reglamentó la ley",
+          "emoji": "🏛️",
+          "nota": "Sin decreto no hay límites nacionales de decibeles."
+        },
+        {
+          "nombre": "Intendencias",
+          "rol": "Aplican ordenanzas propias sobre ruido",
+          "emoji": "🗺️",
+          "nota": "Sus criterios no son comparables entre departamentos."
+        },
+        {
+          "nombre": "Facultad de Derecho (Udelar)",
+          "rol": "Publicó el análisis jurídico de la ley",
+          "emoji": "🎓",
+          "nota": "Constata la falta de reglamento, sin medir el ruido."
+        },
+        {
+          "nombre": "Ministerio de Ambiente",
+          "rol": "Identificó la ausencia como obstáculo de gestión",
+          "emoji": "🌳",
+          "nota": "Lo incluyó en el Plan Nacional Ambiental."
+        }
+      ]
     },
     {
       "slug": "ordenamiento-territorial-aprobaciones-fictas",
@@ -144,7 +377,36 @@
       "propuesta": "Eliminar la aprobación tácita en la Evaluación Ambiental Estratégica y exigir pronunciamiento expreso del Ministerio de Ambiente antes de habilitar proyectos.",
       "fuente_url": "https://www.elobservador.com.uy/nacional/demoras-ambiente-provocaron-que-diez-proyectos-algunos-millonarios-fueran-aprobados-pese-observaciones-tecnicas-n5940789",
       "fuente_titulo": "El Observador - Demoras en Ambiente provocaron que diez proyectos fueran aprobados automáticamente",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley promulgada en 2008; las diez aprobaciones fictas documentadas ocurrieron entre 2020 y 2023.",
+      "responsable": "Parlamento, que aprobó la ley en 2008; el Ministerio de Ambiente, que no se expidió en plazo. La investigación es de El Observador (2024).",
+      "critica": "La nota documenta diez casos, pero no dice sobre cuántos proyectos totales: sin denominador, «diez aprobaciones fictas» no permite saber si es excepción o regla. Atribuye el resultado a la ley cuando la causa inmediata es la demora administrativa. La solución propuesta —eliminar la aprobación tácita— podría convertir cada demora en un bloqueo indefinido, y la nota no discute ese costo.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó la ley 18.308 en 2008",
+          "emoji": "📜",
+          "nota": "Creó la evaluación ambiental estratégica."
+        },
+        {
+          "nombre": "Ministerio de Ambiente",
+          "rol": "Debía expedirse en plazo y no lo hizo",
+          "emoji": "🌳",
+          "nota": "Su demora activó la aprobación ficta."
+        },
+        {
+          "nombre": "Intendencias",
+          "rol": "Aprueban los instrumentos departamentales",
+          "emoji": "🗺️",
+          "nota": "Quedan alcanzadas por la aprobación automática."
+        },
+        {
+          "nombre": "El Observador",
+          "rol": "Documentó los diez casos entre 2020 y 2023",
+          "emoji": "🗞️",
+          "nota": "No publica el total de proyectos presentados."
+        }
+      ]
     },
     {
       "slug": "discapacidad-transporte-sin-sancion",
@@ -162,7 +424,42 @@
       "propuesta": "Incorporar una sanción efectiva para las empresas que nieguen el beneficio y un mecanismo de reembolso o compensación para financiar la gratuidad.",
       "fuente_url": "https://www.elobservador.com.uy/nacional/pese-decreto-lacalle-pou-que-lo-reglamento-personas-discapacidad-no-acceden-boletos-gratuitos-omnibus-suburbanos-e-interdepartamentales-n5993844",
       "fuente_titulo": "El Observador - Pese a decreto, personas con discapacidad no acceden a boletos gratuitos",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley promulgada en 2010; el artículo 83 se reglamentó en 2021 y la nota que documenta el incumplimiento es de 2025.",
+      "responsable": "Parlamento, que aprobó la ley en 2010; el Poder Ejecutivo, que reglamentó el artículo 83 en 2021. La denuncia es de El Observador (2025).",
+      "critica": "El caso es sólido en el hecho —once años de demora y beneficio casi no aplicado—, pero la nota generaliza desde «casos amparados por la Justicia» sin decir cuántas personas usaron el beneficio ni cuántas empresas lo niegan. Concluye que falta sanción, aunque no prueba que la sanción sea la causa del incumplimiento: también puede faltar difusión o reembolso.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó la ley 18.651 en 2010",
+          "emoji": "📜",
+          "nota": "Fijó la gratuidad del transporte sin sanción."
+        },
+        {
+          "nombre": "Poder Ejecutivo",
+          "rol": "Reglamentó el artículo 83 en 2021",
+          "emoji": "🏛️",
+          "nota": "Lo hizo once años después de la ley."
+        },
+        {
+          "nombre": "Empresas de transporte",
+          "rol": "Deben aplicar la gratuidad",
+          "emoji": "🚌",
+          "nota": "No hay sanción prevista si la niegan."
+        },
+        {
+          "nombre": "Poder Judicial",
+          "rol": "Amparó casos individuales",
+          "emoji": "⚖️",
+          "nota": "La nota se apoya en esos fallos, sin cifras globales."
+        },
+        {
+          "nombre": "El Observador",
+          "rol": "Publicó el informe en 2025",
+          "emoji": "🗞️",
+          "nota": "Documentó el incumplimiento."
+        }
+      ]
     },
     {
       "slug": "educacion-media-obligatoria",
@@ -180,7 +477,42 @@
       "propuesta": "Fijar metas intermedias de egreso con seguimiento anual y evaluar la obligatoriedad con mecanismos de apoyo a los estudiantes que abandonan.",
       "fuente_url": "https://www.ineed.edu.uy/images/boletines/2024/Egreso-media-nuevas-cifras-viejas-conclusiones.pdf",
       "fuente_titulo": "INEEd - Egreso de media: nuevas cifras, viejas conclusiones",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley promulgada en 2008; los datos de egreso son de 2023 y el análisis del INEEd, de 2024.",
+      "responsable": "Parlamento, que aprobó la ley en 2008; la ANEP, que debe cumplirla. El análisis es del INEEd (2024).",
+      "critica": "El INEEd compara el egreso con la meta legal y concluye que la ley «fracasó», pero no separa lo que dependió de la ley de lo que dependió de la gestión, los recursos o el contexto social. El puesto 15 entre 17 países se presenta sin controlar el nivel de ingreso ni el gasto educativo. Es un dato descriptivo usado como sentencia causal.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó la ley 18.437 en 2008",
+          "emoji": "📜",
+          "nota": "Declaró obligatoria la educación media completa."
+        },
+        {
+          "nombre": "ANEP",
+          "rol": "Administra la educación pública",
+          "emoji": "🏫",
+          "nota": "Es la responsable de alcanzar la meta legal."
+        },
+        {
+          "nombre": "INEEd",
+          "rol": "Evaluó el egreso y publicó el análisis",
+          "emoji": "📊",
+          "nota": "Compara con la meta, sin aislar causas."
+        },
+        {
+          "nombre": "Estudiantes y familias",
+          "rol": "Sostienen la continuidad educativa",
+          "emoji": "🎒",
+          "nota": "El texto no recoge su situación."
+        },
+        {
+          "nombre": "MEC",
+          "rol": "Coordina la política educativa nacional",
+          "emoji": "🏛️",
+          "nota": "No se analiza su rol en el resultado."
+        }
+      ]
     },
     {
       "slug": "vagancia-medidas-seguridad",
@@ -198,7 +530,42 @@
       "propuesta": "Derogar la ley 10.071 y trasladar las situaciones de mendicidad o adicción a un abordaje social y sanitario, no a medidas de seguridad.",
       "fuente_url": "https://ojs.claeh.edu.uy/publicaciones/index.php/rderecho/article/view/720",
       "fuente_titulo": "Revista de Derecho (CLAEH) - Análisis de la ley 10.071 (Ley de vagancia)",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley sancionada en 1941; el análisis académico que pide su derogación es de 2024.",
+      "responsable": "Parlamento de 1941, que la aprobó; ningún gobierno posterior la derogó. El análisis es de la Revista de Derecho (CLAEH).",
+      "critica": "El artículo académico tiene razón en el principio —una ley de peligrosidad sin delito contradice garantías—, pero no aporta cuántas personas fueron detenidas bajo esta norma en los últimos años. Sin ese dato, no se sabe si la ley está activa o es letra muerta. La crítica es constitucional, no empírica, y el texto la presenta como si probara un daño actual.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó la ley 10.071 en 1941",
+          "emoji": "📜",
+          "nota": "Ningún parlamento posterior la derogó."
+        },
+        {
+          "nombre": "Poder Judicial",
+          "rol": "Aplica o descarta las medidas de seguridad",
+          "emoji": "⚖️",
+          "nota": "No hay registro público de cuántas aplicó."
+        },
+        {
+          "nombre": "Ministerio del Interior",
+          "rol": "Ejecuta las medidas de internamiento",
+          "emoji": "🚔",
+          "nota": "Tampoco publica cifras de uso."
+        },
+        {
+          "nombre": "Academia (CLAEH)",
+          "rol": "Publicó el análisis y pidió la derogación",
+          "emoji": "🎓",
+          "nota": "Su crítica es de principios, no de impacto medido."
+        },
+        {
+          "nombre": "Intendencia de Maldonado",
+          "rol": "Se planteó reflotarla en Punta del Este en 2023",
+          "emoji": "🗺️",
+          "nota": "Referentes locales la descartaron por obsoleta."
+        }
+      ]
     },
     {
       "slug": "corridas-de-toros-colonia",
@@ -216,7 +583,42 @@
       "propuesta": "Derogar la ley 9.483 para eliminar la autorización excepcional de corridas de toros en Colonia.",
       "fuente_url": "https://www.impo.com.uy/bases/leyes/9483-1935",
       "fuente_titulo": "IMPO - Ley 9.483 (1935), Espectáculos públicos. Corridas de toros",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley sancionada en 1935; la plaza fue reconvertida en 2021.",
+      "responsable": "Parlamento de 1935, que la aprobó; el Estado uruguayo, que no la derogó. La fuente es el texto en IMPO.",
+      "critica": "El razonamiento es impecable en la forma —una autorización vigente sin uso—, pero la nota no muestra que alguien haya intentado reabrir las corridas ni que la ley genere un conflicto práctico. La contradicción es normativa, no de gestión: se trata de una derogación de higiene legal, no de un problema que afecte la vida de la gente. Presentarla como tema de gestión infla su peso.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó la ley 9.483 en 1935",
+          "emoji": "📜",
+          "nota": "Autorizó las corridas solo en Colonia."
+        },
+        {
+          "nombre": "Intendencia de Colonia",
+          "rol": "Gobierna el departamento habilitado",
+          "emoji": "🏛️",
+          "nota": "No hay espectáculos taurinos en la actualidad."
+        },
+        {
+          "nombre": "Ministerio de Ambiente",
+          "rol": "Aplica la normativa de protección animal",
+          "emoji": "🌳",
+          "nota": "Convive con una autorización excepcional vigente."
+        },
+        {
+          "nombre": "Organizaciones proteccionistas",
+          "rol": "Piden derogar la autorización",
+          "emoji": "🐂",
+          "nota": "El tema no registra conflicto práctico actual."
+        },
+        {
+          "nombre": "IMPO",
+          "rol": "Publica el texto vigente",
+          "emoji": "📄",
+          "nota": "Es la fuente primaria de la norma."
+        }
+      ]
     },
     {
       "slug": "liberados-cupo-licitaciones",
@@ -234,7 +636,42 @@
       "propuesta": "Agregar una sanción contractual por incumplimiento y publicar anualmente cuántos puestos del cupo se ocuparon por organismo y por empresa adjudicataria.",
       "fuente_url": "https://www.elobservador.com.uy/nota/agilizar-divorcios-penalizar-las-fake-news-y-otros-reclamos-ciudadanos-al-parlamento-202091515440",
       "fuente_titulo": "El Observador - Agilizar divorcios, penalizar las fake news y otros reclamos ciudadanos al Parlamento",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley promulgada en 2005; el informe del Promole citado es posterior y la nota es de 2020.",
+      "responsable": "Parlamento, que aprobó la ley en 2005; los organismos licitantes, que deben incluir el cupo en los pliegos. El dato es del Promole, citado por El Observador.",
+      "critica": "La nota afirma que la ley se incumple porque «no se fijó una sanción», pero no presenta el dato básico: cuántos puestos del cupo se ocuparon sobre cuántos correspondían. Sin numerador ni denominador, la conclusión sobre el incumplimiento se apoya en una opinión. Además, atribuye todo a la falta de sanción sin considerar que el cupo depende de que el organismo lo exija en el pliego.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó la ley 17.897 en 2005",
+          "emoji": "📜",
+          "nota": "Reservó 5% de peones en licitaciones públicas."
+        },
+        {
+          "nombre": "Promole",
+          "rol": "Programa de inclusión laboral de liberados",
+          "emoji": "📋",
+          "nota": "Advirtió que no hay sanción concreta."
+        },
+        {
+          "nombre": "Organismos licitantes",
+          "rol": "Incluyen el cupo en los pliegos",
+          "emoji": "🏛️",
+          "nota": "Su control no es sistemático."
+        },
+        {
+          "nombre": "Empresas adjudicatarias",
+          "rol": "Deben ocupar los puestos reservados",
+          "emoji": "🏗️",
+          "nota": "No hay datos públicos de cumplimiento."
+        },
+        {
+          "nombre": "El Observador",
+          "rol": "Publicó el reclamo ciudadano en 2020",
+          "emoji": "🗞️",
+          "nota": "Puso el tema en agenda."
+        }
+      ]
     },
     {
       "slug": "preaviso-huelga-sin-sancion",
@@ -252,7 +689,42 @@
       "propuesta": "Derogar el artículo 3 o sustituirlo por un mecanismo de comunicación obligatoria con consecuencias claras y proporcionadas.",
       "fuente_url": "https://www.elobservador.com.uy/nota/agilizar-divorcios-penalizar-las-fake-news-y-otros-reclamos-ciudadanos-al-parlamento-202091515440",
       "fuente_titulo": "El Observador - Agilizar divorcios, penalizar las fake news y otros reclamos ciudadanos al Parlamento",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley de 1968; el informe del Promole citado no tiene fecha precisa en la nota.",
+      "responsable": "Parlamento de 1968, que aprobó la ley; los sucesivos parlamentos que no la modificaron. El dato es del Promole, citado por El Observador.",
+      "critica": "Es un caso de norma sin consecuencia, pero la nota no muestra un solo incumplimiento concreto ni su efecto. Concluye que la obligación es «declarativa» a partir de la ausencia de sanción, lo que es una inferencia lógica, no un hecho observado. Tampoco discute si el preaviso se cumple igual por práctica sindical.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó la ley 13.720 en 1968",
+          "emoji": "📜",
+          "nota": "Fijó siete días de preaviso sin consecuencia."
+        },
+        {
+          "nombre": "Promole",
+          "rol": "Relevó la ausencia de sanción",
+          "emoji": "📋",
+          "nota": "Su informe se cita sin fecha precisa."
+        },
+        {
+          "nombre": "Sindicatos",
+          "rol": "Declaran las huelgas",
+          "emoji": "🧑‍🏭",
+          "nota": "La nota no mide si cumplen el preaviso."
+        },
+        {
+          "nombre": "Cámaras empresariales",
+          "rol": "Declaran lockouts",
+          "emoji": "🏢",
+          "nota": "Tampoco hay registro de cumplimiento."
+        },
+        {
+          "nombre": "El Observador",
+          "rol": "Publicó el reclamo en 2020",
+          "emoji": "🗞️",
+          "nota": "Puso el tema en agenda."
+        }
+      ]
     },
     {
       "slug": "empleo-publico-sumarios-lentos",
@@ -270,7 +742,42 @@
       "propuesta": "Acortar los plazos del sumario, crear unidades instructoras especializadas y revisar la clausura automática por vencimiento del plazo.",
       "fuente_url": "https://www.gub.uy/oficina-nacional-servicio-civil/comunicacion/publicaciones/estudio-procesos-disciplinarios-administracion-publica-uruguaya-2019",
       "fuente_titulo": "ONSC - Estudio de procesos disciplinarios en la Administración Pública uruguaya, 2019-2021",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley promulgada en 2013; el estudio de la ONSC cubre 2019-2021.",
+      "responsable": "Parlamento, que aprobó el estatuto en 2013; la ONSC, que midió los tiempos. El estudio es oficial (2019-2021).",
+      "critica": "Es la fuente más sólida del conjunto: mide 5.473 sumarios y 384 días promedio. Aun así, la nota confunde dos problemas: la lentitud del procedimiento y la clausura a los dos años. Un sumario puede ser lento y aun así alcanzar sanción. Falta el dato de cuántos se cerraron sin sanción por vencimiento, que es el que probaría el efecto real.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó el estatuto 19.121 en 2013",
+          "emoji": "📜",
+          "nota": "Fijó la clausura del sumario a los dos años."
+        },
+        {
+          "nombre": "Oficina Nacional del Servicio Civil",
+          "rol": "Midió 384 días promedio por sumario",
+          "emoji": "📋",
+          "nota": "Registró 2.860 procesos abiertos a fines de 2021."
+        },
+        {
+          "nombre": "Funcionarios públicos",
+          "rol": "Alcanzados por el régimen disciplinario",
+          "emoji": "🧑‍💼",
+          "nota": "La demora afecta tanto la sanción como la defensa."
+        },
+        {
+          "nombre": "Sindicatos estatales",
+          "rol": "Participan en los sumarios",
+          "emoji": "🏢",
+          "nota": "No se recoge su posición en la nota."
+        },
+        {
+          "nombre": "Poder Ejecutivo",
+          "rol": "Instruye los sumarios",
+          "emoji": "🏛️",
+          "nota": "Define los recursos de las unidades instructoras."
+        }
+      ]
     },
     {
       "slug": "violencia-genero-implementacion",
@@ -290,11 +797,33 @@
       "responsable": "María de la Paz Echetto, doctora en Derecho y docente de la Udelar, abogada del servicio El Paso",
       "critica": "La fuente confunde los problemas de aplicación de la ley con defectos de la propia ley y atribuye buena parte de esos problemas a la resistencia ideológica de quienes la cuestionan, sin demostrarlo. Usa fallas puntuales de las tobilleras para explicar los femicidios sin estadísticas que prueben esa relación causal; interpreta el desacuerdo de algunos jueces como falta de compromiso, cuando aplicar la ley por obligación es justamente su función; presenta la capacitación en género como solución sin demostrar su eficacia y, a la vez, afirma que la ley carece de interseccionalidad cuando la propia norma ya contempla diferencias socioeconómicas, étnicas, territoriales y de discapacidad. En el fondo, sustituye demostraciones por interpretaciones, generalizaciones y atribución de intenciones.",
       "participantes": [
-        {"nombre": "María de la Paz Echetto", "rol": "Abogada y docente Udelar; autora de las afirmaciones", "emoji": "🗣️", "nota": "Afirma sin aportar estadísticas; confunde aplicación de la ley con defecto de la norma."},
-        {"nombre": "Suprema Corte de Justicia", "rol": "Responsable de crear juzgados especializados en violencia de género", "emoji": "⚖️"},
-        {"nombre": "Fiscalía General de la Nación", "rol": "Investiga y protege a las víctimas", "emoji": "🏛️"},
-        {"nombre": "Ministerio del Interior", "rol": "Controla el funcionamiento de las tobilleras electrónicas", "emoji": "🚔"},
-        {"nombre": "Jueces y juezas", "rol": "Aplican la ley", "emoji": "📜", "nota": "Aplicar la ley por obligación es su función; el desacuerdo no implica falta de compromiso."}
+        {
+          "nombre": "María de la Paz Echetto",
+          "rol": "Abogada y docente Udelar; autora de las afirmaciones",
+          "emoji": "🗣️",
+          "nota": "Afirma sin aportar estadísticas; confunde aplicación de la ley con defecto de la norma."
+        },
+        {
+          "nombre": "Suprema Corte de Justicia",
+          "rol": "Responsable de crear juzgados especializados en violencia de género",
+          "emoji": "⚖️"
+        },
+        {
+          "nombre": "Fiscalía General de la Nación",
+          "rol": "Investiga y protege a las víctimas",
+          "emoji": "🏛️"
+        },
+        {
+          "nombre": "Ministerio del Interior",
+          "rol": "Controla el funcionamiento de las tobilleras electrónicas",
+          "emoji": "🚔"
+        },
+        {
+          "nombre": "Jueces y juezas",
+          "rol": "Aplican la ley",
+          "emoji": "📜",
+          "nota": "Aplicar la ley por obligación es su función; el desacuerdo no implica falta de compromiso."
+        }
       ],
       "fuente_url": "https://udelar.edu.uy/noticias/maria-de-la-paz-echetto-situacion-actual-de-la-ley-19580-de-violencia-basada-en-genero",
       "fuente_titulo": "Udelar - María de la Paz Echetto: situación actual de la Ley 19.580",
@@ -316,7 +845,42 @@
       "propuesta": "Otorgar autonomía presupuestal a la URCDP y financiar un plan de fiscalización proactiva con personal técnico permanente.",
       "fuente_url": "https://ladiaria.com.uy/politica/articulo/2024/1/la-proteccion-de-los-datos-personales-una-ley-excelente-con-escaso-presupuesto-para-su-cumplimiento/",
       "fuente_titulo": "La diaria - La protección de los datos personales: una ley «excelente» con escaso presupuesto",
-      "verificado": true
+      "verificado": true,
+      "fecha": "Ley promulgada en 2008; los datos de presupuesto citados son de 2022.",
+      "responsable": "Parlamento, que aprobó la ley en 2008; Agesic, de la que depende la URCDP. La crítica es de Datysoc, difundida por La diaria (2024).",
+      "critica": "La nota califica la ley de «excelente» y a la vez denuncia que no se aplica, sin resolver la tensión: si el texto es bueno y el problema es el presupuesto, la conclusión debería ser sobre financiamiento, no sobre la ley. Usa la comparación con «agencias comparables de la región» sin nombrarlas ni dar sus montos. El dato de US$ 70.000 es puntual y no se ajusta por inflación ni por funciones.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Aprobó la ley 18.331 en 2008",
+          "emoji": "📜",
+          "nota": "Creó la unidad de control sin asegurar su financiamiento."
+        },
+        {
+          "nombre": "Unidad Reguladora y de Control de Datos Personales",
+          "rol": "Fiscaliza el cumplimiento",
+          "emoji": "🔒",
+          "nota": "Disponía de US$ 70.000 en 2022."
+        },
+        {
+          "nombre": "Agesic",
+          "rol": "Organismo del que depende la URCDP",
+          "emoji": "🏛️",
+          "nota": "Define su estructura y presupuesto."
+        },
+        {
+          "nombre": "Datysoc",
+          "rol": "Organización que documentó la falta de recursos",
+          "emoji": "🕵️",
+          "nota": "Señaló que el control es solo por denuncias."
+        },
+        {
+          "nombre": "La diaria",
+          "rol": "Publicó el análisis en 2024",
+          "emoji": "🗞️",
+          "nota": "Puso el tema en agenda."
+        }
+      ]
     }
   ]
 }

@@ -31,7 +31,42 @@
           "titulo": "Los derechos humanos en Uruguay 2025 - Amnistía Internacional"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Datos a 2025; el incendio del módulo 11 de Santiago Vázquez fue en junio de 2025.",
+      "responsable": "Ministerio del Interior e Instituto Nacional de Rehabilitación; el Parlamento debe reformar el Código del Proceso Penal. Documentado por Subrayado y La diaria (2025).",
+      "critica": "El texto encadena bien los datos —16.570 reclusos, 480 por 100.000—, pero salta de la sobrepoblación a la reincidencia sin mostrar la tasa de reincidencia. El 74% que pide empleo es una demanda declarada, no una prueba de que el trabajo reduzca la reincidencia. El incendio se usa como ilustración emocional de una relación causal que el texto no demuestra.",
+      "participantes": [
+        {
+          "nombre": "Ministerio del Interior",
+          "rol": "Administra el sistema penitenciario",
+          "emoji": "🚔",
+          "nota": "Reconoce hacinamiento y debilidad de las medidas alternativas."
+        },
+        {
+          "nombre": "Instituto Nacional de Rehabilitación",
+          "rol": "Gestiona los establecimientos",
+          "emoji": "🔒",
+          "nota": "Debe crear cupos de trabajo y estudio."
+        },
+        {
+          "nombre": "Parlamento",
+          "rol": "Debe reformar el Código del Proceso Penal",
+          "emoji": "📜",
+          "nota": "Su decisión habilita las medidas alternativas."
+        },
+        {
+          "nombre": "Amnistía Internacional",
+          "rol": "Documentó la situación de derechos humanos",
+          "emoji": "📣",
+          "nota": "Aporta el marco, no la tasa de reincidencia."
+        },
+        {
+          "nombre": "Subrayado",
+          "rol": "Publicó la serie de prisionalización",
+          "emoji": "🗞️",
+          "nota": "Aporta el dato de 16.570 reclusos."
+        }
+      ]
     },
     {
       "slug": "prevencion-del-suicidio",
@@ -62,7 +97,42 @@
           "titulo": "Salud mental como prioridad de gestión - MSP"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Datos de 2025; la nota de La diaria es de julio de 2026.",
+      "responsable": "MSP y ASSE, con apoyo de ANEP; el tema lo documentó La diaria (julio 2026).",
+      "critica": "El descenso a 668 muertes se presenta como «el más bajo en diez años» y a la vez como alarma: ambas cosas pueden ser ciertas, pero el texto no dice si la diferencia es estadísticamente significativa. Tampoco relaciona el aumento de intentos con el descenso de muertes, que podría indicar mejor registro o mejor respuesta. La conclusión de que «el sistema de salud solo no alcanza» no se deriva de los datos.",
+      "participantes": [
+        {
+          "nombre": "Ministerio de Salud Pública",
+          "rol": "Rector de la política de salud mental",
+          "emoji": "🏥",
+          "nota": "Reconoce que el descenso es leve."
+        },
+        {
+          "nombre": "ASSE",
+          "rol": "Presta la atención en el primer nivel",
+          "emoji": "🩺",
+          "nota": "Debe garantizar consulta con tiempos máximos."
+        },
+        {
+          "nombre": "ANEP",
+          "rol": "Detecta señales en centros educativos",
+          "emoji": "🏫",
+          "nota": "La propuesta le asigna un rol de prevención."
+        },
+        {
+          "nombre": "La diaria",
+          "rol": "Publicó los datos en julio de 2026",
+          "emoji": "🗞️",
+          "nota": "Aporta la serie de muertes e intentos."
+        },
+        {
+          "nombre": "Personas usuarias",
+          "rol": "Atravesaron intentos de autoeliminación",
+          "emoji": "🧠",
+          "nota": "El 72% de los intentos corresponde a mujeres."
+        }
+      ]
     },
     {
       "slug": "primera-infancia-y-pobreza",
@@ -93,7 +163,42 @@
           "titulo": "Centros de Atención a la Infancia y la Familia (Plan CAIF) - INAU"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Datos de 2024-2025; el Plan Nacional de Cuidados es 2026-2030.",
+      "responsable": "INAU, Plan CAIF y ANEP (Educación Inicial); el tema lo planteó La diaria en setiembre de 2025.",
+      "critica": "El 79% de matrícula con financiamiento público mide cobertura, no calidad ni pertinencia. El texto usa la caída de la natalidad como argumento para reasignar la oferta, pero no muestra dónde sobran y dónde faltan cupos. La frase sobre pobreza infantil se afirma sin la tasa correspondiente, solo con la referencia a que se «concentra» en hogares con niños.",
+      "participantes": [
+        {
+          "nombre": "INAU",
+          "rol": "Rector de la primera infancia",
+          "emoji": "🧒",
+          "nota": "Financia más de 570 centros."
+        },
+        {
+          "nombre": "Plan CAIF",
+          "rol": "Gestiona centros de atención a la infancia",
+          "emoji": "🏫",
+          "nota": "Es la red principal en territorios vulnerables."
+        },
+        {
+          "nombre": "ANEP (Educación Inicial)",
+          "rol": "Presta educación inicial pública",
+          "emoji": "📚",
+          "nota": "Debe coordinar la reasignación de cupos."
+        },
+        {
+          "nombre": "MIDES",
+          "rol": "Mide pobreza y coordina la política social",
+          "emoji": "🏛️",
+          "nota": "El texto no cita su tasa de pobreza infantil."
+        },
+        {
+          "nombre": "La diaria",
+          "rol": "Publicó el análisis en setiembre de 2025",
+          "emoji": "🗞️",
+          "nota": "Puso el tema en agenda."
+        }
+      ]
     },
     {
       "slug": "secundaria-y-utu",
@@ -124,7 +229,42 @@
           "titulo": "UTU reformulará propuesta de formación básica para mayores de 14 años"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Datos de 2025-2026; las fuentes son de 2026.",
+      "responsable": "ANEP, con MIDES y MEC; documentado por La diaria (2026) y Presidencia.",
+      "critica": "Se celebra una mejora de casi ocho puntos en el egreso sin explicar si cambió la cohorte, la medición o la promoción automática. La caída de matrícula de UTU se atribuye a la desvinculación, pero también podría reflejar el descenso de natalidad. Los 5.212 fuera del sistema se citan sin decir cuántos son de cada nivel.",
+      "participantes": [
+        {
+          "nombre": "ANEP",
+          "rol": "Administra Secundaria y UTU",
+          "emoji": "🏫",
+          "nota": "Debe sostener la revinculación."
+        },
+        {
+          "nombre": "UTU",
+          "rol": "Perdió casi 10.000 matriculados en ciclo básico",
+          "emoji": "🔧",
+          "nota": "Reformula su propuesta para mayores de 14 años."
+        },
+        {
+          "nombre": "MIDES",
+          "rol": "Articula asignaciones familiares y apoyo territorial",
+          "emoji": "🏛️",
+          "nota": "Su rol es clave para la permanencia."
+        },
+        {
+          "nombre": "Presidencia",
+          "rol": "Difundió el operativo de revinculación",
+          "emoji": "📣",
+          "nota": "Reportó más de 2.000 estudiantes contactados."
+        },
+        {
+          "nombre": "La diaria",
+          "rol": "Publicó los datos de egreso en 2026",
+          "emoji": "🗞️",
+          "nota": "Aporta la serie de bachillerato."
+        }
+      ]
     },
     {
       "slug": "empleo-juvenil",
@@ -155,7 +295,42 @@
           "titulo": "Proyecto de ley de promoción del trabajo para colectivos con obstáculos de acceso"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Datos a setiembre de 2026; la nota de El País es de 2026.",
+      "responsable": "MTSS, INEFOP y ANEP-UTU; hay un proyecto de ley en Diputados. Documentado por El País y Prensa Latina (2026).",
+      "critica": "El 21,6% de desempleo juvenil se compara con el promedio nacional, pero no se ajusta por escolaridad ni por región, que son las variables que el propio texto señala como causas. Los 235 mil jóvenes sin trabajo y los 80 mil que buscan empleo se presentan juntos, lo que mezcla inactivos con desocupados. La propuesta de prácticas subsidiadas no discute el riesgo de sustituir empleo formal por pasantías.",
+      "participantes": [
+        {
+          "nombre": "Ministerio de Trabajo y Seguridad Social",
+          "rol": "Rector de las políticas de empleo",
+          "emoji": "💼",
+          "nota": "Debe articular la primera experiencia laboral."
+        },
+        {
+          "nombre": "INEFOP",
+          "rol": "Financia formación y capacitación",
+          "emoji": "🎓",
+          "nota": "Es la vía para cerrar la brecha de habilidades."
+        },
+        {
+          "nombre": "ANEP-UTU",
+          "rol": "Forma a los jóvenes sin ciclo básico completo",
+          "emoji": "🏫",
+          "nota": "78 mil no terminaron ciclo básico ni tienen experiencia."
+        },
+        {
+          "nombre": "Cámara de Diputados",
+          "rol": "Tramita el proyecto de empleo para colectivos excluidos",
+          "emoji": "📜",
+          "nota": "Define si las prácticas serán obligatorias o incentivo."
+        },
+        {
+          "nombre": "El País",
+          "rol": "Publicó el análisis de barreras de acceso",
+          "emoji": "🗞️",
+          "nota": "Aporta los datos de desempleo juvenil."
+        }
+      ]
     },
     {
       "slug": "alquileres-y-vivienda",
@@ -186,7 +361,42 @@
           "titulo": "Estrategia para reducir el déficit habitacional - Presidencia"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Datos a noviembre de 2025; el Plan Quinquenal es 2025-2029.",
+      "responsable": "MVOT y Agencia Nacional de Vivienda, con las intendencias; documentado por La diaria (2026), INE y Presidencia.",
+      "critica": "El déficit de 40.000 viviendas es una estimación del propio plan, no una medición censal; el texto la presenta como dato firme. El alquiler promedio de 21.109 pesos en Montevideo no se compara con el ingreso medio del hogar, que es lo que determinaría si es caro. La demanda «por debajo de 35.000 pesos» mide búsquedas publicadas, no necesidad.",
+      "participantes": [
+        {
+          "nombre": "Ministerio de Vivienda y Ordenamiento Territorial",
+          "rol": "Ejecuta el Plan Quinquenal de Vivienda",
+          "emoji": "🏠",
+          "nota": "Estima el déficit en 40.000 viviendas."
+        },
+        {
+          "nombre": "Agencia Nacional de Vivienda",
+          "rol": "Administra el alquiler social",
+          "emoji": "🏛️",
+          "nota": "Debe ampliar la garantía estatal."
+        },
+        {
+          "nombre": "Instituto Nacional de Estadística",
+          "rol": "Mide los alquileres de Montevideo",
+          "emoji": "📊",
+          "nota": "El promedio de 21.109 pesos es su dato de noviembre de 2025."
+        },
+        {
+          "nombre": "Intendencia de Montevideo",
+          "rol": "Gestiona suelo y permisos",
+          "emoji": "🗺️",
+          "nota": "Su rol condiciona la oferta."
+        },
+        {
+          "nombre": "La diaria",
+          "rol": "Publicó el análisis en 2026",
+          "emoji": "🗞️",
+          "nota": "Puso el tema en agenda."
+        }
+      ]
     },
     {
       "slug": "agua-y-saneamiento",
@@ -217,7 +427,42 @@
           "titulo": "Agua potable y saneamiento: proyectos, obras y desafíos de OSE"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Datos del Informe de Gestión 2025 de OSE.",
+      "responsable": "OSE, con el Ministerio de Ambiente y las intendencias; documentado por OSE y El País (2026).",
+      "critica": "La cobertura de agua de 98,67% y la de saneamiento de 47,5% no son comparables: la primera suele medirse en viviendas urbanas y la segunda sobre viviendas con conexión. El texto las pone en la misma frase sin aclarar la base. Los 9.447 hogares sin baño son un dato censal distinto del déficit de red, y se usan como si midieran lo mismo.",
+      "participantes": [
+        {
+          "nombre": "OSE",
+          "rol": "Presta agua y saneamiento en todo el país",
+          "emoji": "🚰",
+          "nota": "Ejecuta el mayor plan de inversiones de su historia."
+        },
+        {
+          "nombre": "Ministerio de Ambiente",
+          "rol": "Rector de la política hídrica",
+          "emoji": "🌳",
+          "nota": "Define el marco del Plan Nacional de Aguas."
+        },
+        {
+          "nombre": "Intendencias",
+          "rol": "Gestionan obras locales de saneamiento",
+          "emoji": "🗺️",
+          "nota": "Su capacidad condiciona la universalización."
+        },
+        {
+          "nombre": "El País",
+          "rol": "Publicó el informe sobre obras y desafíos",
+          "emoji": "🗞️",
+          "nota": "Aporta el detalle de Casupá y la nueva planta."
+        },
+        {
+          "nombre": "Hogares sin red",
+          "rol": "9.447 viviendas sin baño de uso exclusivo",
+          "emoji": "🏚️",
+          "nota": "Es el grupo que la cobertura promedio oculta."
+        }
+      ]
     },
     {
       "slug": "residuos-y-reciclaje",
@@ -248,7 +493,42 @@
           "titulo": "Ley N° 19.829 - Gestión integral de residuos"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Recuperación de envases medida en 2022; la reglamentación por corrientes es de octubre de 2025.",
+      "responsable": "Ministerio de Ambiente, intendencias y fabricantes; documentado por Búsqueda (2025).",
+      "critica": "El 4% de recuperación se compara con una meta de 50% fijada para 2025, pero no se aclara si la meta se refería a envases o a residuos totales, ni si el 4% es nacional o de un flujo. Los convenios con 15 intendencias miden acuerdos firmados, no vertederos cerrados. El texto confunde gestión con resultado.",
+      "participantes": [
+        {
+          "nombre": "Ministerio de Ambiente",
+          "rol": "Rector de la gestión de residuos",
+          "emoji": "♻️",
+          "nota": "Reglamentó la ley por corrientes en octubre de 2025."
+        },
+        {
+          "nombre": "Intendencias",
+          "rol": "Operan la recolección y los vertederos",
+          "emoji": "🗺️",
+          "nota": "Quince firmaron convenios para cerrar vertederos."
+        },
+        {
+          "nombre": "Fabricantes y envasadores",
+          "rol": "Alcanzados por la responsabilidad extendida",
+          "emoji": "🏭",
+          "nota": "Deben financiar la recuperación de envases."
+        },
+        {
+          "nombre": "Búsqueda",
+          "rol": "Publicó el atraso en valorización",
+          "emoji": "🗞️",
+          "nota": "Aporta el dato de 4% de recuperación."
+        },
+        {
+          "nombre": "Vecinos de vertederos",
+          "rol": "Sufren el cierre pendiente",
+          "emoji": "🏘️",
+          "nota": "El texto no recoge su situación."
+        }
+      ]
     },
     {
       "slug": "transporte-metropolitano",
@@ -279,7 +559,42 @@
           "titulo": "Tarifas del transporte colectivo urbano - IM"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Tarifas vigentes desde enero de 2026.",
+      "responsable": "Intendencia de Montevideo, que fijó la tarifa; MTOP y las intendencias de Canelones y San José para la integración. Documentado por la IM y el MTOP.",
+      "critica": "El texto justifica el aumento en el déficit del sistema sin publicar el déficit ni el costo por pasajero. La devolución de 2 pesos desde 40 viajes se presenta como beneficio, pero no se calcula qué porcentaje del gasto mensual representa. La comparación entre 52 pesos con STM y 64 en efectivo no considera el costo de obtener y cargar la tarjeta.",
+      "participantes": [
+        {
+          "nombre": "Intendencia de Montevideo",
+          "rol": "Fija la tarifa del transporte urbano",
+          "emoji": "🚌",
+          "nota": "Justificó el ajuste en la sostenibilidad del sistema."
+        },
+        {
+          "nombre": "Ministerio de Transporte y Obras Públicas",
+          "rol": "Coordina el sistema metropolitano",
+          "emoji": "🏛️",
+          "nota": "La integración tarifaria sigue siendo parcial."
+        },
+        {
+          "nombre": "Intendencias de Canelones y San José",
+          "rol": "Integran el área metropolitana",
+          "emoji": "🗺️",
+          "nota": "Su acuerdo es condición para el boleto único."
+        },
+        {
+          "nombre": "Usuarios del STM",
+          "rol": "Pagan 52 pesos con tarjeta y 64 en efectivo",
+          "emoji": "🧍",
+          "nota": "La devolución por viajes frecuentes es marginal."
+        },
+        {
+          "nombre": "Sistema de Transporte Metropolitano",
+          "rol": "Opera la tarjeta y la combinación",
+          "emoji": "💳",
+          "nota": "La combinación metropolitana cuesta 80 pesos."
+        }
+      ]
     },
     {
       "slug": "cuidados-personas-mayores",
@@ -310,7 +625,42 @@
           "titulo": "Proclama por la financiación adecuada del Sistema Nacional Integrado de Cuidados"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Datos de 2025; el Plan Nacional de Cuidados es 2026-2030.",
+      "responsable": "Secretaría Nacional de Cuidados y Discapacidad, INMAYORES y BPS; documentado por el propio Plan y el movimiento El Pepe (2025).",
+      "critica": "Las 110 mil personas en dependencia se estiman, no se cuentan; el texto no dice con qué instrumento. Los 5.900 usuarios de Asistentes Personales se comparan con esa estimación sin aclarar que el programa tiene criterios de elegibilidad, de modo que la brecha no es solo presupuestal. Los 9 centros de día son un dato de oferta, no de demanda insatisfecha.",
+      "participantes": [
+        {
+          "nombre": "Secretaría Nacional de Cuidados y Discapacidad",
+          "rol": "Rectora del Sistema Nacional de Cuidados",
+          "emoji": "🧓",
+          "nota": "Reconoce que la cobertura sigue siendo limitada."
+        },
+        {
+          "nombre": "INMAYORES",
+          "rol": "Regula y fiscaliza los establecimientos",
+          "emoji": "🏛️",
+          "nota": "Debe controlar la calidad de las residencias."
+        },
+        {
+          "nombre": "BPS",
+          "rol": "Financia prestaciones y asistentes personales",
+          "emoji": "💳",
+          "nota": "Su presupuesto define la cobertura real."
+        },
+        {
+          "nombre": "Movimiento El Pepe",
+          "rol": "Reclama financiación adecuada del sistema",
+          "emoji": "📣",
+          "nota": "Puso el tema en agenda pública."
+        },
+        {
+          "nombre": "Familias cuidadoras",
+          "rol": "Sostienen el cuidado no remunerado",
+          "emoji": "🏠",
+          "nota": "El texto no mide su carga."
+        }
+      ]
     },
     {
       "slug": "discapacidad-y-empleo",
@@ -341,7 +691,42 @@
           "titulo": "La mitad de los niños y jóvenes con discapacidad vive en hogares con NBI"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Datos del Censo 2023 y del informe de la ONSC; la nota de La diaria es de octubre de 2025.",
+      "responsable": "MTSS, Instituto Nacional de Discapacidad y ONSC; documentado por UNICEF, la ONSC y La diaria.",
+      "critica": "La tasa de empleo de 49% frente a 78% no se ajusta por edad ni por nivel educativo, que explican buena parte de la diferencia. El texto atribuye la brecha a la falta de ajustes razonables sin descartar esas variables. La cuota de empleo público se menciona «por debajo de la ley» sin el porcentaje exigido ni el alcanzado.",
+      "participantes": [
+        {
+          "nombre": "Ministerio de Trabajo y Seguridad Social",
+          "rol": "Rector de la política de empleo",
+          "emoji": "💼",
+          "nota": "Debe fiscalizar la cuota y los ajustes razonables."
+        },
+        {
+          "nombre": "Instituto Nacional de Discapacidad",
+          "rol": "Coordina los derechos de las personas con discapacidad",
+          "emoji": "♿",
+          "nota": "Es el organismo de referencia del tema."
+        },
+        {
+          "nombre": "Oficina Nacional del Servicio Civil",
+          "rol": "Controla el ingreso al Estado",
+          "emoji": "📋",
+          "nota": "Su informe muestra la cuota por debajo de la ley."
+        },
+        {
+          "nombre": "UNICEF",
+          "rol": "Aportó los datos de prevalencia",
+          "emoji": "📊",
+          "nota": "197.000 personas, 6,6% de la población."
+        },
+        {
+          "nombre": "La diaria",
+          "rol": "Publicó el informe de octubre de 2025",
+          "emoji": "🗞️",
+          "nota": "Vinculó discapacidad con necesidades básicas."
+        }
+      ]
     },
     {
       "slug": "brecha-digital",
@@ -372,7 +757,42 @@
           "titulo": "Plan de Gobierno Digital 2025 - AGESIC"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Datos de la encuesta EUTIC 2024, publicada en 2025.",
+      "responsable": "Agesic, con MEC, UTU e intendencias; documentado por Agesic y La diaria (noviembre 2025).",
+      "critica": "El 92% de uso de internet se presenta junto a brechas de calidad sin aclarar que son dimensiones distintas: tener acceso no es saber usarlo. El 55% de banda ancha en el quintil más bajo no se compara con el mismo quintil en años previos, así que no se sabe si la brecha se cierra o se abre. Los porcentajes de habilidades se dan sin el tamaño de la muestra.",
+      "participantes": [
+        {
+          "nombre": "Agesic",
+          "rol": "Mide el uso de tecnología y diseña el plan digital",
+          "emoji": "💻",
+          "nota": "La EUTIC 2024 es su encuesta."
+        },
+        {
+          "nombre": "MEC",
+          "rol": "Coordina la alfabetización digital",
+          "emoji": "🏛️",
+          "nota": "Debe articular la formación presencial."
+        },
+        {
+          "nombre": "UTU",
+          "rol": "Forma en competencias digitales",
+          "emoji": "🏫",
+          "nota": "Es la vía para adultos sin escolaridad completa."
+        },
+        {
+          "nombre": "Intendencias",
+          "rol": "Gestionan territorios y dispositivos",
+          "emoji": "🗺️",
+          "nota": "El 74% de quienes no usan internet vive en el interior."
+        },
+        {
+          "nombre": "La diaria",
+          "rol": "Publicó el análisis en noviembre de 2025",
+          "emoji": "🗞️",
+          "nota": "Puso el tema en agenda."
+        }
+      ]
     },
     {
       "slug": "transparencia-compras-publicas",
@@ -403,7 +823,42 @@
           "titulo": "Los derechos humanos en Uruguay 2025 - Amnistía Internacional"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Datos desde 2018; el informe de Amnistía cubre abril 2024 a marzo 2025.",
+      "responsable": "Agencia Reguladora de Compras Estatales (ARCE), Unidad de Acceso a la Información Pública y Tribunal de Cuentas; documentado por el catálogo de datos abiertos y Amnistía Internacional.",
+      "critica": "Los 568.000 procedimientos y 750.000 adjudicaciones miden volumen, no transparencia: un dato puede estar publicado y ser inutilizable. Los 51 casos de restricción de acceso provienen de un informe de derechos humanos que no detalla cuántos terminaron en sanción. El texto concluye que hay un problema de calidad sin analizar la calidad de los propios datos que cita.",
+      "participantes": [
+        {
+          "nombre": "Agencia Reguladora de Compras Estatales",
+          "rol": "Publica los datos de compras del Estado",
+          "emoji": "📊",
+          "nota": "Su catálogo abierto es la fuente principal."
+        },
+        {
+          "nombre": "Unidad de Acceso a la Información Pública",
+          "rol": "Garantiza el derecho de acceso",
+          "emoji": "🏛️",
+          "nota": "Registra las restricciones denunciadas."
+        },
+        {
+          "nombre": "Tribunal de Cuentas",
+          "rol": "Controla la legalidad del gasto",
+          "emoji": "⚖️",
+          "nota": "Debe auditar las contrataciones directas."
+        },
+        {
+          "nombre": "Amnistía Internacional",
+          "rol": "Documentó 51 casos de restricción",
+          "emoji": "📣",
+          "nota": "No detalla cuántos terminaron en sanción."
+        },
+        {
+          "nombre": "Proveedores del Estado",
+          "rol": "Participan en los procedimientos",
+          "emoji": "🏗️",
+          "nota": "La comparabilidad de datos los afecta directamente."
+        }
+      ]
     },
     {
       "slug": "descentralizacion-municipios",
@@ -434,7 +889,42 @@
           "titulo": "Sesionó el Plenario de Municipios en Torre Ejecutiva - OPP"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Datos a 2025; la nota de La diaria es de mayo de 2025.",
+      "responsable": "Parlamento y OPP, con el Congreso de Intendentes y el Plenario de Municipios; documentado por La diaria y la CEPAL.",
+      "critica": "El texto afirma que los municipios «no tienen autonomía» pero no distingue autonomía legal de autonomía fiscal: la ley les da competencias y no recursos. Los 136 municipios se presentan como un dato de expansión sin analizar su tamaño poblacional ni su capacidad de gestión. La propuesta de partida estable no discute de dónde saldría el dinero.",
+      "participantes": [
+        {
+          "nombre": "Parlamento",
+          "rol": "Debe definir competencias y recursos",
+          "emoji": "📜",
+          "nota": "La ley vigente no asigna partida estable."
+        },
+        {
+          "nombre": "Oficina de Planeamiento y Presupuesto",
+          "rol": "Diseña las transferencias",
+          "emoji": "🏛️",
+          "nota": "Administra el sistema de transferencias subnacionales."
+        },
+        {
+          "nombre": "Congreso de Intendentes",
+          "rol": "Coordina a los gobiernos departamentales",
+          "emoji": "🗺️",
+          "nota": "Su acuerdo es condición política."
+        },
+        {
+          "nombre": "Plenario de Municipios",
+          "rol": "Representa al tercer nivel de gobierno",
+          "emoji": "🏘️",
+          "nota": "Reclama competencias y recursos."
+        },
+        {
+          "nombre": "La diaria",
+          "rol": "Publicó el análisis en mayo de 2025",
+          "emoji": "🗞️",
+          "nota": "Puso el tema en agenda."
+        }
+      ]
     },
     {
       "slug": "migracion-e-integracion",
@@ -465,7 +955,42 @@
           "titulo": "Anuario estadístico de la Dirección Nacional de Migración 2025"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Censo 2023; cotizantes a enero de 2026.",
+      "responsable": "Dirección Nacional de Migración, MTSS y MEC; documentado por el INE, Presidencia y el Anuario de Migración 2025.",
+      "critica": "Los 107.578 nacidos en el exterior incluyen a quienes llegaron hace décadas; usarlos para hablar de la migración reciente infla el fenómeno. El dato de 104.000 cotizantes mide empleo registrado, no integración: no dice salario, calificación ni informalidad. La afirmación sobre brechas de las mujeres migrantes no viene acompañada de la brecha.",
+      "participantes": [
+        {
+          "nombre": "Dirección Nacional de Migración",
+          "rol": "Otorga residencias y regularizaciones",
+          "emoji": "🛂",
+          "nota": "Debe agilizar la residencia por arraigo."
+        },
+        {
+          "nombre": "Ministerio de Trabajo y Seguridad Social",
+          "rol": "Regula el empleo de migrantes",
+          "emoji": "💼",
+          "nota": "Los cotizantes superan los 104.000."
+        },
+        {
+          "nombre": "Ministerio de Educación y Cultura",
+          "rol": "Valida títulos y competencias",
+          "emoji": "🎓",
+          "nota": "La demora de validación frena la integración."
+        },
+        {
+          "nombre": "Instituto Nacional de Estadística",
+          "rol": "Mide la población nacida en el exterior",
+          "emoji": "📊",
+          "nota": "El Censo 2023 registró 107.578 personas."
+        },
+        {
+          "nombre": "Trabajadores migrantes",
+          "rol": "Sostienen casi 7% del empleo registrado",
+          "emoji": "🧑‍💼",
+          "nota": "Las mujeres migrantes enfrentan brechas adicionales."
+        }
+      ]
     },
     {
       "slug": "violencia-de-genero",
@@ -496,7 +1021,42 @@
           "titulo": "Cantidad de homicidios de mujeres por violencia de género - MIDES"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Datos de 2025; el informe del Ministerio del Interior cubre enero-octubre de 2025.",
+      "responsable": "Suprema Corte de Justicia, Fiscalía y Ministerio del Interior; documentado por el propio Ministerio y La diaria.",
+      "critica": "El texto mezcla femicidios (18), denuncias (43.445) y delitos sexuales (3.124) como si midieran lo mismo. El 76% de las víctimas atendidas por Fiscalía es un porcentaje sobre una población atendida, no sobre el total de delitos. La conclusión de que «la ley 19.580 sigue sin aplicación plena» se apoya en la persistencia de casos, sin analizar si hubo más denuncias, más condenas o más medidas.",
+      "participantes": [
+        {
+          "nombre": "Suprema Corte de Justicia",
+          "rol": "Debe crear juzgados especializados",
+          "emoji": "⚖️",
+          "nota": "Su presupuesto define la respuesta judicial."
+        },
+        {
+          "nombre": "Fiscalía General de la Nación",
+          "rol": "Investiga y atiende a las víctimas",
+          "emoji": "🏛️",
+          "nota": "El 76% de su unidad atiende violencia de género."
+        },
+        {
+          "nombre": "Ministerio del Interior",
+          "rol": "Registra denuncias y aplica medidas",
+          "emoji": "🚔",
+          "nota": "Aportó las 43.445 denuncias de 2025."
+        },
+        {
+          "nombre": "La diaria",
+          "rol": "Publicó el análisis de los datos en 2026",
+          "emoji": "🗞️",
+          "nota": "Advirtió sobre la lectura de casos aislados."
+        },
+        {
+          "nombre": "Víctimas y organizaciones",
+          "rol": "Sostienen la denuncia y el acompañamiento",
+          "emoji": "📣",
+          "nota": "El texto no mide su acceso efectivo a la ley."
+        }
+      ]
     },
     {
       "slug": "adicciones-y-consumo",
@@ -527,7 +1087,42 @@
           "titulo": "X Encuesta Nacional sobre Consumo de Drogas en Estudiantes de Educación Media"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Estudio de 2024; la nota es de 2025.",
+      "responsable": "Junta Nacional de Drogas, MSP, ANEP e intendencias; documentado por la JND y ANEP.",
+      "critica": "El 80% de universitarios que consumió alcohol en el último año no distingue consumo ocasional de problemático: el propio texto da 10% con uso problemático, que es el dato relevante. Los universitarios no representan a la población general, y el texto lo usa para hablar de «Uruguay entre los países de mayor prevalencia». La comparación regional no se acompaña de las fuentes ni de los años.",
+      "participantes": [
+        {
+          "nombre": "Junta Nacional de Drogas",
+          "rol": "Rectora de la política de drogas",
+          "emoji": "💊",
+          "nota": "Publicó el estudio en universitarios."
+        },
+        {
+          "nombre": "Ministerio de Salud Pública",
+          "rol": "Regula la venta de psicofármacos",
+          "emoji": "🏥",
+          "nota": "El 41% de quienes usan tranquilizantes lo hace sin receta."
+        },
+        {
+          "nombre": "ANEP",
+          "rol": "Aplica la prevención en secundaria y UTU",
+          "emoji": "🏫",
+          "nota": "Es el ámbito donde se concentra la propuesta."
+        },
+        {
+          "nombre": "Intendencias",
+          "rol": "Controlan la venta y los espacios de consumo",
+          "emoji": "🗺️",
+          "nota": "Su fiscalización es dispar."
+        },
+        {
+          "nombre": "Universidades",
+          "rol": "Aportaron la población del estudio",
+          "emoji": "🎓",
+          "nota": "No representan a la población general."
+        }
+      ]
     },
     {
       "slug": "seguridad-alimentaria",
@@ -558,7 +1153,42 @@
           "titulo": "Aportes del INDA sobre seguridad y soberanía alimentaria"
         }
       ],
-      "verificado": true
+      "verificado": true,
+      "fecha": "Datos de 2025.",
+      "responsable": "Instituto Nacional de Alimentación, MGAP, MIDES e intendencias; documentado por MIDES y la Escuela de Nutrición (Udelar).",
+      "critica": "La inseguridad alimentaria moderada o grave de 13,2% proviene de una escala de percepción, no de una medición de ingesta: mide el relato del hogar sobre si comió menos, no desnutrición. El texto lo usa para afirmar que «el problema es el acceso económico» sin analizar precios relativos ni ingresos. Los 18,9% en hogares con menores de 6 años no se ajustan por tamaño del hogar.",
+      "participantes": [
+        {
+          "nombre": "Instituto Nacional de Alimentación",
+          "rol": "Ejecuta la política alimentaria",
+          "emoji": "🍽️",
+          "nota": "Debe ampliar la canasta accesible."
+        },
+        {
+          "nombre": "Ministerio de Ganadería, Agricultura y Pesca",
+          "rol": "Coordina la producción familiar",
+          "emoji": "🌾",
+          "nota": "La compra pública es su instrumento."
+        },
+        {
+          "nombre": "MIDES",
+          "rol": "Mide la inseguridad alimentaria",
+          "emoji": "🏛️",
+          "nota": "Publicó el informe nacional de prevalencia 2025."
+        },
+        {
+          "nombre": "Escuela de Nutrición (Udelar)",
+          "rol": "Relevó ollas y merenderos populares",
+          "emoji": "🎓",
+          "nota": "Aporta la dimensión territorial."
+        },
+        {
+          "nombre": "Intendencias",
+          "rol": "Gestionan la respuesta local",
+          "emoji": "🗺️",
+          "nota": "La inseguridad se concentra en territorios específicos."
+        }
+      ]
     }
   ]
 }
