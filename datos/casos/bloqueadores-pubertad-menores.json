@@ -4,7 +4,7 @@
   "emoji": "🧪",
   "sector": "Salud e infancia",
   "pregunta": "¿Qué habilitó Uruguay y qué muestran los países que empezaron antes?",
-  "sintesis": "Uruguay aprobó en 2018 la ley integral para personas trans y el MSP actualizó su guía clínica en 2026. La guía contempla bloqueadores de pubertad en adolescentes que cumplen criterios clínicos, no desde los 10 años. No encontramos dato público de cuántos menores reciben el tratamiento ni de sus resultados. Varios países que lo adoptaron antes lo restringieron: Suecia y Finlandia lo limitan a casos excepcionales o a investigación, el Reino Unido lo prohibió en 2024 y Noruega lo discute. Las revisiones sistemáticas encuentran evidencia débil de beneficio a largo plazo. No está probado que Uruguay esté repitiendo ese recorrido: falta el dato básico.",
+  "sintesis": "Uruguay se sumó en 2018 al grupo de países que ofrecen bloqueadores y hormonas a menores, con una ley y una guía clínica. Los países que empezaron antes están retrocediendo: Suecia y Finlandia los limitan a casos excepcionales o investigación, el Reino Unido los prohibió en 2024 y Noruega los discute. La evidencia internacional de beneficio a largo plazo es débil. En Uruguay no hay dato público de cuántos menores se tratan ni de sus resultados, así que no se puede medir el tamaño del fenómeno local.",
   "certeza": "indicios",
   "cadena": [
     {
@@ -27,20 +27,60 @@
     },
     {
       "paso": "Efecto no buscado",
-      "texto": "La hipótesis es que un inicio temprano aumenta la probabilidad de pasar a hormonas y cirugía, y que volver atrás después es costoso. Hay indicios: la revisión Cass observó que, tras introducir los bloqueadores, creció la disposición a iniciar hormonas en la adolescencia, y Suecia y el Reino Unido restringieron. No hay estudio uruguayo que lo pruebe.",
-      "certeza": "hipotesis",
+      "texto": "La hipótesis es que un inicio temprano aumenta la probabilidad de pasar a hormonas y cirugía, y que volver atrás después es costoso. Hay indicios internacionales: la revisión Cass observó que, tras introducir los bloqueadores, creció la disposición a iniciar hormonas en la adolescencia, y Suecia y el Reino Unido restringieron. Lo que falta es el estudio uruguayo: no hay seguimiento local publicado.",
+      "certeza": "indicios",
       "fuente": "Cass Review (2024); Socialstyrelsen (2022); NHS (2024)"
     }
   ],
   "cronologia": [
-    {"fecha": "2018", "pais": "Uruguay", "hecho": "Se aprueba la Ley 19.684, que declara de interés general las políticas para personas trans y obliga a elaborar guías de atención.", "fuente": "https://parlamento.gub.uy/documentosyleyes/leyes/ley/19684"},
-    {"fecha": "2020", "pais": "Finlandia", "hecho": "La guía nacional prioriza el apoyo psicosocial y limita los tratamientos hormonales a casos seleccionados, con evaluación multidisciplinaria centralizada.", "fuente": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10875134/"},
-    {"fecha": "2022", "pais": "Suecia", "hecho": "La Junta Nacional de Salud concluye que, a nivel de grupo, los riesgos de los bloqueadores y las hormonas probablemente superan los beneficios; los admite solo en casos excepcionales o dentro de investigación.", "fuente": "https://socialstyrelsen.se/contentassets/444af6c0a5fb429c9b56fd51b931a816/2023-1-8330.pdf"},
-    {"fecha": "2022", "pais": "Francia", "hecho": "La Academia Nacional de Medicina recomienda «la mayor reserva» en el uso de bloqueadores en niños y adolescentes.", "fuente": "https://bioethicsobservatory.org/2024/07/european-policies-regarding-minors-with-gender-dysphoria-a-comparative-analysis/47056/"},
-    {"fecha": "2023", "pais": "Noruega", "hecho": "La Junta de Investigación de Salud (Ukom) recomienda tratar los bloqueadores y las hormonas como tratamientos experimentales. El directorio de salud no prohibió nada en ese momento.", "fuente": "https://apnews.com/article/fact-check-norway-not-ban-gender-affirming-care-956221436313"},
-    {"fecha": "2024", "pais": "Reino Unido", "hecho": "La revisión Cass concluye que la evidencia es «notablemente débil». El NHS deja de recetar bloqueadores fuera de ensayos y en diciembre se vuelve indefinida la prohibición de prescribirlos a menores.", "fuente": "https://www.gov.uk/government/news/ban-on-puberty-blockers-to-be-made-indefinite-on-experts-advice"},
-    {"fecha": "2024", "pais": "Países Bajos", "hecho": "El Parlamento ordena investigar los resultados físicos y mentales de los menores tratados con bloqueadores, en el país donde nació el protocolo.", "fuente": "https://bioethicsobservatory.org/2024/07/european-policies-regarding-minors-with-gender-dysphoria-a-comparative-analysis/47056/"},
-    {"fecha": "2026", "pais": "Uruguay", "hecho": "El MSP actualiza la guía clínica. Se abre una disputa pública: un portal afirma que se «habilitó el bloqueo hormonal desde los 10 años» y una verificación lo desmiente.", "fuente": "https://ladiaria.com.uy/verifica/articulo/2026/9/es-falso-que-el-msp-habilito-el-bloqueo-hormonal-a-ninos-a-partir-de-los-10-anos/"}
+    {
+      "fecha": "2018",
+      "pais": "Uruguay",
+      "hecho": "Se aprueba la Ley 19.684, que declara de interés general las políticas para personas trans y obliga a elaborar guías de atención.",
+      "fuente": "https://parlamento.gub.uy/documentosyleyes/leyes/ley/19684"
+    },
+    {
+      "fecha": "2020",
+      "pais": "Finlandia",
+      "hecho": "La guía nacional prioriza el apoyo psicosocial y limita los tratamientos hormonales a casos seleccionados, con evaluación multidisciplinaria centralizada.",
+      "fuente": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10875134/"
+    },
+    {
+      "fecha": "2022",
+      "pais": "Suecia",
+      "hecho": "La Junta Nacional de Salud concluye que, a nivel de grupo, los riesgos de los bloqueadores y las hormonas probablemente superan los beneficios; los admite solo en casos excepcionales o dentro de investigación.",
+      "fuente": "https://socialstyrelsen.se/contentassets/444af6c0a5fb429c9b56fd51b931a816/2023-1-8330.pdf"
+    },
+    {
+      "fecha": "2022",
+      "pais": "Francia",
+      "hecho": "La Academia Nacional de Medicina recomienda «la mayor reserva» en el uso de bloqueadores en niños y adolescentes.",
+      "fuente": "https://bioethicsobservatory.org/2024/07/european-policies-regarding-minors-with-gender-dysphoria-a-comparative-analysis/47056/"
+    },
+    {
+      "fecha": "2023",
+      "pais": "Noruega",
+      "hecho": "La Junta de Investigación de Salud (Ukom) recomienda tratar los bloqueadores y las hormonas como tratamientos experimentales. El directorio de salud no prohibió nada en ese momento.",
+      "fuente": "https://apnews.com/article/fact-check-norway-not-ban-gender-affirming-care-956221436313"
+    },
+    {
+      "fecha": "2024",
+      "pais": "Reino Unido",
+      "hecho": "La revisión Cass concluye que la evidencia es «notablemente débil». El NHS deja de recetar bloqueadores fuera de ensayos y en diciembre se vuelve indefinida la prohibición de prescribirlos a menores.",
+      "fuente": "https://www.gov.uk/government/news/ban-on-puberty-blockers-to-be-made-indefinite-on-experts-advice"
+    },
+    {
+      "fecha": "2024",
+      "pais": "Países Bajos",
+      "hecho": "El Parlamento ordena investigar los resultados físicos y mentales de los menores tratados con bloqueadores, en el país donde nació el protocolo.",
+      "fuente": "https://bioethicsobservatory.org/2024/07/european-policies-regarding-minors-with-gender-dysphoria-a-comparative-analysis/47056/"
+    },
+    {
+      "fecha": "2026",
+      "pais": "Uruguay",
+      "hecho": "El MSP actualiza la guía clínica. Se abre una disputa pública: un portal afirma que se «habilitó el bloqueo hormonal desde los 10 años» y una verificación lo desmiente.",
+      "fuente": "https://ladiaria.com.uy/verifica/articulo/2026/9/es-falso-que-el-msp-habilito-el-bloqueo-hormonal-a-ninos-a-partir-de-los-10-anos/"
+    }
   ],
   "intereses": [
     {
@@ -68,6 +108,185 @@
       "nota": "La advertencia sobre el uso exagerado de estudios en ambos lados está en la revisión Cass."
     }
   ],
+  "patron": {
+    "observado": "Entre 2015 y 2026, países con sistemas de salud distintos adoptaron la misma política en pocos años, impulsada por las mismas guías internacionales (WPATH y Endocrine Society), y varios la revirtieron cuando revisaron la evidencia. Uruguay se sumó en 2018 con una ley y actualizó la guía en 2026.",
+    "no_probado": "No hay documento público que muestre una coordinación de la industria farmacéutica para imponerla en Uruguay, ni que la demanda social local haya sido el motor.",
+    "como_probar": [
+      "Quién financió y redactó la actualización de la guía.",
+      "Qué reuniones y actores participaron en la decisión.",
+      "Si hubo pedidos de familias u organizaciones antes de la ley."
+    ]
+  },
+  "glosario": {
+    "análogos de GnRH": "Medicamentos que frenan la pubertad bloqueando la señal hormonal. Se usan hace décadas en pubertad precoz y en algunos cánceres; para disforia de género no tienen registro sanitario específico en varios países.",
+    "Cass Review": "Revisión independiente encargada por el sistema de salud inglés (NHS) y publicada en 2024. Concluyó que la evidencia sobre bloqueadores y hormonas en menores es débil y recomendó limitarlos a investigación.",
+    "WPATH": "Asociación Profesional Mundial para la Salud Transgénero. Publica los estándares de cuidado que siguen muchos equipos y defiende el acceso a bloqueadores y hormonas.",
+    "revisión sistemática": "Estudio que reúne y evalúa toda la investigación disponible sobre una pregunta, con criterios explícitos. Es más confiable que un estudio aislado.",
+    "evidencia débil": "Datos de baja calidad o escasos: no alcanzan para afirmar que un tratamiento funciona o es seguro, aunque tampoco prueban lo contrario.",
+    "hipótesis": "Explicación posible que todavía no está probada y que se contrasta con datos.",
+    "NHS": "Servicio Nacional de Salud del Reino Unido.",
+    "Ukom": "Junta de Investigación de Salud de Noruega, organismo independiente que recomendó tratar estos tratamientos como experimentales."
+  },
+  "donde_encaja": {
+    "escala": "En Uruguay no hay cifra pública de menores tratados. Para dimensionar: el país tiene 9.447 hogares sin baño de uso exclusivo y 5.212 personas en edad escolar fuera del sistema educativo.",
+    "gasto": "Tampoco hay dato público del gasto. Un tratamiento con análogos de GnRH cuesta, según precios internacionales de consultoras privadas, entre US$ 5.000 y 8.500 por dosis mensual; en Uruguay el precio no es público.",
+    "prioridades": [
+      {
+        "tema": "Agua y saneamiento",
+        "slug": "agua-y-saneamiento",
+        "dato": "9.447 hogares sin baño de uso exclusivo."
+      },
+      {
+        "tema": "Secundaria y UTU",
+        "slug": "secundaria-y-utu",
+        "dato": "5.212 personas en edad escolar fuera del sistema."
+      },
+      {
+        "tema": "Primera infancia",
+        "slug": "primera-infancia-y-pobreza",
+        "dato": "La pobreza se concentra en hogares con niños pequeños."
+      },
+      {
+        "tema": "Cuidados de personas mayores",
+        "slug": "cuidados-personas-mayores",
+        "dato": "110 mil personas en dependencia y 9 centros de día."
+      }
+    ]
+  },
+  "parlamento": {
+    "nota": "En la actuación parlamentaria cargada (2025-2026) hay un solo pedido de informes sobre el tema.",
+    "registros": [
+      {
+        "politico": "Nicolle Salle",
+        "anio": 2026,
+        "hecho": "Pidió informes sobre los fundamentos científicos, normativos y protocolos del bloqueo puberal y la hormonización en personas menores de edad.",
+        "fuente": "https://legislativo.parlamento.gub.uy/aresuelveref.aspx?FICHAASUNTO,175492"
+      }
+    ]
+  },
+  "manipulacion": [
+    {
+      "tecnica": "Opacidad selectiva",
+      "descripcion": "Cuando se promueve algo nuevo, no se publican los números que permitirían medirlo: cuántos casos, cuánto se gasta, qué resultados hay.",
+      "senal": "En Uruguay no hay registro público de menores tratados ni de gasto.",
+      "presente": "Sí, en este caso."
+    },
+    {
+      "tecnica": "Saturación de datos",
+      "descripcion": "Cuando ya hay que justificar algo, se publican muchos números y estudios que dan impresión de prueba, aunque sean débiles o estén fuera de contexto.",
+      "senal": "La revisión Cass advirtió que ambos lados exageran la evidencia; hay guías que se citan entre sí en círculo.",
+      "presente": "Sí, en el debate internacional."
+    },
+    {
+      "tecnica": "Autoridad prestada",
+      "descripcion": "Se apela a un experto o sociedad científica sin mostrar quién financia su posición.",
+      "senal": "Las sociedades que defienden el acceso y las que piden cautela tienen vínculos e intereses que no siempre se declaran.",
+      "presente": "Parcial: no hay dato uruguayo de conflictos de interés."
+    }
+  ],
+  "curvas": {
+    "escala": "0 = prohibido · 1 = solo investigación o casos excepcionales · 2 = restringido con cautela · 3 = acceso con guía clínica",
+    "series": [
+      {
+        "pais": "Suecia",
+        "puntos": [
+          [
+            2015,
+            3
+          ],
+          [
+            2022,
+            1
+          ]
+        ]
+      },
+      {
+        "pais": "Finlandia",
+        "puntos": [
+          [
+            2015,
+            3
+          ],
+          [
+            2020,
+            1
+          ]
+        ]
+      },
+      {
+        "pais": "Reino Unido",
+        "puntos": [
+          [
+            2015,
+            3
+          ],
+          [
+            2024,
+            0
+          ]
+        ],
+        "color": "#b4534b"
+      },
+      {
+        "pais": "Noruega",
+        "puntos": [
+          [
+            2015,
+            3
+          ],
+          [
+            2023,
+            2
+          ],
+          [
+            2024,
+            1
+          ]
+        ]
+      },
+      {
+        "pais": "Francia",
+        "puntos": [
+          [
+            2015,
+            3
+          ],
+          [
+            2022,
+            2
+          ]
+        ]
+      },
+      {
+        "pais": "Países Bajos",
+        "puntos": [
+          [
+            2015,
+            3
+          ],
+          [
+            2024,
+            3
+          ]
+        ]
+      },
+      {
+        "pais": "Uruguay",
+        "puntos": [
+          [
+            2016,
+            2
+          ],
+          [
+            2026,
+            2
+          ]
+        ],
+        "destacado": true,
+        "nota": "Sin dato de intensidad"
+      }
+    ]
+  },
   "otra_posicion": [
     {
       "actor": "Endocrine Society",
@@ -100,13 +319,37 @@
     "Cuánto gasta el sistema en estos tratamientos y quién los provee."
   ],
   "fuentes": [
-    {"titulo": "Ley 19.684 - Ley Integral para Personas Trans", "url": "https://parlamento.gub.uy/documentosyleyes/leyes/ley/19684"},
-    {"titulo": "La diaria Verifica: es falso que el MSP habilitó el bloqueo hormonal desde los 10 años", "url": "https://ladiaria.com.uy/verifica/articulo/2026/9/es-falso-que-el-msp-habilito-el-bloqueo-hormonal-a-ninos-a-partir-de-los-10-anos/"},
-    {"titulo": "Guía clínica para la hormonización en personas trans (MSP)", "url": "https://www.gub.uy/ministerio-salud-publica/sites/ministerio-salud-publica/files/documentos/publicaciones/Gu%C3%ADa%20clinica%20para%20la%20Hormonizaci%C3%B3n%20en%20personas%20Trans%202016.pdf"},
-    {"titulo": "Cass Review - informe final (Reino Unido, 2024)", "url": "https://cass.independent-review.uk/home/publications/final-report/"},
-    {"titulo": "GOV.UK: prohibición indefinida de bloqueadores de pubertad", "url": "https://www.gov.uk/government/news/ban-on-puberty-blockers-to-be-made-indefinite-on-experts-advice"},
-    {"titulo": "Socialstyrelsen: guía sueca de atención a menores con disforia de género (2022)", "url": "https://socialstyrelsen.se/contentassets/444af6c0a5fb429c9b56fd51b931a816/2023-1-8330.pdf"},
-    {"titulo": "AP Fact Check: Noruega no prohibió la atención de afirmación de género", "url": "https://apnews.com/article/fact-check-norway-not-ban-gender-affirming-care-956221436313"},
-    {"titulo": "European Academy of Paediatrics: revisión de políticas europeas", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10875134/"}
+    {
+      "titulo": "Ley 19.684 - Ley Integral para Personas Trans",
+      "url": "https://parlamento.gub.uy/documentosyleyes/leyes/ley/19684"
+    },
+    {
+      "titulo": "La diaria Verifica: es falso que el MSP habilitó el bloqueo hormonal desde los 10 años",
+      "url": "https://ladiaria.com.uy/verifica/articulo/2026/9/es-falso-que-el-msp-habilito-el-bloqueo-hormonal-a-ninos-a-partir-de-los-10-anos/"
+    },
+    {
+      "titulo": "Guía clínica para la hormonización en personas trans (MSP)",
+      "url": "https://www.gub.uy/ministerio-salud-publica/sites/ministerio-salud-publica/files/documentos/publicaciones/Gu%C3%ADa%20clinica%20para%20la%20Hormonizaci%C3%B3n%20en%20personas%20Trans%202016.pdf"
+    },
+    {
+      "titulo": "Cass Review - informe final (Reino Unido, 2024)",
+      "url": "https://cass.independent-review.uk/home/publications/final-report/"
+    },
+    {
+      "titulo": "GOV.UK: prohibición indefinida de bloqueadores de pubertad",
+      "url": "https://www.gov.uk/government/news/ban-on-puberty-blockers-to-be-made-indefinite-on-experts-advice"
+    },
+    {
+      "titulo": "Socialstyrelsen: guía sueca de atención a menores con disforia de género (2022)",
+      "url": "https://socialstyrelsen.se/contentassets/444af6c0a5fb429c9b56fd51b931a816/2023-1-8330.pdf"
+    },
+    {
+      "titulo": "AP Fact Check: Noruega no prohibió la atención de afirmación de género",
+      "url": "https://apnews.com/article/fact-check-norway-not-ban-gender-affirming-care-956221436313"
+    },
+    {
+      "titulo": "European Academy of Paediatrics: revisión de políticas europeas",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10875134/"
+    }
   ]
 }

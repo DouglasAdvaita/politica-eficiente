@@ -38,6 +38,33 @@
     </ol>
   </div>
 
+  {% if c.patron %}
+  <div class="bloque">
+    <h4>El patrón y la pregunta de fondo</h4>
+    <p>{{ c.patron.observado }}</p>
+    <p class="chico suave">{{ c.patron.no_probado }}</p>
+    <p class="chico" style="margin-bottom:4px">Se probaría con:</p>
+    <ul class="chico" style="margin:0 0 0 18px; line-height:1.7">
+      {% for x in c.patron.como_probar %}<li>{{ x }}</li>{% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if c.curvas_svg %}
+  <div class="bloque">
+    <h4>El mismo camino, en el tiempo</h4>
+    <p class="chico suave">
+      Nivel de acceso a bloqueadores y hormonas para menores en cada país. Uruguay entra en 2016-2018
+      y se mantiene; los que empezaron antes fueron restringiendo.
+    </p>
+    {{ c.curvas_svg|safe }}
+    <p class="chico suave">{{ c.curvas.escala }}</p>
+    <p class="chico suave">
+      Índice elaborado por este sitio a partir de las normas citadas; no mide cantidad de casos.
+    </p>
+  </div>
+  {% endif %}
+
   <div class="bloque">
     <h4>Qué pasó en otros países</h4>
     <div class="pila" style="margin-top:8px">
@@ -54,8 +81,30 @@
     </div>
   </div>
 
+  {% if c.donde_encaja %}
+  <div class="bloque">
+    <h4>Dónde encaja</h4>
+    <p>{{ c.donde_encaja.escala }}</p>
+    <p>{{ c.donde_encaja.gasto }}</p>
+    <p class="chico suave" style="margin-bottom:4px">Otros temas de este sitio con datos públicos:</p>
+    <div class="pila">
+      {% for p in c.donde_encaja.prioridades %}
+        <div class="hito-pais">
+          <div style="flex:1">
+            <a href="{{ url_for('tema', slug=p.slug) }}"><b>{{ p.tema }}</b></a>
+            <div class="chico suave">{{ p.dato }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
   <div class="bloque">
     <h4>Quién gana y quién pierde</h4>
+    <p class="chico suave" style="margin:0 0 6px">
+      Lo marcado como interpretación es una lectura de este sitio, no un hecho: se muestra para que se pueda discutir.
+    </p>
     <div class="pila" style="margin-top:8px">
       {% for i in c.intereses %}
         <div class="participante">
@@ -90,6 +139,46 @@
     </div>
   </div>
 
+  {% if c.parlamento %}
+  <div class="bloque">
+    <h4>Rastro parlamentario</h4>
+    <p class="chico suave" style="margin:0 0 6px">{{ c.parlamento.nota }}</p>
+    <div class="pila">
+      {% for p in c.parlamento.registros %}
+        <div class="hito-pais">
+          <span class="anio">{{ p.anio }}</span>
+          <div style="flex:1">
+            <b>{{ p.politico }}</b>
+            <p class="chico" style="margin:2px 0">{{ p.hecho }}</p>
+            {% if p.fuente %}<a class="chico" href="{{ p.fuente }}" target="_blank" rel="noopener">ver documento ↗</a>{% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if c.manipulacion %}
+  <div class="bloque bandera">
+    <h4>🚩 Cómo se manipula la información</h4>
+    <p class="chico suave" style="margin:0 0 6px">
+      Dos tácticas opuestas: no mostrar números cuando se quiere imponer algo nuevo, o mostrarlos en exceso cuando se quiere justificar lo ya hecho.
+    </p>
+    <div class="pila">
+      {% for m in c.manipulacion %}
+        <div class="participante">
+          <div style="flex:1">
+            <b>{{ m.tecnica }}</b>
+            <p class="chico" style="margin:4px 0">{{ m.descripcion }}</p>
+            <p class="chico suave" style="margin:0">Señal: {{ m.senal }}</p>
+            <p class="chico" style="margin:2px 0"><b>En este caso:</b> {{ m.presente }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
   <div class="bloque bandera">
     <h4>🚩 Lo que falta saber</h4>
     <ul class="chico" style="margin:6px 0 0 18px; line-height:1.7">
@@ -106,6 +195,18 @@
       {% for f in c.cambiaria %}<li>{{ f }}</li>{% endfor %}
     </ul>
   </div>
+
+  {% if c.glosario %}
+  <div class="bloque">
+    <h4>Palabras de este caso</h4>
+    <p class="chico suave" style="margin:0 0 6px">Pasá el mouse o tocá cada término para ver la explicación.</p>
+    <div class="chips" style="gap:10px; flex-wrap:wrap">
+      {% for termino, definicion in c.glosario.items() %}
+        <span class="palabra" tabindex="0" data-tip="{{ definicion }}">{{ termino }}</span>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
 
   <div class="bloque">
     <h4>Fuentes</h4>

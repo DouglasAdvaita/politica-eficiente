@@ -399,6 +399,7 @@ def caso(slug):
     d = casosmod.uno(slug)
     if not d:
         abort(404)
+    d["curvas_svg"] = casosmod.svg_curvas(d)
     return render_template("caso.html", c=d)
 
 

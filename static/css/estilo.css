@@ -256,6 +256,9 @@ textarea { min-height: 96px; resize: vertical; }
 .hito-pais { display: flex; gap: 14px; padding: 7px 0; border-bottom: 1px solid #eceff3; }
 .hito-pais .anio { flex: 0 0 52px; font-weight: 700; color: var(--tinta); font-size: .85rem; }
 .hito-pais:last-child { border-bottom: 0; }
+.curvas-svg { width: 100%; height: auto; margin: 6px 0 2px; }
+.curvas-svg .eje { font-size: 11px; fill: #6b7686; }
+.curvas-svg .et { font-size: 11px; fill: #333d4b; }
 
 /* ---------- mapa ---------- */
 .mapa-caja { overflow-x: auto; border: 1px solid var(--borde); border-radius: var(--radio); background: #ffffff; }
