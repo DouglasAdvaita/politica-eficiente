@@ -72,6 +72,24 @@
     </div>
   </div>
 
+  <div class="bloque">
+    <h4>La otra posición</h4>
+    <p class="chico suave" style="margin:0 0 6px">
+      Las sociedades que defienden el acceso no coinciden con las restricciones. Sus argumentos y sus fuentes:
+    </p>
+    <div class="pila">
+      {% for o in c.otra_posicion %}
+        <div class="participante">
+          <div style="flex:1">
+            <b>{{ o.actor }}</b>
+            <p class="chico" style="margin:4px 0">{{ o.postura }}</p>
+            {% if o.fuente %}<a class="chico" href="{{ o.fuente }}" target="_blank" rel="noopener">fuente ↗</a>{% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
   <div class="bloque bandera">
     <h4>🚩 Lo que falta saber</h4>
     <ul class="chico" style="margin:6px 0 0 18px; line-height:1.7">
@@ -83,6 +101,13 @@
   </div>
 
   <div class="bloque">
+    <h4>Qué cambiaría esta conclusión</h4>
+    <ul class="chico" style="margin:6px 0 0 18px; line-height:1.7">
+      {% for f in c.cambiaria %}<li>{{ f }}</li>{% endfor %}
+    </ul>
+  </div>
+
+  <div class="bloque">
     <h4>Fuentes</h4>
     <ul class="chico" style="margin:6px 0 0 18px; line-height:1.8">
       {% for f in c.fuentes %}
@@ -90,5 +115,9 @@
       {% endfor %}
     </ul>
   </div>
+
+  {% if c.metodo %}
+    <p class="chico suave" style="margin-top:10px">{{ c.metodo }}</p>
+  {% endif %}
 </article>
 {% endblock %}

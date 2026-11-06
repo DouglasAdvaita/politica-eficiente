@@ -68,6 +68,30 @@
       "nota": "La advertencia sobre el uso exagerado de estudios en ambos lados está en la revisión Cass."
     }
   ],
+  "otra_posicion": [
+    {
+      "actor": "Endocrine Society",
+      "postura": "Sostiene que la revisión Cass no aporta investigación nueva que contradiga su guía; describe los bloqueadores como una pausa generalmente reversible y defiende que la decisión la tomen la familia y los médicos, no una prohibición.",
+      "fuente": "https://www.endocrine.org/news-and-advocacy/news-room/2024/statement-in-support-of-gender-affirming-care"
+    },
+    {
+      "actor": "WPATH y USPATH",
+      "postura": "Cuestionan el proceso de Cass por excluir a especialistas en la materia y defienden sus estándares de cuidado; señalan que varios países (Canadá, Países Bajos, Bélgica, Alemania) no restringieron.",
+      "fuente": "https://www.wpath.org/wp-content/uploads/2024/11/17.05.24-Response-Cass-Review-FINAL-with-ed-note.pdf"
+    },
+    {
+      "actor": "Análisis del BMJ",
+      "postura": "Señala que Cass detectó circularidad entre guías que se citan entre sí, y que la propia revisión sistemática de WPATH calificó como «baja» la evidencia sobre beneficios en salud mental y «imposible» concluir sobre el riesgo de suicidio.",
+      "fuente": "https://www.bmj.com/content/385/bmj.q1141"
+    }
+  ],
+  "cambiaria": [
+    "Un registro uruguayo que muestre cuántos menores se tratan y con qué resultados a 5 y 10 años.",
+    "Una revisión sistemática independiente que encuentre beneficio claro y sostenido en salud mental.",
+    "Casos de reversión o arrepentimiento documentados en Uruguay.",
+    "Que la guía uruguaya exija evaluación multidisciplinaria prolongada y seguimiento obligatorio: reduciría el riesgo, aunque no lo eliminaría."
+  ],
+  "metodo": "Búsqueda realizada el 6/11/2026 en fuentes oficiales (Parlamento, MSP, NHS, Socialstyrelsen), verificaciones periodísticas y comunicados de sociedades científicas. «Sin datos» significa que no encontramos una cifra pública, no que el hecho no exista. Las cifras de mercado provienen de consultoras privadas y no coinciden entre sí; se usan solo como orden de magnitud.",
   "faltantes": [
     "Cuántos menores reciben bloqueadores u hormonas en Uruguay, por departamento y prestador (dato no publicado).",
     "Qué seguimiento de resultados existe y a cuántos años se extiende.",
