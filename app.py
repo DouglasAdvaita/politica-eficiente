@@ -358,6 +358,41 @@ def opinar(slug):
     return redirect(url_for("tema", slug=slug) + "#foro")
 
 
+@app.route("/comparador")
+def comparador():
+    camara = request.args.get("camara", "todas")
+    where, params = "", []
+    if camara != "todas":
+        where, params = "WHERE p.camara = ?", [camara]
+    with dbm.abrir() as db:
+        filas = db.todos(
+            """SELECT p.id, p.slug, p.nombre, p.emoji, p.cargo, p.camara,
+                      COUNT(a.id) AS total,
+                      SUM(CASE WHEN a.importancia = 'alta' THEN 1 ELSE 0 END) AS alta,
+                      SUM(CASE WHEN a.importancia = 'media' THEN 1 ELSE 0 END) AS media,
+                      SUM(CASE WHEN a.importancia = 'baja' THEN 1 ELSE 0 END) AS baja,
+                      SUM(CASE WHEN a.estado = 'hecho' THEN 1 ELSE 0 END) AS hechas,
+                      SUM(CASE WHEN a.estado = 'en_proceso' THEN 1 ELSE 0 END) AS en_proceso,
+                      SUM(CASE WHEN a.estado = 'pendiente' THEN 1 ELSE 0 END) AS pendientes
+               FROM politicos p JOIN acciones a ON a.politico_id = p.id
+               """ + where + """
+               GROUP BY p.id, p.slug, p.nombre, p.emoji, p.cargo, p.camara
+               ORDER BY alta DESC, total DESC, p.nombre""",
+            tuple(params),
+        )
+        anios = db.todos(
+            """SELECT anio, COUNT(*) AS n FROM hitos
+               WHERE anio IS NOT NULL AND anio >= 2000
+               GROUP BY anio ORDER BY anio""")
+        camaras = [f["camara"] for f in db.todos(
+            "SELECT DISTINCT camara FROM politicos WHERE camara <> '' ORDER BY camara")]
+    tope = max((f["n"] for f in anios), default=1) or 1
+    return render_template(
+        "comparador.html", filas=filas, anios=anios, camaras=camaras,
+        camara=camara, tope=tope,
+    )
+
+
 @app.route("/politicos")
 def politicos():
     camara = request.args.get("camara", "todas")

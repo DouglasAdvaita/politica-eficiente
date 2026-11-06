@@ -31,6 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Cualquier fila o tarjeta con data-href se abre con clic o Enter.
+  document.querySelectorAll("[data-href]:not(.nodo)").forEach((el) => {
+    const ir = () => { location.href = el.dataset.href; };
+    el.addEventListener("click", ir);
+    el.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); ir(); }
+    });
+  });
+
   // Textarea que crece y contador simple.
   document.querySelectorAll("textarea").forEach((t) => {
     t.addEventListener("input", () => {

@@ -126,6 +126,7 @@ CREATE TABLE IF NOT EXISTS acciones (
     estado TEXT NOT NULL DEFAULT 'pendiente',
     fecha TEXT,
     tema_categoria TEXT NOT NULL DEFAULT '',
+    importancia TEXT NOT NULL DEFAULT 'media',
     fuente_url TEXT,
     creado TEXT NOT NULL
 );
@@ -381,11 +382,24 @@ def _migrar(db):
     if ES_PG:
         for nombre, ddl in columnas_nuevas:
             db.ejecutar(f"ALTER TABLE temas ADD COLUMN IF NOT EXISTS {nombre} {ddl}")
+        _migrar_acciones(db)
         return
     actuales = {f["name"] for f in db.todos("PRAGMA table_info(temas)")}
     for nombre, ddl in columnas_nuevas:
         if nombre not in actuales:
             db.ejecutar(f"ALTER TABLE temas ADD COLUMN {nombre} {ddl}")
+    _migrar_acciones(db)
+
+
+def _migrar_acciones(db):
+    """La importancia de una accion se agrego despues de las primeras cargas."""
+    if ES_PG:
+        db.ejecutar("ALTER TABLE acciones ADD COLUMN IF NOT EXISTS importancia "
+                    "TEXT NOT NULL DEFAULT 'media'")
+        return
+    actuales = {f["name"] for f in db.todos("PRAGMA table_info(acciones)")}
+    if "importancia" not in actuales:
+        db.ejecutar("ALTER TABLE acciones ADD COLUMN importancia TEXT NOT NULL DEFAULT 'media'")
 
 
 def registrar_actividad(db, usuario_id, tipo, puntos, detalle=""):

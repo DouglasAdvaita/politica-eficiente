@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block titulo %}Comparador · Política Eficiente{% endblock %}
+{% block ancho %}ancho{% endblock %}
+{% block cuerpo %}
+<div class="fila entre">
+  <div>
+    <h1>Comparador de actividad</h1>
+    <p class="suave">
+      Cada fila muestra lo que un cargo hizo, tiene en curso y prometió. La columna
+      <b>alta</b> cuenta solo las decisiones que cambian una norma, una obra grande,
+      un nombramiento o un acuerdo internacional; <b>baja</b> agrupa ceremonias,
+      aniversarios y exposiciones.
+      <span class="etiqueta azul" tabindex="0" data-tip="Una acción de alcance alto no está bien hecha por ser alta: la columna mide alcance, no calidad ni resultado.">cómo se lee</span>
+    </p>
+  </div>
+  <div class="chips">
+    <a class="chip {% if camara == 'todas' %}activo{% endif %}" href="{{ url_for('comparador') }}">Todas</a>
+    {% for c in camaras %}
+      <a class="chip {% if camara == c %}activo{% endif %}" href="{{ url_for('comparador', camara=c) }}">{{ c|cat }}</a>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="panel" style="margin-top:14px; overflow-x:auto">
+  <table>
+    <thead>
+      <tr>
+        <th>Cargo</th>
+        <th>Alta</th>
+        <th>Media</th>
+        <th>Baja</th>
+        <th>Hechas</th>
+        <th>En proceso</th>
+        <th>Pendientes</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for f in filas %}
+        <tr data-href="{{ url_for('politico', slug=f.slug) }}" role="link" tabindex="0" style="cursor:pointer">
+          <td>
+            <b>{{ f.emoji }} {{ f.nombre }}</b>
+            <div class="chico suave">{{ f.cargo }}</div>
+          </td>
+          <td><b>{{ f.alta }}</b></td>
+          <td>{{ f.media }}</td>
+          <td class="suave">{{ f.baja }}</td>
+          <td style="color:var(--verde)">{{ f.hechas }}</td>
+          <td style="color:var(--azul)">{{ f.en_proceso }}</td>
+          <td style="color:var(--ambar)">{{ f.pendientes }}</td>
+          <td>{{ f.total }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<section style="margin-top:26px">
+  <h2>Evolución anual de la actividad registrada</h2>
+  <p class="suave chico">
+    Cada barra cuenta hechos con fecha y fuente cargados en las fichas de los cargos.
+    Los años sin barra no tienen datos, no significan que no haya pasado nada.
+  </p>
+  <div class="panel" style="margin-top:10px">
+    {% for a in anios %}
+      <div class="fila" style="align-items:center; gap:10px; margin:3px 0">
+        <span class="chico suave" style="width:44px">{{ a.anio }}</span>
+        <i style="display:block; height:10px; border-radius:3px; background:var(--tinta); opacity:.75; width:{{ (100 * a.n / tope)|round(1) }}%"></i>
+        <span class="chico suave">{{ a.n }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<p class="chico suave" style="margin-top:14px">
+  Los datos salen de las actividades declaradas y de las noticias correlacionadas, cada una con su enlace.
+  Si un cargo aparece con pocos hechos es porque no hay fuente cargada, no porque no haya trabajado.
+</p>
+{% endblock %}

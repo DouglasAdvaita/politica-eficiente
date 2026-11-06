@@ -208,3 +208,6 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 3. Completar las 72 biografías sin artículo con noticias fechadas y enlazadas.
 4. T26: comparador visual de acciones e iniciativas.
 - [x] T30 - Ficha editorial obligatoria por tema: todo tema muestra fecha, responsable que lo inicia, critica de coherencia del relato e indice de personas y organismos con emoji justificado; importador idempotente a SQLite y Neon. (35 de 35 temas, commit a06e35d)
+- [x] T23 - Glosario con ventanas emergentes: 30 terminos en lenguaje simple, pagina /glosario y palabras explicadas al pasar el mouse en los textos del tema. (commit 6523bcd)
+- [x] T22 - Contexto y preguntas abiertas: cada uno de los 35 temas explica como se llego a la situacion, que dato falta y 3 preguntas que el ciudadano puede responder. (commit 40ac43b)
+- [ ] T28 - Contexto, lenguaje sencillo y politica de fuentes: hecho el contexto faltante, el glosario y las banderas rojas; falta el control explicito de bots e IA en el sentir popular.
