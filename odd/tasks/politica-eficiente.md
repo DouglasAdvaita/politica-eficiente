@@ -207,3 +207,4 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 2. Revisar y correlacionar las noticias `por_revisar` y las aceptadas con su biografía (proceso manual).
 3. Completar las 72 biografías sin artículo con noticias fechadas y enlazadas.
 4. T26: comparador visual de acciones e iniciativas.
+- [x] T30 - Ficha editorial obligatoria por tema: todo tema muestra fecha, responsable que lo inicia, critica de coherencia del relato e indice de personas y organismos con emoji justificado; importador idempotente a SQLite y Neon. (35 de 35 temas, commit a06e35d)
