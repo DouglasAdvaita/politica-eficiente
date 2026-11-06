@@ -8,13 +8,14 @@
     <span class="emoji">{{ t.emoji }}</span>
     <div style="flex:1">
       <div class="chips" style="margin-bottom:8px">
-        <span class="etiqueta {% if t.tipo == 'ley' %}ambar{% else %}verde{% endif %}">
+        <span class="etiqueta {% if t.tipo == 'ley' %}ambar{% else %}verde{% endif %}" tabindex="0"
+              data-tip="{% if t.tipo == 'ley' %}Ley vigente que no logra su objetivo según los datos cargados.{% else %}Iniciativa ciudadana o de un cargo, aún no aprobada.{% endif %}">
           {% if t.tipo == 'ley' %}Ley ineficaz{% else %}Propuesta{% endif %}
         </span>
         <span class="etiqueta">{{ t.categoria|cat }}</span>
         {% if t.subcategoria %}<span class="etiqueta">{{ t.subcategoria }}</span>{% endif %}
-        {% if t.urgencia == 'alta' %}<span class="etiqueta roja">urgencia alta</span>{% endif %}
-        {% if not t.verificado %}<span class="etiqueta ambar">sin verificar</span>{% endif %}
+        {% if t.urgencia == 'alta' %}<span class="etiqueta roja" tabindex="0" data-tip="Requiere atención inmediata según su calificación.">urgencia alta</span>{% endif %}
+        {% if not t.verificado %}<span class="etiqueta ambar" tabindex="0" data-tip="Dato sin fuente oficial enlazada todavía; se muestra como provisorio.">sin verificar</span>{% endif %}
       </div>
       <h1>{{ t.titulo }}</h1>
       {% if t.resumen %}<p class="suave">{{ t.resumen }}</p>{% endif %}
@@ -134,7 +135,7 @@
           <div class="actividad">
             <span class="fecha">{{ a.fecha or 'sin fecha' }}</span>
             <div>
-              <b>{{ a.emoji }} {{ a.nombre }}</b>
+              <b>{{ a.emoji }} <a href="{{ url_for('politico', slug=a.politico_slug) }}">{{ a.nombre }}</a></b>
               <div class="chico suave">{{ a.titulo }}</div>
             </div>
           </div>

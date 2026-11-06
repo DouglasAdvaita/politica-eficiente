@@ -276,7 +276,8 @@ def tema(slug):
             (t["categoria"], t["id"]),
         )
         acciones = db.todos(
-            """SELECT a.*, p.nombre, p.emoji FROM acciones a JOIN politicos p ON p.id = a.politico_id
+            """SELECT a.*, p.nombre, p.emoji, p.slug AS politico_slug
+               FROM acciones a JOIN politicos p ON p.id = a.politico_id
                WHERE a.tema_categoria = ? ORDER BY a.fecha DESC NULLS LAST LIMIT 6""",
             (t["categoria"],),
         )

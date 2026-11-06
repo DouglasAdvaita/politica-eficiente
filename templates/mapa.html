@@ -39,6 +39,7 @@
   <div class="panel">
     <h2>🧭 Cómo leerlo</h2>
     <ul class="suave chico" style="line-height:1.8">
+      <li>Hacé clic en un <b>tema</b> o en un <b>cargo</b> para abrir su ficha.</li>
       <li><b style="color:var(--verde)">Verde:</b> el cargo se pronunció a favor del tema.</li>
       <li><b style="color:var(--rojo)">Rojo:</b> el cargo se pronunció en contra.</li>
       <li><b style="color:var(--ambar)">Ámbar punteado:</b> tiene actividad declarada en esa categoría, sin postura explícita.</li>
@@ -66,9 +67,9 @@
             <i class="p" style="width:{{ f.ancho_p|round(1) }}%" title="{{ f.pct_politico|round(1) }}% de las actividades"></i>
           </span>
           <span class="chico">
-            {% if f.brecha > 5 %}<span class="etiqueta roja">descuida</span>
-            {% elif f.brecha < -5 %}<span class="etiqueta ambar">sobre-atende</span>
-            {% else %}<span class="etiqueta verde">parejo</span>{% endif %}
+            {% if f.brecha > 5 %}<span class="etiqueta roja" tabindex="0" data-tip="La ciudadanía vota mucho más este tema de lo que los cargos lo trabajan.">descuida</span>
+            {% elif f.brecha < -5 %}<span class="etiqueta ambar" tabindex="0" data-tip="Los cargos trabajan más este tema de lo que la ciudadanía lo vota.">sobre-atende</span>
+            {% else %}<span class="etiqueta verde" tabindex="0" data-tip="La atención de los cargos acompaña a los votos ciudadanos.">parejo</span>{% endif %}
           </span>
         </div>
       {% endfor %}

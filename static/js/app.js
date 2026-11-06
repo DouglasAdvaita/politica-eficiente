@@ -20,6 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
         svg.classList.remove("destacar-politicos", "destacar-usuarios");
       });
     });
+
+    // Navegar al hacer clic (o Enter) en un tema o cargo del mapa.
+    svg.querySelectorAll(".nodo[data-href]").forEach((nodo) => {
+      const ir = () => { location.href = nodo.dataset.href; };
+      nodo.addEventListener("click", ir);
+      nodo.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); ir(); }
+      });
+    });
   }
 
   // Textarea que crece y contador simple.

@@ -122,15 +122,35 @@ textarea { min-height: 96px; resize: vertical; }
 .chip:hover { border-color: var(--tinta); color: var(--tinta); text-decoration: none; }
 .chip.activo { background: var(--tinta); border-color: var(--tinta); color: #ffffff; }
 .etiqueta {
-  display: inline-block; padding: 2px 9px; border-radius: 999px;
-  font-size: .75rem; font-weight: 700; letter-spacing: .2px;
-  background: var(--panel2); color: #4a5566; border: 1px solid var(--borde);
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 1px 0; border: none; border-radius: 0;
+  font-size: .76rem; font-weight: 700; letter-spacing: .2px;
+  background: none; color: #4a5566; white-space: nowrap;
 }
-.etiqueta.verde { background: #eaf4ee; color: var(--verde); border-color: #bfdccb; }
-.etiqueta.roja { background: #fbeeec; color: var(--rojo); border-color: #e8c3bd; }
-.etiqueta.ambar { background: #fbf3e4; color: var(--ambar); border-color: #ead6ad; }
-.etiqueta.azul { background: #eef2f7; color: var(--azul); border-color: #c9d6e4; }
-.etiqueta.rosa { background: #f7eef1; color: var(--rosa); border-color: #e6c8d1; }
+.etiqueta::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #9aa4b2; flex: 0 0 6px; }
+.etiqueta.verde { color: var(--verde); }
+.etiqueta.verde::before { background: var(--verde); }
+.etiqueta.roja { color: var(--rojo); }
+.etiqueta.roja::before { background: var(--rojo); }
+.etiqueta.ambar { color: var(--ambar); }
+.etiqueta.ambar::before { background: var(--ambar); }
+.etiqueta.azul { color: var(--azul); }
+.etiqueta.azul::before { background: var(--azul); }
+.etiqueta.rosa { color: var(--rosa); }
+.etiqueta.rosa::before { background: var(--rosa); }
+
+/* ---------- popups de ayuda (tooltips) ---------- */
+[data-tip] { position: relative; cursor: help; }
+[data-tip]:hover::after, [data-tip]:focus::after {
+  content: attr(data-tip);
+  position: absolute; bottom: calc(100% + 6px); left: 50%;
+  transform: translateX(-50%);
+  background: #1a222d; color: #ffffff;
+  font-size: .74rem; font-weight: 400; letter-spacing: 0;
+  padding: 7px 10px; border-radius: 8px; width: max-content; max-width: 280px;
+  white-space: normal; line-height: 1.4; z-index: 70;
+  box-shadow: 0 4px 16px rgba(16, 24, 40, .22); text-align: left;
+}
 
 /* ---------- portada ---------- */
 .hero {

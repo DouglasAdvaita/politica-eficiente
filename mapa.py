@@ -170,7 +170,7 @@ def svg(d):
         total = max(1, favor + contra)
         ancho_apoyo = int((ANCHO_TEMA - 12) * favor / total)
         piezas.append(
-            f'<g class="nodo tema" data-tema="{t["id"]}">'
+            f'<g class="nodo tema" data-tema="{t["id"]}" data-href="/tema/{esc(t["slug"])}" role="link" tabindex="0">'
             f'<title>{esc(t["titulo"])} · {favor} a favor, {contra} en contra, {t["opiniones"]} opiniones</title>'
             f'<rect x="{X_TEMAS}" y="{y}" width="{ANCHO_TEMA}" height="{ALTO_CAJA}" rx="8" fill="#ffffff" stroke="#d6dbe3"/>'
             f'<rect x="{X_TEMAS + 6}" y="{y + 24}" width="{ancho_apoyo}" height="3" rx="1.5" fill="#1f7a4d" opacity="0.85"/>'
@@ -188,7 +188,7 @@ def svg(d):
         pos_pol[p["id"]] = (x, y)
         fondo = COLOR_CAMARA.get(p["camara"], "#3d4653")
         piezas.append(
-            f'<g class="nodo politico" data-pol="{p["id"]}">'
+            f'<g class="nodo politico" data-pol="{p["id"]}" data-href="/politico/{esc(p["slug"])}" role="link" tabindex="0">'
             f'<title>{esc(p["nombre"])} · {esc(p["cargo"])} · {esc(p["organismo"])}</title>'
             f'<rect x="{x}" y="{y}" width="{ANCHO_POL}" height="{ALTO_CAJA}" rx="7" fill="{fondo}" stroke="#ffffff"/>'
             f'<text x="{x + 6}" y="{y + 20}" font-size="11">{esc(p["emoji"])}</text>'

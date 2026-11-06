@@ -13,8 +13,8 @@
         <span class="etiqueta">{{ p.camara }}</span>
         {% if p.partido %}<span class="etiqueta">{{ p.partido }}</span>{% endif %}
         {% if p.departamento %}<span class="etiqueta">{{ p.departamento }}</span>{% endif %}
-        {% if p.usuario_id %}<span class="etiqueta verde">cuenta verificada</span>{% else %}<span class="etiqueta ambar">cuenta no vinculada</span>{% endif %}
-        {% if p.verificado %}<span class="etiqueta verde">datos con fuente</span>{% else %}<span class="etiqueta ambar">datos sin verificar</span>{% endif %}
+        {% if p.usuario_id %}<span class="etiqueta verde" tabindex="0" data-tip="Quien ocupa el cargo vinculó su cuenta al correo oficial.">cuenta verificada</span>{% else %}<span class="etiqueta ambar" tabindex="0" data-tip="El cargo todavía no vinculó su cuenta al correo oficial.">cuenta no vinculada</span>{% endif %}
+        {% if p.verificado %}<span class="etiqueta verde" tabindex="0" data-tip="Cada dato lleva el enlace de su fuente oficial.">datos con fuente</span>{% else %}<span class="etiqueta ambar" tabindex="0" data-tip="Falta la fuente: se muestra como provisorio, no como hecho.">datos sin verificar</span>{% endif %}
       </div>
     </div>
   </div>
@@ -46,7 +46,7 @@
 <section class="panel" style="margin-top:18px">
   <div class="fila entre" style="align-items:flex-start">
     <h2 style="margin:0">🧬 Biografía</h2>
-    <span class="etiqueta">fuente secundaria</span>
+    <span class="etiqueta" tabindex="0" data-tip="Dato tomado de una enciclopedia abierta; contrastar con el Parlamento.">fuente secundaria</span>
   </div>
   {% if bio.resumen %}<p>{{ bio.resumen }}</p>{% endif %}
 
@@ -106,7 +106,7 @@
   <h2>📈 Desempeño medido en la app</h2>
   {% if rendimiento.puntaje is not none %}
     <div class="fila entre">
-      <span class="etiqueta {% if rendimiento.estado == 'trabajando' %}verde{% elif rendimiento.estado == 'irregular' %}ambar{% else %}roja{% endif %}" style="font-size:.9rem">
+      <span class="etiqueta {% if rendimiento.estado == 'trabajando' %}verde{% elif rendimiento.estado == 'irregular' %}ambar{% else %}roja{% endif %}" style="font-size:.9rem" tabindex="0" data-tip="Puntaje 0-100 según actividades hechas, pendientes y vencidas; los umbrales se configuran en Administración.">
         {{ rendimiento.texto }} · {{ rendimiento.puntaje }}/100
       </span>
       <span class="chico suave">
@@ -152,7 +152,7 @@
           <div class="chico suave">{{ a.descripcion }}</div>
           {% if a.fuente_url %}<a class="chico" href="{{ a.fuente_url }}" target="_blank" rel="noopener">fuente ↗</a>{% endif %}
         </div>
-        <span class="etiqueta {% if a.estado == 'hecho' %}verde{% elif a.estado == 'en_proceso' %}azul{% else %}ambar{% endif %}">{{ a.estado|replace('_',' ') }}</span>
+        <span class="etiqueta {% if a.estado == 'hecho' %}verde{% elif a.estado == 'en_proceso' %}azul{% else %}ambar{% endif %}" tabindex="0" data-tip="{% if a.estado == 'hecho' %}Actividad ya realizada o publicada por el cargo.{% elif a.estado == 'en_proceso' %}Actividad en curso.{% else %}Actividad comprometida, aún sin avance.{% endif %}">{{ a.estado|replace('_',' ') }}</span>
       </div>
     {% else %}
       <p class="suave chico">Sin actividades registradas.</p>
@@ -164,7 +164,7 @@
     {% for pos in posiciones %}
       <div class="fila entre" style="padding:8px 0;border-bottom:1px solid rgba(34,55,92,.5)">
         <a href="{{ url_for('tema', slug=pos.slug) }}">{{ pos.emoji }} {{ pos.titulo }}</a>
-        <span class="etiqueta {% if pos.valor > 0 %}verde{% else %}roja{% endif %}">{% if pos.valor > 0 %}a favor{% else %}en contra{% endif %}</span>
+        <span class="etiqueta {% if pos.valor > 0 %}verde{% else %}roja{% endif %}" tabindex="0" data-tip="Postura declarada por el cargo en este tema.">{% if pos.valor > 0 %}a favor{% else %}en contra{% endif %}</span>
       </div>
     {% else %}
       <p class="suave chico">Todavía no declaró posturas en la app.</p>
