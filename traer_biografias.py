@@ -1,4 +1,5 @@
-"""Recolecta biografias de legisladores desde la Wikipedia en espanol.
+"""Recolecta biografias de legisladores y cargos del Ejecutivo desde la Wikipedia
+en espanol.
 
 Genera datos/fuentes/biografias.json. Cada dato queda atado al articulo del
 que sale: la app lo muestra como fuente secundaria y con enlace para auditar.
@@ -28,13 +29,15 @@ INTERVALO = 1.0
 _LOCK = threading.Lock()
 _ULTIMO = [0.0]
 
-ARCHIVOS = ("senadores.json", "diputados_a_f.json", "diputados_g_o.json",
-            "diputados_p_z.json", "diputados_faltantes.json")
+ARCHIVOS = ("politicos.json", "senadores.json", "diputados_a_f.json",
+            "diputados_g_o.json", "diputados_p_z.json", "diputados_faltantes.json")
 
 MESES = ("enero|febrero|marzo|abril|mayo|junio|julio|agosto|setiembre|septiembre|"
          "octubre|noviembre|diciembre")
 RE_NAC = re.compile(r"\(([^()]{2,60}?),\s*(\d{1,2} de (?:" + MESES + r") de (\d{4}))\)")
 RE_NAC_SOLA = re.compile(r"\((\d{1,2} de (?:" + MESES + r") de (\d{4}))\)")
+ROLES = ("polític", "ministr", "intendente", "senador", "senadora", "diputad", "fiscal",
+         "canciller", "jerarca", "subsecretari", "secretari", "presidencia", "vicepresident")
 RE_PROF = re.compile(r"es (?:un|una) ([^.]{3,160}?) uruguay[oa]", re.I)
 RE_ANIO = re.compile(r"\b(1[89]\d\d|20[0-2]\d)\b")
 
@@ -263,7 +266,8 @@ def _valida(titulo, texto, nombre, apellido):
     if len(tokens) >= 3 and tokens[-1] not in inicio:
         return False
     bajo = _plano(texto[:1200])
-    return "uruguay" in bajo or "uruguayo" in bajo or "uruguaya" in bajo
+    return ("uruguay" in bajo or "uruguayo" in bajo or "uruguaya" in bajo) and \
+        any(_plano(r) in _plano(texto[:800]) for r in ROLES)
 
 
 def extraer(nombre, titulo, partido=""):

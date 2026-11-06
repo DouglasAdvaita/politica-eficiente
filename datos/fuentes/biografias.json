@@ -2,8 +2,913 @@
  "fuente": "Wikipedia en español",
  "licencia": "CC BY-SA 4.0",
  "advertencia": "Datos tomados de articulos de Wikipedia y atribuidos en cada ficha. Es fuente secundaria: debe contrastarse con el Parlamento o el IMPO.",
- "generado": "2026-11-05T15:39:01",
+ "generado": "2026-11-05T23:35:09",
  "legisladores": [
+  {
+   "articulo": "Yamandú Orsi",
+   "url": "https://es.wikipedia.org/wiki/Yamand%C3%BA_Orsi",
+   "nacimiento_fecha": "13 de junio de 1967",
+   "nacimiento_lugar": "Santa Rosa, Canelones",
+   "profesion": "profesor de historia y político",
+   "formacion": "En 1986 se matriculó en la Facultad de Derecho de la Universidad de la República para estudiar relaciones internacionales, sin embargo, abandonó al cabo de un mes",
+   "resumen": "Yamandú Ramón Antonio Orsi Martínez (Santa Rosa, Canelones, 13 de junio de 1967) es un profesor de historia y político uruguayo, miembro del Frente Amplio. Es el presidente de la República Oriental del Uruguay desde el 1 de marzo de 2025",
+   "hitos": [
+    {
+     "anio": 2004,
+     "texto": "En 2004, mientras todavía ejercía la docencia, fue el cuarto candidato a la Cámara de Representantes en la lista electoral del MPP para las elecciones generales de ese año, sin resultar electo."
+    },
+    {
+     "anio": 2005,
+     "texto": "A inicios de 2005 fue nombrado primer suplente de Marcos Carámbula en su candidatura a Intendente de Canelones; tras la victoria del FA en las elecciones municipales de mayo, asumió el cargo de Secretario General de la Intendencia Departamental de Canelones."
+    },
+    {
+     "anio": 2005,
+     "texto": "En 2005 fue nombrado primer suplente de Marcos Carámbula, candidato frenteamplista a Intendente de Canelones en las elecciones departamentales de mayo de ese año."
+    },
+    {
+     "anio": 2015,
+     "texto": "En 2015, ante la imposibilidad constitucional de Carámbula para ser reelecto nuevamente, Orsi renunció a su cargo para ser candidato a Intendente de Canelones."
+    },
+    {
+     "anio": 2015,
+     "texto": "En las elecciones departamentales de 2015, Orsi resultó electo como intendente de Canelones por el período 2015-2020."
+    },
+    {
+     "anio": 2015,
+     "texto": "En las elecciones departamentales y municipales de 2015, el FA obtuvo en Canelones el 58,8% de los votos válidos con relación a los otros partidos."
+    },
+    {
+     "anio": 2015,
+     "texto": "En los primeros días de marzo de 2015, ante la imposibilidad constitucional de Carámbula para ser reelecto para un tercer período, Orsi renunció a su cargo para dedicarse a la campaña electoral departamental."
+    },
+    {
+     "anio": 2015,
+     "texto": "Orsi –que obtuvo el 37% de los votos, superando a José Carlos Mahía, de Asamblea Uruguay–, resultó electo Intendente de Canelones por el período 2015-2020, debido al sistema del doble voto simultáneo."
+    },
+    {
+     "anio": 2019,
+     "texto": "Durante la campaña del balotaje de las elecciones generales de 2019, fue nombrado como jefe de campaña del candidato frenteamplista Daniel Martínez, quien fue derrotado por Luis Lacalle Pou, candidato del Partido Nacional."
+    },
+    {
+     "anio": 2019,
+     "texto": "El traspado de mando tuvo lugar el 9 de julio en el Teatro Politeama.De cara a la segunda vuelta de las elecciones generales de 2019, fue nombrado jefe de campaña del candidato del FA, Daniel Martínez Villamil."
+    },
+    {
+     "anio": 2019,
+     "texto": "Tras la derrota del FA en las elecciones de 2019, Orsi comenzó a ser vislumbrado por analistas políticos, consultores de opinión pública y dirigentes políticos como un candidato para los comicios de 2024."
+    },
+    {
+     "anio": 2020,
+     "texto": "En enero de 2020, Orsi fue anunciado como candidato único a Intendente de Canelones por el FA, de cara a las elecciones departamentales de ese año, resultando reelecto para el período 2020-2025."
+    },
+    {
+     "anio": 2023,
+     "texto": "El 19 de marzo de 2023, el MPP anunció oficialmente su apoyo a Orsi como precandidato del FA para las elecciones internas de 2024 en un mitin realizado en la sede del Club Cordón."
+    },
+    {
+     "anio": 2023,
+     "texto": "En 2023 distintos sectores del FA anunciaron oficialmente su apoyo a una precandidatura presidencial de Yamandú Orsi."
+    },
+    {
+     "anio": 2024,
+     "texto": "El 20 de febrero de 2024, presentó formalmente su renuncia ante la Junta Departamental de Canelones dedicarse a la campaña presidencial; la que fue programada para el 1.º de marzo."
+    },
+    {
+     "anio": 2024,
+     "texto": "El 20 de febrero de 2024, presentó su renuncia como intendente, que fue programada para el 1 de marzo."
+    }
+   ],
+   "vinculos": [
+    {
+     "tipo": "vinculo",
+     "descripcion": "Es el segundo hijo del matrimonio entre Pablo «Bebe» Orsi (1933-2018), trabajador rural y Carmen «Beba» Martínez (fallecida en 2023), de profesión costurera"
+    },
+    {
+     "tipo": "familiar",
+     "descripcion": "Además, según varios fuentes de noticias italianas, se reveló que Orsi es bisnieto de Giovanni Orsi, un nativo de Osiglia que emigró a Uruguay en busca de oportunidades"
+    },
+    {
+     "tipo": "familiar",
+     "descripcion": "Tiene una hermana mayor, María del Luján"
+    },
+    {
+     "tipo": "familiar",
+     "descripcion": "En 1972, se estableció con su familia en la ciudad de Canelones, debido a la enfermedad de columna que padecía su padre, la cual le impedía realizar tareas en el campo"
+    },
+    {
+     "tipo": "familiar",
+     "descripcion": "En la capital departamental, el matrimonio montó un comercio, y Orsi asistió a la Escuela n.º 110 «Tres Esquinas» y al Liceo Tomás Berreta"
+    },
+    {
+     "tipo": "familiar",
+     "descripcion": "Está casado con Laura Alonsopérez, a quien conoció mientras dictaba clases en Maldonado; juntos tienen dos hijos, Lucía y Victorio"
+    }
+   ],
+   "_largo_articulo": 12838,
+   "slug": "yamandu-orsi",
+   "nombre": "Yamandú Orsi"
+  },
+  {
+   "articulo": "Carolina Cosse",
+   "url": "https://es.wikipedia.org/wiki/Carolina_Cosse",
+   "nacimiento_fecha": "25 de diciembre de 1961",
+   "nacimiento_lugar": "Montevideo",
+   "profesion": "ingeniera eléctrica y política",
+   "formacion": null,
+   "resumen": "Ana Carolina Cosse Garrido (Montevideo, 25 de diciembre de 1961) es una ingeniera eléctrica y política uruguaya, miembro del Frente Amplio. Es la 19.ª vicepresidenta de Uruguay desde el 1 de marzo de 2025",
+   "hitos": [
+    {
+     "anio": 2004,
+     "texto": "En 2004 tuvo a su cargo la capacitación de los operadores de los dispositivos captadores de huella digital para el Referéndum Revocatorio de Venezuela, llevado a cabo por el Consejo Nacional Electoral de dicho país."
+    },
+    {
+     "anio": 2007,
+     "texto": "Inició su actividad política en 2007, al asumir como directora de una división de la intendencia departamental de Montevideo; para después ser nombrada en mayo de 2010 por el presidente José Mujica como presidenta de la Administración Nacional de Telecomunicaciones (ANTEL)."
+    },
+    {
+     "anio": 2007,
+     "texto": "Su actividad en la política comenzó en 2007, cuando asumió como directora de la División Tecnología de la Información de la Intendencia Departamental de Montevideo."
+    },
+    {
+     "anio": 2014,
+     "texto": "Asimismo, se determinó que el monto anual aumentó en el año electoral de 2014."
+    },
+    {
+     "anio": 2015,
+     "texto": "Desempeñó el cargo hasta fines de febrero de 2015, para tomar posesión como ministra de Industria, Minería y Energía en el segundo gobierno de Tabaré Vázquez."
+    },
+    {
+     "anio": 2018,
+     "texto": "A fines de 2018 anunció que sería precandidata presidencial en las elecciones internas de 2019, recibiendo el apoyo de distintos sectores frenteamplistas como el Movimiento de Participación Popular (MPP)."
+    },
+    {
+     "anio": 2018,
+     "texto": "A fines de septiembre de 2018, Cosse anunció oficialmente que sería precandidata de cara a las elecciones internas."
+    },
+    {
+     "anio": 2018,
+     "texto": "En 2018 comenzó a ser vista como una posible candidata a la presidencia o vicepresidencia por el Frente Amplio para las elecciones de 2019,como parte de un recambio generacional tras décadas de predominio de la tríada conformada por Tabaré Vázquez, José Mujica y Danilo Astori."
+    },
+    {
+     "anio": 2018,
+     "texto": "En el Congreso del Frente Amplio de diciembre de 2018 se proclamó formalmente a Cosse, así como a Daniel Martínez, Mario Bergara y Óscar Andrade como precandidatos del partido."
+    },
+    {
+     "anio": 2019,
+     "texto": "A partir de finales de 2019, antes de que asumiera su escaño senatorial, se comenzó rumorear que Cosse podría ser candidata del Frente Amplio a la Intendencia de Montevideo."
+    },
+    {
+     "anio": 2019,
+     "texto": "De cara a las elecciones generales de 2019, Carolina Cosse realizó un acuerdo con el también exprecandidato Óscar Andrade para ocupar el segundo lugar de la nómina al Senado del Partido Comunista."
+    },
+    {
+     "anio": 2019,
+     "texto": "Fue afín al Movimiento de Participación Popular (MPP),el 29 de enero de 2019, renunció a su puesto en el Consejo de Ministros para dedicarse a su campaña presidencial para las elecciones internas de ese año."
+    },
+    {
+     "anio": 2019,
+     "texto": "Tras renunciar a su puesto ministerial, el 5 de febrero de 2019 en el acto por el 48° aniversario del Frente Amplio y junto a sus compañeros de la interna, lanzó su campaña electoral."
+    },
+    {
+     "anio": 2020,
+     "texto": "A lo largo de enero de 2020 su candidatura recibió el apoyo del Partido Socialista,del Partido Comunista,y del Partido por la Victoria del Pueblo, así como del sector Casa Grande, liderado por Constanza Moreira."
+    },
+    {
+     "anio": 2020,
+     "texto": "Ambos resultaron elegidos para la Cámara Alta; asumió su escaño el 15 de febrero de 2020."
+    },
+    {
+     "anio": 2021,
+     "texto": "A partir de 2021 se le comienza a considerar como una posible precandidata presidencial de cara a las elecciones internas de 2024."
+    }
+   ],
+   "vinculos": [
+    {
+     "tipo": "familiar",
+     "descripcion": "Nació en Montevideo el 25 de diciembre de 1961, hija de la profesora de historia Zulma Garrido y del actor Villanueva Cosse.Criada en el barrio de Villa Española, cursó sus estudios primarios en la Escuela N.º 117"
+    }
+   ],
+   "_largo_articulo": 15672,
+   "slug": "carolina-cosse",
+   "nombre": "Carolina Cosse"
+  },
+  {
+   "articulo": "Carlos Negro",
+   "url": "https://es.wikipedia.org/wiki/Carlos_Negro",
+   "nacimiento_fecha": null,
+   "nacimiento_lugar": null,
+   "profesion": "abogado, fiscal y político",
+   "formacion": "Egresado de la Universidad de la República en 1991 con el título de abogado, siempre se interesó por el derecho penal",
+   "resumen": "Carlos Genaro Negro Fernández (Montevideo, 1965) es un abogado, fiscal y político uruguayo perteneciente al Frente Amplio. Desde el 1º de marzo de 2025 se desempeña como ministro del Interior de la República Oriental del Uruguay",
+   "hitos": [
+    {
+     "anio": 2024,
+     "texto": "En diciembre de 2024 renunció como fiscal y fue presentado como futuro ministro del Interior por parte del presidente electo Yamandú Orsi."
+    },
+    {
+     "anio": 2025,
+     "texto": "Desde el 1º de marzo de 2025 se desempeña como ministro del Interior de la República Oriental del Uruguay."
+    }
+   ],
+   "vinculos": [
+    {
+     "tipo": "familiar",
+     "descripcion": "Su padre fue Carlos Negro Avellanal, diputado por la Lista 99 entre 1985 y 1990"
+    }
+   ],
+   "_largo_articulo": 930,
+   "slug": "carlos-negro",
+   "nombre": "Carlos Negro"
+  },
+  {
+   "articulo": "Gabriel Oddone",
+   "url": "https://es.wikipedia.org/wiki/Gabriel_Oddone",
+   "nacimiento_fecha": "5 de septiembre de 1963",
+   "nacimiento_lugar": "Montevideo",
+   "profesion": "economista y docente",
+   "formacion": "Graduado en economía en la Universidad de la República, obtuvo su doctorado en historia económica por la Universidad de Barcelona",
+   "resumen": "Gabriel Oddone París (Montevideo, 5 de septiembre de 1963) es un economista y docente uruguayo. Es el actual Ministro de Economía y Finanzas de Uruguay desde el 1 de marzo de 2025",
+   "hitos": [
+    {
+     "anio": 2015,
+     "texto": "Fue miembro del Partido Socialista del Uruguay hasta el año 2015."
+    },
+    {
+     "anio": 2025,
+     "texto": "Es el actual Ministro de Economía y Finanzas de Uruguay desde el 1 de marzo de 2025."
+    }
+   ],
+   "vinculos": [
+    {
+     "tipo": "vinculo",
+     "descripcion": "Es hijo del matrimonio de historiadores Blanca París de Oddone y Juan Oddone"
+    }
+   ],
+   "_largo_articulo": 2500,
+   "slug": "gabriel-oddone",
+   "nombre": "Gabriel Oddone"
+  },
+  {
+   "articulo": "Mario Lubetkin",
+   "url": "https://es.wikipedia.org/wiki/Mario_Lubetkin",
+   "nacimiento_fecha": "13 de diciembre de 1959",
+   "nacimiento_lugar": "Montevideo",
+   "profesion": "periodista",
+   "formacion": null,
+   "resumen": "Mario Israel Lubetkin Tulbovic (Montevideo, 13 de diciembre de 1959) es un periodista uruguayo que ejerce como el Canciller de la República Oriental del Uruguay desde el 1 de marzo de 2025. Mario Lubetkin nació el 13 de diciembre de 1959, en Montevideo, Uruguay, hijo de inmigrantes: padre ucraniano con ciudadanía lituana y madre lituana, y ambos de origen judío",
+   "hitos": [
+    {
+     "anio": 1984,
+     "texto": "Regresó definitivamente a Uruguay en abril de 1984, donde continuó como corresponsal de la IPS y retomó su militancia política en el Partido Comunista, aunque unos años después se alejó por su trabajo."
+    },
+    {
+     "anio": 2002,
+     "texto": "Además de actuar como director general de la agencia Inter Press Service de 2002 a 2014, fue consultor de alto nivel para organizaciones en América Latina, la Unión Europea y los Estados Unidos, y profesor universitario en Italia y España."
+    },
+    {
+     "anio": 2002,
+     "texto": "Posteriormente fue director de la oficina de IPS en Uruguay; luego fue director para América Latina de la agencia; y en 2002 le ofrecieron ser director mundial de IPS, cargo que ejerció hasta 2014 y por el que tuvo que trasladarse nuevamente a Roma."
+    },
+    {
+     "anio": 2014,
+     "texto": "En 2014 pasó a ser el director de la Oficina de Comunicación Institucional de la Organización de las Naciones Unidas para la Alimentación y la Agricultura —FAO—."
+    },
+    {
+     "anio": 2016,
+     "texto": "En abril de 2016 fue nombrado Comendador de la Orden al Mérito de la República Italiana por el presidente italiano Sergio Mattarella."
+    },
+    {
+     "anio": 2017,
+     "texto": "Un año después se convirtió en el director del gabinete del Director General de la organización y en 2017 fue nombrado como su subdirector general."
+    },
+    {
+     "anio": 2022,
+     "texto": "En 2022 se convirtió en el representante regional para América Latina y el Caribe de la FAO."
+    },
+    {
+     "anio": 2024,
+     "texto": "Desde allí, el 13 de diciembre de 2024, el día de su cumpleaños, el presidente electo de Uruguay, Yamandú Orsi, le ofreció ser el futuro canciller de su gobierno."
+    },
+    {
+     "anio": 2025,
+     "texto": "A finales de julio de 2025, dirigentes de la oposición pidieron la renuncia de Lubetkin por la polémica resultante de la emisión de nuevos pasaportes uruguayos no aceptados por Alemania, Francia y Japón; pero recibió el apoyo del presidente Orsi para continuar con su cargo."
+    },
+    {
+     "anio": 2025,
+     "texto": "Asumió como canciller de Uruguay el 1 de marzo de 2025, con la asunción del gobierno, y el 5 de marzo se realizó la ceremonia de asunción en el ministerio en el Palacio Santos, sede protocolar de la Cancillería de Uruguay."
+    }
+   ],
+   "vinculos": [
+    {
+     "tipo": "familiar",
+     "descripcion": "Mario Lubetkin nació el 13 de diciembre de 1959, en Montevideo, Uruguay, hijo de inmigrantes: padre ucraniano con ciudadanía lituana y madre lituana, y ambos de origen judío"
+    },
+    {
+     "tipo": "familiar",
+     "descripcion": "A los 11 años acompañó a sus padres al primer acto del recientemente fundado Frente Amplio, el 26 de marzo de 1971"
+    },
+    {
+     "tipo": "vinculo",
+     "descripcion": "En su juventud comenzó a militar con amigos del barrio en la Unión de Juventudes Comunistas"
+    },
+    {
+     "tipo": "familiar",
+     "descripcion": "En 1976 su padre lo llevó a Buenos Aires, donde trabajó en una fábrica de plástico, pero tras el golpe de Estado en ese país el 24 de marzo solicitó en la embajada de Italia en Buenos Aires su salida rumbo a Roma, donde vivía su hermano"
+    },
+    {
+     "tipo": "familiar",
+     "descripcion": "En septiembre de 1976 llegó a Italia, allí vivió con su hermano y comenzó a trabajar en la agencia de noticias Inter Press Service"
+    }
+   ],
+   "_largo_articulo": 4017,
+   "slug": "mario-lubetkin",
+   "nombre": "Mario Lubetkin"
+  },
+  {
+   "articulo": "Cristina Lustemberg",
+   "url": "https://es.wikipedia.org/wiki/Cristina_Lustemberg",
+   "nacimiento_fecha": "12 de enero de 1966",
+   "nacimiento_lugar": "Montevideo",
+   "profesion": "médica pediatra y política",
+   "formacion": null,
+   "resumen": "María Cristina Lustemberg Haro (Montevideo, 12 de enero de 1966) es una médica pediatra y política uruguaya, integrante del Frente Amplio. Estuvo exiliada en Cuba junto a su familia, entre los 8 y 20 años",
+   "hitos": [
+    {
+     "anio": 2015,
+     "texto": "Fue elegida diputada por la lista 711, de Raúl Sendic Rodríguez, del Frente Amplio para el periodo 2015-2020, pero el presidente Tabaré Vázquez la nombró subsecretaria del Ministerio de Salud Pública ese mismo año."
+    },
+    {
+     "anio": 2017,
+     "texto": "En 2017 renunció al cargo en el ministerio y regresó al parlamento, donde retomó la banca que ocupó su suplente, José Querejeta."
+    },
+    {
+     "anio": 2019,
+     "texto": "En las elecciones internas de 2019 apoyaron la candidatura presidencial de Daniel Martínez."
+    },
+    {
+     "anio": 2019,
+     "texto": "En las elecciones parlamentarias de octubre de 2019, resultó elegida diputada por Montevideo para el periodo 2020-2025."
+    },
+    {
+     "anio": 2024,
+     "texto": "En diciembre de 2024, Lustemberg fue anunciada por el presidente electo Yamandú Orsi como futura ministra de Salud Pública."
+    }
+   ],
+   "vinculos": [
+    {
+     "tipo": "familiar",
+     "descripcion": "Su esposo también es médico y tienen tres hijas"
+    }
+   ],
+   "_largo_articulo": 2140,
+   "slug": "cristina-lustemberg",
+   "nombre": "Cristina Lustemberg"
+  },
+  {
+   "articulo": "José Carlos Mahía",
+   "url": "https://es.wikipedia.org/wiki/Jos%C3%A9_Carlos_Mah%C3%ADa",
+   "nacimiento_fecha": "8 de agosto de 1966",
+   "nacimiento_lugar": "Las Piedras, Canelones",
+   "profesion": "profesor de historia y político",
+   "formacion": null,
+   "resumen": "José Carlos Mahía (Las Piedras, Canelones, 8 de agosto de 1966) es un profesor de historia y político uruguayo, perteneciente al Frente Amplio. Desde el 1° de marzo de 2025 es Ministro de Educación y Cultura de Uruguay",
+   "hitos": [
+    {
+     "anio": 1989,
+     "texto": "En 1989 formó parte del Movimiento 20 de mayo, también en Canelones, obteniendo en esas elecciones la lista 205 representación en la Junta Departamental."
+    },
+    {
+     "anio": 1994,
+     "texto": "En 1994 fue candidato a Diputado en la elección en la que el Frente Amplio llegó a ser uno de los tercios del Parlamento y la lista 2121 fue la más votada."
+    },
+    {
+     "anio": 1995,
+     "texto": "Como consecuencia, en 1995, con 28 años, asumió por primera la banca de Diputado siendo el legislador más joven de esa legislatura."
+    },
+    {
+     "anio": 1995,
+     "texto": "En ese lapso (1995-2000) integró en la Cámara de Diputados la Comisión de Energía, Minería y Turismo, participando activamente del debate sobre la Ley del Marco Regulatorio Energético."
+    },
+    {
+     "anio": 1995,
+     "texto": "Ha sido Representante Nacional electo por Canelones desde 1995."
+    },
+    {
+     "anio": 1996,
+     "texto": "A mediados de los ´90 (1996) comenzó su actividad parlamentaria a nivel internacional: se integró al Parlamento Latinoamericano (Parlatino) y a la Comisión de “Niñez y Juventud” de la que fue Vicepresidente durante once años."
+    },
+    {
+     "anio": 2000,
+     "texto": "En el 2000 integró en el Comando Político del Frente Amplio que llevó adelante la candidatura a la Intendencia de Ángel Spinoglio."
+    },
+    {
+     "anio": 2003,
+     "texto": "Presentó también el emblemático proyecto de ley por el que la canción “A Don José” fue declarada “Himno Popular y Cultural del Uruguay” en octubre de 2003."
+    },
+    {
+     "anio": 2010,
+     "texto": "Durante el gobierno 2010-2015 Mahía intensificó su trabajo en todo Canelones involucrándose cada vez más en temas de gestión departamental, constituyendo equipos de trabajo vinculados a los cinco vértices en los que se expresó el programa del Frente Amplio."
+    },
+    {
+     "anio": 2010,
+     "texto": "En la legislatura 2010-2015 fue miembro de las Comisiones de Asuntos Internacionales; y la de Ciencia y Tecnología, llegando a presidir ambas en el período."
+    },
+    {
+     "anio": 2014,
+     "texto": "En octubre de 2014 encabezó nuevamente la lista 2121 de Canelones y fue elegido por quinta vez consecutiva a la Cámara de Diputados."
+    },
+    {
+     "anio": 2015,
+     "texto": "En 2015 asumió su 5.ª Legislatura consecutiva, siendo el Diputado con más periodos en el Parlamento electo por Canelones desde la restauración democrática a la fecha."
+    },
+    {
+     "anio": 2015,
+     "texto": "En enero de 2015 fue proclamado por unanimidad y aclamación como candidato a la Intendencia de Departamental de Canelones."
+    },
+    {
+     "anio": 2015,
+     "texto": "En este sentido bajo el rótulo “La ciberguerra una amenaza para la Paz y la Seguridad en el Mundo” pasó a ser un asunto de estudio de la Unión y en el encuentro realizado en 2015 en Hanói, Vietnam, el Diputado Mahía fue relator sobre el tema."
+    },
+    {
+     "anio": 2015,
+     "texto": "Fue candidato a la Intendencia de Canelones para las elecciones de mayo de 2015."
+    },
+    {
+     "anio": 2016,
+     "texto": "A nivel partidario en 2016 es electo Vicepresidente del Frente Amplio para el período 2016-2019."
+    }
+   ],
+   "vinculos": [
+    {
+     "tipo": "familiar",
+     "descripcion": "Está en pareja con Patricia Varela y tiene cuatro hijos: Eugenia, Felipe (ambos de su primer matrimonio), Santiago (hijo de su compañera) y Victoria (hija de ambos)"
+    }
+   ],
+   "_largo_articulo": 11526,
+   "slug": "jose-carlos-mahia",
+   "nombre": "José Carlos Mahía"
+  },
+  {
+   "articulo": "Sandra Lazo",
+   "url": "https://es.wikipedia.org/wiki/Sandra_Lazo",
+   "nacimiento_fecha": "12 de abril de 1967",
+   "nacimiento_lugar": "Montevideo",
+   "profesion": "comunicadora y política",
+   "formacion": null,
+   "resumen": "Sandra Lazo (Montevideo, 12 de abril de 1967) es una comunicadora y política uruguaya que ocupa el cargo de Ministra de Defensa Nacional de Uruguay. Integra el Movimiento de Participación Popular, dentro del Frente Amplio",
+   "hitos": [
+    {
+     "anio": 2010,
+     "texto": "Ingresó al Parlamento como suplente del diputado Amaury de los Santos en el periodo 2010 al 2015."
+    },
+    {
+     "anio": 2015,
+     "texto": "En el periodo siguiente (2015-2020) fue senadora suplente de Andrés Berterreche, asumiendo su banca de manera permanente cuando este fue designado subsecretario de Defensa Nacional el 4 de abril de 2019."
+    },
+    {
+     "anio": 2019,
+     "texto": "En las elecciones parlamentarias de 2019 fue elegida senadora titular para el periodo 2020-2025."
+    },
+    {
+     "anio": 2019,
+     "texto": "Tras las elecciones internas de 2019, su nombre estuvo en danza como eventual candidata a la Vicepresidencia de la República."
+    },
+    {
+     "anio": 2024,
+     "texto": "En diciembre de 2024, Lazo fue anunciada por el presidente electo Yamandú Orsi como futura ministra de Defensa Nacional."
+    }
+   ],
+   "vinculos": [],
+   "_largo_articulo": 1279,
+   "slug": "sandra-lazo",
+   "nombre": "Sandra Lazo"
+  },
+  {
+   "articulo": "Juan Castillo (político)",
+   "url": "https://es.wikipedia.org/wiki/Juan_Castillo_%28pol%C3%ADtico%29",
+   "nacimiento_fecha": "22 de noviembre de 1957",
+   "nacimiento_lugar": "La Paz, Canelones",
+   "profesion": "político y sindicalista",
+   "formacion": null,
+   "resumen": "Juan Castillo (La Paz, Canelones, 22 de noviembre de 1957) es un político y sindicalista uruguayo. Nacido en el barrio Santos Lugares de la ciudad de La Paz, Canelones",
+   "hitos": [
+    {
+     "anio": 1999,
+     "texto": "Fue integrante de la Mesa Representativa del PIT-CNT, del Secretariado Ejecutivo, asumiendo varias responsabilidades como ser Secretario de Organización, Propaganda y de Relaciones Internacionales del PIT-CNT, y desde 1999 Coordinador General del PIT-CNT."
+    },
+    {
+     "anio": 2009,
+     "texto": "En las elecciones de 2009 fue elegido Senador por el Partido Comunista del Uruguay, pero no asumió el cargo, continuando con su actividad sindical hasta el 2011."
+    },
+    {
+     "anio": 2012,
+     "texto": "En las elecciones internas del 27 de mayo de 2012 el Frente Amplio celebró elecciones abiertas para elegir a sus máximas autoridades, postulándose Castillo junto a Enrique Rubio, Ernesto Agazzi y Mónica Xavier, resultando electa esta última."
+    },
+    {
+     "anio": 2015,
+     "texto": "Fue director Nacional de Trabajo desde el año 2015 hasta el 2017, asumiendo en diciembre de ese año como Senador de la República."
+    },
+    {
+     "anio": 2024,
+     "texto": "En diciembre de 2024, Castillo fue anunciado por el presidente electo Yamandú Orsi como futuro Ministro de Trabajo asumiendo el cargo el 1° de marzo de 2025 en el marco de la ceremonia de paso de mando en la Plaza independencia."
+    }
+   ],
+   "vinculos": [],
+   "_largo_articulo": 3049,
+   "slug": "juan-castillo",
+   "nombre": "Juan Castillo"
+  },
+  {
+   "articulo": "Edgardo Ortuño",
+   "url": "https://es.wikipedia.org/wiki/Edgardo_Ortu%C3%B1o",
+   "nacimiento_fecha": "10 de junio de 1970",
+   "nacimiento_lugar": "Montevideo",
+   "profesion": "profesor, funcionario y político",
+   "formacion": null,
+   "resumen": "Edgardo Ortuño (Montevideo, 10 de junio de 1970) es un profesor, funcionario y político uruguayo. Desde 2025 es el Ministro de Ambiente de Uruguay",
+   "hitos": [
+    {
+     "anio": 1987,
+     "texto": "En 1987 milita en el Referéndum para derogar la Ley de Caducidad de la Pretensión Punitiva del Estado; año en el cual ingresa a la actividad política partidaria; participa del proceso fundacional de la Vertiente Artiguista en 1989."
+    },
+    {
+     "anio": 2000,
+     "texto": "Electo diputado suplente para la legislatura 2000-2005, y diputado titular en 2005."
+    },
+    {
+     "anio": 2020,
+     "texto": "El 23 de junio del 2020 Ortuño asume como Director en OSE (Obras Sanitarias del Estado) en representación del Frente Amplio."
+    },
+    {
+     "anio": 2024,
+     "texto": "En diciembre de 2024, Ortuño fue anunciado por el presidente electo Yamandú Orsi como futuro ministro de Ambiente."
+    },
+    {
+     "anio": 2025,
+     "texto": "Desde 2025 es el Ministro de Ambiente de Uruguay."
+    }
+   ],
+   "vinculos": [],
+   "_largo_articulo": 1813,
+   "slug": "edgardo-ortuno",
+   "nombre": "Edgardo Ortuño"
+  },
+  {
+   "articulo": "Lucía Etcheverry",
+   "url": "https://es.wikipedia.org/wiki/Luc%C3%ADa_Etcheverry",
+   "nacimiento_fecha": "2 de julio de 1968",
+   "nacimiento_lugar": "Salto",
+   "profesion": "asistente social y política",
+   "formacion": null,
+   "resumen": "Lucía Etcheverry Lima (Salto, 2 de julio de 1968) es una asistente social y política uruguaya perteneciente al Movimiento de Participación Popular, Frente Amplio. Etcheverry egresó de la Universidad de la República en 1993 con el título de asistente social",
+   "hitos": [
+    {
+     "anio": 2019,
+     "texto": "Se desempeñó como Directora Nacional de Vivienda en el MVOTMA y también, como Directora de Obras en la Intendencia de Canelones En los comicios de 2019 resultó electa diputada por el departamento de Canelones para el periodo 2020-2025."
+    },
+    {
+     "anio": 2024,
+     "texto": "En diciembre de 2024, Etcheverry fue anunciada por el presidente electo Yamandú Orsi como futura ministra de Transporte y Obras Públicas."
+    }
+   ],
+   "vinculos": [],
+   "_largo_articulo": 862,
+   "slug": "lucia-etcheverry",
+   "nombre": "Lucía Etcheverry"
+  },
+  {
+   "articulo": "Sebastián Valdomir",
+   "url": "https://es.wikipedia.org/wiki/Sebasti%C3%A1n_Valdomir",
+   "nacimiento_fecha": "11 de febrero de 1979",
+   "nacimiento_lugar": "Montevideo",
+   "profesion": "sociólogo y político",
+   "formacion": null,
+   "resumen": "Carlos Sebastián Valdomir Muslera (Montevideo,11 de febrero de 1979) es un sociólogo y político uruguayo perteneciente al Movimiento de Participación Popular. Nacido en La Comercial",
+   "hitos": [
+    {
+     "anio": 2019,
+     "texto": "En 2019 fue electo diputado suplente de Alejandro \"Pacha\" Sánchez; cuando este asumió como senador, Valdomir ocupó el escaño."
+    },
+    {
+     "anio": 2024,
+     "texto": "Reelecto en 2024, el 15 de febrero de 2025 fue elegido Presidente de la Cámara de Representantes."
+    }
+   ],
+   "vinculos": [
+    {
+     "tipo": "familiar",
+     "descripcion": "Está casado y tiene dos hijos"
+    },
+    {
+     "tipo": "familiar",
+     "descripcion": "Sus padres, oriundos de Rivera, son votantes del Partido Nacional"
+    }
+   ],
+   "_largo_articulo": 886,
+   "slug": "sebastian-valdomir",
+   "nombre": "Sebastián Valdomir"
+  },
+  {
+   "articulo": "Cecilia Cairo",
+   "url": "https://es.wikipedia.org/wiki/Cecilia_Cairo",
+   "nacimiento_fecha": null,
+   "nacimiento_lugar": null,
+   "profesion": "política",
+   "formacion": null,
+   "resumen": "Ana Cecilia Cairo Modernel (Montevideo, 1964) es una política uruguaya perteneciente al Movimiento de Participación Popular, fue ministra de Vivienda y Ordenamiento Territorial desde el 1° de marzo de 2025 hasta el 17 de abril de 2025. Previamente se desempeñó como Representante Nacional durante la XLIX Legislatura",
+   "hitos": [
+    {
+     "anio": 1964,
+     "texto": "Actualmente se desempeña como Representante Nacional durante la L Legislatura Cairo nació en el barrio de Villa del Cerro en 1964."
+    },
+    {
+     "anio": 1964,
+     "texto": "Ana Cecilia Cairo Modernel (Montevideo, 1964) es una política uruguaya perteneciente al Movimiento de Participación Popular, fue ministra de Vivienda y Ordenamiento Territorial desde el 1° de marzo de 2025 hasta el 17 de abril de 2025."
+    },
+    {
+     "anio": 2005,
+     "texto": "En las elecciones municipales de 2005 fue electa edila de la Junta Departamental de Montevideo, cargo para el que fue reelecta en 2010."
+    },
+    {
+     "anio": 2019,
+     "texto": "En las elecciones generales de 2019 fue electa para la Cámara de Representantes por el Departamento de Montevideo."
+    },
+    {
+     "anio": 2024,
+     "texto": "El 16 de diciembre de 2024, Cairo fue presentada por el presidente electo Yamandú Orsi como ministra del Ministerio de Vivienda y Ordenamiento Territorial."
+    },
+    {
+     "anio": 2025,
+     "texto": "Asumió el cargo el 1 de marzo de 2025, pero presentó su renuncia tan solo 48 días después, en medio de un escándalo vinculado a irregularidades en su vivienda particular."
+    }
+   ],
+   "vinculos": [
+    {
+     "tipo": "familiar",
+     "descripcion": "En 1978 se trasladó junto a su madre a España, y más tarde a Francia, donde estudió en La Sorbona de París y posteriormente, Centro Universitario de Clichy, dónde estudió Gestión y Análisis de Sistemas"
+    },
+    {
+     "tipo": "familiar",
+     "descripcion": "Cairo tiene tres hijos, dos mujeres y un varón"
+    },
+    {
+     "tipo": "familiar",
+     "descripcion": "Está casada con Jorge Meroni, quien renunció a su cargo en la alcaldía del Municipio A de Montevideo por acusaciones de acoso sexual"
+    }
+   ],
+   "_largo_articulo": 3716,
+   "slug": "cecilia-cairo",
+   "nombre": "Cecilia Cairo"
+  },
+  {
+   "articulo": "María Fajardo",
+   "url": "https://es.wikipedia.org/wiki/Mar%C3%ADa_Fajardo",
+   "nacimiento_fecha": null,
+   "nacimiento_lugar": null,
+   "profesion": "política",
+   "formacion": null,
+   "resumen": "María de los Ángeles Fajardo Rieiro, conocida como María Fajardo, es una política uruguaya perteneciente al Partido Nacional. Inició su militancia acompañando a Jorge Larrañaga",
+   "hitos": [
+    {
+     "anio": 2019,
+     "texto": "En los comicios de octubre de 2019, el veterano político Guillermo Besozzi resultó electo diputado por Soriano; a fines de 2020, al ser electo intendente de Soriano, Fajardo ingresó como suplente."
+    },
+    {
+     "anio": 2022,
+     "texto": "En 2022 fue 4.ª vicepresidenta de la Cámara de Representantes."
+    },
+    {
+     "anio": 2024,
+     "texto": "En las elecciones de 2024 fue electa simultáneamente senadora y diputada, optando por este último cargo."
+    }
+   ],
+   "vinculos": [],
+   "_largo_articulo": 733,
+   "slug": "maria-fajardo",
+   "nombre": "María Fajardo"
+  },
+  {
+   "articulo": "Mario Bergara",
+   "url": "https://es.wikipedia.org/wiki/Mario_Bergara",
+   "nacimiento_fecha": "4 de mayo de 1965",
+   "nacimiento_lugar": "Montevideo",
+   "profesion": "contador público, economista, funcionario, profesor y político",
+   "formacion": "Mario Bergara recibió el título de Economista en 1987 y de Contador Público en 1990 por la Universidad de la República",
+   "resumen": "Mario Esteban Bergara Duque (Montevideo, 4 de mayo de 1965) es un contador público, economista, funcionario, profesor y político uruguayo, perteneciente al Frente Amplio. Actualmente es intendente de Montevideo desde julio de 2025",
+   "hitos": [
+    {
+     "anio": 1990,
+     "texto": "Los comienzos de Bergara en el Frente Amplio fueron como miembro de la Unión de Juventudes Comunistas y luego del Partido Comunista del Uruguay, del cual sale por los años 1990 con su disgregación."
+    },
+    {
+     "anio": 1998,
+     "texto": "En 1998 obtuvo su doctorado en Economía por la Universidad de California en Berkeley, tras cursar un año antes un máster en Economía en ese centro de estudios."
+    },
+    {
+     "anio": 2001,
+     "texto": "Entre 2001 y 2005 fue convocado por el presidente Jorge Batlle para ser director de la Unidad Reguladora de Servicios de Comunicaciones."
+    },
+    {
+     "anio": 2004,
+     "texto": "Tras el triunfo electoral de Tabaré Vázquez en las elecciones del 2004 fue nombrado subsecretario de Economía y Finanzas, acompañando al ministro Danilo Astori."
+    },
+    {
+     "anio": 2008,
+     "texto": "El 11 de noviembre de 2008, asumió como presidente del Banco Central del Uruguay, su mandato se centró en la desdolarización de la deuda uruguaya."
+    },
+    {
+     "anio": 2015,
+     "texto": "El 21 de abril de 2015, asumió nuevamente como presidente del Banco Central del Uruguay."
+    },
+    {
+     "anio": 2018,
+     "texto": "Finalmente el 11 de octubre de 2018 renunció a su cargo para aspirar a la precandidatura a la Presidencia por el Frente Amplio."
+    },
+    {
+     "anio": 2019,
+     "texto": "Bergara fue uno de los precandidatos a la Presidencia que se presentaron a las elecciones internas del Frente Amplio en junio de 2019."
+    },
+    {
+     "anio": 2019,
+     "texto": "Fue precandidato presidencial por el Frente Amplio en las elecciones internas de 2019, donde se posicionó en cuarto lugar, y en las elecciones internas de 2024, donde bajó su postulación para apoyar a la del ex-intendente canario Yamandú Orsi."
+    },
+    {
+     "anio": 2020,
+     "texto": "En las elecciones parlamentarias de octubre, Bergara resultó elegido senador para el periodo 2020-2025."
+    },
+    {
+     "anio": 2024,
+     "texto": "En las elecciones de 2024 fue reelecto como senador de la República, pero renunció a su banca para asumir como intendente de Montevideo, electo en las elecciones departamentales de 2025."
+    },
+    {
+     "anio": 2024,
+     "texto": "En las elecciones generales de 2024 fue reelecto como senador, pero su sector redujo su representación de tres bancas en la Cámara Alta a solo una."
+    },
+    {
+     "anio": 2024,
+     "texto": "Lanzó su precandidatura de cara a las elecciones internas de 2024, pero en abril de ese año se bajó para apoyar a Yamandú Orsi."
+    },
+    {
+     "anio": 2025,
+     "texto": "Actualmente es intendente de Montevideo desde julio de 2025."
+    },
+    {
+     "anio": 2025,
+     "texto": "En diciembre de ese año su nombre comienza a sonar para una candidatura a la intendencia de Montevideo para las elecciones departamentales de mayo de 2025, posteriormente ese mismo mes el MPP ratificó su apoyo a Bergara ante una posible postulación."
+    }
+   ],
+   "vinculos": [
+    {
+     "tipo": "familiar",
+     "descripcion": "Bergara fue pareja de la profesora, periodista e informativista Blanca Rodríguez"
+    }
+   ],
+   "_largo_articulo": 5950,
+   "slug": "mario-bergara",
+   "nombre": "Mario Bergara"
+  },
+  {
+   "articulo": "Francisco Legnani",
+   "url": "https://es.wikipedia.org/wiki/Francisco_Legnani",
+   "nacimiento_fecha": "15 de enero de 1979",
+   "nacimiento_lugar": "Canelones",
+   "profesion": "abogado, escribano y político",
+   "formacion": null,
+   "resumen": "Francisco Pedro Legnani Silva (Canelones, 15 de enero de 1979) es un abogado, escribano y político uruguayo, miembro del Frente Amplio. En mayo de 2025 fue electo intendente del departamento de Canelones, sucediendo a Yamandú Orsi, y encabezando el quinto gobierno consecutivo del Frente Amplio en el departamento",
+   "hitos": [
+    {
+     "anio": 2008,
+     "texto": "Se formó como abogado y escribano, y desde 2008 ha ocupado diversos cargos en la administración departamental, destacándose como secretario general de la intendencia durante la gestión de Yamandú Orsi."
+    },
+    {
+     "anio": 2025,
+     "texto": "En las elecciones departamentales de 2025, Legnani fue el candidato único del Frente Amplio para la intendencia de Canelones."
+    },
+    {
+     "anio": 2025,
+     "texto": "En mayo de 2025 fue electo intendente del departamento de Canelones, sucediendo a Yamandú Orsi, y encabezando el quinto gobierno consecutivo del Frente Amplio en el departamento."
+    }
+   ],
+   "vinculos": [
+    {
+     "tipo": "familiar",
+     "descripcion": "Legnani inició su militancia política a los 15 años, influenciado por su tío abuelo Ramón Legnani, quien fue diputado socialista y candidato a la intendencia de Canelones en dos veces, en 1971 y 1985"
+    },
+    {
+     "tipo": "vinculo",
+     "descripcion": "Es primo del político “Tabaré Hackenbruch Legnani” y sobrino Político del ex intendente Tabaré Hackenbruch"
+    },
+    {
+     "tipo": "familiar",
+     "descripcion": "Francisco Legnani es padre de tres hijos y reside en Canelones"
+    }
+   ],
+   "_largo_articulo": 1737,
+   "slug": "francisco-legnani",
+   "nombre": "Francisco Legnani"
+  },
+  {
+   "articulo": "Nicolás Olivera Seiguerman",
+   "url": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Olivera_Seiguerman",
+   "nacimiento_fecha": "4 de mayo de 1981",
+   "nacimiento_lugar": "Paysandú",
+   "profesion": "abogado y político",
+   "formacion": null,
+   "resumen": "Nicolás Javier Olivera Seiguerman (Paysandú, 4 de mayo de 1981) es un abogado y político uruguayo, perteneciente al Partido Nacional. Es intendente de Paysandú desde 2020",
+   "hitos": [
+    {
+     "anio": 2005,
+     "texto": "Fue edil titular en la Junta Departamental de Paysandú por el Partido Nacional, desde 2005 a 2010."
+    },
+    {
+     "anio": 2010,
+     "texto": "Fue Encargado de la Unidad de Vivienda entre 2010 y 2013, director general de Obras entre 2013 y 2015, así como también Secretario General en forma interina en sucesivos períodos durante la gestión 2010-2015."
+    },
+    {
+     "anio": 2019,
+     "texto": "A principios de 2019, lanzó su candidatura a la intendencia y anunció su apoyo a Jorge Larrañaga como precandidato a las presidencia de la república."
+    },
+    {
+     "anio": 2020,
+     "texto": "Es intendente de Paysandú desde 2020."
+    },
+    {
+     "anio": 2025,
+     "texto": "Fue elegido diputado por el Partido Nacional para el período 2025-2030, cargo al que renunció después de ser electo intendente."
+    }
+   ],
+   "vinculos": [],
+   "_largo_articulo": 2579,
+   "slug": "nicolas-olivera",
+   "nombre": "Nicolás Olivera"
+  },
+  {
+   "articulo": "Álvaro García Rodríguez",
+   "url": "https://es.wikipedia.org/wiki/%C3%81lvaro_Garc%C3%ADa_Rodr%C3%ADguez",
+   "nacimiento_fecha": "19 de septiembre de 1961",
+   "nacimiento_lugar": "Montevideo",
+   "profesion": "contador público, funcionario, profesor y político",
+   "formacion": null,
+   "resumen": "Álvaro García Rodríguez (Montevideo, 19 de septiembre de 1961) es un contador público, funcionario, profesor y político uruguayo perteneciente al Frente Amplio. Ha sido ministro de Economía del Uruguay, presidente de la Corporación Nacional para el Desarrollo y exdirector de la Oficina de Planeamiento y Presupuesto",
+   "hitos": [
+    {
+     "anio": 2002,
+     "texto": "En 2002 se desempeñó como gerente de Planeamiento y Control de Gestión y Costos de Pirelli Cabos, Energía y Telecomunicaciones en Santo André, San Pablo, Brasil."
+    },
+    {
+     "anio": 2005,
+     "texto": "En 2005 Tabaré Vázquez lo designó presidente de la Corporación Nacional para el Desarrollo, cargo que ocupó hasta el 2 de abril de 2008 cuando presentó su renuncia."
+    },
+    {
+     "anio": 2008,
+     "texto": "Tras la noticia de la renuncia de Danilo Astori al Ministerio de Economía por razones electorales, se le propuso a García la titularidad del cargo, que asumió 18 de septiembre de 2008."
+    },
+    {
+     "anio": 2019,
+     "texto": "El 9 de julio de 2019, García anuncia su alejamiento y desvinculación del Partido Socialista."
+    }
+   ],
+   "vinculos": [
+    {
+     "tipo": "familiar",
+     "descripcion": "Tiene dos hijos"
+    }
+   ],
+   "_largo_articulo": 4587,
+   "slug": "alvaro-garcia",
+   "nombre": "Álvaro García"
+  },
+  {
+   "articulo": "Mónica Ferrero",
+   "url": "https://es.wikipedia.org/wiki/M%C3%B3nica_Ferrero",
+   "nacimiento_fecha": "18 de setiembre de 1961",
+   "nacimiento_lugar": "Young,Uruguay",
+   "profesion": "fiscal",
+   "formacion": "Cursó estudios en la Facultad de Derecho de la Universidad de la República, donde obtuvo el título de abogada, prestando juramento en agosto de 1986",
+   "resumen": "Mónica Yannet Ferrero Álvarez (Young,Uruguay, 18 de setiembre de 1961) es una fiscal uruguaya, quien se desempeña como Fiscal de Corte y Procuradora General de la Nación en forma interina desde agosto de 2024. Cursó estudios en la Facultad de Derecho de la Universidad de la República, donde obtuvo el título de abogada, prestando juramento en agosto de 1986",
+   "hitos": [
+    {
+     "anio": 1993,
+     "texto": "En efecto, en mayo de 1993 fue designada como Fiscal Letrada Departamental de Tacuarembó."
+    },
+    {
+     "anio": 2000,
+     "texto": "En mayo de 2000 ascendió a cumplir funciones en Montevideo, al ser nombrada Fiscal Letrada Nacional en lo Penal de Noveno Turno, donde permaneció casi una década."
+    },
+    {
+     "anio": 2009,
+     "texto": "En mayo de 2009, fue designada al frente de la Fiscalía Letrada Nacional Especializada en Crimen Organizado de Primer Turno, una de las dos fiscalías con tal especialización creadas por la ley 18.390 de octubre de 2008."
+    },
+    {
+     "anio": 2013,
+     "texto": "Luego de cuatro años y medio de ocupar tal cargo, en diciembre de 2013 retornó a una fiscalía penal común al ser nombrada Fiscal Letrada en lo Penal de Tercer Turno."
+    }
+   ],
+   "vinculos": [],
+   "_largo_articulo": 4110,
+   "slug": "monica-ferrero",
+   "nombre": "Mónica Ferrero"
+  },
   {
    "articulo": "Óscar Andrade (político)",
    "url": "https://es.wikipedia.org/wiki/%C3%93scar_Andrade_%28pol%C3%ADtico%29",
@@ -743,41 +1648,6 @@
    "nombre": "Liliam Kechichian"
   },
   {
-   "articulo": "Sandra Lazo",
-   "url": "https://es.wikipedia.org/wiki/Sandra_Lazo",
-   "nacimiento_fecha": "12 de abril de 1967",
-   "nacimiento_lugar": "Montevideo",
-   "profesion": "comunicadora y política",
-   "formacion": null,
-   "resumen": "Sandra Lazo (Montevideo, 12 de abril de 1967) es una comunicadora y política uruguaya que ocupa el cargo de Ministra de Defensa Nacional de Uruguay. Integra el Movimiento de Participación Popular, dentro del Frente Amplio",
-   "hitos": [
-    {
-     "anio": 2010,
-     "texto": "Ingresó al Parlamento como suplente del diputado Amaury de los Santos en el periodo 2010 al 2015."
-    },
-    {
-     "anio": 2015,
-     "texto": "En el periodo siguiente (2015-2020) fue senadora suplente de Andrés Berterreche, asumiendo su banca de manera permanente cuando este fue designado subsecretario de Defensa Nacional el 4 de abril de 2019."
-    },
-    {
-     "anio": 2019,
-     "texto": "En las elecciones parlamentarias de 2019 fue elegida senadora titular para el periodo 2020-2025."
-    },
-    {
-     "anio": 2019,
-     "texto": "Tras las elecciones internas de 2019, su nombre estuvo en danza como eventual candidata a la Vicepresidencia de la República."
-    },
-    {
-     "anio": 2024,
-     "texto": "En diciembre de 2024, Lazo fue anunciada por el presidente electo Yamandú Orsi como futura ministra de Defensa Nacional."
-    }
-   ],
-   "vinculos": [],
-   "_largo_articulo": 1279,
-   "slug": "sandra-lazo",
-   "nombre": "Sandra Lazo"
-  },
-  {
    "articulo": "Martín Lema",
    "url": "https://es.wikipedia.org/wiki/Mart%C3%ADn_Lema",
    "nacimiento_fecha": "6 de septiembre de 1982",
@@ -844,46 +1714,6 @@
    "_largo_articulo": 4343,
    "slug": "martin-lema",
    "nombre": "Martín Lema"
-  },
-  {
-   "articulo": "Cristina Lustemberg",
-   "url": "https://es.wikipedia.org/wiki/Cristina_Lustemberg",
-   "nacimiento_fecha": "12 de enero de 1966",
-   "nacimiento_lugar": "Montevideo",
-   "profesion": "médica pediatra y política",
-   "formacion": null,
-   "resumen": "María Cristina Lustemberg Haro (Montevideo, 12 de enero de 1966) es una médica pediatra y política uruguaya, integrante del Frente Amplio. Estuvo exiliada en Cuba junto a su familia, entre los 8 y 20 años",
-   "hitos": [
-    {
-     "anio": 2015,
-     "texto": "Fue elegida diputada por la lista 711, de Raúl Sendic Rodríguez, del Frente Amplio para el periodo 2015-2020, pero el presidente Tabaré Vázquez la nombró subsecretaria del Ministerio de Salud Pública ese mismo año."
-    },
-    {
-     "anio": 2017,
-     "texto": "En 2017 renunció al cargo en el ministerio y regresó al parlamento, donde retomó la banca que ocupó su suplente, José Querejeta."
-    },
-    {
-     "anio": 2019,
-     "texto": "En las elecciones internas de 2019 apoyaron la candidatura presidencial de Daniel Martínez."
-    },
-    {
-     "anio": 2019,
-     "texto": "En las elecciones parlamentarias de octubre de 2019, resultó elegida diputada por Montevideo para el periodo 2020-2025."
-    },
-    {
-     "anio": 2024,
-     "texto": "En diciembre de 2024, Lustemberg fue anunciada por el presidente electo Yamandú Orsi como futura ministra de Salud Pública."
-    }
-   ],
-   "vinculos": [
-    {
-     "tipo": "familiar",
-     "descripcion": "Su esposo también es médico y tienen tres hijas"
-    }
-   ],
-   "_largo_articulo": 2140,
-   "slug": "cristina-lustemberg",
-   "nombre": "Cristina Lustemberg"
   },
   {
    "articulo": "Carlos Moreira",
@@ -1120,41 +1950,6 @@
    "_largo_articulo": 12893,
    "slug": "andres-ojeda",
    "nombre": "Andrés Ojeda"
-  },
-  {
-   "articulo": "Edgardo Ortuño",
-   "url": "https://es.wikipedia.org/wiki/Edgardo_Ortu%C3%B1o",
-   "nacimiento_fecha": "10 de junio de 1970",
-   "nacimiento_lugar": "Montevideo",
-   "profesion": "profesor, funcionario y político",
-   "formacion": null,
-   "resumen": "Edgardo Ortuño (Montevideo, 10 de junio de 1970) es un profesor, funcionario y político uruguayo. Desde 2025 es el Ministro de Ambiente de Uruguay",
-   "hitos": [
-    {
-     "anio": 1987,
-     "texto": "En 1987 milita en el Referéndum para derogar la Ley de Caducidad de la Pretensión Punitiva del Estado; año en el cual ingresa a la actividad política partidaria; participa del proceso fundacional de la Vertiente Artiguista en 1989."
-    },
-    {
-     "anio": 2000,
-     "texto": "Electo diputado suplente para la legislatura 2000-2005, y diputado titular en 2005."
-    },
-    {
-     "anio": 2020,
-     "texto": "El 23 de junio del 2020 Ortuño asume como Director en OSE (Obras Sanitarias del Estado) en representación del Frente Amplio."
-    },
-    {
-     "anio": 2024,
-     "texto": "En diciembre de 2024, Ortuño fue anunciado por el presidente electo Yamandú Orsi como futuro ministro de Ambiente."
-    },
-    {
-     "anio": 2025,
-     "texto": "Desde 2025 es el Ministro de Ambiente de Uruguay."
-    }
-   ],
-   "vinculos": [],
-   "_largo_articulo": 1813,
-   "slug": "edgardo-ortuno",
-   "nombre": "Edgardo Ortuño"
   },
   {
    "articulo": "Blanca Rodríguez",
@@ -1681,58 +2476,6 @@
    "nombre": "María Fernanda Auersperg Kosenkov"
   },
   {
-   "articulo": "Cecilia Cairo",
-   "url": "https://es.wikipedia.org/wiki/Cecilia_Cairo",
-   "nacimiento_fecha": null,
-   "nacimiento_lugar": null,
-   "profesion": "política",
-   "formacion": null,
-   "resumen": "Ana Cecilia Cairo Modernel (Montevideo, 1964) es una política uruguaya perteneciente al Movimiento de Participación Popular, fue ministra de Vivienda y Ordenamiento Territorial desde el 1° de marzo de 2025 hasta el 17 de abril de 2025. Previamente se desempeñó como Representante Nacional durante la XLIX Legislatura",
-   "hitos": [
-    {
-     "anio": 1964,
-     "texto": "Actualmente se desempeña como Representante Nacional durante la L Legislatura Cairo nació en el barrio de Villa del Cerro en 1964."
-    },
-    {
-     "anio": 1964,
-     "texto": "Ana Cecilia Cairo Modernel (Montevideo, 1964) es una política uruguaya perteneciente al Movimiento de Participación Popular, fue ministra de Vivienda y Ordenamiento Territorial desde el 1° de marzo de 2025 hasta el 17 de abril de 2025."
-    },
-    {
-     "anio": 2005,
-     "texto": "En las elecciones municipales de 2005 fue electa edila de la Junta Departamental de Montevideo, cargo para el que fue reelecta en 2010."
-    },
-    {
-     "anio": 2019,
-     "texto": "En las elecciones generales de 2019 fue electa para la Cámara de Representantes por el Departamento de Montevideo."
-    },
-    {
-     "anio": 2024,
-     "texto": "El 16 de diciembre de 2024, Cairo fue presentada por el presidente electo Yamandú Orsi como ministra del Ministerio de Vivienda y Ordenamiento Territorial."
-    },
-    {
-     "anio": 2025,
-     "texto": "Asumió el cargo el 1 de marzo de 2025, pero presentó su renuncia tan solo 48 días después, en medio de un escándalo vinculado a irregularidades en su vivienda particular."
-    }
-   ],
-   "vinculos": [
-    {
-     "tipo": "familiar",
-     "descripcion": "En 1978 se trasladó junto a su madre a España, y más tarde a Francia, donde estudió en La Sorbona de París y posteriormente, Centro Universitario de Clichy, dónde estudió Gestión y Análisis de Sistemas"
-    },
-    {
-     "tipo": "familiar",
-     "descripcion": "Cairo tiene tres hijos, dos mujeres y un varón"
-    },
-    {
-     "tipo": "familiar",
-     "descripcion": "Está casada con Jorge Meroni, quien renunció a su cargo en la alcaldía del Municipio A de Montevideo por acusaciones de acoso sexual"
-    }
-   ],
-   "_largo_articulo": 3716,
-   "slug": "cecilia-cairo",
-   "nombre": "Cecilia Cairo"
-  },
-  {
    "articulo": "Federico Casaretto",
    "url": "https://es.wikipedia.org/wiki/Federico_Casaretto",
    "nacimiento_fecha": "13 de noviembre de 1968",
@@ -2052,90 +2795,6 @@
    "_largo_articulo": 4756,
    "slug": "margarita-libschitz",
    "nombre": "Margarita Libschitz"
-  },
-  {
-   "articulo": "José Carlos Mahía",
-   "url": "https://es.wikipedia.org/wiki/Jos%C3%A9_Carlos_Mah%C3%ADa",
-   "nacimiento_fecha": "8 de agosto de 1966",
-   "nacimiento_lugar": "Las Piedras, Canelones",
-   "profesion": "profesor de historia y político",
-   "formacion": null,
-   "resumen": "José Carlos Mahía (Las Piedras, Canelones, 8 de agosto de 1966) es un profesor de historia y político uruguayo, perteneciente al Frente Amplio. Desde el 1° de marzo de 2025 es Ministro de Educación y Cultura de Uruguay",
-   "hitos": [
-    {
-     "anio": 1989,
-     "texto": "En 1989 formó parte del Movimiento 20 de mayo, también en Canelones, obteniendo en esas elecciones la lista 205 representación en la Junta Departamental."
-    },
-    {
-     "anio": 1994,
-     "texto": "En 1994 fue candidato a Diputado en la elección en la que el Frente Amplio llegó a ser uno de los tercios del Parlamento y la lista 2121 fue la más votada."
-    },
-    {
-     "anio": 1995,
-     "texto": "Como consecuencia, en 1995, con 28 años, asumió por primera la banca de Diputado siendo el legislador más joven de esa legislatura."
-    },
-    {
-     "anio": 1995,
-     "texto": "En ese lapso (1995-2000) integró en la Cámara de Diputados la Comisión de Energía, Minería y Turismo, participando activamente del debate sobre la Ley del Marco Regulatorio Energético."
-    },
-    {
-     "anio": 1995,
-     "texto": "Ha sido Representante Nacional electo por Canelones desde 1995."
-    },
-    {
-     "anio": 1996,
-     "texto": "A mediados de los ´90 (1996) comenzó su actividad parlamentaria a nivel internacional: se integró al Parlamento Latinoamericano (Parlatino) y a la Comisión de “Niñez y Juventud” de la que fue Vicepresidente durante once años."
-    },
-    {
-     "anio": 2000,
-     "texto": "En el 2000 integró en el Comando Político del Frente Amplio que llevó adelante la candidatura a la Intendencia de Ángel Spinoglio."
-    },
-    {
-     "anio": 2003,
-     "texto": "Presentó también el emblemático proyecto de ley por el que la canción “A Don José” fue declarada “Himno Popular y Cultural del Uruguay” en octubre de 2003."
-    },
-    {
-     "anio": 2010,
-     "texto": "Durante el gobierno 2010-2015 Mahía intensificó su trabajo en todo Canelones involucrándose cada vez más en temas de gestión departamental, constituyendo equipos de trabajo vinculados a los cinco vértices en los que se expresó el programa del Frente Amplio."
-    },
-    {
-     "anio": 2010,
-     "texto": "En la legislatura 2010-2015 fue miembro de las Comisiones de Asuntos Internacionales; y la de Ciencia y Tecnología, llegando a presidir ambas en el período."
-    },
-    {
-     "anio": 2014,
-     "texto": "En octubre de 2014 encabezó nuevamente la lista 2121 de Canelones y fue elegido por quinta vez consecutiva a la Cámara de Diputados."
-    },
-    {
-     "anio": 2015,
-     "texto": "En 2015 asumió su 5.ª Legislatura consecutiva, siendo el Diputado con más periodos en el Parlamento electo por Canelones desde la restauración democrática a la fecha."
-    },
-    {
-     "anio": 2015,
-     "texto": "En enero de 2015 fue proclamado por unanimidad y aclamación como candidato a la Intendencia de Departamental de Canelones."
-    },
-    {
-     "anio": 2015,
-     "texto": "En este sentido bajo el rótulo “La ciberguerra una amenaza para la Paz y la Seguridad en el Mundo” pasó a ser un asunto de estudio de la Unión y en el encuentro realizado en 2015 en Hanói, Vietnam, el Diputado Mahía fue relator sobre el tema."
-    },
-    {
-     "anio": 2015,
-     "texto": "Fue candidato a la Intendencia de Canelones para las elecciones de mayo de 2015."
-    },
-    {
-     "anio": 2016,
-     "texto": "A nivel partidario en 2016 es electo Vicepresidente del Frente Amplio para el período 2016-2019."
-    }
-   ],
-   "vinculos": [
-    {
-     "tipo": "familiar",
-     "descripcion": "Está en pareja con Patricia Varela y tiene cuatro hijos: Eugenia, Felipe (ambos de su primer matrimonio), Santiago (hijo de su compañera) y Victoria (hija de ambos)"
-    }
-   ],
-   "_largo_articulo": 11526,
-   "slug": "jose-carlos-mahia",
-   "nombre": "José Carlos Mahía"
   },
   {
    "articulo": "Sol Maneiro",
@@ -2799,38 +3458,6 @@
    "nombre": "Gerardo Sotelo del Giacco"
   },
   {
-   "articulo": "Sebastián Valdomir",
-   "url": "https://es.wikipedia.org/wiki/Sebasti%C3%A1n_Valdomir",
-   "nacimiento_fecha": "11 de febrero de 1979",
-   "nacimiento_lugar": "Montevideo",
-   "profesion": "sociólogo y político",
-   "formacion": null,
-   "resumen": "Carlos Sebastián Valdomir Muslera (Montevideo,11 de febrero de 1979) es un sociólogo y político uruguayo perteneciente al Movimiento de Participación Popular. Nacido en La Comercial",
-   "hitos": [
-    {
-     "anio": 2019,
-     "texto": "En 2019 fue electo diputado suplente de Alejandro \"Pacha\" Sánchez; cuando este asumió como senador, Valdomir ocupó el escaño."
-    },
-    {
-     "anio": 2024,
-     "texto": "Reelecto en 2024, el 15 de febrero de 2025 fue elegido Presidente de la Cámara de Representantes."
-    }
-   ],
-   "vinculos": [
-    {
-     "tipo": "familiar",
-     "descripcion": "Está casado y tiene dos hijos"
-    },
-    {
-     "tipo": "familiar",
-     "descripcion": "Sus padres, oriundos de Rivera, son votantes del Partido Nacional"
-    }
-   ],
-   "_largo_articulo": 886,
-   "slug": "sebastian-valdomir",
-   "nombre": "Sebastián Valdomir"
-  },
-  {
    "articulo": "Carlos Varela Nestier",
    "url": "https://es.wikipedia.org/wiki/Carlos_Varela_Nestier",
    "nacimiento_fecha": null,
@@ -3061,9 +3688,39 @@
  ],
  "sin_articulo": [
   {
+   "slug": "pablo-caggiani",
+   "nombre": "Pablo Caggiani",
+   "motivo": "sin articulo validado (candidatos: ['Daniel Caggiani', 'Administración Nacional de Educación Pública', 'Consejo Directivo Central (Uruguay)'])"
+  },
+  {
+   "slug": "alvaro-danza",
+   "nombre": "Álvaro Danza",
+   "motivo": "sin articulo validado (candidatos: ['Gobierno de Yamandú Orsi', 'Administración de los Servicios de Salud del Estado', 'Controversias en la presidencia de Yamandú Orsi'])"
+  },
+  {
+   "slug": "jimena-pardo",
+   "nombre": "Jimena Pardo",
+   "motivo": "sin articulo validado (candidatos: ['Banco de Previsión Social'])"
+  },
+  {
+   "slug": "andrea-cabrera",
+   "nombre": "Andrea Cabrera",
+   "motivo": "sin articulo validado (candidatos: ['Administración Nacional de Usinas y Transmisiones Eléctricas', 'Ingeniero Budge'])"
+  },
+  {
+   "slug": "alejandro-paz",
+   "nombre": "Alejandro Paz",
+   "motivo": "sin articulo validado (candidatos: ['Luis Paz', 'Marcos Paz', 'Máximo Paz (político)'])"
+  },
+  {
+   "slug": "marcelo-bisogno",
+   "nombre": "Marcelo Bisogno",
+   "motivo": "sin articulo validado (candidatos: [])"
+  },
+  {
    "slug": "rodrigo-blas",
    "nombre": "Rodrigo Blás",
-   "motivo": "sin articulo validado (candidatos: ['Herrerismo', 'Partido Nacional (Uruguay)', 'Elecciones departamentales y municipales de Uruguay de 2015'])"
+   "motivo": "sin articulo validado (candidatos: ['Cámara de Senadores (Uruguay)', 'Elecciones departamentales y municipales de Uruguay de 2015', 'Partido Nacional (Uruguay)'])"
   },
   {
    "slug": "daniel-borbonet",
@@ -3078,7 +3735,12 @@
   {
    "slug": "tatiana-antunez",
    "nombre": "Tatiana Antúnez",
-   "motivo": "sin articulo validado (candidatos: ['1897', '9 de mayo', '1961'])"
+   "motivo": "sin articulo validado (candidatos: ['1897', '1961', '9 de mayo'])"
+  },
+  {
+   "slug": "mary-araujo",
+   "nombre": "Mary Araújo",
+   "motivo": "sin articulo validado (candidatos: ['1934', 'Elecciones departamentales y municipales de Uruguay de 2015', 'Teledoce'])"
   },
   {
    "slug": "yisela-araujo",
@@ -3086,14 +3748,9 @@
    "motivo": "sin articulo validado (candidatos: ['Elecciones departamentales y municipales de Uruguay de 2020'])"
   },
   {
-   "slug": "mary-araujo",
-   "nombre": "Mary Araújo",
-   "motivo": "sin articulo validado (candidatos: ['16 de julio', 'Teledoce', 'Elecciones departamentales y municipales de Uruguay de 2020'])"
-  },
-  {
    "slug": "maria-paula-de-armas-gonzalez",
    "nombre": "María Paula de Armas González",
-   "motivo": "sin articulo validado (candidatos: ['Natalicio González', 'Concepción del Uruguay', 'Presidente de Uruguay'])"
+   "motivo": "sin articulo validado (candidatos: ['Natalicio González', 'Concepción del Uruguay', 'Historia de las misiones de la provincia jesuítica del Paraguay'])"
   },
   {
    "slug": "cecilia-badin-vidal",
@@ -3113,7 +3770,7 @@
   {
    "slug": "horacio-de-brum-delgado",
    "nombre": "Horacio Javier de Brum Delgado",
-   "motivo": "sin articulo validado (candidatos: ['Club Nacional de Football', 'Elecciones internas de Uruguay de 2024', 'Elecciones departamentales y municipales de Uruguay de 2020'])"
+   "motivo": "sin articulo validado (candidatos: ['Club Nacional de Football', 'Elecciones departamentales y municipales de Uruguay de 2015', 'Coalición Republicana'])"
   },
   {
    "slug": "susana-camaran",
@@ -3123,7 +3780,7 @@
   {
    "slug": "maximiliano-campo-silveira",
    "nombre": "Maximiliano Campo Silveira",
-   "motivo": "sin articulo validado (candidatos: ['Club Nacional de Football', 'Sarandí del Yi', 'Teledoce'])"
+   "motivo": "sin articulo validado (candidatos: ['Club Nacional de Football', 'Teledoce', 'Coalición Republicana'])"
   },
   {
    "slug": "elianne-castro-pisciottano",
@@ -3131,24 +3788,24 @@
    "motivo": "sin articulo validado (candidatos: [])"
   },
   {
-   "slug": "mario-colman",
-   "nombre": "Mario Colman",
-   "motivo": "sin articulo validado (candidatos: ['Concepción del Uruguay', 'Rubén Bacigalupe', 'Elecciones departamentales y municipales de Uruguay de 2010'])"
-  },
-  {
    "slug": "walter-cervini",
    "nombre": "Walter Cervini",
-   "motivo": "sin articulo validado (candidatos: ['Club Nacional de Football', 'Club Atlético Peñarol', 'Elecciones departamentales y municipales de Uruguay de 2020'])"
+   "motivo": "sin articulo validado (candidatos: ['Club Nacional de Football', 'Ciudadanos (Uruguay)', 'Partido Colorado (Uruguay)'])"
+  },
+  {
+   "slug": "mario-colman",
+   "nombre": "Mario Colman",
+   "motivo": "sin articulo validado (candidatos: ['Rubén Bacigalupe', 'Álvaro Viviano', 'Elecciones departamentales y municipales de Uruguay de 2010'])"
   },
   {
    "slug": "ines-cortes",
    "nombre": "Inés Cortés",
-   "motivo": "sin articulo validado (candidatos: ['Inés Córdova', 'Inmigración italiana en Uruguay', 'Departamento de Flores'])"
+   "motivo": "sin articulo validado (candidatos: ['Gustavo Ferrés', 'Amnistía Internacional Uruguay', 'Inmigración italiana en Uruguay'])"
   },
   {
    "slug": "juan-pablo-delgado-mas",
    "nombre": "Juan Pablo Delgado Mas",
-   "motivo": "sin articulo validado (candidatos: ['Álvaro Delgado Ceretta', 'Instituto Preuniversitario Salesiano Juan XXIII', 'Literatura de Uruguay'])"
+   "motivo": "sin articulo validado (candidatos: ['Álvaro Delgado Ceretta', 'Partido Nacional (Uruguay)', 'Unión Cívica (Uruguay)'])"
   },
   {
    "slug": "alfredo-de-mattos",
@@ -3163,7 +3820,7 @@
   {
    "slug": "matias-duque-barreto",
    "nombre": "Matias Heber Duque Barreto",
-   "motivo": "sin articulo validado (candidatos: ['Elecciones departamentales y municipales de Uruguay de 2020', 'Elecciones regionales de Colombia de 2015'])"
+   "motivo": "sin articulo validado (candidatos: ['Elecciones regionales de Colombia de 2015', 'Elecciones departamentales y municipales de Uruguay de 2020'])"
   },
   {
    "slug": "natalia-diaz-marrero",
@@ -3173,12 +3830,12 @@
   {
    "slug": "graciela-echenique",
    "nombre": "Graciela Echenique",
-   "motivo": "sin articulo validado (candidatos: ['Elecciones departamentales y municipales de Uruguay de 2015', 'Coalición Cívica (confederación)', 'Elecciones departamentales y municipales de Uruguay de 2020'])"
+   "motivo": "sin articulo validado (candidatos: ['Paula Daza', 'Elecciones departamentales y municipales de Uruguay de 2015', 'Partido Nacional (Uruguay)'])"
   },
   {
    "slug": "diego-echeverria-casanova",
    "nombre": "Diego Echeverría Casanova",
-   "motivo": "sin articulo validado (candidatos: ['25 de julio', 'Club Almirante Brown', '1841'])"
+   "motivo": "sin articulo validado (candidatos: ['Club Almirante Brown', '8 de julio', '13 de septiembre'])"
   },
   {
    "slug": "fermin-farinha-tacain",
@@ -3188,7 +3845,7 @@
   {
    "slug": "gabriel-gianoli",
    "nombre": "Gabriel Gianoli",
-   "motivo": "sin articulo validado (candidatos: ['Elecciones generales de Uruguay de 2019', 'Partido Nacional (Uruguay)', 'Coalición Republicana'])"
+   "motivo": "sin articulo validado (candidatos: ['Elecciones generales de Uruguay de 2019', 'Coalición Republicana', 'Partido Nacional (Uruguay)'])"
   },
   {
    "slug": "bruno-giometti-pineiro",
@@ -3203,17 +3860,17 @@
   {
    "slug": "andres-grezzi-de-armas",
    "nombre": "Andrés Grezzi de Armas",
-   "motivo": "sin articulo validado (candidatos: ['Coalición Republicana', 'Venancio Flores'])"
-  },
-  {
-   "slug": "pablo-inthamoussu",
-   "nombre": "Pablo Inthamoussu",
-   "motivo": "sin articulo validado (candidatos: ['Esta boca es mía (Uruguay)', 'PH, podemos hablar (Uruguay)', 'Mariana Percovich'])"
+   "motivo": "sin articulo validado (candidatos: ['Venancio Flores', 'Coalición Republicana'])"
   },
   {
    "slug": "juan-martin-jorge-canadell",
    "nombre": "Juan Martín Jorge Canadell",
    "motivo": "sin articulo validado (candidatos: ['Quilmes Atlético Club'])"
+  },
+  {
+   "slug": "pablo-inthamoussu",
+   "nombre": "Pablo Inthamoussu",
+   "motivo": "sin articulo validado (candidatos: ['PH, podemos hablar (Uruguay)', 'La Gran Siete', 'Daniel Martínez (político)'])"
   },
   {
    "slug": "adrian-juri-cajiga",
@@ -3223,12 +3880,12 @@
   {
    "slug": "alvaro-lima",
    "nombre": "Álvaro Lima",
-   "motivo": "sin articulo validado (candidatos: ['Andrés Lima (político)', 'Álvaro Sanjurjo Toucon', 'Partido Nacional (Uruguay)'])"
+   "motivo": "sin articulo validado (candidatos: ['Andrés Lima (político)', 'Álvaro Sanjurjo Toucon', 'Álvaro Brechner'])"
   },
   {
-   "slug": "nicolas-lorenzo",
-   "nombre": "Nicolás Lorenzo",
-   "motivo": "sin articulo validado (candidatos: ['Lorenzo Varela', 'Concepción del Uruguay', 'Partido Nacional (Uruguay)'])"
+   "slug": "ines-mercedes-long-zapata",
+   "nombre": "Inés Mercedes Long Zapata",
+   "motivo": "sin articulo validado (candidatos: ['Mirtha Legrand', 'Municipio de Young (Uruguay)', 'Partido de Campana'])"
   },
   {
    "slug": "william-martinez-zaquierez",
@@ -3236,39 +3893,39 @@
    "motivo": "sin articulo validado (candidatos: [])"
   },
   {
-   "slug": "ines-mercedes-long-zapata",
-   "nombre": "Inés Mercedes Long Zapata",
-   "motivo": "sin articulo validado (candidatos: ['Elecciones departamentales y municipales de Uruguay de 2020', 'Mirtha Legrand', 'Elecciones departamentales y municipales de Uruguay de 2015'])"
+   "slug": "nicolas-lorenzo",
+   "nombre": "Nicolás Lorenzo",
+   "motivo": "sin articulo validado (candidatos: ['Lorenzo Varela', 'Academia Nacional de Economía (Uruguay)', 'Partido Nacional (Uruguay)'])"
   },
   {
    "slug": "agustin-mazzini-garcia",
    "nombre": "Agustín Mazzini García",
-   "motivo": "sin articulo validado (candidatos: ['25 de noviembre', 'Inmigración italiana en Uruguay', 'Historia contemporánea de España'])"
+   "motivo": "sin articulo validado (candidatos: ['Elecciones departamentales y municipales de Uruguay de 2015', 'Inmigración italiana en Uruguay', 'Historia contemporánea de España'])"
   },
   {
    "slug": "nino-medina",
    "nombre": "Nino Medina",
-   "motivo": "sin articulo validado (candidatos: ['Ary Cabrera Prates', 'Logia de los Tenientes de Artigas', 'Gilberto Vázquez'])"
+   "motivo": "sin articulo validado (candidatos: ['Ary Cabrera Prates', 'Gilberto Vázquez', 'Tabaré Vázquez'])"
   },
   {
    "slug": "ana-laura-melo-cedres",
    "nombre": "Ana Laura Melo Cedrés",
-   "motivo": "sin articulo validado (candidatos: ['Uruguay', '1961'])"
-  },
-  {
-   "slug": "nicolas-mesa",
-   "nombre": "Nicolás Mesa",
-   "motivo": "sin articulo validado (candidatos: ['Concepción del Uruguay', 'Cine de Uruguay', 'Alejandro Sánchez (político)'])"
+   "motivo": "sin articulo validado (candidatos: ['1961', 'Uruguay'])"
   },
   {
    "slug": "marti-molins-silva",
    "nombre": "Martí Molins Silva",
-   "motivo": "sin articulo validado (candidatos: ['Historia de la Real Sociedad de Fútbol', 'Partido Colorado (Uruguay)', 'Coalición Republicana'])"
+   "motivo": "sin articulo validado (candidatos: ['Historia de la Real Sociedad de Fútbol', 'Coalición Republicana', 'Partido Colorado (Uruguay)'])"
+  },
+  {
+   "slug": "nicolas-mesa",
+   "nombre": "Nicolás Mesa",
+   "motivo": "sin articulo validado (candidatos: ['Partido Nacional (Uruguay)', 'Concepción del Uruguay', 'Juan Castillo (político)'])"
   },
   {
    "slug": "anibal-mendez",
    "nombre": "Aníbal Méndez",
-   "motivo": "sin articulo validado (candidatos: ['Partido Autóctono Negro', 'Paysandú', 'Enrique Amorim'])"
+   "motivo": "sin articulo validado (candidatos: ['Paysandú', 'Partido Autóctono Negro', 'Elecciones generales de Uruguay de 1950'])"
   },
   {
    "slug": "sandra-monica-nedov-rodriguez",
@@ -3288,32 +3945,32 @@
   {
    "slug": "juan-jose-olaizola",
    "nombre": "Juan José Olaizola",
-   "motivo": "sin articulo validado (candidatos: ['25 de diciembre', 'Ministerio de Transporte y Obras Públicas de Uruguay', 'Boom latinoamericano'])"
+   "motivo": "sin articulo validado (candidatos: ['Ministerio de Transporte y Obras Públicas de Uruguay', 'Partido Nacional (Uruguay)', 'Boom latinoamericano'])"
   },
   {
    "slug": "gabriel-otero-aguero",
    "nombre": "Gabriel Otero Agüero",
-   "motivo": "sin articulo validado (candidatos: ['Pedro José Viera', '31 de julio', 'Guerra de la Independencia Argentina'])"
+   "motivo": "sin articulo validado (candidatos: ['Enrique Angelelli', 'Guaraníes', 'Pedro José Viera'])"
   },
   {
    "slug": "monica-pereira-sosa",
    "nombre": "Mónica Pereira Sosa",
-   "motivo": "sin articulo validado (candidatos: ['Premios Amanda Rorra', 'PH, podemos hablar (Uruguay)', 'Acto del Obelisco'])"
+   "motivo": "sin articulo validado (candidatos: ['Elecciones departamentales y municipales de Uruguay de 2015', 'PH, podemos hablar (Uruguay)', 'Premios Amanda Rorra'])"
   },
   {
    "slug": "estela-pereyra",
    "nombre": "Estela Pereyra",
-   "motivo": "sin articulo validado (candidatos: ['Cine de Uruguay', 'Crisis política en Paraguay de 2012', 'Jorge Antonio'])"
+   "motivo": "sin articulo validado (candidatos: ['Jorge Antonio', 'Elecciones departamentales y municipales de Uruguay de 2015', 'Partido Revolucionario de los Trabajadores (Argentina)'])"
   },
   {
    "slug": "alvaro-perrone-cabrera",
    "nombre": "Álvaro Perrone Cabrera",
-   "motivo": "sin articulo validado (candidatos: ['PH, podemos hablar (Uruguay)', 'Historia del Club de Gimnasia y Esgrima La Plata', 'Elecciones departamentales y municipales de Uruguay de 2010'])"
+   "motivo": "sin articulo validado (candidatos: ['Historia del Club de Gimnasia y Esgrima La Plata', 'Elecciones departamentales y municipales de Uruguay de 2010', 'PH, podemos hablar (Uruguay)'])"
   },
   {
    "slug": "marcos-presa-caceres",
    "nombre": "Marcos Presa Cáceres",
-   "motivo": "sin articulo validado (candidatos: ['Revolución oriental', 'Elecciones generales de Uruguay de 1994', '1923'])"
+   "motivo": "sin articulo validado (candidatos: ['Jorge Batlle', 'Revolución oriental', 'Elecciones generales de Uruguay de 2024'])"
   },
   {
    "slug": "federico-preve-cocco",
@@ -3323,27 +3980,27 @@
   {
    "slug": "carlos-reyes-alvarez",
    "nombre": "Carlos Reyes Álvarez",
-   "motivo": "sin articulo validado (candidatos: ['Dictadura cívico-militar en Uruguay (1973-1985)', 'Relaciones Reino Unido-Uruguay', 'Carlos I de España'])"
+   "motivo": "sin articulo validado (candidatos: ['Academia Nacional de Economía (Uruguay)', 'Partido Nacional (Uruguay)', 'Carlos I de España'])"
   },
   {
    "slug": "silvana-perez-bonavita",
    "nombre": "Silvana Pérez Bonavita",
-   "motivo": "sin articulo validado (candidatos: ['Elecciones generales de Uruguay de 2019', 'Cabildo Abierto (partido político)', 'Coalición Republicana'])"
+   "motivo": "sin articulo validado (candidatos: ['Elecciones generales de Uruguay de 2019', 'Coalición Republicana', 'Cabildo Abierto (partido político)'])"
   },
   {
    "slug": "jose-rielli-san-martin",
    "nombre": "José Rielli San Martín",
-   "motivo": "sin articulo validado (candidatos: ['Elecciones departamentales y municipales de Uruguay de 2020', 'Elecciones departamentales y municipales de Uruguay de 2025', 'Coalición Republicana'])"
+   "motivo": "sin articulo validado (candidatos: ['Elecciones departamentales y municipales de Uruguay de 2015', 'Elecciones departamentales y municipales de Uruguay de 2025', 'Coalición Republicana'])"
   },
   {
    "slug": "juan-martin-rodriguez-da-costa-leites",
    "nombre": "Juan Martín Rodríguez Da Costa Leites",
-   "motivo": "sin articulo validado (candidatos: ['28 de febrero', '7 de julio', 'Club Atlético Cerro'])"
+   "motivo": "sin articulo validado (candidatos: ['Movimiento de Liberación Nacional-Tupamaros', '2 de agosto', '7 de julio'])"
   },
   {
    "slug": "alvaro-rodriguez-hunter",
    "nombre": "Álvaro Rodríguez Hunter",
-   "motivo": "sin articulo validado (candidatos: ['24 de octubre', '28 de junio', 'Elecciones departamentales y municipales de Uruguay de 2020'])"
+   "motivo": "sin articulo validado (candidatos: ['Elecciones generales de Uruguay de 2024', '28 de junio', '24 de octubre'])"
   },
   {
    "slug": "magela-rinaldi",
@@ -3358,12 +4015,12 @@
   {
    "slug": "jose-satdjian",
    "nombre": "José Satdjian",
-   "motivo": "sin articulo validado (candidatos: ['Nicolás Martinelli', 'Daniel Salinas', 'Karina Rando'])"
+   "motivo": "sin articulo validado (candidatos: ['Luis Lacalle Pou', 'Daniel Salinas', 'Karina Rando'])"
   },
   {
    "slug": "julieta-sierra-franco",
    "nombre": "Julieta Sierra Franco",
-   "motivo": "sin articulo validado (candidatos: ['Jacinto de Romarate', '1954', '1933'])"
+   "motivo": "sin articulo validado (candidatos: ['1933', '27 de febrero', 'Jacinto de Romarate'])"
   },
   {
    "slug": "rubenson-silva",
@@ -3378,12 +4035,12 @@
   {
    "slug": "javier-umpierrez",
    "nombre": "Javier Umpiérrez",
-   "motivo": "sin articulo validado (candidatos: ['Referéndum sobre la Ley de Urgente Consideración (Uruguay)', 'Diversidad sexual en Uruguay', 'Movimiento Nacional de Rocha'])"
+   "motivo": "sin articulo validado (candidatos: ['Diversidad sexual en Uruguay', 'Asociación Uruguaya de Árbitros de Fútbol', 'La Gran Siete'])"
   },
   {
    "slug": "sergio-valverde",
    "nombre": "Sergio Valverde",
-   "motivo": "sin articulo validado (candidatos: ['Bethencourt', 'PH, podemos hablar (Uruguay)', 'Uruguay en la Copa América 2021'])"
+   "motivo": "sin articulo validado (candidatos: ['Elecciones departamentales y municipales de Uruguay de 2015', 'PH, podemos hablar (Uruguay)', 'Fundación Manantiales'])"
   },
   {
    "slug": "mauricio-viera-dutruel",

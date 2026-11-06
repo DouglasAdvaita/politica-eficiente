@@ -130,7 +130,7 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
   Hecho: 99 diputados y los 30 senadores electos (27 en ejercicio + 3 que están en ministerios, con la
   aclaración de que su banca la ejerce un suplente). Total 148 cargos. Contacto: 99/99 diputados y
   27/28 senadores con correo institucional; sin teléfonos porque las fichas no los publican.
-- [ ] T19 — Biografía, familia, vínculos y amistades documentadas de cada legislador · criterio: cada dato con fuente y una línea de tiempo de su vida; si no hay artículo enciclopédico, la biografía se arma con las noticias de lo que impulsó, votó o protagonizó, cada hecho con fecha y enlace. (En curso: 63 de 127 con Wikipedia, 435 hitos y 82 vínculos; faltan 64 por noticias.)
+- [ ] T19 — Biografía, familia, vínculos y amistades documentadas de cada legislador · criterio: cada dato con fuente y una línea de tiempo de su vida; si no hay artículo enciclopédico, la biografía se arma con las noticias de lo que impulsó, votó o protagonizó, cada hecho con fecha y enlace. (En curso: 76 de 148 cargos con Wikipedia — 61 legisladores y 15 del Ejecutivo/Intendencias —, 522 hitos y 101 vínculos; faltan 72 por noticias.)
 - [ ] T20 — Transcripciones del Parlamento · criterio: sesiones del Senado y de Diputados descargadas, buscables y enlazadas al tema que tratan.
 - [ ] T21 — Línea de tiempo de noticias con contraste de datos · criterio: cada noticia con cifras comparables, causas y fuentes; sin afirmaciones sin respaldo.
 - [ ] T24 — Comparador de muertes y volumen en redes · criterio: feminicidios, homicidios, siniestros y suicidios en la misma escala y período, y conteo de menciones por tema en redes con fecha y método.
@@ -154,11 +154,12 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - T18: **99 diputados** cargados (96 + 3 faltantes detectados por auditoría), todos con correo
   institucional y fuente. Los cargos del Ejecutivo mandan sobre la banca: quien asume un ministerio
   queda con ese cargo y no se duplica como legislador.
-- T19: `traer_biografias.py` busca el artículo, valida identidad (dos apellidos, nombre de pila y
-  mención de Uruguay) y rechaza homónimos; `importar_biografias.py` carga sin duplicar. Resultado:
-  **63 biografías, 435 hitos y 82 vínculos**; 59 en fichas de legisladores y 4 en cargos del
-  Ejecutivo. Los artículos se guardan en `datos/cache_wikipedia/` (fuera de git).
-- Neon: consulta directa confirma 63 biografías, 435 hitos y 82 vínculos, con el enlace de fuente
+- T19: `traer_biografias.py` busca el artículo, valida identidad (apellidos, nombre de pila,
+  mención de Uruguay y de un cargo o actividad política) y rechaza homónimos (deportistas,
+  periodistas). Incluye cargos del Ejecutivo y las Intendencias. `importar_biografias.py` carga sin
+  duplicar. Resultado: **76 biografías, 522 hitos y 101 vínculos**. Los artículos se guardan en
+  `datos/cache_wikipedia/` (fuera de git).
+- Neon: consulta directa confirma 76 biografías, 522 hitos y 101 vínculos, con el enlace de fuente
   de cada ficha.
 - Ficha de Pablo Abdala revisada en pantalla (captura 1200 px): resumen, nacimiento, profesión,
   familia, línea de tiempo y nota de fuente secundaria. Se corrigió la línea para que el año no
@@ -186,7 +187,9 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - Sesión 5 (2026-11-05): rediseño a fondo claro: blancos y grises, negritas en lo relevante,
   cargos en gris oscuro, emojis de tema desaturados y color reservado al semáforo de estado. Se
   ajustaron mapa y flujos. Verificado en pantalla a 1280 y a 420 px. Se agregaron T27 (semáforo de
-  gestión por proceso) y T28 (contexto, lenguaje sencillo y política de fuentes).
+  gestión por proceso) y T28 (contexto, lenguaje sencillo y política de fuentes). Además se
+  extendieron las biografías al Ejecutivo y las Intendencias, con validación que descarta
+  homónimos (futbolistas, periodistas): 76 biografías.
 
 ## Próximo paso
 1. Forzar el despliegue en Render y verificar la ficha pública con biografía.
