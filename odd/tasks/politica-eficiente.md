@@ -31,7 +31,8 @@ tema, ver la actividad de cada cargo y medir el desvío.
 
 ## Restricciones
 - Rutas: `C:\Mis Documentos\_superacion\Codex\PoliticaEficiente`.
-- Mismo camino que RAVE: git, Render (gunicorn + `render.yaml`), estética neón, APK después.
+- Mismo camino que RAVE: git, Render (gunicorn + `render.yaml`), estética clara y sobria (grises,
+  color solo para el estado de gestión), APK después.
 - SQL con `?` traducido a `%s`: el mismo esquema corre en SQLite y Postgres/Neon.
 - Sin datos personales inventados. Todo contacto lleva fuente y marca de verificación.
 - **Sin datos ficticios en pantalla.** Si no hay usuarios, votos o noticias, la sección no se muestra;
@@ -50,9 +51,10 @@ tema, ver la actividad de cada cargo y medir el desvío.
 **Principio rector:** que la persona entienda en 5 segundos qué está mirando y qué puede hacer.
 Tres capas, siempre en el mismo orden: *qué pasa* → *qué puedo hacer* → *qué se está haciendo*.
 
-1. **Jerarquía visual.** Fondo azul-noche, paneles elevados, un solo acento fuerte por pantalla.
-   El neón (verde agua) marca acción y dato positivo; rosa/rojo, conflicto o descuido; ámbar,
-   advertencia o dato sin verificar. Nunca dos acentos compitiendo en la misma tarjeta.
+1. **Jerarquía visual.** Fondo claro (blanco y grises), texto oscuro y negritas en el dato
+   relevante. El color se reserva para lo que exige atención: verde/ámbar/rojo de semáforo para el
+   estado de gestión, nunca como decoración. Los cargos se muestran en gris oscuro y los emojis de
+   tema, desaturados.
 2. **Lectura por tarjetas.** Cada tema entra por emoji + título + una línea de resumen + barra de
    apoyo + contadores. El emoji funciona como ancla memorizable, no como decoración.
 3. **Votar sin fricción.** Dos botones grandes (👍 / 👎) siempre visibles en el detalle, con el
@@ -136,6 +138,8 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - [ ] T22 — Contexto y preguntas abiertas por tema · criterio: cada propuesta explica cómo se llegó a la situación y plantea 2 a 4 preguntas que el ciudadano debe poder responder.
 - [ ] T23 — Glosario con ventanas emergentes · criterio: palabras difíciles (subsidio, derogar, sanción, presunción de inocencia) con explicación simple al pasar el mouse o tocar.
 - [ ] T26 — Comparador visual de actividad e iniciativas · criterio: comparar acciones importantes y no importantes de cada cargo, y la evolución de una iniciativa o tema en el tiempo, con la misma escala y la fuente de cada hecho.
+- [ ] T27 — Semáforo de gestión por proceso · criterio: cada tema tiene un proceso con hitos y una calificación ciudadana e interna; verde, ámbar o rojo miden si la gestión y su evolución son adecuadas, no si el problema es grave; sin datos suficientes no se colorea.
+- [ ] T28 — Contexto, lenguaje sencillo y política de fuentes · criterio: cada tema muestra el contexto faltante, traduce los términos difíciles y marca banderas rojas; ninguna fuente (medio masivo u oficial) se toma como verdad a priori y el sentir popular se registra como inteligencia colectiva, con control explícito de bots y contenido generado por IA.
 
 ## Evidencia
 - `python probar_app.py` → `/`, `/temas`, `/mapa`, `/politicos`, `/registro`, `/ingresar`, `/salud`,
@@ -179,6 +183,10 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
   `biografias`, `hitos` y `vinculos`, ficha con línea de tiempo y carga en Neon. Decisión del
   usuario: las 64 fichas sin artículo se armarán con noticias (hechos, iniciativas, votos) y cada
   hecho con fecha y enlace; queda pedido el comparador visual de actividad (T26).
+- Sesión 5 (2026-11-05): rediseño a fondo claro: blancos y grises, negritas en lo relevante,
+  cargos en gris oscuro, emojis de tema desaturados y color reservado al semáforo de estado. Se
+  ajustaron mapa y flujos. Verificado en pantalla a 1280 y a 420 px. Se agregaron T27 (semáforo de
+  gestión por proceso) y T28 (contexto, lenguaje sencillo y política de fuentes).
 
 ## Próximo paso
 1. Forzar el despliegue en Render y verificar la ficha pública con biografía.

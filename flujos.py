@@ -96,19 +96,19 @@ def svg(d):
     piezas = [
         f'<svg viewBox="0 0 {ANCHO_LOCAL} {alto}" role="img" aria-label="Flujo de capital del Estado" '
         f'xmlns="http://www.w3.org/2000/svg" class="mapa-svg">',
-        f'<rect width="{ANCHO_LOCAL}" height="{alto}" fill="#070c18"/>',
-        f'<text x="{X_I}" y="50" fill="#8fb8ff" font-size="14" font-weight="700" letter-spacing="1.5">INGRESOS DEL ESTADO</text>',
-        f'<text x="{X_E + W_E / 2}" y="50" fill="#63f5c8" font-size="14" font-weight="700" letter-spacing="1.5" text-anchor="middle">ESTADO</text>',
-        f'<text x="{X_G}" y="50" fill="#ffb4d1" font-size="14" font-weight="700" letter-spacing="1.5">GASTOS DEL ESTADO</text>',
+        f'<rect width="{ANCHO_LOCAL}" height="{alto}" fill="#ffffff"/>',
+        f'<text x="{X_I}" y="50" fill="#4a5566" font-size="14" font-weight="700" letter-spacing="1.5">INGRESOS DEL ESTADO</text>',
+        f'<text x="{X_E + W_E / 2}" y="50" fill="#1a222d" font-size="14" font-weight="700" letter-spacing="1.5" text-anchor="middle">ESTADO</text>',
+        f'<text x="{X_G}" y="50" fill="#4a5566" font-size="14" font-weight="700" letter-spacing="1.5">GASTOS DEL ESTADO</text>',
     ]
     # caja del Estado
     piezas.append(
         f'<rect x="{X_E}" y="{y_estado_top}" width="{W_E}" height="{y_estado_bot - y_estado_top}" '
-        f'rx="10" fill="#0f2a3a" stroke="#63f5c8" stroke-width="1.6"/>'
+        f'rx="10" fill="#2a323d" stroke="#2a323d" stroke-width="1.6"/>'
     )
     piezas.append(
         f'<text x="{X_E + W_E / 2}" y="{(y_estado_top + y_estado_bot) / 2}" text-anchor="middle" '
-        f'fill="#e8f1ff" font-size="13" font-weight="700">Tesoro Nacional</text>'
+        f'fill="#ffffff" font-size="13" font-weight="700">Tesoro Nacional</text>'
     )
     # ingresos
     for i, f in enumerate(ingresos):
@@ -116,16 +116,16 @@ def svg(d):
         y = y_i[i]
         piezas.append(
             f'<g class="nodo flujo"><title>{_esc(f["nombre"])} · {_fmt(f["monto"], f["unidad"])}</title>'
-            f'<rect x="{X_I}" y="{y}" width="{W_I}" height="{h}" rx="7" fill="#12203a" stroke="#2b4a7a"/>'
-            f'<text x="{X_I + 10}" y="{y + h / 2 + 4}" fill="#e8f1ff" font-size="11.5">{_esc(_recortar(f["nombre"], 26))}</text>'
-            f'<text x="{X_I + W_I - 8}" y="{y + h / 2 + 4}" text-anchor="end" fill="#8fb8ff" font-size="10">{_esc(_fmt(f["monto"], f["unidad"]))}</text>'
+            f'<rect x="{X_I}" y="{y}" width="{W_I}" height="{h}" rx="7" fill="#f7f8fa" stroke="#d6dbe3"/>'
+            f'<text x="{X_I + 10}" y="{y + h / 2 + 4}" fill="#1a222d" font-size="11.5">{_esc(_recortar(f["nombre"], 26))}</text>'
+            f'<text x="{X_I + W_I - 8}" y="{y + h / 2 + 4}" text-anchor="end" fill="#2f5d8a" font-size="10">{_esc(_fmt(f["monto"], f["unidad"]))}</text>'
             f'</g>'
         )
         # linea al Estado
         piezas.append(
             f'<path d="M {X_I + W_I} {y + h / 2} C {X_I + W_I + 80} {y + h / 2} '
             f'{X_E - 80} {(y_estado_top + y_estado_bot) / 2} {X_E} {(y_estado_top + y_estado_bot) / 2}" '
-            f'fill="none" stroke="#7fd4ff" stroke-width="{max(1.5, h * 0.6):.1f}" opacity="0.45" '
+            f'fill="none" stroke="#2f5d8a" stroke-width="{max(1.5, h * 0.6):.1f}" opacity="0.3" '
             f'class="linea-flujo"><title>{_esc(f["nombre"])} → Estado</title></path>'
         )
     # gastos
@@ -134,15 +134,15 @@ def svg(d):
         y = y_g[i]
         piezas.append(
             f'<g class="nodo flujo"><title>{_esc(f["nombre"])} · {_fmt(f["monto"], f["unidad"])}</title>'
-            f'<rect x="{X_G}" y="{y}" width="{W_G}" height="{h}" rx="7" fill="#2a1230" stroke="#7a2b5e"/>'
-            f'<text x="{X_G + 10}" y="{y + h / 2 + 4}" fill="#ffe6f2" font-size="11.5">{_esc(_recortar(f["nombre"], 30))}</text>'
-            f'<text x="{X_G + W_G - 8}" y="{y + h / 2 + 4}" text-anchor="end" fill="#ffb4d1" font-size="10">{_esc(_fmt(f["monto"], f["unidad"]))}</text>'
+            f'<rect x="{X_G}" y="{y}" width="{W_G}" height="{h}" rx="7" fill="#faf7f6" stroke="#e3cbc6"/>'
+            f'<text x="{X_G + 10}" y="{y + h / 2 + 4}" fill="#1a222d" font-size="11.5">{_esc(_recortar(f["nombre"], 30))}</text>'
+            f'<text x="{X_G + W_G - 8}" y="{y + h / 2 + 4}" text-anchor="end" fill="#b23a2e" font-size="10">{_esc(_fmt(f["monto"], f["unidad"]))}</text>'
             f'</g>'
         )
         piezas.append(
             f'<path d="M {X_E + W_E} {(y_estado_top + y_estado_bot) / 2} C {X_E + W_E + 80} {(y_estado_top + y_estado_bot) / 2} '
             f'{X_G - 80} {y + h / 2} {X_G} {y + h / 2}" '
-            f'fill="none" stroke="#ff8a4c" stroke-width="{max(1.5, h * 0.6):.1f}" opacity="0.45" '
+            f'fill="none" stroke="#b23a2e" stroke-width="{max(1.5, h * 0.6):.1f}" opacity="0.25" '
             f'class="linea-flujo"><title>Estado → {_esc(f["nombre"])}</title></path>'
         )
     piezas.append("</svg>")

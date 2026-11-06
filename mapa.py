@@ -20,11 +20,11 @@ PASO = 36
 ALTO_CAJA = 30
 
 COLOR_CAMARA = {
-    "Senadores": "#2a3f6b",
-    "Diputados": "#243a5e",
-    "Poder Ejecutivo": "#3a2a5e",
-    "Intendencias": "#1f4a45",
-    "Organismos": "#4a3a22",
+    "Senadores": "#333d4b",
+    "Diputados": "#3d4653",
+    "Poder Ejecutivo": "#2a323d",
+    "Intendencias": "#454e5b",
+    "Organismos": "#525b68",
 }
 
 
@@ -153,12 +153,12 @@ def svg(d):
         f'xmlns="http://www.w3.org/2000/svg" class="mapa-svg">',
         """<defs>
         <linearGradient id="fondo" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#0a1224"/><stop offset="100%" stop-color="#070c18"/>
+          <stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f4f5f7"/>
         </linearGradient>
         </defs>""",
         f'<rect width="{ANCHO}" height="{altura}" fill="url(#fondo)"/>',
-        f'<text x="{X_TEMAS}" y="50" fill="#8fb8ff" font-size="14" font-weight="700" letter-spacing="1.5">TEMAS QUE PREOCUPAN</text>',
-        f'<text x="{X_POL}" y="50" fill="#ffb4d1" font-size="14" font-weight="700" letter-spacing="1.5">CARGOS PÚBLICOS</text>',
+        f'<text x="{X_TEMAS}" y="50" fill="#4a5566" font-size="14" font-weight="700" letter-spacing="1.5">TEMAS QUE PREOCUPAN</text>',
+        f'<text x="{X_POL}" y="50" fill="#4a5566" font-size="14" font-weight="700" letter-spacing="1.5">CARGOS PÚBLICOS</text>',
     ]
 
     pos_y = {}
@@ -172,10 +172,10 @@ def svg(d):
         piezas.append(
             f'<g class="nodo tema" data-tema="{t["id"]}">'
             f'<title>{esc(t["titulo"])} · {favor} a favor, {contra} en contra, {t["opiniones"]} opiniones</title>'
-            f'<rect x="{X_TEMAS}" y="{y}" width="{ANCHO_TEMA}" height="{ALTO_CAJA}" rx="8" fill="#12203a" stroke="#2b4a7a"/>'
-            f'<rect x="{X_TEMAS + 6}" y="{y + 24}" width="{ancho_apoyo}" height="3" rx="1.5" fill="#39ff88" opacity="0.8"/>'
+            f'<rect x="{X_TEMAS}" y="{y}" width="{ANCHO_TEMA}" height="{ALTO_CAJA}" rx="8" fill="#ffffff" stroke="#d6dbe3"/>'
+            f'<rect x="{X_TEMAS + 6}" y="{y + 24}" width="{ancho_apoyo}" height="3" rx="1.5" fill="#1f7a4d" opacity="0.85"/>'
             f'<text x="{X_TEMAS + 11}" y="{y + 20}" font-size="13">{esc(t["emoji"])}</text>'
-            f'<text x="{X_TEMAS + 33}" y="{y + 20}" fill="#e8f1ff" font-size="11.5">{esc(recortar(t["titulo"], 46))}</text>'
+            f'<text x="{X_TEMAS + 33}" y="{y + 20}" fill="#1a222d" font-size="11.5">{esc(recortar(t["titulo"], 46))}</text>'
             f'</g>'
         )
 
@@ -186,14 +186,14 @@ def svg(d):
         x = X_POL + col * (ANCHO_POL + GAP_POL)
         y = Y0 + fila * PASO
         pos_pol[p["id"]] = (x, y)
-        fondo = COLOR_CAMARA.get(p["camara"], "#243a5e")
+        fondo = COLOR_CAMARA.get(p["camara"], "#3d4653")
         piezas.append(
             f'<g class="nodo politico" data-pol="{p["id"]}">'
             f'<title>{esc(p["nombre"])} · {esc(p["cargo"])} · {esc(p["organismo"])}</title>'
-            f'<rect x="{x}" y="{y}" width="{ANCHO_POL}" height="{ALTO_CAJA}" rx="7" fill="{fondo}" stroke="#3f5d94"/>'
+            f'<rect x="{x}" y="{y}" width="{ANCHO_POL}" height="{ALTO_CAJA}" rx="7" fill="{fondo}" stroke="#ffffff"/>'
             f'<text x="{x + 6}" y="{y + 20}" font-size="11">{esc(p["emoji"])}</text>'
             f'<text x="{x + 21}" y="{y + 13}" fill="#ffffff" font-size="9" font-weight="600">{esc(recortar(p["nombre"], 16))}</text>'
-            f'<text x="{x + 21}" y="{y + 24}" fill="#9fc0ee" font-size="7.5">{esc(recortar(p["cargo"], 22))}</text>'
+            f'<text x="{x + 21}" y="{y + 24}" fill="#d3d9e2" font-size="7.5">{esc(recortar(p["cargo"], 22))}</text>'
             f'</g>'
         )
 
@@ -210,7 +210,7 @@ def svg(d):
             valor = d["posiciones"].get((p["id"], t["id"]))
             if not valor:
                 continue
-            color = "#39ff88" if valor > 0 else "#ff3b6b"
+            color = "#1f7a4d" if valor > 0 else "#b23a2e"
             grosor = 2.0 + (1.4 if t["urgencia"] == "alta" else 0)
             estado = "a favor" if valor > 0 else "en contra"
             lineas.append(
@@ -224,7 +224,7 @@ def svg(d):
                     continue
                 lineas.append(
                     f'<path d="{_curva(X_TEMAS + ANCHO_TEMA, pos_y[t["id"]] + 15, xp, yp + 15)}" '
-                    f'fill="none" stroke="#ffb84c" stroke-width="1.2" opacity="0.25" '
+                    f'fill="none" stroke="#a96b12" stroke-width="1.2" opacity="0.3" '
                     f'stroke-dasharray="4 5" class="linea-actividad">'
                     f'<title>{esc(p["nombre"])} tiene actividad en {esc(t["categoria"])}, sin postura declarada</title></path>'
                 )
@@ -232,7 +232,7 @@ def svg(d):
     lineas_usuario = []
     if grupos:
         piezas.append(
-            f'<text x="410" y="{y_usuarios - 16}" fill="#63f5c8" font-size="12" '
+            f'<text x="410" y="{y_usuarios - 16}" fill="#4a5566" font-size="12" '
             f'font-weight="700" letter-spacing="1.2">CIUDADANÍA POR GRUPO</text>'
         )
         ancho_grupo = 90
@@ -245,9 +245,9 @@ def svg(d):
             piezas.append(
                 f'<g class="nodo grupo"><title>{g["nombre"]}: {cantidad} personas</title>'
                 f'<rect x="{xg:.0f}" y="{y_usuarios}" width="{ancho_grupo}" height="52" rx="11" '
-                f'fill="#0f1c33" stroke="{g["color"]}" stroke-width="1.5"/>'
+                f'fill="#ffffff" stroke="{g["color"]}" stroke-width="1.5"/>'
                 f'<text x="{xg + ancho_grupo / 2:.0f}" y="{y_usuarios + 20}" text-anchor="middle" font-size="14">{g["emoji"]}</text>'
-                f'<text x="{xg + ancho_grupo / 2:.0f}" y="{y_usuarios + 34}" text-anchor="middle" fill="#dbe9ff" font-size="8.5">{esc(g["nombre"])}</text>'
+                f'<text x="{xg + ancho_grupo / 2:.0f}" y="{y_usuarios + 34}" text-anchor="middle" fill="#4a5566" font-size="8.5">{esc(g["nombre"])}</text>'
                 f'<text x="{xg + ancho_grupo / 2:.0f}" y="{y_usuarios + 46}" text-anchor="middle" fill="{g["color"]}" font-size="10" font-weight="700">{cantidad}</text>'
                 f'</g>'
             )
@@ -266,17 +266,17 @@ def svg(d):
     piezas.extend(lineas_usuario)
     piezas.extend(lineas)
     leyenda = (
-        f'<tspan fill="#39ff88">━</tspan> cargo a favor   '
-        f'<tspan fill="#ff3b6b">━</tspan> cargo en contra   '
-        f'<tspan fill="#ffb84c">┅</tspan> actividad declarada'
+        f'<tspan fill="#1f7a4d">━</tspan> cargo a favor   '
+        f'<tspan fill="#b23a2e">━</tspan> cargo en contra   '
+        f'<tspan fill="#a96b12">┅</tspan> actividad declarada'
     )
     if grupos:
         leyenda += (
-            '   <tspan fill="#63f5c8">━</tspan> apoyo ciudadano '
+            '   <tspan fill="#4a5566">━</tspan> apoyo ciudadano '
             '(grosor = % del grupo)'
         )
     piezas.append(
-        f'<g class="leyenda"><text x="{X_TEMAS}" y="{altura - 20}" fill="#8fb8ff" '
+        f'<g class="leyenda"><text x="{X_TEMAS}" y="{altura - 20}" fill="#4a5566" '
         f'font-size="10.5">{leyenda}</text></g>'
     )
     piezas.append("</svg>")

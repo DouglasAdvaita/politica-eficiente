@@ -19,11 +19,11 @@ PUNTOS = {
 }
 
 GRUPOS = [
-    ("simple", "Simples", "👤", "#7fd4ff"),
-    ("con_intereses", "Con intereses", "🎯", "#63f5c8"),
-    ("activo", "Activos", "⚡", "#ffd166"),
-    ("muy_activo", "Muy activos", "🔥", "#ff8a4c"),
-    ("referente", "Referentes", "⭐", "#ff5fa2"),
+    ("simple", "Simples", "👤", "#6b7686"),
+    ("con_intereses", "Con intereses", "🎯", "#4f6b60"),
+    ("activo", "Activos", "⚡", "#7a6b4a"),
+    ("muy_activo", "Muy activos", "🔥", "#7d5a45"),
+    ("referente", "Referentes", "⭐", "#6a5a70"),
 ]
 
 
@@ -67,4 +67,4 @@ def datos_grupo(clave):
     for g in GRUPOS:
         if g[0] == clave:
             return {"clave": g[0], "nombre": g[1], "emoji": g[2], "color": g[3]}
-    return {"clave": "simple", "nombre": "Simples", "emoji": "👤", "color": "#7fd4ff"}
+    return {"clave": "simple", "nombre": "Simples", "emoji": "👤", "color": "#6b7686"}
