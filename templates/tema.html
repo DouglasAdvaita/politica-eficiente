@@ -145,6 +145,10 @@
 <section style="margin-top:22px" class="grid">
   <div class="panel" id="foro">
     <h2>💬 Foro del tema</h2>
+    <p class="chico suave" style="margin-top:-4px">
+      Control de automatización: se descarta un texto idéntico ya publicado en el tema en las últimas 24 horas
+      y se limita a 4 opiniones cada 5 minutos por cuenta. No se usa IA para moderar el contenido.
+    </p>
     {% if yo %}
       <form method="post" action="{{ url_for('opinar', slug=t.slug) }}">
         <label for="texto">Tu opinión</label>

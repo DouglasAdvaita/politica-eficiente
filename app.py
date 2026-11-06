@@ -3,9 +3,13 @@
 Un lugar para entender que pasa en la politica uruguaya, opinar, votar y
 comparar lo que preocupa a la gente con lo que hacen los cargos publicos.
 """
+import hashlib
 import json
 import os
+import re
 import smtplib
+import unicodedata
+from datetime import datetime, timedelta, timezone
 from email.message import EmailMessage
 
 from flask import (
@@ -104,6 +108,21 @@ def filtro_corto(texto, n=150):
 @app.template_filter("cat")
 def filtro_cat(valor):
     return NOMBRES_CATEGORIA.get(valor, valor)
+
+
+def _normalizar(texto):
+    plano = "".join(c for c in unicodedata.normalize("NFKD", (texto or "").lower())
+                    if not unicodedata.combining(c))
+    plano = re.sub(r"[^a-z0-9ñ ]+", " ", plano)
+    return " ".join(plano.split())
+
+
+def _huella(texto):
+    return hashlib.sha1(_normalizar(texto).encode("utf-8")).hexdigest()[:16]
+
+
+def _corte(minutos):
+    return (datetime.now(timezone.utc) - timedelta(minutes=minutos)).isoformat(timespec="seconds")
 
 
 @app.template_filter("glosario")
@@ -346,10 +365,25 @@ def opinar(slug):
         t = db.uno("SELECT id, titulo FROM temas WHERE slug = ?", (slug,))
         if not t:
             abort(404)
+        recientes = db.valor(
+            "SELECT COUNT(*) FROM opiniones WHERE usuario_id = ? AND creado >= ?",
+            (yo["id"], _corte(5))) or 0
+        if recientes >= 4:
+            flash("Publicaste varias opiniones seguidas. Esperá unos minutos antes de seguir.", "error")
+            return redirect(url_for("tema", slug=slug) + "#foro")
+        marca = _huella(texto[:2000])
+        repetida = db.uno(
+            """SELECT id FROM opiniones WHERE tema_id = ? AND hash = ? AND creado >= ?
+               LIMIT 1""",
+            (t["id"], marca, _corte(24 * 60)))
+        if repetida:
+            flash("Ese mismo texto ya está publicado en este tema. Amplialo si querés agregar algo.", "error")
+            return redirect(url_for("tema", slug=slug) + "#foro")
         db.ejecutar(
-            """INSERT INTO opiniones (tema_id, usuario_id, politico_id, texto, creado)
-               VALUES (?, ?, ?, ?, ?)""",
-            (t["id"], yo["id"], (yo.get("politico") or {}).get("id"), texto[:2000], dbm.ahora()),
+            """INSERT INTO opiniones (tema_id, usuario_id, politico_id, texto, hash, creado)
+               VALUES (?, ?, ?, ?, ?, ?)""",
+            (t["id"], yo["id"], (yo.get("politico") or {}).get("id"), texto[:2000],
+             marca, dbm.ahora()),
         )
         dbm.registrar_actividad(
             db, yo["id"], "opinion", gamificacion.PUNTOS["opinion"], f"Opinión en {t['titulo']}"

@@ -115,6 +115,7 @@ CREATE TABLE IF NOT EXISTS opiniones (
     politico_id INTEGER,
     padre_id INTEGER,
     texto TEXT NOT NULL,
+    hash TEXT NOT NULL DEFAULT '',
     creado TEXT NOT NULL
 );
 
@@ -383,12 +384,25 @@ def _migrar(db):
         for nombre, ddl in columnas_nuevas:
             db.ejecutar(f"ALTER TABLE temas ADD COLUMN IF NOT EXISTS {nombre} {ddl}")
         _migrar_acciones(db)
+        _migrar_opiniones(db)
         return
     actuales = {f["name"] for f in db.todos("PRAGMA table_info(temas)")}
     for nombre, ddl in columnas_nuevas:
         if nombre not in actuales:
             db.ejecutar(f"ALTER TABLE temas ADD COLUMN {nombre} {ddl}")
     _migrar_acciones(db)
+    _migrar_opiniones(db)
+
+
+def _migrar_opiniones(db):
+    """La huella del texto se agrego para frenar copias y contenido automatizado."""
+    if ES_PG:
+        db.ejecutar("ALTER TABLE opiniones ADD COLUMN IF NOT EXISTS hash "
+                    "TEXT NOT NULL DEFAULT ''")
+        return
+    actuales = {f["name"] for f in db.todos("PRAGMA table_info(opiniones)")}
+    if "hash" not in actuales:
+        db.ejecutar("ALTER TABLE opiniones ADD COLUMN hash TEXT NOT NULL DEFAULT ''")
 
 
 def _migrar_acciones(db):
