@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block titulo %}Glosario · Política Eficiente{% endblock %}
+{% block cuerpo %}
+<h1>Glosario</h1>
+<p class="suave">
+  Las palabras que se usan en las leyes y en la prensa, explicadas sin jerga.
+  En los temas, la palabra aparece con un subrayado punteado: al pasar el mouse
+  o tocar, se abre la explicación.
+</p>
+
+<div class="pila" style="margin-top:18px">
+  {% for termino, definicion in terminos %}
+    <div class="panel" style="padding:14px 18px">
+      <b>{{ termino }}</b>
+      <p class="suave chico" style="margin:4px 0 0">{{ definicion }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+<p class="chico suave" style="margin-top:16px">
+  Si un término no está y debería estar, se puede proponer desde el foro del tema.
+</p>
+{% endblock %}

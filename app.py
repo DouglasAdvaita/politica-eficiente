@@ -18,6 +18,7 @@ import db as dbm
 import desempeno
 import flujos as flujosmod
 import gamificacion
+import glosario as glosariomod
 import mapa as mapamod
 
 app = Flask(__name__)
@@ -103,6 +104,12 @@ def filtro_corto(texto, n=150):
 @app.template_filter("cat")
 def filtro_cat(valor):
     return NOMBRES_CATEGORIA.get(valor, valor)
+
+
+@app.template_filter("glosario")
+def filtro_glosario(texto):
+    """Explica los terminos dificiles con una ventana emergente."""
+    return Markup(glosariomod.marcar(texto))
 
 
 @app.template_filter("datos")
@@ -616,6 +623,12 @@ def flujos():
     return render_template(
         "flujos.html", d=d, dibujo=dibujo, claves=cl, comparacion=comparacion
     )
+
+
+@app.route("/glosario")
+def glosario():
+    terminos = sorted(glosariomod.GLOSARIO.items(), key=lambda par: par[0])
+    return render_template("glosario.html", terminos=terminos)
 
 
 @app.route("/salud")

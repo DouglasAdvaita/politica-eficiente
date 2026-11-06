@@ -141,7 +141,11 @@ textarea { min-height: 96px; resize: vertical; }
 
 /* ---------- popups de ayuda (tooltips) ---------- */
 [data-tip] { position: relative; cursor: help; }
-[data-tip]:hover::after, [data-tip]:focus::after {
+.palabra {
+  border-bottom: 1px dotted #9aa4b2; cursor: help;
+  text-underline-offset: 2px;
+}
+.palabra:hover, .palabra:focus { border-bottom-color: var(--tinta); outline: none; }[data-tip]:hover::after, [data-tip]:focus::after {
   content: attr(data-tip);
   position: absolute; bottom: calc(100% + 6px); left: 50%;
   transform: translateX(-50%);

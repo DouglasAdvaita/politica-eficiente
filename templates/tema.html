@@ -18,7 +18,7 @@
         {% if not t.verificado %}<span class="etiqueta ambar" tabindex="0" data-tip="Dato sin fuente oficial enlazada todavía; se muestra como provisorio.">sin verificar</span>{% endif %}
       </div>
       <h1>{{ t.titulo }}</h1>
-      {% if t.resumen %}<p class="suave">{{ t.resumen }}</p>{% endif %}
+      {% if t.resumen %}<p class="suave">{{ t.resumen|glosario }}</p>{% endif %}
     </div>
   </div>
 
@@ -51,13 +51,13 @@
   {% if t.problema and t.tipo == 'ley' %}
     <div class="bloque problema">
       <h4>Por qué no funciona</h4>
-      <p>{{ t.problema }}</p>
+      <p>{{ t.problema|glosario }}</p>
     </div>
   {% endif %}
   {% if t.evidencia %}
     <div class="bloque evidencia">
       <h4>Evidencia y datos</h4>
-      <p>{{ t.evidencia }}</p>
+      <p>{{ t.evidencia|glosario }}</p>
       {% set datos = t.datos_clave|datos %}
       {% if datos %}
         <ul class="chico suave">
@@ -69,7 +69,7 @@
   {% if t.propuesta %}
     <div class="bloque propuesta">
       <h4>Qué se propone</h4>
-      <p>{{ t.propuesta }}</p>
+      <p>{{ t.propuesta|glosario }}</p>
     </div>
   {% endif %}
 
@@ -84,7 +84,7 @@
   {% if t.critica %}
     <div class="bloque bandera">
       <h4>🚩 Crítica de coherencia</h4>
-      <p>{{ t.critica }}</p>
+      <p>{{ t.critica|glosario }}</p>
     </div>
   {% endif %}
 
