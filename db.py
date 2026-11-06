@@ -89,6 +89,9 @@ CREATE TABLE IF NOT EXISTS temas (
     etapa TEXT NOT NULL DEFAULT 'propuesta',
     impacto TEXT NOT NULL DEFAULT 'medio',
     estado_legal TEXT NOT NULL DEFAULT '',
+    fecha TEXT NOT NULL DEFAULT '',
+    responsable TEXT NOT NULL DEFAULT '',
+    critica TEXT NOT NULL DEFAULT '',
     fuente_url TEXT,
     verificado SMALLINT NOT NULL DEFAULT 0,
     creado TEXT NOT NULL
@@ -220,6 +223,16 @@ CREATE TABLE IF NOT EXISTS noticias (
     creado TEXT NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS participantes (
+    id {AUTO},
+    tema_id INTEGER NOT NULL,
+    nombre TEXT NOT NULL,
+    rol TEXT NOT NULL DEFAULT '',
+    emoji TEXT NOT NULL DEFAULT '👤',
+    nota TEXT NOT NULL DEFAULT '',
+    creado TEXT NOT NULL
+);
+
 CREATE INDEX IF NOT EXISTS idx_votos_tema ON votos (tema_id);
 CREATE INDEX IF NOT EXISTS idx_acciones_pol ON acciones (politico_id);
 CREATE INDEX IF NOT EXISTS idx_opiniones_tema ON opiniones (tema_id);
@@ -228,6 +241,7 @@ CREATE INDEX IF NOT EXISTS idx_hitos_pol ON hitos (politico_id);
 CREATE INDEX IF NOT EXISTS idx_vinculos_pol ON vinculos (politico_id);
 CREATE INDEX IF NOT EXISTS idx_noticias_pol ON noticias (politico_id);
 CREATE INDEX IF NOT EXISTS idx_noticias_estado ON noticias (estado);
+CREATE INDEX IF NOT EXISTS idx_participantes_tema ON participantes (tema_id);
 """
 
 
@@ -350,6 +364,24 @@ def crear_esquema():
         for sentencia in ESQUEMA.split(";"):
             if sentencia.strip():
                 db.ejecutar(sentencia)
+        _migrar(db)
+
+
+def _migrar(db):
+    """Columnas nuevas que las bases ya existentes no tienen."""
+    columnas_nuevas = [
+        ("fecha", "TEXT NOT NULL DEFAULT ''"),
+        ("responsable", "TEXT NOT NULL DEFAULT ''"),
+        ("critica", "TEXT NOT NULL DEFAULT ''"),
+    ]
+    if ES_PG:
+        for nombre, ddl in columnas_nuevas:
+            db.ejecutar(f"ALTER TABLE temas ADD COLUMN IF NOT EXISTS {nombre} {ddl}")
+        return
+    actuales = {f["name"] for f in db.todos("PRAGMA table_info(temas)")}
+    for nombre, ddl in columnas_nuevas:
+        if nombre not in actuales:
+            db.ejecutar(f"ALTER TABLE temas ADD COLUMN {nombre} {ddl}")
 
 
 def registrar_actividad(db, usuario_id, tipo, puntos, detalle=""):

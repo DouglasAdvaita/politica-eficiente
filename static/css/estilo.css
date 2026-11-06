@@ -189,7 +189,14 @@ textarea { min-height: 96px; resize: vertical; }
 .bloque.problema { border-color: var(--rojo); }
 .bloque.propuesta { border-color: var(--verde); }
 .bloque.evidencia { border-color: var(--ambar); }
+.bloque.bandera { border-color: var(--rojo); background: #fbf5f4; padding: 12px 14px; border-radius: 0 8px 8px 0; }
+.bloque.bandera h4 { color: var(--rojo); }
 .bloque h4 { margin: 0 0 4px; font-size: .82rem; letter-spacing: 1px; text-transform: uppercase; color: var(--suave); }
+
+/* ---------- índice de personas involucradas ---------- */
+.participante { display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; border-bottom: 1px solid #eceff3; }
+.participante:last-child { border-bottom: 0; }
+.participante .emoji { font-size: 1.25rem; line-height: 1.3; filter: grayscale(.25); }
 .votar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; padding: 12px 0; }
 .votar .conteo { font-weight: 700; }
 

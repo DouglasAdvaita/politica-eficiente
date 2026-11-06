@@ -286,6 +286,16 @@
       "impacto": "alto",
       "estado": "vigente",
       "propuesta": "Asignar partidas específicas para vivienda y empleo de víctimas y auditar el funcionamiento y los tiempos de respuesta de las tobilleras electrónicas.",
+      "fecha": "25 de noviembre de 2025",
+      "responsable": "María de la Paz Echetto, doctora en Derecho y docente de la Udelar, abogada del servicio El Paso",
+      "critica": "La fuente confunde los problemas de aplicación de la ley con defectos de la propia ley y atribuye buena parte de esos problemas a la resistencia ideológica de quienes la cuestionan, sin demostrarlo. Usa fallas puntuales de las tobilleras para explicar los femicidios sin estadísticas que prueben esa relación causal; interpreta el desacuerdo de algunos jueces como falta de compromiso, cuando aplicar la ley por obligación es justamente su función; presenta la capacitación en género como solución sin demostrar su eficacia y, a la vez, afirma que la ley carece de interseccionalidad cuando la propia norma ya contempla diferencias socioeconómicas, étnicas, territoriales y de discapacidad. En el fondo, sustituye demostraciones por interpretaciones, generalizaciones y atribución de intenciones.",
+      "participantes": [
+        {"nombre": "María de la Paz Echetto", "rol": "Abogada y docente Udelar; autora de las afirmaciones", "emoji": "🗣️", "nota": "Afirma sin aportar estadísticas; confunde aplicación de la ley con defecto de la norma."},
+        {"nombre": "Suprema Corte de Justicia", "rol": "Responsable de crear juzgados especializados en violencia de género", "emoji": "⚖️"},
+        {"nombre": "Fiscalía General de la Nación", "rol": "Investiga y protege a las víctimas", "emoji": "🏛️"},
+        {"nombre": "Ministerio del Interior", "rol": "Controla el funcionamiento de las tobilleras electrónicas", "emoji": "🚔"},
+        {"nombre": "Jueces y juezas", "rol": "Aplican la ley", "emoji": "📜", "nota": "Aplicar la ley por obligación es su función; el desacuerdo no implica falta de compromiso."}
+      ],
       "fuente_url": "https://udelar.edu.uy/noticias/maria-de-la-paz-echetto-situacion-actual-de-la-ley-19580-de-violencia-basada-en-genero",
       "fuente_titulo": "Udelar - María de la Paz Echetto: situación actual de la Ley 19.580",
       "verificado": true

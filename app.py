@@ -281,9 +281,14 @@ def tema(slug):
                WHERE a.tema_categoria = ? ORDER BY a.fecha DESC NULLS LAST LIMIT 6""",
             (t["categoria"],),
         )
+        participantes = db.todos(
+            "SELECT * FROM participantes WHERE tema_id = ? ORDER BY id",
+            (t["id"],),
+        )
     return render_template(
         "tema.html", t=t, mi_voto=mi_voto, opiniones=opiniones,
         posicionados=posicionados, relacionados=relacionados, acciones=acciones,
+        participantes=participantes,
     )
 
 

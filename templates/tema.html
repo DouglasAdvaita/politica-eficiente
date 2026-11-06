@@ -73,6 +73,38 @@
     </div>
   {% endif %}
 
+  <div class="bloque">
+    <h4>Responsable y fecha</h4>
+    <p>
+      {% if t.responsable %}<b>{{ t.responsable }}</b>{% else %}<span class="suave">Sin responsable identificado.</span>{% endif %}
+      {% if t.fecha %} · {{ t.fecha }}{% endif %}
+    </p>
+  </div>
+
+  {% if t.critica %}
+    <div class="bloque bandera">
+      <h4>🚩 Crítica de coherencia</h4>
+      <p>{{ t.critica }}</p>
+    </div>
+  {% endif %}
+
+  {% if participantes %}
+    <div class="bloque">
+      <h4>👥 Personas y organismos involucrados</h4>
+      <div class="pila" style="margin-top:8px">
+        {% for pa in participantes %}
+          <div class="participante">
+            <span class="emoji">{{ pa.emoji }}</span>
+            <div style="flex:1">
+              <b>{{ pa.nombre }}</b> <span class="chico suave">{{ pa.rol }}</span>
+              {% if pa.nota %}<div class="chico suave">{{ pa.nota }}</div>{% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
   {% if t.fuente_url %}
     <p class="chico suave">Fuente: <a href="{{ t.fuente_url }}" target="_blank" rel="noopener">abrir documento original ↗</a></p>
   {% endif %}
