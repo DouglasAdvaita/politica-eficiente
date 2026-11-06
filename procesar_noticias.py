@@ -36,22 +36,24 @@ def _candidatos(titulo):
 def promover():
     dbm.crear_esquema()
     with dbm.abrir() as db:
-        pendientes = db.todos(
-            "SELECT id, politico_id, titulo, anio, url FROM noticias "
-            "WHERE politico_id IS NOT NULL AND estado = 'aceptada' ORDER BY anio")
-        agregados = 0
-        for n in pendientes:
-            ya = db.valor(
-                "SELECT 1 FROM hitos WHERE politico_id = ? AND fuente_url = ?",
-                (n["politico_id"], n["url"]))
-            if not ya:
-                db.ejecutar(
-                    "INSERT INTO hitos (politico_id, anio, texto, fuente_url, creado) "
-                    "VALUES (?, ?, ?, ?, ?)",
-                    (n["politico_id"], n["anio"], n["titulo"], n["url"], dbm.ahora()))
-                agregados += 1
-            db.ejecutar("UPDATE noticias SET estado = 'procesada' WHERE id = ?", (n["id"],))
-    print(f"hitos agregados: {agregados} | noticias procesadas: {len(pendientes)}")
+        pendientes = db.valor(
+            "SELECT COUNT(*) FROM noticias "
+            "WHERE politico_id IS NOT NULL AND estado = 'aceptada'")
+        db.ejecutar(
+            """INSERT INTO hitos (politico_id, anio, texto, fuente_url, creado)
+               SELECT n.politico_id, n.anio, n.titulo, n.url, ?
+               FROM noticias n
+               WHERE n.politico_id IS NOT NULL AND n.estado = 'aceptada'
+                 AND NOT EXISTS (
+                     SELECT 1 FROM hitos h
+                     WHERE h.politico_id = n.politico_id AND h.fuente_url = n.url
+                 )""",
+            (dbm.ahora(),),
+        )
+        db.ejecutar(
+            "UPDATE noticias SET estado = 'procesada' "
+            "WHERE politico_id IS NOT NULL AND estado = 'aceptada'")
+    print(f"noticias promovidas a hitos: {pendientes}")
 
 
 def revisar():
