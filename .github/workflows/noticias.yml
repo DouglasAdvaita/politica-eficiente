@@ -1,0 +1,22 @@
+name: Recolectar noticias
+
+on:
+  schedule:
+    # 10:15 UTC = 07:15 en Uruguay, todos los dias.
+    - cron: '15 10 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  recolectar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+      - name: Recolectar noticias (solo guarda crudas, no publica)
+        env:
+          DATABASE_URL: ${{ secrets.NEON_DATABASE_URL }}
+        run: python traer_noticias.py

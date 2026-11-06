@@ -140,6 +140,7 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - [ ] T26 — Comparador visual de actividad e iniciativas · criterio: comparar acciones importantes y no importantes de cada cargo, y la evolución de una iniciativa o tema en el tiempo, con la misma escala y la fuente de cada hecho.
 - [ ] T27 — Semáforo de gestión por proceso · criterio: cada tema tiene un proceso con hitos y una calificación ciudadana e interna; verde, ámbar o rojo miden si la gestión y su evolución son adecuadas, no si el problema es grave; sin datos suficientes no se colorea.
 - [ ] T28 — Contexto, lenguaje sencillo y política de fuentes · criterio: cada tema muestra el contexto faltante, traduce los términos difíciles y marca banderas rojas; ninguna fuente (medio masivo u oficial) se toma como verdad a priori y el sentir popular se registra como inteligencia colectiva, con control explícito de bots y contenido generado por IA.
+- [ ] T29 — Recolector de noticias con actualización diaria · criterio: un cron diario junta noticias de cada cargo desde Google News RSS y las guarda crudas con fecha, medio y enlace, deduplicadas por URL; la correlación con la biografía del cargo se procesa aparte, con revisión manual de las ambiguas.
 
 ## Evidencia
 - `python probar_app.py` → `/`, `/temas`, `/mapa`, `/politicos`, `/registro`, `/ingresar`, `/salud`,
@@ -161,6 +162,11 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
   `datos/cache_wikipedia/` (fuera de git).
 - Neon: consulta directa confirma 76 biografías, 522 hitos y 101 vínculos, con el enlace de fuente
   de cada ficha.
+- T29: `traer_noticias.py` junta noticias crudas (título, medio, fecha, enlace) en la tabla
+  `noticias` y las clasifica por nombre (aceptada / por_revisar / descartada); `procesar_noticias.py`
+  las correlaciona a la línea de tiempo del cargo y las sube a `hitos` sin duplicar. Cron diario en
+  `.github/workflows/noticias.yml`. Probado local: 38 noticias de 3 cargos, promovidas y
+  re-promovidas sin duplicados.
 - Ficha de Pablo Abdala revisada en pantalla (captura 1200 px): resumen, nacimiento, profesión,
   familia, línea de tiempo y nota de fuente secundaria. Se corrigió la línea para que el año no
   quede pisado por el punto.
@@ -191,7 +197,13 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
   extendieron las biografías al Ejecutivo y las Intendencias, con validación que descarta
   homónimos (futbolistas, periodistas): 76 biografías.
 
+- Sesión 6 (2026-11-06): recolector de noticias diario (T29) en dos etapas — recolección automática
+  por GitHub Actions (Google News RSS) + correlación/procesamiento manual con criterio editorial —,
+  con la tabla `noticias` y el cron `.github/workflows/noticias.yml`. Probado contra SQLite.
+
 ## Próximo paso
-1. Forzar el despliegue en Render y verificar la ficha pública con biografía.
-2. Completar las 64 biografías sin artículo con noticias fechadas y enlazadas.
-3. T26: comparador visual de acciones e iniciativas.
+1. Cargar el secreto `NEON_DATABASE_URL` en GitHub (Settings → Secrets → Actions) para que el cron
+   escriba en Neon, y correr una primera pasada que pueble las noticias.
+2. Revisar y correlacionar las noticias `por_revisar` y las aceptadas con su biografía (proceso manual).
+3. Completar las 72 biografías sin artículo con noticias fechadas y enlazadas.
+4. T26: comparador visual de acciones e iniciativas.

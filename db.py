@@ -206,12 +206,28 @@ CREATE TABLE IF NOT EXISTS vinculos (
     creado TEXT NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS noticias (
+    id {AUTO},
+    url TEXT UNIQUE NOT NULL,
+    titulo TEXT NOT NULL,
+    medio TEXT NOT NULL DEFAULT '',
+    fecha TEXT NOT NULL DEFAULT '',
+    anio INTEGER,
+    politico_id INTEGER,
+    estado TEXT NOT NULL DEFAULT 'nueva',
+    bandera TEXT NOT NULL DEFAULT '',
+    contexto TEXT NOT NULL DEFAULT '',
+    creado TEXT NOT NULL
+);
+
 CREATE INDEX IF NOT EXISTS idx_votos_tema ON votos (tema_id);
 CREATE INDEX IF NOT EXISTS idx_acciones_pol ON acciones (politico_id);
 CREATE INDEX IF NOT EXISTS idx_opiniones_tema ON opiniones (tema_id);
 CREATE INDEX IF NOT EXISTS idx_actividad_usuario ON actividad (usuario_id);
 CREATE INDEX IF NOT EXISTS idx_hitos_pol ON hitos (politico_id);
 CREATE INDEX IF NOT EXISTS idx_vinculos_pol ON vinculos (politico_id);
+CREATE INDEX IF NOT EXISTS idx_noticias_pol ON noticias (politico_id);
+CREATE INDEX IF NOT EXISTS idx_noticias_estado ON noticias (estado);
 """
 
 
