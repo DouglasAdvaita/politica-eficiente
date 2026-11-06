@@ -46,6 +46,28 @@
   </div>
 </section>
 
+{% if casos %}
+<section class="panel" style="margin-top:22px">
+  <div class="fila entre" style="align-items:flex-start">
+    <div>
+      <h2 style="margin:0">🔬 Caso piloto: cómo leer un tema a fondo</h2>
+      <p class="suave" style="margin:6px 0 0">
+        Un tema trabajado en capas: qué pasó, qué se intentó, qué efecto tuvo y qué falta saber,
+        con el nivel de respaldo de cada afirmación.
+      </p>
+    </div>
+  </div>
+  <div class="pila" style="margin-top:12px">
+    {% for caso in casos %}
+      <a class="panel" href="{{ url_for('caso', slug=caso.slug) }}" style="display:block; text-decoration:none; color:inherit">
+        <b>{{ caso.emoji }} {{ caso.titulo }}</b>
+        <div class="chico suave">{{ caso.sector }} · {{ caso.certeza_texto }}</div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 <section style="margin-top:28px">
   <div class="fila entre">
     <h2>🔥 Temas con más apoyo</h2>

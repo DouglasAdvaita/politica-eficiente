@@ -248,6 +248,15 @@ textarea { min-height: 96px; resize: vertical; }
 .linea-tiempo li::before { content: ""; position: absolute; left: 54px; top: 14px; width: 10px; height: 10px; border-radius: 50%; background: #ffffff; border: 2px solid var(--tinta); z-index: 2; }
 .linea-tiempo p { margin: 0; font-size: .9rem; color: var(--texto); }
 
+/* ---------- caso: cadena causal ---------- */
+.cadena { list-style: none; margin: 10px 0 0; padding: 0 0 0 18px; border-left: 2px solid #e3e7ee; }
+.cadena li { position: relative; padding: 0 0 14px 12px; }
+.cadena li::before { content: ""; position: absolute; left: -7px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: #ffffff; border: 2px solid var(--tinta); }
+.cadena p { margin: 4px 0; font-size: .9rem; }
+.hito-pais { display: flex; gap: 14px; padding: 7px 0; border-bottom: 1px solid #eceff3; }
+.hito-pais .anio { flex: 0 0 52px; font-weight: 700; color: var(--tinta); font-size: .85rem; }
+.hito-pais:last-child { border-bottom: 0; }
+
 /* ---------- mapa ---------- */
 .mapa-caja { overflow-x: auto; border: 1px solid var(--borde); border-radius: var(--radio); background: #ffffff; }
 .mapa-svg { display: block; width: 100%; min-width: 1080px; height: auto; }

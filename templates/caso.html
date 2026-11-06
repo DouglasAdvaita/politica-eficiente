@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block titulo %}{{ c.titulo }} · Política Eficiente{% endblock %}
+{% block cuerpo %}
+<p class="chico"><a href="{{ url_for('inicio') }}">← Inicio</a> · Caso piloto</p>
+
+<article class="panel">
+  <div class="cabecera-tema">
+    <span class="emoji">{{ c.emoji }}</span>
+    <div style="flex:1">
+      <div class="chips" style="margin-bottom:8px">
+        <span class="etiqueta">{{ c.sector }}</span>
+        <span class="etiqueta {{ c.certeza_clase }}" tabindex="0"
+              data-tip="Indica cuánto sostiene la evidencia la conclusión principal: probado, indicios, hipótesis o sin datos.">{{ c.certeza_texto }}</span>
+      </div>
+      <h1>{{ c.titulo }}</h1>
+      <p class="suave">{{ c.pregunta }}</p>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <h4>En una frase</h4>
+    <p>{{ c.sintesis }}</p>
+  </div>
+
+  <div class="bloque">
+    <h4>Cadena causal</h4>
+    <ol class="cadena">
+      {% for paso in c.cadena %}
+        <li>
+          <div class="fila entre" style="align-items:baseline; gap:10px">
+            <b>{{ paso.paso }}</b>
+            <span class="etiqueta {{ paso.clase }}" tabindex="0" data-tip="Nivel de respaldo de este eslabón.">{{ paso.etiqueta }}</span>
+          </div>
+          <p>{{ paso.texto }}</p>
+          {% if paso.fuente %}<p class="chico suave">Fuente: {{ paso.fuente }}</p>{% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+
+  <div class="bloque">
+    <h4>Qué pasó en otros países</h4>
+    <div class="pila" style="margin-top:8px">
+      {% for h in c.cronologia %}
+        <div class="hito-pais">
+          <span class="anio">{{ h.fecha }}</span>
+          <div style="flex:1">
+            <b>{{ h.pais }}</b>
+            <p class="chico" style="margin:2px 0">{{ h.hecho }}</p>
+            {% if h.fuente %}<a class="chico" href="{{ h.fuente }}" target="_blank" rel="noopener">fuente ↗</a>{% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="bloque">
+    <h4>Quién gana y quién pierde</h4>
+    <div class="pila" style="margin-top:8px">
+      {% for i in c.intereses %}
+        <div class="participante">
+          <div style="flex:1">
+            <div class="fila entre" style="align-items:baseline; gap:8px">
+              <b>{{ i.actor }}</b>
+              <span class="etiqueta {{ i.clase }}" tabindex="0" data-tip="Nivel de respaldo de esta lectura.">{{ i.etiqueta }}</span>
+            </div>
+            <p class="chico" style="margin:4px 0">{{ i.interes }}</p>
+            {% if i.nota %}<p class="chico suave" style="margin:0">{{ i.nota }}</p>{% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="bloque bandera">
+    <h4>🚩 Lo que falta saber</h4>
+    <ul class="chico" style="margin:6px 0 0 18px; line-height:1.7">
+      {% for f in c.faltantes %}<li>{{ f }}</li>{% endfor %}
+    </ul>
+    <p class="chico suave" style="margin-top:8px">
+      Mientras falten estos datos, cualquier conclusión sobre Uruguay queda en el terreno de los indicios.
+    </p>
+  </div>
+
+  <div class="bloque">
+    <h4>Fuentes</h4>
+    <ul class="chico" style="margin:6px 0 0 18px; line-height:1.8">
+      {% for f in c.fuentes %}
+        <li><a href="{{ f.url }}" target="_blank" rel="noopener">{{ f.titulo }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>
+{% endblock %}

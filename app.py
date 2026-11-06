@@ -18,6 +18,7 @@ from flask import (
 from markupsafe import Markup
 
 import auth
+import casos as casosmod
 import db as dbm
 import desempeno
 import flujos as flujosmod
@@ -186,7 +187,8 @@ def inicio():
         )
         brecha = mapamod.brecha(db)[:4]
     return render_template(
-        "inicio.html", totales=totales, destacados=destacados, ultimas=ultimas, brecha=brecha
+        "inicio.html", totales=totales, destacados=destacados, ultimas=ultimas,
+        brecha=brecha, casos=casosmod.todos(),
     )
 
 
@@ -390,6 +392,14 @@ def opinar(slug):
         )
     flash(f"Opinión publicada. +{gamificacion.PUNTOS['opinion']} puntos.", "ok")
     return redirect(url_for("tema", slug=slug) + "#foro")
+
+
+@app.route("/caso/<slug>")
+def caso(slug):
+    d = casosmod.uno(slug)
+    if not d:
+        abort(404)
+    return render_template("caso.html", c=d)
 
 
 @app.route("/comparador")
