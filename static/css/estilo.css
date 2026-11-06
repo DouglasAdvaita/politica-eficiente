@@ -194,6 +194,10 @@ textarea { min-height: 96px; resize: vertical; }
 .bloque.propuesta { border-color: var(--verde); }
 .bloque.evidencia { border-color: var(--ambar); }
 .bloque.contexto { border-color: var(--azul); }
+.bloque.gestion-verde { border-color: var(--verde); }
+.bloque.gestion-ambar { border-color: var(--ambar); }
+.bloque.gestion-rojo { border-color: var(--rojo); background: #fbf5f4; }
+.bloque.gestion-gris { border-color: #c8ced7; background: #f6f7f9; }
 .bloque.preguntas { border-color: var(--azul); background: #f7f9fc; border-radius: 0 8px 8px 0; }
 .bloque.bandera { border-color: var(--rojo); background: #fbf5f4; padding: 12px 14px; border-radius: 0 8px 8px 0; }
 .bloque.bandera h4 { color: var(--rojo); }

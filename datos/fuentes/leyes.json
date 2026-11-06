@@ -53,7 +53,10 @@
         "¿Cuántas multas se aplicaron desde 2019 y con qué criterio en cada departamento?",
         "¿Qué artículo impide aplicar la licencia por puntos sin el decreto?",
         "¿La demora fue técnica o política?"
-      ]
+      ],
+      "gestion": "rojo",
+      "gestion_motivo": "El capítulo de infracciones sigue sin reglamento general y la libreta por puntos se postergó hasta 2026.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "vivienda-promovida-inversion",
@@ -112,7 +115,10 @@
         "¿Cuántas viviendas se construyeron bajo el régimen y cuántas se alquilaron?",
         "¿El precio tope permite comprar a un hogar de ingresos medios?",
         "¿Qué inversión se habría perdido sin la exoneración?"
-      ]
+      ],
+      "gestion": "rojo",
+      "gestion_motivo": "El 83% de las compras fue para inversión: el beneficio no se tradujo en acceso a vivienda.",
+      "gestion_fecha": "2024"
     },
     {
       "slug": "alquiler-sin-garantia-desalojo",
@@ -171,7 +177,10 @@
         "¿Cuántos desalojos se ejecutaron bajo el régimen especial y en qué plazo real?",
         "¿Aumentó la oferta de alquileres sin garantía?",
         "¿Qué alternativa tiene un hogar que no puede pagar garantía?"
-      ]
+      ],
+      "gestion": "ambar",
+      "gestion_motivo": "El régimen está vigente; no hay datos públicos de cuántos desalojos se ejecutaron ni en qué plazo.",
+      "gestion_fecha": "2021"
     },
     {
       "slug": "promocion-inversiones-gasto-tributario",
@@ -224,7 +233,10 @@
         "¿Cuánta inversión y empleo se crearon por cada dólar exonerado?",
         "¿Qué pasaría con esa inversión si se eliminara el beneficio?",
         "¿Quién controla que la empresa cumpla lo prometido?"
-      ]
+      ],
+      "gestion": "ambar",
+      "gestion_motivo": "Se exonera más de la mitad del IRAE sin evaluación pública de resultados.",
+      "gestion_fecha": "2024"
     },
     {
       "slug": "teletrabajo-acuerdo-individual",
@@ -283,7 +295,10 @@
         "¿Cuántas personas teletrabajan y cuántas reciben equipos del empleador?",
         "¿Quién paga la electricidad y la conexión?",
         "¿Se puede reclamar una jornada límite sin norma expresa?"
-      ]
+      ],
+      "gestion": "ambar",
+      "gestion_motivo": "La ley existe, pero deja equipos y conectividad al acuerdo individual entre partes desiguales.",
+      "gestion_fecha": "2021"
     },
     {
       "slug": "bienestar-animal-sin-recursos",
@@ -342,7 +357,10 @@
         "¿Cuántas denuncias terminaron en sanción y cuántas se archivaron?",
         "¿Qué pasaría si las multas se cobraran de verdad?",
         "¿Alcanza con más funcionarios o hace falta otro procedimiento?"
-      ]
+      ],
+      "gestion": "rojo",
+      "gestion_motivo": "El INBA tiene 21 funcionarios y las multas casi no se cobran.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "contaminacion-acustica-sin-reglamento",
@@ -401,7 +419,10 @@
         "¿Qué límites de decibeles aplica hoy cada intendencia?",
         "¿Cuántas denuncias por ruido se registran y cuántas se sancionan?",
         "¿Un reglamento nacional resolvería o solo movería el problema?"
-      ]
+      ],
+      "gestion": "rojo",
+      "gestion_motivo": "La ley no tiene reglamento nacional desde 2004; cada intendencia fija sus propios límites.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "ordenamiento-territorial-aprobaciones-fictas",
@@ -454,7 +475,10 @@
         "¿Cuántos proyectos se presentaron entre 2020 y 2023?",
         "¿Qué proyectos se aprobaron con observaciones técnicas?",
         "¿Eliminar la aprobación ficta no premiaría la demora?"
-      ]
+      ],
+      "gestion": "rojo",
+      "gestion_motivo": "Diez proyectos se aprobaron por silencio administrativo entre 2020 y 2023.",
+      "gestion_fecha": "2024"
     },
     {
       "slug": "discapacidad-transporte-sin-sancion",
@@ -513,7 +537,10 @@
         "¿Cuántas personas usaron el beneficio desde 2021?",
         "¿Cuántas empresas lo niegan y con qué argumento?",
         "¿Quién paga el costo de la gratuidad?"
-      ]
+      ],
+      "gestion": "rojo",
+      "gestion_motivo": "El artículo 83 se reglamentó en 2021 y el beneficio casi no se aplica.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "educacion-media-obligatoria",
@@ -572,7 +599,10 @@
         "¿Cuántos estudiantes abandonan por año y por qué?",
         "¿La obligatoriedad se puede exigir sin apoyo económico a las familias?",
         "¿Qué cambió en la enseñanza entre 2008 y hoy?"
-      ]
+      ],
+      "gestion": "rojo",
+      "gestion_motivo": "El egreso (51,6%) sigue lejos de la obligatoriedad que fija la ley.",
+      "gestion_fecha": "2023"
     },
     {
       "slug": "vagancia-medidas-seguridad",
@@ -631,7 +661,10 @@
         "¿Cuántas personas fueron detenidas por esta ley en los últimos diez años?",
         "¿Qué instituciones la aplican todavía?",
         "¿Derogarla deja un vacío o solo elimina una norma simbólica?"
-      ]
+      ],
+      "gestion": "ambar",
+      "gestion_motivo": "Sigue vigente una ley de 1941 que contradice estándares de derechos humanos, sin uso documentado.",
+      "gestion_fecha": "2024"
     },
     {
       "slug": "corridas-de-toros-colonia",
@@ -690,7 +723,10 @@
         "¿Alguien pidió reabrir las corridas en los últimos años?",
         "¿Qué impide derogar una ley sin uso?",
         "¿La autorización habilita algo que la normativa animal prohíbe?"
-      ]
+      ],
+      "gestion": "ambar",
+      "gestion_motivo": "La autorización sigue vigente sin uso; no se derogó.",
+      "gestion_fecha": "2021"
     },
     {
       "slug": "liberados-cupo-licitaciones",
@@ -749,7 +785,10 @@
         "¿Cuántos puestos del cupo se ocuparon cada año?",
         "¿Qué organismo debería controlarlo?",
         "¿Una sanción contractual alcanza si nadie audita el pliego?"
-      ]
+      ],
+      "gestion": "rojo",
+      "gestion_motivo": "El cupo del 5% no se verifica y no hay datos públicos de cumplimiento.",
+      "gestion_fecha": "2020"
     },
     {
       "slug": "preaviso-huelga-sin-sancion",
@@ -808,7 +847,10 @@
         "¿Se cumple el preaviso en la práctica?",
         "¿Qué efecto tuvo la norma en los conflictos de los últimos años?",
         "¿Derogarla cambiaría algo o solo limpiaría el texto?"
-      ]
+      ],
+      "gestion": "ambar",
+      "gestion_motivo": "La obligación existe desde 1968 sin consecuencia por incumplimiento.",
+      "gestion_fecha": "2020"
     },
     {
       "slug": "empleo-publico-sumarios-lentos",
@@ -867,7 +909,10 @@
         "¿Cuántos sumarios se cerraron sin sanción por el plazo?",
         "¿Qué falta: instructores, jueces o procedimiento?",
         "¿La clausura automática protege al funcionario o al Estado?"
-      ]
+      ],
+      "gestion": "rojo",
+      "gestion_motivo": "384 días promedio por sumario y clausura a los dos años: faltas graves quedan sin sanción.",
+      "gestion_fecha": "2021"
     },
     {
       "slug": "violencia-genero-implementacion",
@@ -923,7 +968,10 @@
         "¿Cuántos juzgados especializados existen y cuántos faltan?",
         "¿Cuántas víctimas accedieron a vivienda y trabajo?",
         "¿Las tobilleras fallan por el aparato o por el tiempo de respuesta?"
-      ]
+      ],
+      "gestion": "rojo",
+      "gestion_motivo": "Se reglamentó en 2019, pero vivienda, trabajo y control de tobilleras siguen sin cumplirse.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "datos-personales-sin-presupuesto",
@@ -982,7 +1030,10 @@
         "¿Cuántas denuncias recibió la URCDP y cuántas resolvió?",
         "¿Qué haría con más presupuesto?",
         "¿La ley protege igual los datos del Estado y los de las empresas?"
-      ]
+      ],
+      "gestion": "rojo",
+      "gestion_motivo": "La URCDP dispone de US$ 70.000 y controla solo por denuncias.",
+      "gestion_fecha": "2022"
     }
   ]
 }

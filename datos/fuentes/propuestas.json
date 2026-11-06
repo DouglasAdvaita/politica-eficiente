@@ -72,7 +72,10 @@
         "¿Cuál es la tasa de reincidencia y cómo se mide?",
         "¿Cuántas personas podrían cumplir pena fuera de la cárcel?",
         "¿Qué pasa con la salud y el trabajo dentro de los módulos?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay cifras de población presa, pero no tasa de reincidencia ni evaluación de las medidas alternativas.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "prevencion-del-suicidio",
@@ -144,7 +147,10 @@
         "¿En qué departamentos y edades se concentran las muertes?",
         "¿Los intentos aumentaron o se registran mejor?",
         "¿Qué atención recibe quien sale de una crisis?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay datos de muertes e intentos, pero no evaluación de la respuesta del sistema.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "primera-infancia-y-pobreza",
@@ -216,7 +222,10 @@
         "¿Dónde sobran y dónde faltan cupos?",
         "¿Qué proporción de hogares con niños pequeños está bajo la línea de pobreza?",
         "¿Los centros funcionan en los horarios en que se trabaja?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay cobertura, pero no datos de calidad ni de demanda insatisfecha por barrio.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "secundaria-y-utu",
@@ -288,7 +297,10 @@
         "¿Cuántos estudiantes abandonan y cuántos vuelven al año siguiente?",
         "¿La caída de UTU es desvinculación o menos nacimientos?",
         "¿Qué sostiene a un estudiante que trabaja?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay egreso y matrícula, pero no seguimiento de quiénes vuelven y quiénes no.",
+      "gestion_fecha": "2026"
     },
     {
       "slug": "empleo-juvenil",
@@ -360,7 +372,10 @@
         "¿Cuántos de los 235 mil no buscan trabajo porque estudian o cuidan a alguien?",
         "¿Las prácticas propuestas tendrían aportes y salario?",
         "¿Qué pasa con un joven sin ciclo básico ni experiencia?"
-      ]
+      ],
+      "gestion": "ambar",
+      "gestion_motivo": "Hay un proyecto de ley en Diputados; todavía no hay resultado.",
+      "gestion_fecha": "2026"
     },
     {
       "slug": "alquileres-y-vivienda",
@@ -432,7 +447,10 @@
         "¿Qué porcentaje del ingreso destina un hogar al alquiler?",
         "¿Cuántas viviendas vacías hay y por qué no se alquilan?",
         "¿El alquiler social llega a quien lo necesita?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay déficit estimado y precios, pero no relación entre alquiler e ingreso ni oferta real.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "agua-y-saneamiento",
@@ -504,7 +522,10 @@
         "¿Cuántas viviendas se conectan por año?",
         "¿Qué pasa con los hogares sin baño?",
         "¿La tarifa social cubre a quien no tiene red?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay cobertura, pero no cronograma de obras ni conexiones por año.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "residuos-y-reciclaje",
@@ -576,7 +597,10 @@
         "¿Qué se recupera hoy y qué se entierra?",
         "¿Cuántos vertederos siguen abiertos?",
         "¿Quién paga el costo de reciclar?"
-      ]
+      ],
+      "gestion": "ambar",
+      "gestion_motivo": "La ley se reglamentó por corrientes en octubre de 2025; la recuperación de envases sigue cerca del 4%.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "transporte-metropolitano",
@@ -648,7 +672,10 @@
         "¿Cuánto cuesta cada viaje y cuánto paga el usuario?",
         "¿Cuánta gente usa el transporte y cuánta lo abandonó?",
         "¿Qué frecuencia se garantiza en los barrios alejados?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay tarifa, pero no costo por pasajero ni frecuencia garantizada.",
+      "gestion_fecha": "2026"
     },
     {
       "slug": "cuidados-personas-mayores",
@@ -720,7 +747,10 @@
         "¿Cuántas personas solicitan asistencia y no la reciben?",
         "¿Quién cuida cuando no hay servicio?",
         "¿Cómo se controla la calidad de las residencias?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay usuarios del programa, pero no demanda rechazada ni calidad de las residencias.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "discapacidad-y-empleo",
@@ -792,7 +822,10 @@
         "¿Cuántos puestos de la cuota se cubrieron?",
         "¿Qué ajustes piden las empresas y quién los paga?",
         "¿Qué pasa con quien no puede trabajar?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay brecha de empleo, pero no cumplimiento de la cuota ni ajustes solicitados.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "brecha-digital",
@@ -864,7 +897,10 @@
         "¿Qué habilidades faltan y para qué trámites?",
         "¿Quién enseña a un adulto mayor en su casa?",
         "¿Alcanza con dar dispositivos?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay uso de internet, pero no serie histórica de la brecha.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "transparencia-compras-publicas",
@@ -936,7 +972,10 @@
         "¿Se puede comparar el mismo bien entre organismos?",
         "¿Cuántas contrataciones directas se auditan?",
         "¿Qué pasa cuando un organismo niega información?"
-      ]
+      ],
+      "gestion": "ambar",
+      "gestion_motivo": "Los datos de compras se publican desde 2018, pero su comparabilidad sigue siendo despareja.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "descentralizacion-municipios",
@@ -1008,7 +1047,10 @@
         "¿Cuánto dinero maneja cada municipio?",
         "¿Qué competencias podría ejercer sin conflicto?",
         "¿Quién controla su gestión?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay número de municipios, pero no cuánto recibe y gasta cada uno.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "migracion-e-integracion",
@@ -1080,7 +1122,10 @@
         "¿Cuánto tarda una residencia por arraigo?",
         "¿Cuántos títulos profesionales se convalidan y cuántos no?",
         "¿Qué barrera enfrenta una mujer migrante?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay stock de migrantes, pero no tiempos de residencia ni títulos validados.",
+      "gestion_fecha": "2026"
     },
     {
       "slug": "violencia-de-genero",
@@ -1152,7 +1197,10 @@
         "¿Cuántas denuncias terminan en condena?",
         "¿Cuántas medidas cautelares se cumplen?",
         "¿Qué pasa cuando la víctima retira la denuncia?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay denuncias y femicidios, pero no condenas ni cumplimiento de medidas cautelares.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "adicciones-y-consumo",
@@ -1224,7 +1272,10 @@
         "¿Cuánto consume la población general y no solo los universitarios?",
         "¿Quién vende psicofármacos sin receta?",
         "¿Qué tratamiento hay disponible y con qué espera?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay consumo en universitarios, pero no en población general ni oferta de tratamiento.",
+      "gestion_fecha": "2025"
     },
     {
       "slug": "seguridad-alimentaria",
@@ -1296,7 +1347,10 @@
         "¿Cuánto cuesta una canasta básica y cuánto gana un hogar típico?",
         "¿Qué alimentos subieron más?",
         "¿La ayuda alimentaria llega a tiempo?"
-      ]
+      ],
+      "gestion": "gris",
+      "gestion_motivo": "Hay prevalencia, pero no costo de la canasta frente al ingreso.",
+      "gestion_fecha": "2025"
     }
   ]
 }

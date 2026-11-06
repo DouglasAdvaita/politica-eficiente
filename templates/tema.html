@@ -16,6 +16,12 @@
         {% if t.subcategoria %}<span class="etiqueta">{{ t.subcategoria }}</span>{% endif %}
         {% if t.urgencia == 'alta' %}<span class="etiqueta roja" tabindex="0" data-tip="Requiere atención inmediata según su calificación.">urgencia alta</span>{% endif %}
         {% if not t.verificado %}<span class="etiqueta ambar" tabindex="0" data-tip="Dato sin fuente oficial enlazada todavía; se muestra como provisorio.">sin verificar</span>{% endif %}
+        {% if t.gestion %}
+          <span class="etiqueta {% if t.gestion == 'verde' %}verde{% elif t.gestion == 'ambar' %}ambar{% elif t.gestion == 'rojo' %}roja{% endif %}" tabindex="0"
+                data-tip="Mide si la norma o propuesta avanza hacia su objetivo, no si el problema es grave. Gris significa que no hay datos públicos suficientes.">
+            Gestión {{ {'verde': 'al día', 'ambar': 'parcial', 'rojo': 'incumplida', 'gris': 'sin datos'}.get(t.gestion, t.gestion) }}
+          </span>
+        {% endif %}
       </div>
       <h1>{{ t.titulo }}</h1>
       {% if t.resumen %}<p class="suave">{{ t.resumen|glosario }}</p>{% endif %}
@@ -87,6 +93,18 @@
       {% if t.fecha %} · {{ t.fecha }}{% endif %}
     </p>
   </div>
+
+  {% if t.gestion_motivo %}
+    <div class="bloque gestion-{{ t.gestion }}">
+      <h4>🚦 Estado de gestión</h4>
+      <p>
+        <b>{% if t.gestion == 'verde' %}Al día{% elif t.gestion == 'ambar' %}Con avances parciales{% elif t.gestion == 'rojo' %}Incumplida{% else %}Sin datos suficientes{% endif %}</b>
+        {% if t.gestion_fecha %} · {{ t.gestion_fecha }}{% endif %}
+      </p>
+      <p>{{ t.gestion_motivo }}</p>
+      <p class="chico suave">El color mide si la gestión avanza hacia el objetivo, no si el problema es grave.</p>
+    </div>
+  {% endif %}
 
   {% if t.critica %}
     <div class="bloque bandera">

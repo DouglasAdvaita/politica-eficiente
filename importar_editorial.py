@@ -29,10 +29,13 @@ def importar():
                     continue
                 total += 1
                 db.ejecutar(
-                    "UPDATE temas SET fecha = ?, responsable = ?, critica = ?, contexto = ?, preguntas = ? WHERE id = ?",
+                    "UPDATE temas SET fecha = ?, responsable = ?, critica = ?, contexto = ?, preguntas = ?, "
+                    "gestion = ?, gestion_motivo = ?, gestion_fecha = ? WHERE id = ?",
                     (t.get("fecha", ""), t.get("responsable", ""),
                      t.get("critica", ""), t.get("contexto", ""),
-                     json.dumps(t.get("preguntas") or [], ensure_ascii=False), fila["id"]),
+                     json.dumps(t.get("preguntas") or [], ensure_ascii=False),
+                     t.get("gestion", ""), t.get("gestion_motivo", ""),
+                     t.get("gestion_fecha", ""), fila["id"]),
                 )
                 if t.get("responsable"):
                     con_responsable += 1
