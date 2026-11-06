@@ -19,7 +19,7 @@
 
   <div class="bloque">
     <h4>En una frase</h4>
-    <p>{{ c.sintesis }}</p>
+    <p>{{ c.sintesis_html|safe }}</p>
   </div>
 
   <div class="bloque">
@@ -31,18 +31,25 @@
             <b>{{ paso.paso }}</b>
             <span class="etiqueta {{ paso.clase }}" tabindex="0" data-tip="Nivel de respaldo de este eslabón.">{{ paso.etiqueta }}</span>
           </div>
-          <p>{{ paso.texto }}</p>
+          <p>{{ paso.texto_html|safe }}</p>
           {% if paso.fuente %}<p class="chico suave">Fuente: {{ paso.fuente }}</p>{% endif %}
         </li>
       {% endfor %}
     </ol>
   </div>
 
+  {% if c.mecanismo %}
+  <div class="bloque">
+    <h4>Cómo se llegó acá</h4>
+    <p>{{ c.mecanismo_html|safe }}</p>
+  </div>
+  {% endif %}
+
   {% if c.patron %}
   <div class="bloque">
     <h4>El patrón y la pregunta de fondo</h4>
-    <p>{{ c.patron.observado }}</p>
-    <p class="chico suave">{{ c.patron.no_probado }}</p>
+    <p>{{ c.patron.observado_html|safe }}</p>
+    <p class="chico suave">{{ c.patron.no_probado_html|safe }}</p>
     <p class="chico" style="margin-bottom:4px">Se probaría con:</p>
     <ul class="chico" style="margin:0 0 0 18px; line-height:1.7">
       {% for x in c.patron.como_probar %}<li>{{ x }}</li>{% endfor %}
@@ -53,50 +60,31 @@
   {% if c.curvas_svg %}
   <div class="bloque">
     <h4>El mismo camino, en el tiempo</h4>
-    <p class="chico suave">
-      Nivel de acceso a bloqueadores y hormonas para menores en cada país. Uruguay entra en 2016-2018
-      y se mantiene; los que empezaron antes fueron restringiendo.
-    </p>
+    <p class="chico suave">{{ c.curvas.nota }}</p>
     {{ c.curvas_svg|safe }}
     <p class="chico suave">{{ c.curvas.escala }}</p>
-    <p class="chico suave">
-      Índice elaborado por este sitio a partir de las normas citadas; no mide cantidad de casos.
-    </p>
   </div>
   {% endif %}
 
-  <div class="bloque">
-    <h4>Qué pasó en otros países</h4>
-    <div class="pila" style="margin-top:8px">
-      {% for h in c.cronologia %}
-        <div class="hito-pais">
-          <span class="anio">{{ h.fecha }}</span>
-          <div style="flex:1">
-            <b>{{ h.pais }}</b>
-            <p class="chico" style="margin:2px 0">{{ h.hecho }}</p>
-            {% if h.fuente %}<a class="chico" href="{{ h.fuente }}" target="_blank" rel="noopener">fuente ↗</a>{% endif %}
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-
-  {% if c.donde_encaja %}
+  {% if c.necesidades_svg %}
   <div class="bloque">
     <h4>Dónde encaja</h4>
-    <p>{{ c.donde_encaja.escala }}</p>
-    <p>{{ c.donde_encaja.gasto }}</p>
-    <p class="chico suave" style="margin-bottom:4px">Otros temas de este sitio con datos públicos:</p>
-    <div class="pila">
-      {% for p in c.donde_encaja.prioridades %}
-        <div class="hito-pais">
-          <div style="flex:1">
-            <a href="{{ url_for('tema', slug=p.slug) }}"><b>{{ p.tema }}</b></a>
-            <div class="chico suave">{{ p.dato }}</div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
+    <p class="chico suave">{{ c.donde_encaja.escala }}</p>
+    {{ c.necesidades_svg|safe }}
+  </div>
+  {% endif %}
+
+  {% if c.costo_duda %}
+  <div class="bloque">
+    <h4>El costo de la duda</h4>
+    <p>{{ c.costo_duda_html|safe }}</p>
+  </div>
+  {% endif %}
+
+  {% if c.carga_prueba %}
+  <div class="bloque bandera">
+    <h4>🚩 La carga de la prueba</h4>
+    <p>{{ c.carga_prueba_html|safe }}</p>
   </div>
   {% endif %}
 
@@ -105,7 +93,7 @@
     <p class="chico suave" style="margin:0 0 6px">
       Lo marcado como interpretación es una lectura de este sitio, no un hecho: se muestra para que se pueda discutir.
     </p>
-    <div class="pila" style="margin-top:8px">
+    <div class="pila">
       {% for i in c.intereses %}
         <div class="participante">
           <div style="flex:1">
@@ -113,8 +101,8 @@
               <b>{{ i.actor }}</b>
               <span class="etiqueta {{ i.clase }}" tabindex="0" data-tip="Nivel de respaldo de esta lectura.">{{ i.etiqueta }}</span>
             </div>
-            <p class="chico" style="margin:4px 0">{{ i.interes }}</p>
-            {% if i.nota %}<p class="chico suave" style="margin:0">{{ i.nota }}</p>{% endif %}
+            <p class="chico" style="margin:4px 0">{{ i.interes_html|safe }}</p>
+            {% if i.nota %}<p class="chico suave" style="margin:0">{{ i.nota_html|safe }}</p>{% endif %}
           </div>
         </div>
       {% endfor %}
@@ -142,7 +130,6 @@
   {% if c.parlamento %}
   <div class="bloque">
     <h4>Rastro parlamentario</h4>
-    <p class="chico suave" style="margin:0 0 6px">{{ c.parlamento.nota }}</p>
     <div class="pila">
       {% for p in c.parlamento.registros %}
         <div class="hito-pais">
@@ -150,11 +137,12 @@
           <div style="flex:1">
             <b>{{ p.politico }}</b>
             <p class="chico" style="margin:2px 0">{{ p.hecho }}</p>
-            {% if p.fuente %}<a class="chico" href="{{ p.fuente }}" target="_blank" rel="noopener">ver documento ↗</a>{% endif %}
+            {% if p.fuente %}<a class="chico" href="{{ p.fuente }}" target="_blank" rel="noopener">documento ↗</a>{% endif %}
           </div>
         </div>
       {% endfor %}
     </div>
+    <p class="chico suave" style="margin-top:6px">{{ c.parlamento.nota }}</p>
   </div>
   {% endif %}
 
@@ -185,7 +173,7 @@
       {% for f in c.faltantes %}<li>{{ f }}</li>{% endfor %}
     </ul>
     <p class="chico suave" style="margin-top:8px">
-      Mientras falten estos datos, cualquier conclusión sobre Uruguay queda en el terreno de los indicios.
+      Cuando algo se promueve y no se puede medir, el dato que falta es parte del mensaje.
     </p>
   </div>
 
@@ -196,15 +184,9 @@
     </ul>
   </div>
 
-  {% if c.glosario %}
-  <div class="bloque">
-    <h4>Palabras de este caso</h4>
-    <p class="chico suave" style="margin:0 0 6px">Pasá el mouse o tocá cada término para ver la explicación.</p>
-    <div class="chips" style="gap:10px; flex-wrap:wrap">
-      {% for termino, definicion in c.glosario.items() %}
-        <span class="palabra" tabindex="0" data-tip="{{ definicion }}">{{ termino }}</span>
-      {% endfor %}
-    </div>
+  {% if c.cierre %}
+  <div class="bloque cierre">
+    <p><b>{{ c.cierre_html|safe }}</b></p>
   </div>
   {% endif %}
 
@@ -217,8 +199,8 @@
     </ul>
   </div>
 
-  {% if c.metodo %}
-    <p class="chico suave" style="margin-top:10px">{{ c.metodo }}</p>
+  {% if c.nota_ia %}
+    <p class="chico suave" style="margin-top:10px">{{ c.nota_ia }}</p>
   {% endif %}
 </article>
 {% endblock %}

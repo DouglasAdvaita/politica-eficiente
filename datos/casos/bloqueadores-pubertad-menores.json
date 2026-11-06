@@ -128,38 +128,51 @@
     "Ukom": "Junta de Investigación de Salud de Noruega, organismo independiente que recomendó tratar estos tratamientos como experimentales."
   },
   "donde_encaja": {
-    "escala": "En Uruguay no hay cifra pública de menores tratados. Para dimensionar: el país tiene 9.447 hogares sin baño de uso exclusivo y 5.212 personas en edad escolar fuera del sistema educativo.",
-    "gasto": "Tampoco hay dato público del gasto. Un tratamiento con análogos de GnRH cuesta, según precios internacionales de consultoras privadas, entre US$ 5.000 y 8.500 por dosis mensual; en Uruguay el precio no es público.",
+    "escala": "Magnitud estimada, en unidades distintas. La barra es logarítmica para que se puedan comparar. Cada punto abre el tema con sus datos.",
     "prioridades": [
       {
-        "tema": "Agua y saneamiento",
-        "slug": "agua-y-saneamiento",
-        "dato": "9.447 hogares sin baño de uso exclusivo."
-      },
-      {
-        "tema": "Secundaria y UTU",
-        "slug": "secundaria-y-utu",
-        "dato": "5.212 personas en edad escolar fuera del sistema."
-      },
-      {
-        "tema": "Primera infancia",
-        "slug": "primera-infancia-y-pobreza",
-        "dato": "La pobreza se concentra en hogares con niños pequeños."
-      },
-      {
-        "tema": "Cuidados de personas mayores",
+        "tema": "Personas mayores en dependencia",
         "slug": "cuidados-personas-mayores",
-        "dato": "110 mil personas en dependencia y 9 centros de día."
+        "poblacion": 110000,
+        "unidad": "personas"
+      },
+      {
+        "tema": "Déficit de vivienda",
+        "slug": "alquileres-y-vivienda",
+        "poblacion": 40000,
+        "unidad": "viviendas"
+      },
+      {
+        "tema": "Personas privadas de libertad",
+        "slug": "hacinamiento-carcelario",
+        "poblacion": 16570,
+        "unidad": "personas"
+      },
+      {
+        "tema": "Hogares sin baño",
+        "slug": "agua-y-saneamiento",
+        "poblacion": 9447,
+        "unidad": "hogares"
+      },
+      {
+        "tema": "Fuera del sistema educativo",
+        "slug": "secundaria-y-utu",
+        "poblacion": 5212,
+        "unidad": "personas"
       }
-    ]
+    ],
+    "caso": {
+      "poblacion": 0,
+      "nota": "Menores en tratamiento: sin dato público"
+    }
   },
   "parlamento": {
-    "nota": "En la actuación parlamentaria cargada (2025-2026) hay un solo pedido de informes sobre el tema.",
+    "nota": "Un pedido de informes no es una respuesta: si no hay seguimiento, el dato sigue faltando.",
     "registros": [
       {
         "politico": "Nicolle Salle",
         "anio": 2026,
-        "hecho": "Pidió informes sobre los fundamentos científicos, normativos y protocolos del bloqueo puberal y la hormonización en personas menores de edad.",
+        "hecho": "Pidió informes sobre los fundamentos científicos, normativos y protocolos del bloqueo puberal y la hormonización en menores. No figura respuesta ni conclusiones en la actuación cargada: queda como única traza y sin resultado público.",
         "fuente": "https://legislativo.parlamento.gub.uy/aresuelveref.aspx?FICHAASUNTO,175492"
       }
     ]
@@ -186,104 +199,146 @@
   ],
   "curvas": {
     "escala": "0 = prohibido · 1 = solo investigación o casos excepcionales · 2 = restringido con cautela · 3 = acceso con guía clínica",
+    "nota": "Cada punto es un cambio de norma documentado. Pasá el mouse o tocá el punto para ver el hecho y su fuente. El índice lo elabora este sitio y no mide cantidad de casos.",
     "series": [
+      {
+        "pais": "Uruguay",
+        "destacado": true,
+        "puntos": [
+          {
+            "anio": 2016,
+            "nivel": 2,
+            "hecho": "Guía clínica de hormonización del MSP",
+            "fuente": "https://www.gub.uy/ministerio-salud-publica/sites/ministerio-salud-publica/files/documentos/publicaciones/Gu%C3%ADa%20clinica%20para%20la%20Hormonizaci%C3%B3n%20en%20personas%20Trans%202016.pdf"
+          },
+          {
+            "anio": 2018,
+            "nivel": 2,
+            "hecho": "Ley 19.684: atención integral y guías obligatorias",
+            "fuente": "https://parlamento.gub.uy/documentosyleyes/leyes/ley/19684"
+          },
+          {
+            "anio": 2026,
+            "nivel": 2,
+            "hecho": "Guía actualizada; sin dato público de intensidad",
+            "fuente": "https://ladiaria.com.uy/verifica/articulo/2026/9/es-falso-que-el-msp-habilito-el-bloqueo-hormonal-a-ninos-a-partir-de-los-10-anos/"
+          }
+        ]
+      },
       {
         "pais": "Suecia",
         "puntos": [
-          [
-            2015,
-            3
-          ],
-          [
-            2022,
-            1
-          ]
+          {
+            "anio": 2015,
+            "nivel": 3,
+            "hecho": "Guía nacional de atención",
+            "fuente": "https://socialstyrelsen.se/contentassets/444af6c0a5fb429c9b56fd51b931a816/2023-1-8330.pdf"
+          },
+          {
+            "anio": 2022,
+            "nivel": 1,
+            "hecho": "Riesgos probablemente superan beneficios; excepcional o investigación",
+            "fuente": "https://socialstyrelsen.se/contentassets/444af6c0a5fb429c9b56fd51b931a816/2023-1-8330.pdf"
+          }
         ]
       },
       {
         "pais": "Finlandia",
         "puntos": [
-          [
-            2015,
-            3
-          ],
-          [
-            2020,
-            1
-          ]
+          {
+            "anio": 2015,
+            "nivel": 3,
+            "hecho": "Práctica con guía clínica",
+            "fuente": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10875134/"
+          },
+          {
+            "anio": 2020,
+            "nivel": 1,
+            "hecho": "Prioridad al apoyo psicosocial; tratamientos limitados",
+            "fuente": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10875134/"
+          }
         ]
       },
       {
         "pais": "Reino Unido",
+        "color": "#b4534b",
         "puntos": [
-          [
-            2015,
-            3
-          ],
-          [
-            2024,
-            0
-          ]
-        ],
-        "color": "#b4534b"
+          {
+            "anio": 2015,
+            "nivel": 3,
+            "hecho": "Servicio nacional con acceso",
+            "fuente": "https://cass.independent-review.uk/home/publications/final-report/"
+          },
+          {
+            "anio": 2024,
+            "nivel": 1,
+            "hecho": "Cass Review: solo en investigación",
+            "fuente": "https://cass.independent-review.uk/home/publications/final-report/"
+          },
+          {
+            "anio": 2025,
+            "nivel": 0,
+            "hecho": "Prohibición indefinida de prescribir a menores",
+            "fuente": "https://www.gov.uk/government/news/ban-on-puberty-blockers-to-be-made-indefinite-on-experts-advice"
+          }
+        ]
       },
       {
         "pais": "Noruega",
         "puntos": [
-          [
-            2015,
-            3
-          ],
-          [
-            2023,
-            2
-          ],
-          [
-            2024,
-            1
-          ]
+          {
+            "anio": 2015,
+            "nivel": 3,
+            "hecho": "Práctica con guía clínica",
+            "fuente": "https://apnews.com/article/fact-check-norway-not-ban-gender-affirming-care-956221436313"
+          },
+          {
+            "anio": 2023,
+            "nivel": 2,
+            "hecho": "Ukom recomienda tratarlos como experimentales",
+            "fuente": "https://apnews.com/article/fact-check-norway-not-ban-gender-affirming-care-956221436313"
+          },
+          {
+            "anio": 2024,
+            "nivel": 1,
+            "hecho": "Regiones sanitarias los restringen a estudios",
+            "fuente": "https://www.genderclinicnews.com/p/tighten-up"
+          }
         ]
       },
       {
         "pais": "Francia",
         "puntos": [
-          [
-            2015,
-            3
-          ],
-          [
-            2022,
-            2
-          ]
+          {
+            "anio": 2015,
+            "nivel": 3,
+            "hecho": "Acceso con guía clínica",
+            "fuente": "https://bioethicsobservatory.org/2024/07/european-policies-regarding-minors-with-gender-dysphoria-a-comparative-analysis/47056/"
+          },
+          {
+            "anio": 2022,
+            "nivel": 2,
+            "hecho": "Academia de Medicina pide «la mayor reserva»",
+            "fuente": "https://bioethicsobservatory.org/2024/07/european-policies-regarding-minors-with-gender-dysphoria-a-comparative-analysis/47056/"
+          }
         ]
       },
       {
         "pais": "Países Bajos",
         "puntos": [
-          [
-            2015,
-            3
-          ],
-          [
-            2024,
-            3
-          ]
+          {
+            "anio": 2015,
+            "nivel": 3,
+            "hecho": "Protocolo holandés en uso",
+            "fuente": "https://bioethicsobservatory.org/2024/07/european-policies-regarding-minors-with-gender-dysphoria-a-comparative-analysis/47056/"
+          },
+          {
+            "anio": 2024,
+            "nivel": 3,
+            "hecho": "El Parlamento ordena investigar resultados",
+            "fuente": "https://bioethicsobservatory.org/2024/07/european-policies-regarding-minors-with-gender-dysphoria-a-comparative-analysis/47056/"
+          }
         ]
-      },
-      {
-        "pais": "Uruguay",
-        "puntos": [
-          [
-            2016,
-            2
-          ],
-          [
-            2026,
-            2
-          ]
-        ],
-        "destacado": true,
-        "nota": "Sin dato de intensidad"
       }
     ]
   },
@@ -351,5 +406,10 @@
       "titulo": "European Academy of Paediatrics: revisión de políticas europeas",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10875134/"
     }
-  ]
+  ],
+  "mecanismo": "Una intervención con evidencia débil se volvió estándar por una combinación de factores: guías de sociedades científicas que se citaban entre sí, temor de los prestadores a litigios por negar tratamiento, incentivos comerciales de quien vende los fármacos y un activismo que legítimamente buscaba alivio. Quien preguntaba quedaba del lado de la discriminación. Así se llega a 2026 sin registro de casos.",
+  "costo_duda": "Finlandia (2020), Suecia (2022) y el Reino Unido (2024) restringieron y recibieron críticas de sociedades científicas y activistas que las acusaron de negar atención. Aun así lo hicieron. Eso explica por qué un país chico puede preferir no medir: medir obliga a decidir.",
+  "carga_prueba": "Hoy se pide a los críticos que demuestren el daño, pero no se pide a los promotores que demuestren el beneficio a largo plazo. Esa inversión es el centro del problema: una intervención nueva debería probar que funciona antes de volverse estándar, no al revés.",
+  "cierre": "La pregunta no es si Uruguay repite a Suecia. Es por qué, ocho años después de la ley, nadie sabe cuántos menores trató ni con qué resultado, y por qué preguntarlo se volvió sospechoso.",
+  "nota_ia": "Este texto fue asistido por IA y revisado por humanos. Cada afirmación relevante tiene su fuente enlazada y fecha de consulta. Los errores son nuestros."
 }

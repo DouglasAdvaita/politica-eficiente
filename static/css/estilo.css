@@ -259,6 +259,11 @@ textarea { min-height: 96px; resize: vertical; }
 .curvas-svg { width: 100%; height: auto; margin: 6px 0 2px; }
 .curvas-svg .eje { font-size: 11px; fill: #6b7686; }
 .curvas-svg .et { font-size: 11px; fill: #333d4b; }
+.necesidades-svg { width: 100%; height: auto; margin: 6px 0 2px; }
+.necesidades-svg .eje { font-size: 11px; fill: #6b7686; }
+.necesidades-svg .et { font-size: 11px; fill: #333d4b; }
+.cierre { border-color: var(--tinta); background: #f4f6f9; }
+.cierre p { margin: 0; font-size: 1rem; line-height: 1.6; }
 
 /* ---------- mapa ---------- */
 .mapa-caja { overflow-x: auto; border: 1px solid var(--borde); border-radius: var(--radio); background: #ffffff; }
