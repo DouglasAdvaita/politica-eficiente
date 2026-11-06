@@ -211,3 +211,5 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - [x] T23 - Glosario con ventanas emergentes: 30 terminos en lenguaje simple, pagina /glosario y palabras explicadas al pasar el mouse en los textos del tema. (commit 6523bcd)
 - [x] T22 - Contexto y preguntas abiertas: cada uno de los 35 temas explica como se llego a la situacion, que dato falta y 3 preguntas que el ciudadano puede responder. (commit 40ac43b)
 - [ ] T28 - Contexto, lenguaje sencillo y politica de fuentes: hecho el contexto faltante, el glosario y las banderas rojas; falta el control explicito de bots e IA en el sentir popular.
+- [x] T26 - Comparador visual de actividad: pagina /comparador con acciones por importancia (alta, media, baja), estado y evolucion anual de los hechos registrados, cada uno con su fuente. (commit 503a243)
+- [~] T19 - Biografia y linea de tiempo: los 148 cargos tienen al menos un hito. Los 32 diputados sin cobertura de prensa se completaron con la ficha oficial del Parlamento (banca, comisiones, grupos de amistad y suplencia), con enlace a cada ficha; falta familia y vinculos de esos 32.

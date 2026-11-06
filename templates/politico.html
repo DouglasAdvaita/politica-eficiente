@@ -72,20 +72,6 @@
     {% endfor %}
   {% endif %}
 
-  {% if hitos %}
-    <h4 style="margin:18px 0 6px">Línea de tiempo de su vida</h4>
-    <ol class="linea-tiempo">
-      {% for h in hitos %}
-        <li>
-          <span class="anio">{{ h.anio or 's/f' }}</span>
-          <p>{{ h.texto }}{% if h.fuente_url and h.fuente_url != (bio.fuente_url if bio else '') %} <a class="chico" href="{{ h.fuente_url }}" target="_blank" rel="noopener">fuente ↗</a>{% endif %}</p>
-        </li>
-      {% endfor %}
-    </ol>
-  {% else %}
-    <p class="suave chico" style="margin-top:14px">La fuente no trae fechas suficientes para armar la línea de tiempo.</p>
-  {% endif %}
-
   {% if bio.fuente_url %}
     <p class="chico suave" style="margin-top:12px">
       Fuente de esta biografía y de su línea de tiempo:
@@ -99,6 +85,23 @@
 <section class="panel" style="margin-top:18px">
   <h2>🧬 Biografía</h2>
   <p class="suave chico">Todavía no hay biografía con fuente para este cargo. Se completa solo con datos publicados y su enlace, nunca con suposiciones.</p>
+</section>
+{% endif %}
+
+{% if hitos %}
+<section class="panel" style="margin-top:18px">
+  <div class="fila entre" style="align-items:flex-start">
+    <h2 style="margin:0">{% if bio %}Línea de tiempo de su vida{% else %}Trayectoria documentada{% endif %}</h2>
+    <span class="etiqueta" tabindex="0" data-tip="Datos de la ficha oficial del Parlamento: banca, comisiones, grupos de amistad y suplencias.">fuente oficial</span>
+  </div>
+  <ol class="linea-tiempo">
+    {% for h in hitos %}
+      <li>
+        <span class="anio">{{ h.anio or 's/f' }}</span>
+        <p>{{ h.texto }}{% if h.fuente_url %} <a class="chico" href="{{ h.fuente_url }}" target="_blank" rel="noopener">fuente ↗</a>{% endif %}</p>
+      </li>
+    {% endfor %}
+  </ol>
 </section>
 {% endif %}
 
