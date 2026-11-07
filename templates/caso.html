@@ -163,9 +163,8 @@
   </div>
 
   {% if c.parlamento %}
-  <details class="bloque-details">
-  <summary class="bloque-summary">Rastro parlamentario</summary>
-  <div class="bloque">
+  <div id="s-parlamento" class="bloque">
+    <h4>Rastro parlamentario</h4>
     <div class="pila">
       {% for p in c.parlamento.registros %}
         <div class="hito-pais">
@@ -180,7 +179,6 @@
     </div>
     <p class="chico suave" style="margin-top:6px">{{ c.parlamento.nota }}</p>
   </div>
-  </details>
   {% endif %}
 
   <section id="s-bios">

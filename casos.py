@@ -215,7 +215,7 @@ def svg_negocio(caso):
     mercado = neg.get("mercado") or []
     if not historico and not mercado:
         return ""
-    partes = ['<svg viewBox="0 0 760 470" class="negocio-svg" role="img" '
+    partes = ['<svg viewBox="0 0 760 360" class="negocio-svg" role="img" '
               'aria-label="Negocio de Ipsen y mercado mundial de GnRH">']
     # ---- panel A: serie desde 2005 ----
     partes.append('<text x="10" y="18" class="nt">Ipsen (la empresa del bloqueador): cuánto vende en total</text>')
@@ -262,7 +262,6 @@ def svg_negocio(caso):
                   '<text x="%d" y="%d" class="nd">Decapeptyl (el bloqueador)</text>'
                   % (izq + 120, 246, izq + 136, 250))
     # ---- panel B: fracción del negocio total (barra apilada) ----
-    partes.append('<text x="10" y="262" class="nt">El negocio completo (2025): qué fracción es este fármaco</text>')
     total = sum(m["valor"] for m in mercado)
     x0b, x1b = 54, 720
     ybar = 288
@@ -284,19 +283,7 @@ def svg_negocio(caso):
                           % (cx + w / 2, ybar + 21, "#ffffff" if destacado else "#334155",
                              m["valor"] / total * 100))
         cx += w
-    # leyenda con valores visibles
-    ly = 342
-    col = 0
-    for m in mercado:
-        cx2 = 12 + (col % 2) * 370
-        yy = ly + (col // 2) * 16
-        color = "#c2410c" if m.get("destacado") else "#94a3b8"
-        partes.append('<rect x="%d" y="%d" width="10" height="10" fill="%s"/>' % (cx2, yy - 9, color))
-        partes.append('<text x="%d" y="%d" class="%s">%s · US$ %s M (%.0f%%)</text>'
-                      % (cx2 + 15, yy, "nd" if m.get("destacado") else "et",
-                         html.escape(m["molecula"]), _fmt(m["valor"]), m["valor"] / total * 100))
-        col += 1
-    ly += 30
+    ly = 326
     partes.append('<text x="12" y="%d" class="eje">Decapeptyl (Ipsen, 543 M€) es la mayor parte del triptorelin. El uso como bloqueador en menores es una fracción aún menor, sin dato público.</text>' % ly)
     partes.append('<text x="12" y="%d" class="eje">%s</text>' % (ly + 16, html.escape(neg.get("fuente_mercado", ""))))
     partes.append("</svg>")
@@ -507,10 +494,13 @@ def svg_bio(persona):
         titulo = "%s: %s" % (h.get("anio", ""), h.get("hecho", ""))
         enlace = h.get("fuente") or "#"
         color = "#c2410c" if h.get("relevante") else "#9aa4b2"
+        emoji = h.get("emoji", "•")
         partes.append('<a href="%s" target="_blank" rel="noopener">'
-                      '<circle cx="%.1f" cy="%.1f" r="3" fill="%s" stroke="#ffffff" '
-                      'stroke-width="1.2"><title>%s</title></circle></a>'
-                      % (html.escape(enlace), x, y, color, html.escape(titulo)))
+                      '<circle cx="%.1f" cy="%.1f" r="7" fill="%s" stroke="#ffffff" '
+                      'stroke-width="1.2" opacity="0.85"><title>%s</title></circle>'
+                      '<text x="%.1f" y="%.1f" text-anchor="middle" dominant-baseline="central" '
+                      'font-size="9">%s</text></a>'
+                      % (html.escape(enlace), x, y, color, html.escape(titulo), x, y, html.escape(emoji)))
         partes.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%d" stroke="%s"/>'
                       % (x, y + 3, x, yline, color))
     partes.append("</svg>")
