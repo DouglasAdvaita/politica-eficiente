@@ -215,7 +215,7 @@ def svg_negocio(caso):
     mercado = neg.get("mercado") or []
     if not historico and not mercado:
         return ""
-    partes = ['<svg viewBox="0 0 760 360" class="negocio-svg" role="img" '
+    partes = ['<svg viewBox="0 0 760 260" class="negocio-svg" role="img" '
               'aria-label="Negocio de Ipsen y mercado mundial de GnRH">']
     # ---- panel A: serie desde 2005 ----
     partes.append('<text x="10" y="18" class="nt">Ipsen (la empresa del bloqueador): cuánto vende en total</text>')
@@ -261,31 +261,6 @@ def svg_negocio(caso):
     partes.append('<rect x="%d" y="%d" width="11" height="3" fill="#c2410c"/>'
                   '<text x="%d" y="%d" class="nd">Decapeptyl (el bloqueador)</text>'
                   % (izq + 120, 246, izq + 136, 250))
-    # ---- panel B: fracción del negocio total (barra apilada) ----
-    total = sum(m["valor"] for m in mercado)
-    x0b, x1b = 54, 720
-    ybar = 288
-    cx = x0b
-    for i, m in enumerate(mercado):
-        w = m["valor"] / total * (x1b - x0b)
-        destacado = m.get("destacado")
-        color = "#c2410c" if destacado else ("#e2e8ef" if i % 2 == 0 else "#cbd5e1")
-        partes.append('<rect x="%.1f" y="%d" width="%.1f" height="34" fill="%s" '
-                      'stroke="%s" stroke-width="%s">'
-                      '<title>%s: US$ %s M (%.0f%% del total) — %s</title></rect>'
-                      % (cx, ybar, w, color, "#7c2d12" if destacado else "#b8c1cd",
-                         "1.4" if destacado else "0.6",
-                         html.escape(m["molecula"]), _fmt(m["valor"]),
-                         m["valor"] / total * 100, html.escape(m["nota"])))
-        if w > 55:
-            partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="et" '
-                          'fill="%s">%.0f%%</text>'
-                          % (cx + w / 2, ybar + 21, "#ffffff" if destacado else "#334155",
-                             m["valor"] / total * 100))
-        cx += w
-    ly = 326
-    partes.append('<text x="12" y="%d" class="eje">Decapeptyl (Ipsen, 543 M€) es la mayor parte del triptorelin. El uso como bloqueador en menores es una fracción aún menor, sin dato público.</text>' % ly)
-    partes.append('<text x="12" y="%d" class="eje">%s</text>' % (ly + 16, html.escape(neg.get("fuente_mercado", ""))))
     partes.append("</svg>")
     return "".join(partes)
 
