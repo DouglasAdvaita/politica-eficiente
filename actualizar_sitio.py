@@ -17,7 +17,8 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 PY = sys.executable
 
 pasos = [
-    ("Actividad parlamentaria", [PY, "traer_actuacion.py"]),
+    ("Actividad parlamentaria (hitos)", [PY, "traer_actuacion.py"]),
+    ("Actividad parlamentaria (acciones)", [PY, "traer_acciones.py"]),
     ("Marcar importancia de acciones", [PY, "marcar_acciones.py"]),
 ]
 

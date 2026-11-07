@@ -182,7 +182,7 @@ def inicio():
                FROM temas t ORDER BY a_favor DESC, t.urgencia = 'alta' DESC LIMIT 6"""
         )
         ultimas = db.todos(
-            """SELECT a.*, p.nombre, p.emoji FROM acciones a JOIN politicos p ON p.id = a.politico_id
+            """SELECT a.*, p.nombre, p.emoji, p.slug AS politico_slug FROM acciones a JOIN politicos p ON p.id = a.politico_id
                ORDER BY a.fecha DESC NULLS LAST LIMIT 5"""
         )
         brecha = mapamod.brecha(db)[:4]

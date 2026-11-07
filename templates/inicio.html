@@ -78,7 +78,7 @@
       <div class="actividad">
         <span class="fecha">{{ a.fecha or 'sin fecha' }}</span>
         <div>
-          <b>{{ a.emoji }} {{ a.nombre }}</b>
+          <b>{{ a.emoji }} {% if a.politico_slug %}<a href="{{ url_for('politico', slug=a.politico_slug) }}">{{ a.nombre }}</a>{% else %}{{ a.nombre }}{% endif %}</b>
           <div class="chico suave">{{ a.titulo }}</div>
         </div>
         <span class="etiqueta {% if a.estado == 'hecho' %}verde{% elif a.estado == 'en_proceso' %}azul{% else %}ambar{% endif %}">{{ a.estado }}</span>
