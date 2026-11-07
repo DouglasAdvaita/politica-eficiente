@@ -403,7 +403,8 @@ def caso(slug):
     d["negocio_svg"] = casosmod.svg_negocio(d)
     d["poblacion_svg"] = casosmod.svg_poblacion(d)
     d["vinculos_svg"] = casosmod.svg_vinculos(d)
-    d["personas_svg"] = [casosmod.svg_bio(p) for p in d.get("personas", [])]
+    for p in d.get("personas", []):
+        p["bio_svg"] = casosmod.svg_bio(p)
     return render_template("caso.html", c=d)
 
 

@@ -801,7 +801,9 @@
         "afectados": 605400,
         "base": 3499451,
         "slug": null,
-        "nota": "605.400 personas bajo la línea de pobreza (INE, 2024). Se superpone con otras categorías."
+        "color": "#dc2626",
+        "nota": "605.400 personas bajo la línea de pobreza (INE, 2024). Se superpone con otras categorías.",
+        "corto": "Pobreza"
       },
       {
         "etiqueta": "Sin acceso a agua potable o saneamiento",
@@ -810,7 +812,9 @@
         "afectados": 171500,
         "base": 3499451,
         "slug": "agua-y-saneamiento",
-        "nota": "171.500 personas sin acceso adecuado a agua o saneamiento (INE, Censo 2023)."
+        "color": "#16a34a",
+        "nota": "171.500 personas sin acceso adecuado a agua o saneamiento (INE, Censo 2023).",
+        "corto": "Agua y saneamiento"
       },
       {
         "etiqueta": "Déficit de vivienda",
@@ -819,7 +823,9 @@
         "afectados": 100000,
         "base": 3499451,
         "slug": "alquileres-y-vivienda",
-        "nota": "40.000 viviendas × 2,5 personas/hogar ≈ 100.000 personas."
+        "color": "#ea580c",
+        "nota": "40.000 viviendas; a 2,5 personas por hogar ≈ 100.000 personas (estimación).",
+        "corto": "Vivienda"
       },
       {
         "etiqueta": "Personas desocupadas",
@@ -827,7 +833,9 @@
         "hasta": 65,
         "afectados": 141200,
         "slug": null,
-        "nota": "141.200 desocupados (INE, dic. 2024; desempleo 7,4%)."
+        "color": "#0ea5e9",
+        "nota": "141.200 desocupados (INE, dic. 2024; desempleo 7,4%).",
+        "corto": "Desocupados"
       },
       {
         "etiqueta": "Personas de 65+ en dependencia",
@@ -836,7 +844,9 @@
         "afectados": 110000,
         "base": 545301,
         "slug": "cuidados-personas-mayores",
-        "nota": "110.000 en dependencia sobre 545.301 mayores de 65 (Censo 2023)."
+        "color": "#0e7490",
+        "nota": "110.000 en dependencia sobre 545.301 mayores de 65 (Censo 2023).",
+        "corto": "Dependencia 65+"
       },
       {
         "etiqueta": "Personas privadas de libertad",
@@ -844,7 +854,9 @@
         "hasta": 65,
         "afectados": 16570,
         "slug": "hacinamiento-carcelario",
-        "nota": "16.570 personas privadas de libertad (2025)."
+        "color": "#7c3aed",
+        "nota": "16.570 personas privadas de libertad (2025).",
+        "corto": "Privados de libertad"
       },
       {
         "etiqueta": "Fuera del sistema educativo",
@@ -852,48 +864,41 @@
         "hasta": 20,
         "afectados": 5212,
         "slug": "secundaria-y-utu",
-        "nota": "5.212 personas en edad escolar no matriculadas."
-      },
-      {
-        "etiqueta": "Menores en tratamiento (este caso)",
-        "desde": 10,
-        "hasta": 18,
-        "afectados": null,
-        "base": null,
-        "slug": null,
-        "tema": true,
-        "color": "#c2410c",
-        "nota": "Sin dato público de cuántos menores reciben bloqueadores u hormonas. Edad aproximada: 10-18."
+        "color": "#d97706",
+        "nota": "5.212 personas en edad escolar no matriculadas.",
+        "corto": "Abandono educativo"
       }
     ],
-    "caso": {
-      "etiqueta": "Este caso: menores en tratamiento",
-      "nota": "Sin dato público. Decapeptyl se vende en Uruguay (Adium), pero no hay cifra de cuántos menores lo reciben ni del gasto."
-    },
     "muertes": [
       {
         "etiqueta": "Suicidios",
-        "hombres": 581,
-        "mujeres": 183,
+        "cantidad": 764,
         "anio": 2024,
-        "fuente": "MSP, Estadísticas Vitales 2024 (76% hombres / 24% mujeres)"
-      },
-      {
-        "etiqueta": "Homicidios",
-        "hombres": 334,
-        "mujeres": 45,
-        "anio": 2024,
-        "fuente": "Ministerio del Interior, Homicidios 2024 (88% hombres / 12% mujeres)"
+        "emoji": "💔",
+        "fuente": "https://www.gub.uy/ministerio-salud-publica/comunicacion/noticias/suicidios-uruguay-nueva-orientacion-politicas-publicas-ante-evolucion"
       },
       {
         "etiqueta": "Siniestros de tránsito",
-        "hombres": null,
-        "mujeres": null,
-        "total": 434,
+        "cantidad": 434,
         "anio": 2024,
-        "fuente": "UNASEV, siniestralidad vial 2024 (sin desglose por sexo)"
+        "emoji": "🚗",
+        "fuente": "https://www.gub.uy/unidad-nacional-seguridad-vial/comunicacion/noticias/se-presentaron-datos-siniestralidad-vial-2024"
+      },
+      {
+        "etiqueta": "Homicidios",
+        "cantidad": 377,
+        "anio": 2024,
+        "emoji": "🔫",
+        "fuente": "https://www.gub.uy/ministerio-interior/sites/ministerio-interior/files/documentos/publicaciones/Homicidios%20anual%202024.pdf"
       }
-    ]
+    ],
+    "caso_banda": {
+      "desde": 10,
+      "hasta": 20,
+      "afectados": 1000,
+      "etiqueta": "Menores en tratamiento (este caso)",
+      "punteado": true
+    }
   },
   "personas": [
     {
@@ -905,32 +910,38 @@
         {
           "anio": "2024-10",
           "hecho": "Elegida diputada por Identidad Soberana; asume como suplente de su padre en Montevideo.",
-          "fuente": "https://www.elobservador.com.uy/gustavo-salle-partida-doble-la-hija-sera-la-otra-diputada-identidad-soberana-n5967809"
+          "fuente": "https://www.elobservador.com.uy/gustavo-salle-partida-doble-la-hija-sera-la-otra-diputada-identidad-soberana-n5967809",
+          "x": 2024.8
         },
         {
           "anio": "2025-02-15",
           "hecho": "Asume como Representante Nacional por Montevideo.",
-          "fuente": "https://parlamento.gub.uy/camarasycomisiones/legisladores/13647"
+          "fuente": "https://parlamento.gub.uy/camarasycomisiones/legisladores/13647",
+          "x": 2025.13
         },
         {
           "anio": "2025-03",
           "hecho": "Impulsa una comisión preinvestigadora sobre la gestión del covid-19.",
-          "fuente": "https://www.montevideo.com.uy/Noticias/Nicolle-Salle-propone-crear-una-comision-preinvestigadora-sobre-la-gestion-del-covid-19-uc918060"
+          "fuente": "https://www.montevideo.com.uy/Noticias/Nicolle-Salle-propone-crear-una-comision-preinvestigadora-sobre-la-gestion-del-covid-19-uc918060",
+          "x": 2025.25
         },
         {
           "anio": "2025",
           "hecho": "Integra las comisiones de Salud Pública y Asistencia Social, y de Adicciones.",
-          "fuente": "https://parlamento.gub.uy/camarasycomisiones/legisladores/13647"
+          "fuente": "https://parlamento.gub.uy/camarasycomisiones/legisladores/13647",
+          "x": 2025.5
         },
         {
           "anio": "2025-2026",
           "hecho": "Presenta 204 pedidos de informes (salud, ambiente, bienestar animal, «Agenda 2030»).",
-          "fuente": "https://www.busqueda.com.uy/politica/bases-subterraneas-tokenizacion-recursos-naturales-y-sobrediagnosticos-los-pedidos-informacion-identidad-soberana-n5413380"
+          "fuente": "https://www.busqueda.com.uy/politica/bases-subterraneas-tokenizacion-recursos-naturales-y-sobrediagnosticos-los-pedidos-informacion-identidad-soberana-n5413380",
+          "x": 2025.8
         },
         {
           "anio": "2026",
           "hecho": "Pide informes sobre bloqueadores de pubertad y hormonización en menores (el rastro de este caso).",
-          "fuente": "https://legislativo.parlamento.gub.uy/aresuelveref.aspx?FICHAASUNTO,175492"
+          "fuente": "https://legislativo.parlamento.gub.uy/aresuelveref.aspx?FICHAASUNTO,175492",
+          "x": 2026.2
         }
       ],
       "vinculaciones": [
