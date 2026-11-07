@@ -444,9 +444,9 @@ def svg_bio(persona):
     izq, der, yline = 60, 20, 26
     partes = ['<svg viewBox="0 0 %d %d" class="bio-svg" role="img" '
               'aria-label="Trayectoria de %s">' % (W, H, html.escape(nombre))]
-    partes.append('<text x="10" y="16" class="nt">%s %s <tspan class="suave" fill="#5d6877">· %s (%s)</tspan>'
+    partes.append('<text x="10" y="16" class="nt" font-size="6" fill="#1a222d" fill-opacity="0.5">%s <tspan fill-opacity="0.5">%s (%s)</tspan>'
                   '<title>%s</title></text>'
-                  % (html.escape(emoji), html.escape(nombre), html.escape(rol), html.escape(profesion),
+                  % (html.escape(emoji), html.escape(rol), html.escape(profesion),
                      html.escape(resumen)))
 
     def px(x):
