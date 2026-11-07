@@ -13,9 +13,6 @@
       {% if yo %}
         <a class="boton principal" href="{{ url_for('temas') }}">Ver temas para votar</a>
         <a class="boton" href="{{ url_for('mapa') }}">Abrir el mapa</a>
-      {% else %}
-        <a class="boton principal" href="{{ url_for('registro') }}">Crear mi cuenta gratis</a>
-        <a class="chico" href="{{ url_for('temas') }}" style="color:var(--suave); align-self:center">Mirar sin cuenta →</a>
       {% endif %}
     </div>
   </div>
@@ -29,44 +26,6 @@
   </div>
 </section>
 
-<nav class="indice-home" aria-label="Secciones">
-  <a href="#sec-pasos">Cómo funciona</a>
-  <a href="#sec-casos">Temas</a>
-  <a href="#sec-temas">Temas</a>
-  <a href="#sec-actividad">Actividad</a>
-</nav>
-
-<section class="pasos-home" id="sec-pasos" style="margin-top:22px">
-  <div class="paso-home"><span class="paso-num">1</span><div><b>Elegí un tema</b><p class="suave chico" style="margin:2px 0 0">Leyes que no funcionan y propuestas sociales, con datos y fuente.</p></div></div>
-  <div class="paso-home"><span class="paso-num">2</span><div><b>Votá y opiná</b><p class="suave chico" style="margin:2px 0 0">Cada voto y opinión suma puntos, nivel y visibilidad. Una cuenta, un voto.</p></div></div>
-  <div class="paso-home"><span class="paso-num">3</span><div><b>Compará</b><p class="suave chico" style="margin:2px 0 0">El mapa cruza lo que preocupa a la gente con las actividades de cada cargo.</p></div></div>
-</section>
-
-{% if casos %}
-<section class="panel" style="margin-top:22px; border-left:4px solid var(--tinta)">
-  <div class="fila entre" style="align-items:flex-start">
-    <div>
-      <h2 style="margin:0">🔬 Temas</h2>
-      <p class="suave" style="margin:6px 0 0">
-        Un tema trabajado en capas: qué pasó, qué se intentó, qué efecto tuvo y qué falta saber,
-        con el nivel de respaldo de cada afirmación.
-      </p>
-    </div>
-  </div>
-  <div class="pila" style="margin-top:12px">
-    {% for caso in casos %}
-      <a class="caso-fila" href="{{ url_for('caso', slug=caso.slug) }}">
-        <span class="caso-emoji">{{ caso.emoji }}</span>
-        <span style="flex:1">
-          <b>{{ caso.titulo }}</b>
-          <div class="chico suave">{{ caso.sector }} · {{ caso.certeza_texto }}</div>
-        </span>
-        <span class="etiqueta">{{ caso.certeza_texto }}</span>
-      </a>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
 
 <section style="margin-top:28px" id="sec-temas">
   <div class="fila entre">
@@ -120,6 +79,7 @@
   </div>
   {% endif %}
 
+  {% if ultimas %}
   <div class="panel">
     <h2>🏛️ Lo último que hicieron los cargos</h2>
     {% for a in ultimas %}
@@ -131,9 +91,8 @@
         </div>
         <span class="etiqueta {% if a.estado == 'hecho' %}verde{% elif a.estado == 'en_proceso' %}azul{% else %}ambar{% endif %}">{{ a.estado }}</span>
       </div>
-    {% else %}
-      <p class="suave chico">Sin actividades cargadas todavía.</p>
     {% endfor %}
   </div>
+  {% endif %}
 </section>
 {% endblock %}
