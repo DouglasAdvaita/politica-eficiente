@@ -72,27 +72,8 @@
     <p class="chico suave">{{ c.negocio.nota_html|safe }}</p>
     {{ c.negocio_svg|safe }}
     <p class="chico suave">{{ c.negocio.fuente_total }}</p>
-    <p class="chico suave">{{ c.negocio.fuente_decapeptyl }}</p>
-  </div>
-  {% endif %}
-
-  {% if c.negocio.otras_empresas %}
-  <div class="bloque bandera">
-    <h4>¿Solo Ipsen?</h4>
-    <p class="chico suave" style="margin:0 0 6px">
-      No. Varias empresas venden análogos de GnRH aprobados para pubertad precoz y usados también, fuera de indicación, para bloquear la pubertad en menores. AbbVie (Lupron) es el mayor de todos:
-    </p>
-    <div class="pila">
-      {% for o in c.negocio.otras_empresas %}
-        <div class="participante">
-          <div style="flex:1">
-            <b>{{ o.empresa }}</b> — <span class="suave">{{ o.producto }}</span>
-            <p class="chico" style="margin:4px 0">{{ o.nota }}</p>
-            <p class="chico suave" style="margin:0">Ventas: {{ o.ventas }} · {{ o.fuente }}</p>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
+    <p class="chico suave">{{ c.negocio.fuente_mercado }}</p>
+    <p class="chico suave">{{ c.negocio.fuente_marcas }}</p>
   </div>
   {% endif %}
 
@@ -101,7 +82,7 @@
     <h4>Dónde encaja</h4>
     <p class="chico suave">{{ c.poblacion.fuente }}</p>
     {{ c.poblacion_svg|safe }}
-    <p class="chico suave">La superficie sombreada bajo la curva de 65+ muestra a cuántos representa el problema dentro de su franja de edad. Las barras de abajo miden en personas afectadas los problemas sin edad: hogares y viviendas se multiplicaron por 2,5 personas por hogar (estimación).</p>
+    <p class="chico suave">Cada franja de color dentro de la curva muestra a cuántas personas representa cada problema en su tramo de edad (porcentaje de esa franja). Las barras de abajo miden en personas afectadas los problemas sin edad: hogares y viviendas se multiplicaron por 2,5 personas por hogar (estimación).</p>
   </div>
   {% endif %}
 

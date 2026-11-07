@@ -138,29 +138,14 @@ def _fmt_m(n):
 
 
 def svg_negocio(caso):
-    """Ventas de Ipsen desde 2005 (total y Decapeptyl) y desglose por producto."""
+    """Ventas de Ipsen desde 2005 y el mercado mundial de GnRH por molecula."""
     neg = caso.get("negocio") or {}
     historico = neg.get("historico") or []
-    productos = neg.get("productos") or []
-    if not historico and not productos:
+    mercado = neg.get("mercado") or []
+    if not historico and not mercado:
         return ""
-    orden = ["Decapeptyl", "Resto", "Dysport", "Cabometyx", "Somatuline"]  # abajo -> arriba
-    rubros = {
-        "Decapeptyl": "hormonización (análogo GnRH)",
-        "Resto": "resto",
-        "Dysport": "toxina botulínica",
-        "Cabometyx": "oncología",
-        "Somatuline": "neuroendocrino",
-    }
-    colores = {
-        "Decapeptyl": "#c2410c",
-        "Resto": "#eef1f5",
-        "Dysport": "#e2e8ef",
-        "Cabometyx": "#d7dfe9",
-        "Somatuline": "#c9d4e2",
-    }
-    partes = ['<svg viewBox="0 0 760 430" class="negocio-svg" role="img" '
-              'aria-label="Ventas de Ipsen desde 2005 y desglose por producto">']
+    partes = ['<svg viewBox="0 0 760 470" class="negocio-svg" role="img" '
+              'aria-label="Negocio de Ipsen y mercado mundial de GnRH">']
     # ---- panel A: serie desde 2005 ----
     partes.append('<text x="10" y="18" class="nt">Ventas del grupo Ipsen desde 2005 (millones de €)</text>')
     izq, der, y_top, y_base = 54, 720, 34, 212
@@ -179,7 +164,6 @@ def svg_negocio(caso):
     for anio in range(2004, 2026, 4):
         partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d</text>'
                       % (px(anio), y_base + 16, anio))
-    # total (pale) y Decapeptyl (destacado)
     total_pts = [h for h in historico if h.get("total")]
     deca_pts = [h for h in historico if h.get("deca")]
     partes.append('<polyline points="%s" fill="none" stroke="#9aa4b2" stroke-width="1.6" opacity="0.85"/>'
@@ -200,58 +184,35 @@ def svg_negocio(caso):
                       % (px(h["anio"]), py(h["deca"]), html.escape(t)))
         partes.append('<text x="%.1f" y="%.1f" class="nd">%s</text>'
                       % (px(h["anio"]) + 6, py(h["deca"]) - 4, ("≈" if aprox else "") + _fmt_m(h["deca"])))
-    # leyenda serie
     partes.append('<rect x="%d" y="%d" width="11" height="3" fill="#9aa4b2"/>'
                   '<text x="%d" y="%d" class="et">grupo (total)</text>'
                   % (izq + 10, 226, izq + 26, 230))
     partes.append('<rect x="%d" y="%d" width="11" height="3" fill="#c2410c"/>'
                   '<text x="%d" y="%d" class="nd">Decapeptyl (análogo GnRH)</text>'
                   % (izq + 120, 226, izq + 136, 230))
-    # ---- panel B: barras apiladas por producto ----
-    partes.append('<text x="10" y="262" class="nt">Ventas por producto (millones de €)</text>')
-    y2_top, y2_base = 278, 356
-    ypx2 = (y2_base - y2_top) / 4000.0
-    cx = {2023: 230, 2024: 470}
-    bw = 120
-    for nivel in (0, 1000, 2000, 3000, 4000):
-        y = y2_base - nivel * ypx2
-        partes.append('<line x1="54" y1="%.1f" x2="720" y2="%.1f" stroke="#e6e9ee"/>' % (y, y))
-        partes.append('<text x="46" y="%.1f" text-anchor="end" class="eje">%d</text>' % (y + 4, nivel))
-    for p in productos:
-        anio = p["anio"]
-        x = cx[anio] - bw / 2.0
-        acum = 0.0
-        for prod in orden:
-            v = p.get(prod, 0) or 0
-            if not v:
-                continue
-            h = v * ypx2
-            y = y2_base - acum - h
-            destacado = prod == "Decapeptyl"
-            titulo = "%s · %s: %s M€" % (anio, prod, _fmt_m(v))
-            partes.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" fill="%s" '
-                          'stroke="%s" stroke-width="%s">'
-                          '<title>%s · %s</title></rect>'
-                          % (x, y, bw, h, colores[prod],
-                             "#7c2d12" if destacado else "#b8c1cd",
-                             "1.6" if destacado else "0.6",
-                             html.escape(titulo), html.escape(rubros[prod])))
-            acum += v
-        partes.append('<text x="%.1f" y="%.1f" text-anchor="middle" class="nt">%s</text>'
-                      % (cx[anio], y2_base - acum - 8, _fmt_m(acum)))
-        partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d</text>'
-                      % (cx[anio], y2_base + 18, anio))
-    # ---- leyenda producto ----
-    ly = 402
-    partes.append('<text x="10" y="%d" class="eje">Leyenda (rubro en el recuadro de cada barra):</text>' % ly)
-    lx = 10
-    for prod in orden:
-        destacado = prod == "Decapeptyl"
-        partes.append('<rect x="%d" y="%d" width="11" height="11" fill="%s" stroke="#b8c1cd" '
-                      'stroke-width="0.5"/>' % (lx, ly - 10, colores[prod]))
-        partes.append('<text x="%d" y="%d" class="%s">%s</text>'
-                      % (lx + 15, ly, "nd" if destacado else "et", html.escape(prod)))
-        lx += 150
+    # ---- panel B: mercado mundial de GnRH por molecula (2025) ----
+    partes.append('<text x="10" y="262" class="nt">Mercado mundial de análogos de GnRH en 2025 (US$ millones)</text>')
+    bx0, bmax = 150, 470.0
+    max_m = max(m["valor"] for m in mercado)
+    fila = 36
+    for i, m in enumerate(mercado):
+        ry = 286 + i * fila
+        destacado = m.get("destacado")
+        w = m["valor"] / max_m * bmax
+        color = "#c2410c" if destacado else "#d3dae4"
+        partes.append('<text x="12" y="%d" class="%s">%s</text>'
+                      % (ry, "nd" if destacado else "et", html.escape(m["molecula"])))
+        partes.append('<rect x="%d" y="%d" width="%.1f" height="18" rx="4" fill="%s" '
+                      'stroke="%s" stroke-width="%s">'
+                      '<title>%s — %s</title></rect>'
+                      % (bx0, ry - 13, w, color,
+                         "#7c2d12" if destacado else "#b8c1cd",
+                         "1.4" if destacado else "0.6",
+                         html.escape(m["molecula"]), html.escape(m["nota"])))
+        partes.append('<text x="%.1f" y="%d" class="%s">US$ %s M</text>'
+                      % (bx0 + w + 8, ry, "nd" if destacado else "et", _fmt(m["valor"])))
+    partes.append('<text x="12" y="%d" class="eje">%s</text>'
+                  % (286 + len(mercado) * fila + 8, html.escape(neg.get("fuente_mercado", ""))))
     partes.append("</svg>")
     return "".join(partes)
 
@@ -309,13 +270,14 @@ def svg_poblacion(caso):
     partes.append('<text x="10" y="%d" class="eje">años →</text>' % (hy_base + 16))
     ly = hy_base + 34
     for s in superficies:
-        base = s.get("base") or 1
-        frac = s.get("afectados", 0) / base
+        desde, hasta = s.get("desde"), s.get("hasta")
+        base = s.get("base") or sum(c for e, c in edades if desde <= e < hasta)
+        frac = (s.get("afectados", 0) / base) if base else 0
         partes.append('<rect x="10" y="%d" width="11" height="11" fill="#0e7490" opacity="0.55"/>'
                       % (ly - 10))
-        partes.append('<text x="26" y="%d" class="et">%s: %s (%.1f%% de los %d+)</text>'
+        partes.append('<text x="26" y="%d" class="et">%s: %s personas (%.1f%% de la franja %d–%d)</text>'
                       % (ly, html.escape(s.get("etiqueta", "")), _fmt(s.get("afectados", 0)),
-                         frac * 100, s.get("desde", 0)))
+                         frac * 100, desde, hasta))
         ly += 16
     by = hy_base + 54 + len(superficies) * 16
     partes.append('<text x="10" y="%d" class="nt">Problemas sin edad — personas afectadas</text>' % by)

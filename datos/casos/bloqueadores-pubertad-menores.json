@@ -441,76 +441,33 @@
         "fuente": "prensa/DataM (estimación)"
       }
     ],
-    "productos": [
-      {
-        "anio": 2023,
-        "Somatuline": 1065.6,
-        "Cabometyx": 534.8,
-        "Dysport": 648.8,
-        "Decapeptyl": 545.5,
-        "Resto": 332.8
-      },
-      {
-        "anio": 2024,
-        "Somatuline": 1121.3,
-        "Cabometyx": 594.8,
-        "Dysport": 689.7,
-        "Decapeptyl": 535.9,
-        "Resto": 458.9
-      }
-    ],
-    "otras_empresas": [
-      {
-        "empresa": "AbbVie",
-        "producto": "Lupron / Lupron Depot-Ped",
-        "droga": "leuprolide",
-        "ventas": "US$ 783 M (2021); US$ 752 M (2020)",
-        "nota": "El mayor vendedor de análogos de GnRH en EE.UU.; indicado para pubertad precoz y, fuera de indicación, para bloquear la pubertad.",
-        "fuente": "Informes anuales de AbbVie"
-      },
-      {
-        "empresa": "Endo Pharmaceuticals",
-        "producto": "Supprelin LA",
-        "droga": "histrelin",
-        "ventas": "sin cifra pública individual",
-        "nota": "Implante anual; es el otro bloqueador de larga duración usado en menores en EE.UU.",
-        "fuente": "FDA / ficha técnica"
-      },
-      {
-        "empresa": "Tolmar",
-        "producto": "Fensolvi",
-        "droga": "leuprolide",
-        "ventas": "sin cifra pública individual",
-        "nota": "Leuprolide inyectable semestral.",
-        "fuente": "FDA / ficha técnica"
-      },
-      {
-        "empresa": "Azurity (ex-Arbor)",
-        "producto": "Triptodur",
-        "droga": "triptorelin",
-        "ventas": "sin cifra pública individual",
-        "nota": "Triptorelin semestral; fabricado por Debiopharm (Suiza), el originador de la molécula.",
-        "fuente": "FDA / DailyMed"
-      },
-      {
-        "empresa": "Ferring",
-        "producto": "Gonapeptyl Depot",
-        "droga": "triptorelin",
-        "ventas": "sin cifra pública individual",
-        "nota": "Triptorelin comercializado en Europa.",
-        "fuente": "ficha técnica (emc)"
-      },
-      {
-        "empresa": "Pfizer",
-        "producto": "Synarel",
-        "droga": "nafarelin",
-        "ventas": "sin cifra pública individual",
-        "nota": "Nafarelina, en aerosol nasal; también en la clase GnRH.",
-        "fuente": "FDA / ficha técnica"
-      }
-    ],
     "fuente_total": "Serie 'desde 2005' con los años con dato público: Ipsen (reportes 2009-2024) y PharmaTimes (2005). Las barras apiladas por producto solo existen para 2023 y 2024.",
-    "fuente_decapeptyl": "Decapeptyl 2023-2024 del reporte anual de Ipsen; 2025 es estimación de prensa/DataM (≈)."
+    "fuente_decapeptyl": "Decapeptyl 2023-2024 del reporte anual de Ipsen; 2025 es estimación de prensa/DataM (≈).",
+    "mercado": [
+      {
+        "molecula": "Leuprolide",
+        "valor": 2351,
+        "nota": "Lupron (AbbVie), Eligard/Fensolvi (Tolmar). Indicado en pubertad precoz y próstata."
+      },
+      {
+        "molecula": "Goserelin",
+        "valor": 1103,
+        "nota": "Zoladex (AstraZeneca/TerSera). Próstata, mama, endometriosis."
+      },
+      {
+        "molecula": "Triptorelin",
+        "valor": 952,
+        "destacado": true,
+        "nota": "Decapeptyl (Ipsen), Trelstar/Triptodur (Debiopharm/Azurity). Es el bloqueador del caso."
+      },
+      {
+        "molecula": "Otros GnRH",
+        "valor": 605,
+        "nota": "histrelin (Supprelin LA, Endo), nafarelina (Synarel, Pfizer), buserelina y otros."
+      }
+    ],
+    "fuente_mercado": "Mercado mundial de análogos de GnRH en 2025 (US$ millones, estimación; PW Consulting).",
+    "fuente_marcas": "Marcas: Zoladex US$1.058 M (2024), Lupron US$783 M (2021), Supprelin LA US$59 M (2024), Decapeptyl €536 M (2024)."
   },
   "poblacion": {
     "fuente": "INE, Censo 2023: población por grupo quinquenal de edades.",
@@ -595,13 +552,29 @@
     ],
     "superficies": [
       {
-        "etiqueta": "Personas de 65 años o más en situación de dependencia",
+        "etiqueta": "Personas de 65 años o más en dependencia",
         "desde": 65,
         "hasta": 95,
         "afectados": 110000,
         "base": 545301,
         "slug": "cuidados-personas-mayores",
-        "fuente": "Plan Nacional de Cuidados 2026-2030: 110 mil personas en dependencia sobre 545.301 mayores de 65 (Censo 2023)."
+        "fuente": "Plan Nacional de Cuidados: 110 mil en dependencia sobre 545.301 mayores de 65 (Censo 2023)."
+      },
+      {
+        "etiqueta": "Personas privadas de libertad",
+        "desde": 20,
+        "hasta": 65,
+        "afectados": 16570,
+        "slug": "hacinamiento-carcelario",
+        "fuente": "16.570 personas privadas de libertad (cierre 2025), sobre la población de 20 a 64 años."
+      },
+      {
+        "etiqueta": "Fuera del sistema educativo",
+        "desde": 5,
+        "hasta": 20,
+        "afectados": 5212,
+        "slug": "secundaria-y-utu",
+        "fuente": "5.212 personas en edad escolar no matriculadas, sobre la población de 5 a 19 años."
       }
     ],
     "barras": [
@@ -611,8 +584,8 @@
         "unidad": "viviendas",
         "personas": 100000,
         "slug": "alquileres-y-vivienda",
-        "nota": "40.000 viviendas; a 2,5 personas por hogar son unas 100.000 personas (estimación).",
-        "emoji": "🚫🏠"
+        "emoji": "🚫🏠",
+        "nota": "40.000 viviendas; a 2,5 personas por hogar son unas 100.000 personas (estimación)."
       },
       {
         "etiqueta": "Hogares sin baño de uso exclusivo",
@@ -620,26 +593,8 @@
         "unidad": "hogares",
         "personas": 23618,
         "slug": "agua-y-saneamiento",
-        "nota": "9.447 hogares; a 2,5 personas por hogar son unas 23.600 personas (estimación).",
-        "emoji": "🚽"
-      },
-      {
-        "etiqueta": "Personas privadas de libertad",
-        "cantidad": 16570,
-        "unidad": "personas",
-        "personas": 16570,
-        "slug": "hacinamiento-carcelario",
-        "nota": "16.570 personas al cierre de 2025.",
-        "emoji": "🔒"
-      },
-      {
-        "etiqueta": "Fuera del sistema educativo",
-        "cantidad": 5212,
-        "unidad": "personas",
-        "personas": 5212,
-        "slug": "secundaria-y-utu",
-        "nota": "5.212 personas en edad escolar no matriculadas.",
-        "emoji": "🎓"
+        "emoji": "🚽",
+        "nota": "9.447 hogares; a 2,5 personas por hogar son unas 23.600 personas (estimación)."
       },
       {
         "etiqueta": "Este caso: menores en tratamiento",
@@ -647,8 +602,8 @@
         "unidad": "sin dato",
         "personas": 0,
         "slug": null,
-        "nota": "No hay dato público de cuántos menores reciben bloqueadores u hormonas.",
-        "emoji": "🧪"
+        "emoji": "🧪",
+        "nota": "No hay dato público de cuántos menores reciben bloqueadores u hormonas."
       }
     ]
   }
