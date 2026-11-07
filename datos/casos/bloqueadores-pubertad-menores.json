@@ -614,5 +614,63 @@
       "etiqueta": "Este caso: menores en tratamiento",
       "nota": "Sin dato público de cuántos menores reciben bloqueadores u hormonas."
     }
-  }
+  },
+  "personas": [
+    {
+      "nombre": "Nicolle Salle",
+      "rol": "Diputada por Montevideo (Identidad Soberana)",
+      "profesion": "Odontóloga",
+      "nota": "No es abogada: es odontóloga. El abogado es su padre, Gustavo Salle, líder de Identidad Soberana. La profesión importa para leer su pedido: no es especialista en endocrinología ni en salud trans.",
+      "hitos": [
+        {
+          "anio": "2024-10",
+          "hecho": "Elegida diputada por Identidad Soberana; asume como suplente de su padre en Montevideo.",
+          "fuente": "https://www.elobservador.com.uy/gustavo-salle-partida-doble-la-hija-sera-la-otra-diputada-identidad-soberana-n5967809"
+        },
+        {
+          "anio": "2025-02-15",
+          "hecho": "Asume como Representante Nacional por Montevideo.",
+          "fuente": "https://parlamento.gub.uy/camarasycomisiones/legisladores/13647"
+        },
+        {
+          "anio": "2025-03",
+          "hecho": "Impulsa una comisión preinvestigadora sobre la gestión del covid-19.",
+          "fuente": "https://www.montevideo.com.uy/Noticias/Nicolle-Salle-propone-crear-una-comision-preinvestigadora-sobre-la-gestion-del-covid-19-uc918060"
+        },
+        {
+          "anio": "2025",
+          "hecho": "Integra las comisiones de Salud Pública y Asistencia Social, y de Adicciones.",
+          "fuente": "https://parlamento.gub.uy/camarasycomisiones/legisladores/13647"
+        },
+        {
+          "anio": "2025-2026",
+          "hecho": "Presenta 204 pedidos de informes (salud, ambiente, bienestar animal, «Agenda 2030»).",
+          "fuente": "https://www.busqueda.com.uy/politica/bases-subterraneas-tokenizacion-recursos-naturales-y-sobrediagnosticos-los-pedidos-informacion-identidad-soberana-n5413380"
+        },
+        {
+          "anio": "2026",
+          "hecho": "Pide informes sobre bloqueadores de pubertad y hormonización en menores (el rastro de este caso).",
+          "fuente": "https://legislativo.parlamento.gub.uy/aresuelveref.aspx?FICHAASUNTO,175492"
+        }
+      ],
+      "vinculaciones": [
+        {
+          "tipo": "Familia",
+          "detalle": "Hija de Gustavo Salle, abogado penalista y líder de Identidad Soberana."
+        },
+        {
+          "tipo": "Partido",
+          "detalle": "Identidad Soberana: antiglobalista, antisistema, crítico de los partidos tradicionales."
+        },
+        {
+          "tipo": "Agenda",
+          "detalle": "Antivacunas; contra la hormonización en menores y la «ideología de género» en escuelas."
+        },
+        {
+          "tipo": "Posición",
+          "detalle": "Crítica de la OMS y de la «Agenda 2030»; a favor de la «soberanía individual»."
+        }
+      ]
+    }
+  ]
 }
