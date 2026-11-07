@@ -140,7 +140,7 @@ def svg_curvas(caso):
         partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d</text>'
                       % (px(anio), y_base + 16, anio))
     # ---- series (escalonadas) ----
-    en_nivel = {}
+    labels = []
     for serie in series:
         destacado = serie.get("destacado")
         puntos = serie["puntos"]
@@ -174,13 +174,21 @@ def svg_curvas(caso):
                           'stroke-width="1.8"><title>%s</title></circle></a>'
                           % (html.escape(enlace), px(p["anio"]), py(p["nivel"]), radio, color,
                              html.escape(titulo)))
-        # etiqueta al final
-        k = en_nivel.get(ultimo_nivel, 0)
-        en_nivel[ultimo_nivel] = k + 1
-        ly = py(ultimo_nivel) + 4 + (k % 4) * 11
-        partes.append('<text x="%d" y="%.1f" class="%s">%s</text>'
-                      % (izq + plot_w + 8, ly, "nd" if destacado else "et",
-                         html.escape(serie["pais"])))
+        labels.append((serie["pais"], ultimo_nivel, destacado, color))
+    # etiquetas al final, agrupadas por nivel (de arriba abajo) y sin superposición
+    labels.sort(key=lambda t: (-t[1], not t[2]))
+    last_y = -1e9
+    for nombre, nivel, destacado, color in labels:
+        y = py(nivel) + 4
+        if y < last_y + 14:
+            y = last_y + 14
+        last_y = y
+        partes.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-width="1"/>'
+                      % (izq + plot_w, py(nivel), izq + plot_w + 6, y, color))
+        partes.append('<text x="%d" y="%.1f" class="et" style="fill:%s%s">%s</text>'
+                      % (izq + plot_w + 8, y, color,
+                         ";font-weight:700" if destacado else "",
+                         html.escape(nombre)))
     partes.append('<text x="%d" y="%d" class="eje">0 prohibido · 1 investigación · 2 cautela · 3 guía clínica</text>'
                   % (izq, y_base + 34))
     partes.append("</svg>")
