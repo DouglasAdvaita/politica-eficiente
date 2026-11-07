@@ -124,12 +124,20 @@
     "observado": "Entre 2015 y 2026, países con sistemas de salud distintos adoptaron la misma política en pocos años, impulsada por las mismas guías internacionales (WPATH y Endocrine Society), y varios la revirtieron cuando revisaron la evidencia. Uruguay se sumó en 2018 con una ley y actualizó la guía en 2026.",
     "no_probado": "No hay documento público que muestre una coordinación de la industria farmacéutica para imponerla en Uruguay, ni que la demanda social local haya sido el motor.",
     "como_probar": [
-      "Quién financió y redactó la actualización de la guía.",
-      "Qué reuniones y actores participaron en la decisión.",
-      "Si hubo pedidos de familias u organizaciones antes de la ley."
+      "Si hubo pedidos de familias u organizaciones antes de la ley 19.684."
     ],
     "base_observado": "opinion",
-    "base_no_probado": "fuente"
+    "base_no_probado": "fuente",
+    "hallazgo": [
+      {
+        "texto": "La guía 2016 la redactó y revisó un equipo del MSP, la Udelar, ASSE y sociedades científicas; la coordinó Florencia Forrisi (a la vez del colectivo activista Ovejas Negras y del MSP), con apoyo del UNFPA (ONU).",
+        "fuente": "https://www.gub.uy/ministerio-salud-publica/comunicacion/noticias/guia-clinica-para-la-hormonizacion-en-personas-trans"
+      },
+      {
+        "texto": "La actualización 2025/2026 la firman Udelar, Ovejas Negras, ASSE, MSP y UNFPA; es la «traducción escrita de cursos» dictados por los mismos autores. La industria farmacéutica no figura en los créditos.",
+        "fuente": "https://uruguay.unfpa.org/es/guia-salud-y-diversidad-sexual"
+      }
+    ]
   },
   "glosario": {
     "análogos de GnRH": "Medicamentos que frenan la pubertad bloqueando la señal hormonal. Se usan hace décadas en pubertad precoz y en algunos cánceres; para disforia de género no tienen registro sanitario específico en varios países.",
@@ -142,7 +150,8 @@
     "Ukom": "Junta de Investigación de Salud de Noruega, organismo independiente que recomendó tratar estos tratamientos como experimentales.",
     "Ipsen": "Compañía farmacéutica francesa. Su producto Decapeptyl es el análogo de GnRH usado como bloqueador de pubertad, comercializado en más de 80 países.",
     "Decapeptyl": "Marca del análogo de GnRH de Ipsen, usado como bloqueador de pubertad.",
-    "GnRH": "Hormona liberadora de gonadotropina; los análogos de GnRH frenan la pubertad."
+    "GnRH": "Hormona liberadora de gonadotropina; los análogos de GnRH frenan la pubertad.",
+    "Tanner": "Escala de Tanner: estadios 1 a 5 del desarrollo puberal (1 = prepubertad, 5 = adulto). La guía habilita frenar la pubertad desde el estadio 2, que aparece alrededor de los 9-11 años en niñas y 10-12 en varones."
   },
   "parlamento": {
     "nota": "Un pedido de informes no es una respuesta: si no hay seguimiento, el dato sigue faltando.",

@@ -218,7 +218,7 @@ def svg_negocio(caso):
     partes = ['<svg viewBox="0 0 760 470" class="negocio-svg" role="img" '
               'aria-label="Negocio de Ipsen y mercado mundial de GnRH">']
     # ---- panel A: serie desde 2005 ----
-    partes.append('<text x="10" y="18" class="nt">Ventas del grupo Ipsen desde 2005 (millones de €)</text>')
+    partes.append('<text x="10" y="18" class="nt">Ipsen (la empresa del bloqueador): cuánto vende en total</text>')
     izq, der, y_top, y_base = 54, 720, 34, 212
     x0, x1, max_v = 2004, 2026, 3600.0
 
@@ -256,13 +256,13 @@ def svg_negocio(caso):
         partes.append('<text x="%.1f" y="%.1f" class="nd">%s</text>'
                       % (px(h["anio"]) + 6, py(h["deca"]) - 4, ("≈" if aprox else "") + _fmt_m(h["deca"])))
     partes.append('<rect x="%d" y="%d" width="11" height="3" fill="#9aa4b2"/>'
-                  '<text x="%d" y="%d" class="et">grupo (total)</text>'
+                  '<text x="%d" y="%d" class="et">todo el grupo Ipsen</text>'
                   % (izq + 10, 226, izq + 26, 230))
     partes.append('<rect x="%d" y="%d" width="11" height="3" fill="#c2410c"/>'
-                  '<text x="%d" y="%d" class="nd">Decapeptyl (análogo GnRH)</text>'
+                  '<text x="%d" y="%d" class="nd">Decapeptyl (el bloqueador)</text>'
                   % (izq + 120, 226, izq + 136, 230))
     # ---- panel B: mercado mundial de GnRH por molecula (2025) ----
-    partes.append('<text x="10" y="262" class="nt">Mercado mundial de análogos de GnRH en 2025 (US$ millones)</text>')
+    partes.append('<text x="10" y="262" class="nt">El negocio completo: cuánto vende cada fármaco de la clase (2025, US$ M)</text>')
     bx0, bmax = 150, 470.0
     max_m = max(m["valor"] for m in mercado)
     fila = 36
@@ -435,7 +435,7 @@ def svg_vinculos(caso):
         x, y = pos[n]
         c = color(n)
         partes.append('<rect x="%.1f" y="%.1f" width="%d" height="%d" rx="7" fill="%s" '
-                      'opacity="0.14" stroke="%s" stroke-width="1.2">'
+                      'opacity="0.28" stroke="%s" stroke-width="1.2">'
                       '<title>%s</title></rect>'
                       % (x - 70, y - 15, 140, 30, c, c,
                          html.escape("%s — %s" % (n, rol.get(n, "")))))

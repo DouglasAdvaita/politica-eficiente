@@ -29,10 +29,7 @@
         <li>
           <div class="fila entre" style="align-items:baseline; gap:10px">
             <b>{{ paso.paso }}</b>
-            <span class="chips">
-              <span class="etiqueta {{ paso.clase }}" tabindex="0" data-tip="Nivel de respaldo de este eslabón.">{{ paso.etiqueta }}</span>
-              {% if paso.base_etiqueta %}<span class="etiqueta base" tabindex="0" data-tip="De dónde sale esta afirmación: un hecho con fuente, una causalidad inferida, o una opinión/lectura.">{{ paso.base_etiqueta }}</span>{% endif %}
-            </span>
+            <span class="etiqueta {{ paso.clase }}" tabindex="0" data-tip="Nivel de respaldo: {{ paso.etiqueta }} · Origen: {{ paso.base_etiqueta or paso.etiqueta }}">{{ paso.base_etiqueta or paso.etiqueta }}</span>
           </div>
           <p>{{ paso.texto_html|safe }}</p>
           {% if paso.fuente %}<p class="chico suave">Fuente: {% if paso.fuente_url %}<a href="{{ paso.fuente_url }}" target="_blank" rel="noopener">{{ paso.fuente }} ↗</a>{% else %}{{ paso.fuente }}{% endif %}</p>{% endif %}
@@ -53,10 +50,20 @@
     <h4>El patrón y la pregunta de fondo</h4>
     <p>{{ c.patron.observado_html|safe }}{% if c.patron.obs_base_etiqueta %} <span class="etiqueta base" tabindex="0" data-tip="De dónde sale esta afirmación.">{{ c.patron.obs_base_etiqueta }}</span>{% endif %}</p>
     <p class="chico suave">{{ c.patron.no_probado_html|safe }}{% if c.patron.nop_base_etiqueta %} <span class="etiqueta base" tabindex="0" data-tip="De dónde sale esta afirmación.">{{ c.patron.nop_base_etiqueta }}</span>{% endif %}</p>
-    <p class="chico" style="margin-bottom:4px">Se probaría con:</p>
+    {% if c.patron.hallazgo %}
+    <p class="chico" style="margin-bottom:4px">Lo que se averiguó:</p>
+    <ul class="chico" style="margin:0 0 0 18px; line-height:1.7">
+      {% for h in c.patron.hallazgo %}
+        <li>{{ h.texto }}{% if h.fuente %} <a href="{{ h.fuente }}" target="_blank" rel="noopener">↗</a>{% endif %}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if c.patron.como_probar %}
+    <p class="chico" style="margin-bottom:4px">Queda por saber:</p>
     <ul class="chico" style="margin:0 0 0 18px; line-height:1.7">
       {% for x in c.patron.como_probar %}<li>{{ x }}</li>{% endfor %}
     </ul>
+    {% endif %}
   </div>
   {% endif %}
 
@@ -113,10 +120,7 @@
           <div style="flex:1">
             <div class="fila entre" style="align-items:baseline; gap:8px">
               <b>{{ i.actor }}</b>
-              <span class="chips">
-                <span class="etiqueta {{ i.clase }}" tabindex="0" data-tip="Nivel de respaldo de esta lectura.">{{ i.etiqueta }}</span>
-                {% if i.base_etiqueta %}<span class="etiqueta base" tabindex="0" data-tip="De dónde sale esta lectura: un hecho con fuente, una causalidad inferida, o una opinión.">{{ i.base_etiqueta }}</span>{% endif %}
-              </span>
+              <span class="etiqueta {{ i.clase }}" tabindex="0" data-tip="Nivel de respaldo: {{ i.etiqueta }} · Origen: {{ i.base_etiqueta or i.etiqueta }}">{{ i.base_etiqueta or i.etiqueta }}</span>
             </div>
             <p class="chico" style="margin:4px 0">{{ i.interes_html|safe }}</p>
             {% if i.nota %}<p class="chico suave" style="margin:0">{{ i.nota_html|safe }}</p>{% endif %}

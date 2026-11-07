@@ -275,6 +275,9 @@ textarea { min-height: 96px; resize: vertical; }
 .vinculos-svg .eje { font-size: 9px; fill: #6b7686; }
 .vinculos-svg .et { font-size: 11px; fill: #333d4b; }
 .vinculos-svg .nd { font-size: 11px; font-weight: 700; fill: #1a222d; }
+.vinculos-svg rect, .vinculos-svg line { cursor: pointer; }
+.vinculos-svg rect:hover { opacity: 0.5 !important; stroke-width: 2; }
+.vinculos-svg line:hover { stroke: #64748b; stroke-width: 2; }
 .bio-svg { width: 100%; height: auto; margin: 2px 0; }
 .bio-svg .nt { font-size: 12px; font-weight: 600; fill: #1a222d; }
 .bio-svg .eje { font-size: 10px; fill: #6b7686; }
