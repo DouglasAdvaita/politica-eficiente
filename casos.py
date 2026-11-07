@@ -482,7 +482,15 @@ def svg_bio(persona):
 
     partes.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="#d6dbe3"/>'
                   % (izq, yline, W - der, yline))
-    for anio in (2024, 2025, 2026):
+    import math
+    rango = x1 - x0
+    paso = 1
+    for p in (1, 2, 5, 10, 20, 50):
+        if rango / p <= 6:
+            paso = p
+            break
+    inicio = int(math.ceil(x0 / paso)) * paso
+    for anio in range(inicio, int(math.floor(x1)) + 1, paso):
         partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d</text>'
                       % (px(anio), yline + 20, anio))
     # puntos (de abajo hacia arriba, alternando altura para evitar superposición)

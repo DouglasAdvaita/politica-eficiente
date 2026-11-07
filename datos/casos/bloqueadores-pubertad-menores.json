@@ -962,6 +962,92 @@
           "detalle": "Crítica de la OMS y de la «Agenda 2030»; a favor de la «soberanía individual»."
         }
       ]
+    },
+    {
+      "nombre": "Hilary Cass",
+      "rol": "Pediatra; dirigió la revisión independiente (Cass Review)",
+      "profesion": "Médica pediatra",
+      "nota": "No es especialista en género ni endocrinología: es pediatra de neurodiscapacidad y cuidados paliativos. Su independencia del campo de género se citó como fortaleza; sus críticos señalan que no es experta en el tema.",
+      "vinculaciones": [
+        {
+          "tipo": "Cargo",
+          "detalle": "Ex presidenta del Royal College of Paediatrics and Child Health (2012-2015)."
+        },
+        {
+          "tipo": "Reconocimiento",
+          "detalle": "OBE (2015) por servicios a la salud infantil; Baronesa Cass, par vitalicio (2024)."
+        },
+        {
+          "tipo": "Revisión",
+          "detalle": "Dirigió la revisión independiente de los servicios de género del NHS (2020-2024), la Cass Review."
+        },
+        {
+          "tipo": "Perfil",
+          "detalle": "Pediatra de discapacidad y cuidados paliativos; no es endocrinóloga ni especialista en género."
+        }
+      ],
+      "hitos": [
+        {
+          "anio": "1982",
+          "x": 1982.0,
+          "hecho": "Se gradúa de médica (MB BS) en el Royal Free Hospital, Londres.",
+          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass"
+        },
+        {
+          "anio": "1992",
+          "x": 1992.0,
+          "hecho": "Funda la clínica nacional de síndrome de Rett; consultora en neurodiscapacidad.",
+          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass"
+        },
+        {
+          "anio": "2009",
+          "x": 2009.0,
+          "hecho": "Consultora en Evelina London; impulsa los cuidados paliativos pediátricos.",
+          "fuente": "https://www.rcpch.ac.uk/about-us/our-team/hilary-cass-baroness-cass"
+        },
+        {
+          "anio": "2012-2015",
+          "x": 2013.5,
+          "hecho": "Presidenta del Royal College of Paediatrics and Child Health.",
+          "fuente": "https://www.rcpch.ac.uk/about-us/our-team/hilary-cass-baroness-cass"
+        },
+        {
+          "anio": "2015",
+          "x": 2015.0,
+          "hecho": "Recibe la OBE por servicios a la salud infantil.",
+          "fuente": "https://www.rcpch.ac.uk/about-us/our-team/hilary-cass-baroness-cass"
+        },
+        {
+          "anio": "2017-2020",
+          "x": 2018.5,
+          "hecho": "Presidenta de la British Academy of Childhood Disability.",
+          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass"
+        },
+        {
+          "anio": "2020-09",
+          "x": 2020.7,
+          "hecho": "Nombrada para dirigir la revisión independiente de los servicios de género del NHS (Cass Review).",
+          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass"
+        },
+        {
+          "anio": "2022-03",
+          "x": 2022.2,
+          "hecho": "Informe interino: recomienda cerrar el GIDS y crear centros regionales.",
+          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass"
+        },
+        {
+          "anio": "2024-04-10",
+          "x": 2024.3,
+          "hecho": "Informe final: evidencia «notablemente débil»; bloqueadores solo en investigación.",
+          "fuente": "https://inews.co.uk/news/hilary-cass-doctor-gender-2999450"
+        },
+        {
+          "anio": "2024-08",
+          "x": 2024.6,
+          "hecho": "Nombrada Baronesa Cass, par vitalicio (crossbench).",
+          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass"
+        }
+      ]
     }
   ],
   "vinculos": {
