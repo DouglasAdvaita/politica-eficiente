@@ -875,6 +875,7 @@
         "cantidad": 764,
         "anio": 2024,
         "emoji": "💔",
+        "sexo": "76% hombres (~581) · 24% mujeres (~183)",
         "fuente": "https://www.gub.uy/ministerio-salud-publica/comunicacion/noticias/suicidios-uruguay-nueva-orientacion-politicas-publicas-ante-evolucion"
       },
       {
@@ -882,13 +883,15 @@
         "cantidad": 434,
         "anio": 2024,
         "emoji": "🚗",
-        "fuente": "https://www.gub.uy/unidad-nacional-seguridad-vial/comunicacion/noticias/se-presentaron-datos-siniestralidad-vial-2024"
+        "sexo": "80% hombres (346) · 20% mujeres (88)",
+        "fuente": "https://ladiaria.com.uy/politica/articulo/2025/4/en-2024-fallecieron-434-personas-en-siniestros-de-transito-80-fueron-hombres/"
       },
       {
         "etiqueta": "Homicidios",
-        "cantidad": 377,
+        "cantidad": 379,
         "anio": 2024,
         "emoji": "🔫",
+        "sexo": "88% hombres (334) · 12% mujeres (45)",
         "fuente": "https://www.gub.uy/ministerio-interior/sites/ministerio-interior/files/documentos/publicaciones/Homicidios%20anual%202024.pdf"
       }
     ],
