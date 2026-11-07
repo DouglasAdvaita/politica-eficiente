@@ -15,11 +15,11 @@
         <a class="boton" href="{{ url_for('mapa') }}">Abrir el mapa</a>
       {% else %}
         <a class="boton principal" href="{{ url_for('registro') }}">Crear mi cuenta gratis</a>
-        <a class="boton" href="{{ url_for('temas') }}">Mirar sin cuenta</a>
+        <a class="chico" href="{{ url_for('temas') }}" style="color:var(--suave); align-self:center">Mirar sin cuenta →</a>
       {% endif %}
     </div>
   </div>
-  <div class="datos">
+  <div class="datos datos-discretos">
     <div class="dato"><b>{{ totales.temas }}</b><span>temas</span></div>
     <div class="dato"><b>{{ totales.politicos }}</b><span>cargos</span></div>
     <div class="dato"><b>{{ totales.usuarios }}</b><span>ciudadanos</span></div>
@@ -29,28 +29,24 @@
   </div>
 </section>
 
-<section class="pila" style="margin-top:22px">
-  <div class="grid">
-    <div class="panel">
-      <h2>🎯 1. Elegí un tema</h2>
-      <p class="suave">Leyes que no funcionan y propuestas sociales, ordenadas por categoría y urgencia, con datos y fuente.</p>
-    </div>
-    <div class="panel">
-      <h2>🗳️ 2. Votá y opiná</h2>
-      <p class="suave">Cada voto y cada opinión suma puntos, nivel y visibilidad. Sin bots: una cuenta, un voto.</p>
-    </div>
-    <div class="panel">
-      <h2>🔍 3. Compará</h2>
-      <p class="suave">El mapa cruza lo que preocupa a la gente con las actividades de cada cargo. Ahí se ve qué se atiende y qué se descuida.</p>
-    </div>
-  </div>
+<nav class="indice-home" aria-label="Secciones">
+  <a href="#sec-pasos">Cómo funciona</a>
+  <a href="#sec-casos">Casos a fondo</a>
+  <a href="#sec-temas">Temas</a>
+  <a href="#sec-actividad">Actividad</a>
+</nav>
+
+<section class="pasos-home" id="sec-pasos" style="margin-top:22px">
+  <div class="paso-home"><span class="paso-num">1</span><div><b>Elegí un tema</b><p class="suave chico" style="margin:2px 0 0">Leyes que no funcionan y propuestas sociales, con datos y fuente.</p></div></div>
+  <div class="paso-home"><span class="paso-num">2</span><div><b>Votá y opiná</b><p class="suave chico" style="margin:2px 0 0">Cada voto y opinión suma puntos, nivel y visibilidad. Una cuenta, un voto.</p></div></div>
+  <div class="paso-home"><span class="paso-num">3</span><div><b>Compará</b><p class="suave chico" style="margin:2px 0 0">El mapa cruza lo que preocupa a la gente con las actividades de cada cargo.</p></div></div>
 </section>
 
 {% if casos %}
-<section class="panel" style="margin-top:22px">
+<section class="panel" style="margin-top:22px; border-left:4px solid var(--tinta)">
   <div class="fila entre" style="align-items:flex-start">
     <div>
-      <h2 style="margin:0">🔬 Caso piloto: cómo leer un tema a fondo</h2>
+      <h2 style="margin:0">🔬 Casos a fondo</h2>
       <p class="suave" style="margin:6px 0 0">
         Un tema trabajado en capas: qué pasó, qué se intentó, qué efecto tuvo y qué falta saber,
         con el nivel de respaldo de cada afirmación.
@@ -59,16 +55,20 @@
   </div>
   <div class="pila" style="margin-top:12px">
     {% for caso in casos %}
-      <a class="panel" href="{{ url_for('caso', slug=caso.slug) }}" style="display:block; text-decoration:none; color:inherit">
-        <b>{{ caso.emoji }} {{ caso.titulo }}</b>
-        <div class="chico suave">{{ caso.sector }} · {{ caso.certeza_texto }}</div>
+      <a class="caso-fila" href="{{ url_for('caso', slug=caso.slug) }}">
+        <span class="caso-emoji">{{ caso.emoji }}</span>
+        <span style="flex:1">
+          <b>{{ caso.titulo }}</b>
+          <div class="chico suave">{{ caso.sector }} · {{ caso.certeza_texto }}</div>
+        </span>
+        <span class="etiqueta">{{ caso.certeza_texto }}</span>
       </a>
     {% endfor %}
   </div>
 </section>
 {% endif %}
 
-<section style="margin-top:28px">
+<section style="margin-top:28px" id="sec-temas">
   <div class="fila entre">
     <h2>🔥 Temas con más apoyo</h2>
     <a class="chip" href="{{ url_for('temas') }}">Ver todos →</a>
@@ -97,7 +97,7 @@
   </div>
 </section>
 
-<section style="margin-top:28px" class="grid">
+<section style="margin-top:28px" class="grid" id="sec-actividad">
   {% if brecha|selectattr("votos")|list %}
   <div class="panel">
     <h2>📊 Qué preocupa y qué se atiende</h2>

@@ -369,3 +369,21 @@ footer b { color: var(--tinta); }
   .brecha-fila { grid-template-columns: 84px 1fr 64px; }
   .cabecera-tema .emoji { font-size: 1.8rem; }
 }
+/* ---------- home: pasos como linea de tiempo ---------- */
+.pasos-home { display: grid; gap: 10px; }
+.paso-home { display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; border-left: 2px solid var(--borde); padding-left: 14px; }
+.paso-num { flex: 0 0 26px; width: 26px; height: 26px; border-radius: 50%; background: var(--tinta); color: #fff; font-weight: 700; font-size: .85rem; display: grid; place-items: center; }
+/* ---------- home: fila de caso ---------- */
+.caso-fila { display: flex; gap: 12px; align-items: center; padding: 10px 12px; border: 1px solid var(--borde); border-radius: 10px; background: var(--panel); text-decoration: none; color: inherit; transition: .15s; }
+.caso-fila:hover { border-color: var(--tinta); transform: translateY(-1px); }
+.caso-fila b { color: var(--tinta); }
+.caso-emoji { font-size: 1.4rem; line-height: 1; }
+/* ---------- home: metricas discretas ---------- */
+.datos-discretos { gap: 6px; }
+.datos-discretos .dato { padding: 6px 8px; border-radius: 8px; }
+.datos-discretos .dato b { font-size: 1.05rem; }
+.datos-discretos .dato span { font-size: .72rem; }
+/* ---------- home: indice de secciones ---------- */
+.indice-home { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 4px; padding: 6px 0; }
+.indice-home a { font-size: .78rem; font-weight: 600; color: var(--suave); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--borde); background: var(--panel); text-decoration: none; }
+.indice-home a:hover { color: var(--tinta); border-color: var(--tinta); }
