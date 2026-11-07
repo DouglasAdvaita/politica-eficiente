@@ -185,7 +185,7 @@
   {% if c.personas %}
     {% for p in c.personas %}
     <div class="bloque">
-      <h4 style="font-size:10px; color:rgba(0,0,0,.8); text-transform:none; letter-spacing:0; font-weight:600; margin:0 0 4px">Quién es {{ p.nombre }}</h4>
+      <h4 style="color:rgba(0,0,0,.8); text-transform:none; letter-spacing:0; font-weight:600; margin:0 0 4px">Quién es {{ p.nombre }}</h4>
       {{ p.bio_svg|safe }}
     </div>
     {% endfor %}
@@ -194,7 +194,7 @@
   {% if c.empresas %}
     {% for e in c.empresas %}
     <div class="bloque">
-      <h4 style="font-size:10px; color:rgba(0,0,0,.8); text-transform:none; letter-spacing:0; font-weight:600; margin:0 0 4px">La empresa: {{ e.nombre }}</h4>
+      <h4 style="color:rgba(0,0,0,.8); text-transform:none; letter-spacing:0; font-weight:600; margin:0 0 4px">La empresa: {{ e.nombre }}</h4>
       {{ e.bio_svg|safe }}
     </div>
     {% endfor %}
