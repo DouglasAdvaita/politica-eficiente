@@ -29,7 +29,10 @@
         <li>
           <div class="fila entre" style="align-items:baseline; gap:10px">
             <b>{{ paso.paso }}</b>
-            <span class="etiqueta {{ paso.clase }}" tabindex="0" data-tip="Nivel de respaldo de este eslabón.">{{ paso.etiqueta }}</span>
+            <span class="chips">
+              <span class="etiqueta {{ paso.clase }}" tabindex="0" data-tip="Nivel de respaldo de este eslabón.">{{ paso.etiqueta }}</span>
+              {% if paso.base_etiqueta %}<span class="etiqueta base" tabindex="0" data-tip="De dónde sale esta afirmación: un hecho con fuente, una causalidad inferida, o una opinión/lectura.">{{ paso.base_etiqueta }}</span>{% endif %}
+            </span>
           </div>
           <p>{{ paso.texto_html|safe }}</p>
           {% if paso.fuente %}<p class="chico suave">Fuente: {{ paso.fuente }}</p>{% endif %}
@@ -48,8 +51,8 @@
   {% if c.patron %}
   <div class="bloque">
     <h4>El patrón y la pregunta de fondo</h4>
-    <p>{{ c.patron.observado_html|safe }}</p>
-    <p class="chico suave">{{ c.patron.no_probado_html|safe }}</p>
+    <p>{{ c.patron.observado_html|safe }}{% if c.patron.obs_base_etiqueta %} <span class="etiqueta base" tabindex="0" data-tip="De dónde sale esta afirmación.">{{ c.patron.obs_base_etiqueta }}</span>{% endif %}</p>
+    <p class="chico suave">{{ c.patron.no_probado_html|safe }}{% if c.patron.nop_base_etiqueta %} <span class="etiqueta base" tabindex="0" data-tip="De dónde sale esta afirmación.">{{ c.patron.nop_base_etiqueta }}</span>{% endif %}</p>
     <p class="chico" style="margin-bottom:4px">Se probaría con:</p>
     <ul class="chico" style="margin:0 0 0 18px; line-height:1.7">
       {% for x in c.patron.como_probar %}<li>{{ x }}</li>{% endfor %}
@@ -82,7 +85,7 @@
     <h4>Dónde encaja</h4>
     <p class="chico suave">{{ c.poblacion.fuente }}</p>
     {{ c.poblacion_svg|safe }}
-    <p class="chico suave">Cada franja de color dentro de la curva muestra a cuántas personas representa cada problema en su tramo de edad (porcentaje de esa franja). Las barras de abajo miden en personas afectadas los problemas sin edad: hogares y viviendas se multiplicaron por 2,5 personas por hogar (estimación).</p>
+    <p class="chico suave">Cada franja de color dentro de la curva muestra a cuántas personas representa cada problema, apilada desde la base. Las de vivienda y saneamiento no tienen edad fija: se dibujan como una capa continua sobre toda la población (2,9% y 0,7%, respectivamente).</p>
   </div>
   {% endif %}
 
@@ -111,7 +114,10 @@
           <div style="flex:1">
             <div class="fila entre" style="align-items:baseline; gap:8px">
               <b>{{ i.actor }}</b>
-              <span class="etiqueta {{ i.clase }}" tabindex="0" data-tip="Nivel de respaldo de esta lectura.">{{ i.etiqueta }}</span>
+              <span class="chips">
+                <span class="etiqueta {{ i.clase }}" tabindex="0" data-tip="Nivel de respaldo de esta lectura.">{{ i.etiqueta }}</span>
+                {% if i.base_etiqueta %}<span class="etiqueta base" tabindex="0" data-tip="De dónde sale esta lectura: un hecho con fuente, una causalidad inferida, o una opinión.">{{ i.base_etiqueta }}</span>{% endif %}
+              </span>
             </div>
             <p class="chico" style="margin:4px 0">{{ i.interes_html|safe }}</p>
             {% if i.nota %}<p class="chico suave" style="margin:0">{{ i.nota_html|safe }}</p>{% endif %}

@@ -11,25 +11,29 @@
       "paso": "Situación",
       "texto": "La ley 19.684 (2018) reconoce el derecho a la atención integral de las personas trans, incluidos tratamientos médicos, y obliga al MSP a elaborar guías clínicas (artículos 20 y 21). La guía se actualizó en 2026 con un capítulo sobre infancias, adolescencias y diversidad sexual.",
       "certeza": "probado",
-      "fuente": "Ley 19.684 (Parlamento) y guía del MSP"
+      "fuente": "Ley 19.684 (Parlamento) y guía del MSP",
+      "base": "fuente"
     },
     {
       "paso": "Intervención",
       "texto": "La guía contempla análogos de GnRH para frenar la pubertad cuando ya comenzó y se cumplen condiciones clínicas, evaluadas con la escala de Tanner. No surge del texto una edad mínima de 10 años: esa lectura circuló y fue desmentida por verificación periodística.",
       "certeza": "probado",
-      "fuente": "La diaria Verifica, 23/09/2026"
+      "fuente": "La diaria Verifica, 23/09/2026",
+      "base": "fuente"
     },
     {
       "paso": "Efecto observado",
       "texto": "No encontramos dato público sobre cuántos menores reciben bloqueadores en Uruguay ni sobre el seguimiento de resultados. En los países que sí llevan registro, las revisiones sistemáticas hallaron evidencia débil sobre beneficios y riesgos a largo plazo.",
       "certeza": "sin datos",
-      "fuente": "Cass Review (2024) y ausencia de registro uruguayo"
+      "fuente": "Cass Review (2024) y ausencia de registro uruguayo",
+      "base": "fuente"
     },
     {
       "paso": "Efecto no buscado",
       "texto": "La hipótesis es que un inicio temprano aumenta la probabilidad de pasar a hormonas y cirugía, y que volver atrás después es costoso. Hay indicios internacionales: la revisión Cass observó que, tras introducir los bloqueadores, creció la disposición a iniciar hormonas en la adolescencia, y Suecia y el Reino Unido restringieron. Lo que falta es el estudio uruguayo: no hay seguimiento local publicado.",
       "certeza": "indicios",
-      "fuente": "Cass Review (2024); Socialstyrelsen (2022); NHS (2024)"
+      "fuente": "Cass Review (2024); Socialstyrelsen (2022); NHS (2024)",
+      "base": "causalidad"
     }
   ],
   "cronologia": [
@@ -87,25 +91,29 @@
       "actor": "Industria farmacéutica",
       "interes": "Vender análogos de GnRH. Están registrados para pubertad precoz y algunos cánceres, no para disforia de género. Ipsen reportó 542,9 millones de euros en ventas de Decapeptyl en 2025.",
       "certeza": "parcial",
-      "nota": "El dato de ventas es global y de la propia empresa; no hay desagregado público por indicación ni por país. Las cifras de consultoras de mercado no coinciden entre sí y se usan solo como orden de magnitud."
+      "nota": "El dato de ventas es global y de la propia empresa; no hay desagregado público por indicación ni por país. Las cifras de consultoras de mercado no coinciden entre sí y se usan solo como orden de magnitud.",
+      "base": "causalidad"
     },
     {
       "actor": "Ministerio de Salud Pública y prestadores",
       "interes": "Aplicar la guía, cumplir la ley y evitar litigios. Su margen real depende de cuántos equipos especializados existan.",
       "certeza": "interpretacion",
-      "nota": "No hay datos públicos de cuántos equipos multidisciplinarios funcionan ni de sus tiempos de espera."
+      "nota": "No hay datos públicos de cuántos equipos multidisciplinarios funcionan ni de sus tiempos de espera.",
+      "base": "opinion"
     },
     {
       "actor": "Familias y adolescentes",
       "interes": "Buscar alivio a un malestar real y, a la vez, evitar una decisión irreversible. Ambos riesgos son concretos y no se cancelan entre sí.",
       "certeza": "interpretacion",
-      "nota": "No hay encuesta uruguaya sobre arrepentimiento ni sobre acceso efectivo."
+      "nota": "No hay encuesta uruguaya sobre arrepentimiento ni sobre acceso efectivo.",
+      "base": "opinion"
     },
     {
       "actor": "Organizaciones trans y colectivos críticos",
       "interes": "Las primeras defienden el acceso como derecho; los segundos piden cautela y seguimiento. Ambos citan estudios, y la revisión Cass advierte que las dos partes exageran la evidencia.",
       "certeza": "probado",
-      "nota": "La advertencia sobre el uso exagerado de estudios en ambos lados está en la revisión Cass."
+      "nota": "La advertencia sobre el uso exagerado de estudios en ambos lados está en la revisión Cass.",
+      "base": "fuente"
     }
   ],
   "patron": {
@@ -115,7 +123,9 @@
       "Quién financió y redactó la actualización de la guía.",
       "Qué reuniones y actores participaron en la decisión.",
       "Si hubo pedidos de familias u organizaciones antes de la ley."
-    ]
+    ],
+    "base_observado": "opinion",
+    "base_no_probado": "fuente"
   },
   "glosario": {
     "análogos de GnRH": "Medicamentos que frenan la pubertad bloqueando la señal hormonal. Se usan hace décadas en pubertad precoz y en algunos cánceres; para disforia de género no tienen registro sanitario específico en varios países.",
@@ -552,13 +562,34 @@
     ],
     "superficies": [
       {
+        "etiqueta": "Déficit de vivienda",
+        "desde": 0,
+        "hasta": 95,
+        "afectados": 100000,
+        "base": 3499451,
+        "slug": "alquileres-y-vivienda",
+        "color": "#c2410c",
+        "nota": "40.000 viviendas; a 2,5 personas por hogar son unas 100.000 personas (estimación)."
+      },
+      {
+        "etiqueta": "Hogares sin baño de uso exclusivo",
+        "desde": 0,
+        "hasta": 95,
+        "afectados": 23618,
+        "base": 3499451,
+        "slug": "agua-y-saneamiento",
+        "color": "#16a34a",
+        "nota": "9.447 hogares; a 2,5 personas por hogar son unas 23.600 personas (estimación)."
+      },
+      {
         "etiqueta": "Personas de 65 años o más en dependencia",
         "desde": 65,
         "hasta": 95,
         "afectados": 110000,
         "base": 545301,
         "slug": "cuidados-personas-mayores",
-        "fuente": "Plan Nacional de Cuidados: 110 mil en dependencia sobre 545.301 mayores de 65 (Censo 2023)."
+        "color": "#0e7490",
+        "nota": "110.000 en dependencia sobre 545.301 mayores de 65 (Censo 2023)."
       },
       {
         "etiqueta": "Personas privadas de libertad",
@@ -566,7 +597,8 @@
         "hasta": 65,
         "afectados": 16570,
         "slug": "hacinamiento-carcelario",
-        "fuente": "16.570 personas privadas de libertad (cierre 2025), sobre la población de 20 a 64 años."
+        "color": "#7c3aed",
+        "nota": "16.570 personas privadas de libertad (cierre 2025), sobre la población de 20 a 64 años."
       },
       {
         "etiqueta": "Fuera del sistema educativo",
@@ -574,37 +606,13 @@
         "hasta": 20,
         "afectados": 5212,
         "slug": "secundaria-y-utu",
-        "fuente": "5.212 personas en edad escolar no matriculadas, sobre la población de 5 a 19 años."
+        "color": "#d97706",
+        "nota": "5.212 personas en edad escolar no matriculadas, sobre la población de 5 a 19 años."
       }
     ],
-    "barras": [
-      {
-        "etiqueta": "Déficit de vivienda",
-        "cantidad": 40000,
-        "unidad": "viviendas",
-        "personas": 100000,
-        "slug": "alquileres-y-vivienda",
-        "emoji": "🚫🏠",
-        "nota": "40.000 viviendas; a 2,5 personas por hogar son unas 100.000 personas (estimación)."
-      },
-      {
-        "etiqueta": "Hogares sin baño de uso exclusivo",
-        "cantidad": 9447,
-        "unidad": "hogares",
-        "personas": 23618,
-        "slug": "agua-y-saneamiento",
-        "emoji": "🚽",
-        "nota": "9.447 hogares; a 2,5 personas por hogar son unas 23.600 personas (estimación)."
-      },
-      {
-        "etiqueta": "Este caso: menores en tratamiento",
-        "cantidad": null,
-        "unidad": "sin dato",
-        "personas": 0,
-        "slug": null,
-        "emoji": "🧪",
-        "nota": "No hay dato público de cuántos menores reciben bloqueadores u hormonas."
-      }
-    ]
+    "caso": {
+      "etiqueta": "Este caso: menores en tratamiento",
+      "nota": "Sin dato público de cuántos menores reciben bloqueadores u hormonas."
+    }
   }
 }

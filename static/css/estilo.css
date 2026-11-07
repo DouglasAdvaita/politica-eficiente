@@ -138,6 +138,9 @@ textarea { min-height: 96px; resize: vertical; }
 .etiqueta.azul::before { background: var(--azul); }
 .etiqueta.rosa { color: var(--rosa); }
 .etiqueta.rosa::before { background: var(--rosa); }
+.etiqueta.base { color: #6b7686; font-weight: 600; }
+.etiqueta.base::before { background: #c3cbd6; border-radius: 0; }
+.etiqueta.base[data-tip]:hover::before { background: var(--tinta); }
 
 /* ---------- popups de ayuda (tooltips) ---------- */
 [data-tip] { position: relative; cursor: help; }
