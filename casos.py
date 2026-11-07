@@ -461,7 +461,7 @@ def svg_vinculos(caso):
 
 
 def svg_bio(persona):
-    """Minigráfica de la trayectoria de una persona: años con puntos y popups."""
+    """Minigráfica compacta de la trayectoria."""
     hitos = persona.get("hitos") or []
     if not hitos:
         return ""
@@ -470,6 +470,7 @@ def svg_bio(persona):
     profesion = persona.get("profesion", "")
     vinculaciones = persona.get("vinculaciones") or []
     nota = persona.get("nota", "")
+    emoji = persona.get("emoji", "")
     resumen = "%s · %s. %s" % (rol, profesion, nota)
     for v in vinculaciones:
         resumen += "\n• %s: %s" % (v.get("tipo"), v.get("detalle"))
@@ -477,13 +478,13 @@ def svg_bio(persona):
     if not xs:
         return ""
     x0, x1 = min(xs) - 0.4, max(xs) + 0.4
-    W, H = 760, 84
-    izq, der, yline = 90, 30, 40
+    W, H = 760, 62
+    izq, der, yline = 60, 20, 26
     partes = ['<svg viewBox="0 0 %d %d" class="bio-svg" role="img" '
               'aria-label="Trayectoria de %s">' % (W, H, html.escape(nombre))]
-    partes.append('<text x="10" y="20" class="nt">%s <tspan class="suave" fill="#5d6877">· %s (%s)</tspan>'
+    partes.append('<text x="10" y="16" class="nt">%s %s <tspan class="suave" fill="#5d6877">· %s (%s)</tspan>'
                   '<title>%s</title></text>'
-                  % (html.escape(nombre), html.escape(rol), html.escape(profesion),
+                  % (html.escape(emoji), html.escape(nombre), html.escape(rol), html.escape(profesion),
                      html.escape(resumen)))
 
     def px(x):
@@ -492,31 +493,27 @@ def svg_bio(persona):
     partes.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="#d6dbe3"/>'
                   % (izq, yline, W - der, yline))
     import math
-    rango = x1 - x0
-    paso = 1
-    for p in (1, 2, 5, 10, 20, 50):
-        if rango / p <= 6:
-            paso = p
-            break
-    inicio = int(math.ceil(x0 / paso)) * paso
-    for anio in range(inicio, int(math.floor(x1)) + 1, paso):
-        partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d</text>'
-                      % (px(anio), yline + 20, anio))
-    # puntos (de abajo hacia arriba, alternando altura para evitar superposición)
+    inicio = int(math.ceil(x0 / 5.0)) * 5
+    for anio in range(inicio, int(math.floor(x1)) + 1, 5):
+        x = px(anio)
+        partes.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="#9aa4b2" stroke-width="1"/>'
+                      % (x, yline, x, yline + 5))
+        partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje" '
+                      'font-size="6">%d</text>'
+                      % (x, yline + 14, anio))
     for i, h in enumerate(hitos):
         x = px(h["x"])
-        y = yline - (6 + (i % 3) * 12)
+        y = yline - (4 + (i % 2) * 8)
         titulo = "%s: %s" % (h.get("anio", ""), h.get("hecho", ""))
         enlace = h.get("fuente") or "#"
         partes.append('<a href="%s" target="_blank" rel="noopener">'
-                      '<circle cx="%.1f" cy="%.1f" r="4" fill="#1a222d" stroke="#ffffff" '
-                      'stroke-width="1.5"><title>%s</title></circle></a>'
+                      '<circle cx="%.1f" cy="%.1f" r="3" fill="#1a222d" stroke="#ffffff" '
+                      'stroke-width="1.2"><title>%s</title></circle></a>'
                       % (html.escape(enlace), x, y, html.escape(titulo)))
         partes.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%d" stroke="#c3cbd6"/>'
-                      % (x, y + 4, x, yline))
+                      % (x, y + 3, x, yline))
     partes.append("</svg>")
     return "".join(partes)
-
 
 def enriquecer(caso):
     """Aplica el glosario del caso a los textos que se muestran."""

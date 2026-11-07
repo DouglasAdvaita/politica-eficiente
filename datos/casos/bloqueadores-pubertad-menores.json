@@ -973,7 +973,8 @@
           "tipo": "Posición",
           "detalle": "Crítica de la OMS y de la «Agenda 2030»; a favor de la «soberanía individual»."
         }
-      ]
+      ],
+      "emoji": "🦷"
     },
     {
       "nombre": "Hilary Cass",
@@ -1059,7 +1060,8 @@
           "hecho": "Nombrada Baronesa Cass, par vitalicio (crossbench).",
           "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass"
         }
-      ]
+      ],
+      "emoji": "🩺"
     }
   ],
   "vinculos": {
@@ -1219,7 +1221,8 @@
           "hecho": "Muere Henri Beaufour; su participación pasa a una fundación y un trust offshore.",
           "fuente": "https://www.bloomberg.com/news/articles/2026-06-23/billionaire-french-pharma-heir-leaves-riches-to-mystery-charity"
         }
-      ]
+      ],
+      "emoji": "💊"
     },
     {
       "nombre": "AbbVie",
@@ -1275,7 +1278,8 @@
           "hecho": "NYT: Humira generó US$114.000 M gracias al «patent thicket» (muro de patentes).",
           "fuente": "https://www.nytimes.com/2023/01/28/business/humira-abbvie-monopoly.html"
         }
-      ]
+      ],
+      "emoji": "💊"
     }
   ]
 }
