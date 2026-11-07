@@ -52,6 +52,26 @@ def registrar(nombre, email, clave, intereses="", departamento=""):
             ),
         )
         fila = db.uno("SELECT id FROM usuarios WHERE email = ?", (email,))
+        # migrar votos y opiniones anonimos de esta sesion a la nueva cuenta
+        anon = None
+        try:
+            anon = session.get("anon_id")
+        except Exception:
+            anon = None
+        if anon:
+            db.ejecutar(
+                "INSERT INTO votos (usuario_id, tema_id, valor, creado) "
+                "SELECT ?, tema_id, valor, creado FROM votos_anon va WHERE anon_id = ? "
+                "AND NOT EXISTS (SELECT 1 FROM votos v WHERE v.usuario_id = ? AND v.tema_id = va.tema_id)",
+                (fila["id"], anon, fila["id"]),
+            )
+            db.ejecutar("DELETE FROM votos_anon WHERE anon_id = ?", (anon,))
+            db.ejecutar(
+                "INSERT INTO opiniones (tema_id, usuario_id, texto, hash, creado) "
+                "SELECT tema_id, ?, texto, hash, creado FROM opiniones_anon WHERE anon_id = ?",
+                (fila["id"], anon),
+            )
+            db.ejecutar("DELETE FROM opiniones_anon WHERE anon_id = ?", (anon,))
         dbm.registrar_actividad(
             db, fila["id"], "registro",
             __import__("gamificacion").PUNTOS["registro"], "Se sumó a la comunidad",

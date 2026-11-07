@@ -122,6 +122,24 @@ CREATE TABLE IF NOT EXISTS opiniones (
     creado TEXT NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS votos_anon (
+    id {AUTO},
+    anon_id TEXT NOT NULL,
+    tema_id INTEGER NOT NULL,
+    valor SMALLINT NOT NULL,
+    creado TEXT NOT NULL,
+    UNIQUE (anon_id, tema_id)
+);
+
+CREATE TABLE IF NOT EXISTS opiniones_anon (
+    id {AUTO},
+    tema_id INTEGER NOT NULL,
+    anon_id TEXT NOT NULL,
+    texto TEXT NOT NULL,
+    hash TEXT NOT NULL DEFAULT '',
+    creado TEXT NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS acciones (
     id {AUTO},
     politico_id INTEGER NOT NULL,

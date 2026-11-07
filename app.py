@@ -18,6 +18,7 @@ from flask import (
 from markupsafe import Markup
 
 import auth
+import secrets
 import casos as casosmod
 import db as dbm
 import desempeno
@@ -165,6 +166,13 @@ def _slug_de_tema(slug):
         return db.uno("SELECT * FROM temas WHERE slug = ?", (slug,))
 
 
+def _anon_id():
+    """Identificador anonimo persistente en cookie de sesion (para votos/opiniones sin cuenta)."""
+    if "anon_id" not in session:
+        session["anon_id"] = secrets.token_hex(16)
+    return session["anon_id"]
+
+
 @app.route("/")
 def inicio():
     with dbm.abrir() as db:
@@ -269,8 +277,10 @@ def tema(slug):
     with dbm.abrir() as db:
         t = db.uno(
             """SELECT t.*,
-                  (SELECT COUNT(*) FROM votos v WHERE v.tema_id = t.id AND v.valor = 1) AS a_favor,
-                  (SELECT COUNT(*) FROM votos v WHERE v.tema_id = t.id AND v.valor = -1) AS en_contra
+                  (SELECT COUNT(*) FROM votos v WHERE v.tema_id = t.id AND v.valor = 1) +
+                  (SELECT COUNT(*) FROM votos_anon va WHERE va.tema_id = t.id AND va.valor = 1) AS a_favor,
+                  (SELECT COUNT(*) FROM votos v WHERE v.tema_id = t.id AND v.valor = -1) +
+                  (SELECT COUNT(*) FROM votos_anon va WHERE va.tema_id = t.id AND va.valor = -1) AS en_contra
                FROM temas t WHERE t.slug = ?""",
             (slug,),
         )
@@ -284,13 +294,25 @@ def tema(slug):
                 (yo["id"], t["id"]),
             )
             mi_voto = fila["valor"] if fila else None
+        else:
+            fila = db.uno(
+                "SELECT valor FROM votos_anon WHERE anon_id = ? AND tema_id = ?",
+                (_anon_id(), t["id"]),
+            )
+            mi_voto = fila["valor"] if fila else None
         opiniones = db.todos(
             """SELECT o.*, u.nombre, u.puntos,
                       p.nombre AS politico_nombre, p.cargo AS politico_cargo
                FROM opiniones o JOIN usuarios u ON u.id = o.usuario_id
                LEFT JOIN politicos p ON p.id = o.politico_id
-               WHERE o.tema_id = ? ORDER BY o.id DESC""",
-            (t["id"],),
+               WHERE o.tema_id = ?
+               UNION ALL
+               SELECT oa.id, oa.tema_id, NULL AS usuario_id, NULL AS politico_id, NULL AS padre_id,
+                      oa.texto, oa.hash, oa.creado, 'Anónimo' AS nombre, 0 AS puntos,
+                      NULL AS politico_nombre, NULL AS politico_cargo
+               FROM opiniones_anon oa WHERE oa.tema_id = ?
+               ORDER BY creado DESC""",
+            (t["id"], t["id"]),
         )
         posicionados = db.todos(
             """SELECT p.*, pos.valor, pos.nota FROM posiciones pos
@@ -323,8 +345,6 @@ def tema(slug):
 @app.route("/tema/<slug>/votar", methods=["POST"])
 def votar(slug):
     yo = auth.usuario_actual()
-    if not yo:
-        return redirect(url_for("ingresar", volver=request.path.replace("/votar", "")))
     try:
         valor = 1 if int(request.form.get("valor", 0)) > 0 else -1
     except ValueError:
@@ -333,64 +353,97 @@ def votar(slug):
         t = db.uno("SELECT id, titulo FROM temas WHERE slug = ?", (slug,))
         if not t:
             abort(404)
-        previo = db.uno(
-            "SELECT id, valor FROM votos WHERE usuario_id = ? AND tema_id = ?",
-            (yo["id"], t["id"]),
-        )
-        if previo and previo["valor"] == valor:
-            db.ejecutar("DELETE FROM votos WHERE id = ?", (previo["id"],))
-            flash("Quité tu voto.", "ok")
-        elif previo:
-            db.ejecutar("UPDATE votos SET valor = ? WHERE id = ?", (valor, previo["id"]))
-            flash("Cambiaste tu voto.", "ok")
+        if yo:
+            previo = db.uno(
+                "SELECT id, valor FROM votos WHERE usuario_id = ? AND tema_id = ?",
+                (yo["id"], t["id"]),
+            )
+            if previo and previo["valor"] == valor:
+                db.ejecutar("DELETE FROM votos WHERE id = ?", (previo["id"],))
+                flash("Quité tu voto.", "ok")
+            elif previo:
+                db.ejecutar("UPDATE votos SET valor = ? WHERE id = ?", (valor, previo["id"]))
+                flash("Cambiaste tu voto.", "ok")
+            else:
+                db.ejecutar(
+                    "INSERT INTO votos (usuario_id, tema_id, valor, creado) VALUES (?, ?, ?, ?)",
+                    (yo["id"], t["id"], valor, dbm.ahora()),
+                )
+                dbm.registrar_actividad(db, yo["id"], "voto", gamificacion.PUNTOS["voto"], "Voto en " + t["titulo"])
+                flash(f"Voto registrado. +{gamificacion.PUNTOS['voto']} puntos.", "ok")
         else:
-            db.ejecutar(
-                "INSERT INTO votos (usuario_id, tema_id, valor, creado) VALUES (?, ?, ?, ?)",
-                (yo["id"], t["id"], valor, dbm.ahora()),
+            anon = _anon_id()
+            previo = db.uno(
+                "SELECT id, valor FROM votos_anon WHERE anon_id = ? AND tema_id = ?",
+                (anon, t["id"]),
             )
-            dbm.registrar_actividad(
-                db, yo["id"], "voto", gamificacion.PUNTOS["voto"], f"Votó en {t['titulo']}"
-            )
-            flash(f"Voto registrado. +{gamificacion.PUNTOS['voto']} puntos.", "ok")
+            if previo and previo["valor"] == valor:
+                db.ejecutar("DELETE FROM votos_anon WHERE id = ?", (previo["id"],))
+                flash("Quité tu voto.", "ok")
+            elif previo:
+                db.ejecutar("UPDATE votos_anon SET valor = ? WHERE id = ?", (valor, previo["id"]))
+                flash("Cambiaste tu voto.", "ok")
+            else:
+                db.ejecutar(
+                    "INSERT INTO votos_anon (anon_id, tema_id, valor, creado) VALUES (?, ?, ?, ?)",
+                    (anon, t["id"], valor, dbm.ahora()),
+                )
+                flash("Voto registrado (sin cuenta).", "ok")
     return redirect(url_for("tema", slug=slug))
 
 
 @app.route("/tema/<slug>/opinar", methods=["POST"])
-@auth.requiere_sesion
 def opinar(slug):
     texto = (request.form.get("texto") or "").strip()
     if len(texto) < 3:
-        flash("Escribí al menos una frase.", "error")
+        flash("Escribi al menos una frase.", "error")
         return redirect(url_for("tema", slug=slug))
     yo = auth.usuario_actual()
     with dbm.abrir() as db:
         t = db.uno("SELECT id, titulo FROM temas WHERE slug = ?", (slug,))
         if not t:
             abort(404)
-        recientes = db.valor(
-            "SELECT COUNT(*) FROM opiniones WHERE usuario_id = ? AND creado >= ?",
-            (yo["id"], _corte(5))) or 0
-        if recientes >= 4:
-            flash("Publicaste varias opiniones seguidas. Esperá unos minutos antes de seguir.", "error")
-            return redirect(url_for("tema", slug=slug) + "#foro")
-        marca = _huella(texto[:2000])
-        repetida = db.uno(
-            """SELECT id FROM opiniones WHERE tema_id = ? AND hash = ? AND creado >= ?
-               LIMIT 1""",
-            (t["id"], marca, _corte(24 * 60)))
-        if repetida:
-            flash("Ese mismo texto ya está publicado en este tema. Amplialo si querés agregar algo.", "error")
-            return redirect(url_for("tema", slug=slug) + "#foro")
-        db.ejecutar(
-            """INSERT INTO opiniones (tema_id, usuario_id, politico_id, texto, hash, creado)
-               VALUES (?, ?, ?, ?, ?, ?)""",
-            (t["id"], yo["id"], (yo.get("politico") or {}).get("id"), texto[:2000],
-             marca, dbm.ahora()),
-        )
-        dbm.registrar_actividad(
-            db, yo["id"], "opinion", gamificacion.PUNTOS["opinion"], f"Opinión en {t['titulo']}"
-        )
-    flash(f"Opinión publicada. +{gamificacion.PUNTOS['opinion']} puntos.", "ok")
+        if yo:
+            recientes = db.valor(
+                "SELECT COUNT(*) FROM opiniones WHERE usuario_id = ? AND creado >= ?",
+                (yo["id"], _corte(5))) or 0
+            if recientes >= 4:
+                flash("Publicaste varias opiniones seguidas. Espera unos minutos antes de seguir.", "error")
+                return redirect(url_for("tema", slug=slug) + "#foro")
+            marca = _huella(texto[:2000])
+            repetida = db.uno(
+                """SELECT id FROM opiniones WHERE tema_id = ? AND hash = ? AND creado >= ?
+                   LIMIT 1""",
+                (t["id"], marca, _corte(24 * 60)))
+            if repetida:
+                flash("Ese mismo texto ya esta publicado en este tema. Amplialo si queres agregar algo.", "error")
+                return redirect(url_for("tema", slug=slug) + "#foro")
+            db.ejecutar(
+                """INSERT INTO opiniones (tema_id, usuario_id, politico_id, texto, hash, creado)
+                   VALUES (?, ?, ?, ?, ?, ?)""",
+                (t["id"], yo["id"], (yo.get("politico") or {}).get("id"), texto[:2000],
+                 marca, dbm.ahora()),
+            )
+            dbm.registrar_actividad(
+                db, yo["id"], "opinion", gamificacion.PUNTOS["opinion"], "Opinion en " + t["titulo"]
+            )
+            flash("Opinion publicada. +" + str(gamificacion.PUNTOS["opinion"]) + " puntos.", "ok")
+        else:
+            anon = _anon_id()
+            marca = _huella(texto[:2000])
+            repetida = db.uno(
+                """SELECT id FROM opiniones_anon WHERE tema_id = ? AND hash = ? AND creado >= ?
+                   LIMIT 1""",
+                (t["id"], marca, _corte(24 * 60)))
+            if repetida:
+                flash("Ese mismo texto ya esta publicado en este tema. Amplialo si queres agregar algo.", "error")
+                return redirect(url_for("tema", slug=slug) + "#foro")
+            db.ejecutar(
+                """INSERT INTO opiniones_anon (tema_id, anon_id, texto, hash, creado)
+                   VALUES (?, ?, ?, ?, ?)""",
+                (t["id"], anon, texto[:2000], marca, dbm.ahora()),
+            )
+            flash("Opinion publicada (sin cuenta).", "ok")
     return redirect(url_for("tema", slug=slug) + "#foro")
 
 

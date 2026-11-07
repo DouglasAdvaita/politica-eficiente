@@ -29,20 +29,15 @@
   </div>
 
   <div class="votar">
-    {% if yo %}
-      <form method="post" action="{{ url_for('votar', slug=t.slug) }}">
-        <input type="hidden" name="valor" value="1">
-        <button class="boton favor {% if mi_voto == 1 %}activo{% endif %}" type="submit">👍 A favor</button>
-      </form>
-      <form method="post" action="{{ url_for('votar', slug=t.slug) }}">
-        <input type="hidden" name="valor" value="-1">
-        <button class="boton contra {% if mi_voto == -1 %}activo{% endif %}" type="submit">👎 En contra</button>
-      </form>
-      <span class="chico suave">Un voto por tema; podés cambiarlo o quitarlo.</span>
-    {% else %}
-      <a class="boton principal" href="{{ url_for('ingresar', volver=request.path) }}">Ingresá para votar</a>
-      <a class="boton" href="{{ url_for('registro') }}">Crear cuenta (10 pts de regalo)</a>
-    {% endif %}
+    <form method="post" action="{{ url_for('votar', slug=t.slug) }}">
+      <input type="hidden" name="valor" value="1">
+      <button class="boton favor {% if mi_voto == 1 %}activo{% endif %}" type="submit">👍 A favor</button>
+    </form>
+    <form method="post" action="{{ url_for('votar', slug=t.slug) }}">
+      <input type="hidden" name="valor" value="-1">
+      <button class="boton contra {% if mi_voto == -1 %}activo{% endif %}" type="submit">👎 En contra</button>
+    </form>
+    <span class="chico suave">Un voto por tema; podés cambiarlo o quitarlo.</span>
   </div>
 
   <div class="fila entre chico" style="margin-top:6px">
@@ -177,7 +172,14 @@
         </div>
       </form>
     {% else %}
-      <p class="suave">Para escribir en el foro necesitás una cuenta. <a href="{{ url_for('registro') }}">Crear cuenta</a> o <a href="{{ url_for('ingresar', volver=request.path) }}">ingresar</a>.</p>
+      <form method="post" action="{{ url_for('opinar', slug=t.slug) }}">
+        <label for="texto">Tu opinión (sin cuenta)</label>
+        <textarea id="texto" name="texto" maxlength="2000" placeholder="Qué pensás, qué falta, qué cambiarías…" required></textarea>
+        <div class="fila entre" style="margin-top:8px">
+          <span class="chico suave">Se publica como anónimo.</span>
+          <button class="boton principal" type="submit">Publicar</button>
+        </div>
+      </form>
     {% endif %}
 
     <div style="margin-top:14px">
