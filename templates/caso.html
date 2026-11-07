@@ -66,11 +66,22 @@
   </div>
   {% endif %}
 
-  {% if c.necesidades_svg %}
+  {% if c.negocio_svg %}
+  <div class="bloque">
+    <h4>El negocio: <span class="palabra" tabindex="0" data-tip="{{ c.negocio.nota }}">{{ c.negocio.empresa }}</span></h4>
+    <p class="chico suave">{{ c.negocio.nota_html|safe }}</p>
+    {{ c.negocio_svg|safe }}
+    <p class="chico suave">{{ c.negocio.fuente_total }}</p>
+    <p class="chico suave">{{ c.negocio.fuente_decapeptyl }}</p>
+  </div>
+  {% endif %}
+
+  {% if c.poblacion_svg %}
   <div class="bloque">
     <h4>Dónde encaja</h4>
-    <p class="chico suave">{{ c.donde_encaja.escala }}</p>
-    {{ c.necesidades_svg|safe }}
+    <p class="chico suave">{{ c.poblacion.fuente }}</p>
+    {{ c.poblacion_svg|safe }}
+    <p class="chico suave">La superficie sombreada bajo la curva de 65+ muestra a cuántos representa el problema dentro de su franja de edad. Las barras de abajo miden en personas afectadas los problemas sin edad: hogares y viviendas se multiplicaron por 2,5 personas por hogar (estimación).</p>
   </div>
   {% endif %}
 

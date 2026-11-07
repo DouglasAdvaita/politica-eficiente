@@ -125,46 +125,10 @@
     "evidencia débil": "Datos de baja calidad o escasos: no alcanzan para afirmar que un tratamiento funciona o es seguro, aunque tampoco prueban lo contrario.",
     "hipótesis": "Explicación posible que todavía no está probada y que se contrasta con datos.",
     "NHS": "Servicio Nacional de Salud del Reino Unido.",
-    "Ukom": "Junta de Investigación de Salud de Noruega, organismo independiente que recomendó tratar estos tratamientos como experimentales."
-  },
-  "donde_encaja": {
-    "escala": "Magnitud estimada, en unidades distintas. La barra es logarítmica para que se puedan comparar. Cada punto abre el tema con sus datos.",
-    "prioridades": [
-      {
-        "tema": "Personas mayores en dependencia",
-        "slug": "cuidados-personas-mayores",
-        "poblacion": 110000,
-        "unidad": "personas"
-      },
-      {
-        "tema": "Déficit de vivienda",
-        "slug": "alquileres-y-vivienda",
-        "poblacion": 40000,
-        "unidad": "viviendas"
-      },
-      {
-        "tema": "Personas privadas de libertad",
-        "slug": "hacinamiento-carcelario",
-        "poblacion": 16570,
-        "unidad": "personas"
-      },
-      {
-        "tema": "Hogares sin baño",
-        "slug": "agua-y-saneamiento",
-        "poblacion": 9447,
-        "unidad": "hogares"
-      },
-      {
-        "tema": "Fuera del sistema educativo",
-        "slug": "secundaria-y-utu",
-        "poblacion": 5212,
-        "unidad": "personas"
-      }
-    ],
-    "caso": {
-      "poblacion": 0,
-      "nota": "Menores en tratamiento: sin dato público"
-    }
+    "Ukom": "Junta de Investigación de Salud de Noruega, organismo independiente que recomendó tratar estos tratamientos como experimentales.",
+    "Ipsen": "Compañía farmacéutica francesa. Su producto Decapeptyl es el análogo de GnRH usado como bloqueador de pubertad, comercializado en más de 80 países.",
+    "Decapeptyl": "Marca del análogo de GnRH de Ipsen, usado como bloqueador de pubertad.",
+    "GnRH": "Hormona liberadora de gonadotropina; los análogos de GnRH frenan la pubertad."
   },
   "parlamento": {
     "nota": "Un pedido de informes no es una respuesta: si no hay seguimiento, el dato sigue faltando.",
@@ -411,5 +375,184 @@
   "costo_duda": "Finlandia (2020), Suecia (2022) y el Reino Unido (2024) restringieron y recibieron críticas de sociedades científicas y activistas que las acusaron de negar atención. Aun así lo hicieron. Eso explica por qué un país chico puede preferir no medir: medir obliga a decidir.",
   "carga_prueba": "Hoy se pide a los críticos que demuestren el daño, pero no se pide a los promotores que demuestren el beneficio a largo plazo. Esa inversión es el centro del problema: una intervención nueva debería probar que funciona antes de volverse estándar, no al revés.",
   "cierre": "La pregunta no es si Uruguay repite a Suecia. Es por qué, ocho años después de la ley, nadie sabe cuántos menores trató ni con qué resultado, y por qué preguntarlo se volvió sospechoso.",
-  "nota_ia": "Este texto fue asistido por IA y revisado por humanos. Cada afirmación relevante tiene su fuente enlazada y fecha de consulta. Los errores son nuestros."
+  "nota_ia": "Este texto fue asistido por IA y revisado por humanos. Cada afirmación relevante tiene su fuente enlazada y fecha de consulta. Los errores son nuestros.",
+  "negocio": {
+    "empresa": "Ipsen",
+    "nota": "Decapeptyl es el análogo de GnRH de Ipsen. Está registrado para cáncer de próstata avanzado, miomas, pubertad precoz central, endometriosis, infertilidad y cáncer de mama. La disforia de género no figura entre sus indicaciones y la empresa no publica ventas por indicación.",
+    "productos": [
+      {
+        "anio": 2023,
+        "Somatuline": 1065.6,
+        "Cabometyx": 534.8,
+        "Dysport": 648.8,
+        "Decapeptyl": 545.5,
+        "Resto": 332.8
+      },
+      {
+        "anio": 2024,
+        "Somatuline": 1121.3,
+        "Cabometyx": 594.8,
+        "Dysport": 689.7,
+        "Decapeptyl": 535.9,
+        "Resto": 458.9
+      }
+    ],
+    "decapeptyl": [
+      {
+        "anio": 2023,
+        "valor": 545.5
+      },
+      {
+        "anio": 2024,
+        "valor": 535.9
+      },
+      {
+        "anio": 2025,
+        "valor": 542.9,
+        "aprox": true
+      }
+    ],
+    "fuente_total": "Ipsen, resultados anuales: ventas totales 3.400,6 M€ (2024) y 3.127,5 M€ (2023); el desglose por producto se publica solo para estos dos años.",
+    "fuente_decapeptyl": "Decapeptyl 2023-2024 del reporte anual de Ipsen; 2025 es estimación de prensa/DataM (≈)."
+  },
+  "poblacion": {
+    "fuente": "INE, Censo 2023: población por grupo quinquenal de edades.",
+    "total": 3499451,
+    "edades": [
+      [
+        0,
+        177587
+      ],
+      [
+        5,
+        230968
+      ],
+      [
+        10,
+        237623
+      ],
+      [
+        15,
+        238789
+      ],
+      [
+        20,
+        244026
+      ],
+      [
+        25,
+        259518
+      ],
+      [
+        30,
+        251233
+      ],
+      [
+        35,
+        243642
+      ],
+      [
+        40,
+        238024
+      ],
+      [
+        45,
+        238014
+      ],
+      [
+        50,
+        210944
+      ],
+      [
+        55,
+        193872
+      ],
+      [
+        60,
+        189910
+      ],
+      [
+        65,
+        165347
+      ],
+      [
+        70,
+        131676
+      ],
+      [
+        75,
+        103248
+      ],
+      [
+        80,
+        73372
+      ],
+      [
+        85,
+        44393
+      ],
+      [
+        90,
+        27265
+      ]
+    ],
+    "superficies": [
+      {
+        "etiqueta": "Personas de 65 años o más en situación de dependencia",
+        "desde": 65,
+        "hasta": 95,
+        "afectados": 110000,
+        "base": 545301,
+        "slug": "cuidados-personas-mayores",
+        "fuente": "Plan Nacional de Cuidados 2026-2030: 110 mil personas en dependencia sobre 545.301 mayores de 65 (Censo 2023)."
+      }
+    ],
+    "barras": [
+      {
+        "etiqueta": "Déficit de vivienda",
+        "cantidad": 40000,
+        "unidad": "viviendas",
+        "personas": 100000,
+        "slug": "alquileres-y-vivienda",
+        "nota": "40.000 viviendas; a 2,5 personas por hogar son unas 100.000 personas (estimación).",
+        "emoji": "🚫🏠"
+      },
+      {
+        "etiqueta": "Hogares sin baño de uso exclusivo",
+        "cantidad": 9447,
+        "unidad": "hogares",
+        "personas": 23618,
+        "slug": "agua-y-saneamiento",
+        "nota": "9.447 hogares; a 2,5 personas por hogar son unas 23.600 personas (estimación).",
+        "emoji": "🚽"
+      },
+      {
+        "etiqueta": "Personas privadas de libertad",
+        "cantidad": 16570,
+        "unidad": "personas",
+        "personas": 16570,
+        "slug": "hacinamiento-carcelario",
+        "nota": "16.570 personas al cierre de 2025.",
+        "emoji": "🔒"
+      },
+      {
+        "etiqueta": "Fuera del sistema educativo",
+        "cantidad": 5212,
+        "unidad": "personas",
+        "personas": 5212,
+        "slug": "secundaria-y-utu",
+        "nota": "5.212 personas en edad escolar no matriculadas.",
+        "emoji": "🎓"
+      },
+      {
+        "etiqueta": "Este caso: menores en tratamiento",
+        "cantidad": null,
+        "unidad": "sin dato",
+        "personas": 0,
+        "slug": null,
+        "nota": "No hay dato público de cuántos menores reciben bloqueadores u hormonas.",
+        "emoji": "🧪"
+      }
+    ]
+  }
 }

@@ -259,9 +259,11 @@ textarea { min-height: 96px; resize: vertical; }
 .curvas-svg { width: 100%; height: auto; margin: 6px 0 2px; }
 .curvas-svg .eje { font-size: 11px; fill: #6b7686; }
 .curvas-svg .et { font-size: 11px; fill: #333d4b; }
-.necesidades-svg { width: 100%; height: auto; margin: 6px 0 2px; }
-.necesidades-svg .eje { font-size: 11px; fill: #6b7686; }
-.necesidades-svg .et { font-size: 11px; fill: #333d4b; }
+.negocio-svg, .poblacion-svg { width: 100%; height: auto; margin: 6px 0 2px; }
+.negocio-svg .nt, .poblacion-svg .nt { font-size: 12px; font-weight: 600; fill: #1a222d; }
+.negocio-svg .eje, .poblacion-svg .eje { font-size: 10px; fill: #6b7686; }
+.negocio-svg .et, .poblacion-svg .et { font-size: 11px; fill: #333d4b; }
+.negocio-svg .nd { font-size: 11px; font-weight: 700; fill: #c2410c; }
 .cierre { border-color: var(--tinta); background: #f4f6f9; }
 .cierre p { margin: 0; font-size: 1rem; line-height: 1.6; }
 

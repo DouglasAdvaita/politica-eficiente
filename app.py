@@ -400,7 +400,8 @@ def caso(slug):
     if not d:
         abort(404)
     d["curvas_svg"] = casosmod.svg_curvas(d)
-    d["necesidades_svg"] = casosmod.svg_necesidades(d)
+    d["negocio_svg"] = casosmod.svg_negocio(d)
+    d["poblacion_svg"] = casosmod.svg_poblacion(d)
     return render_template("caso.html", c=d)
 
 

@@ -124,42 +124,212 @@ def svg_curvas(caso):
     return "".join(partes)
 
 
-def svg_necesidades(caso):
-    """Barras horizontales (escala log) con la magnitud de cada problema."""
-    datos = caso.get("donde_encaja") or {}
-    filas = datos.get("prioridades") or []
-    if not filas:
+def _fmt(n):
+    """1234 -> '1.234' (miles con punto)."""
+    return format(int(round(n)), ",").replace(",", ".")
+
+
+def _fmt_m(n):
+    """Millones de euros: 1065.6 -> '1.065,6'."""
+    s = ("%.1f" % n).replace(".", ",")
+    ent, dec = s.split(",")
+    ent = format(int(ent), ",").replace(",", ".")
+    return ent + ("," + dec if dec != "0" else "")
+
+
+def svg_negocio(caso):
+    """Ventas de la empresa por anio (barras apiladas por producto) y del rubro destacado."""
+    neg = caso.get("negocio") or {}
+    productos = neg.get("productos") or []
+    deca = neg.get("decapeptyl") or []
+    if not productos and not deca:
         return ""
-    import math
-    tope = max(f["poblacion"] for f in filas)
-    W, alto_fila = 760, 38
-    H = alto_fila * (len(filas) + 1) + 20
-    etiqueta, barra_ini, barra_fin = 210, 220, 620
-    partes = ['<svg viewBox="0 0 %d %d" class="necesidades-svg" role="img" '
-              'aria-label="Magnitud de distintos problemas sociales">' % (W, H)]
-    for i, f in enumerate(filas):
-        y = 12 + i * alto_fila
-        ancho = (math.log10(max(f["poblacion"], 1)) / math.log10(tope)) * (barra_fin - barra_ini)
-        partes.append('<a href="/tema/%s">' % html.escape(f["slug"]))
-        partes.append('<text x="0" y="%d" class="et">%s</text>' % (y + 14, html.escape(f["tema"])))
-        partes.append('<rect x="%d" y="%d" width="%.1f" height="14" rx="3" fill="#333d4b"/>'
-                      % (barra_ini, y + 3, ancho))
-        partes.append('<text x="%.1f" y="%d" class="eje">%s %s</text>'
-                      % (barra_ini + ancho + 8, y + 14, format(f["poblacion"], ",").replace(",", "."),
-                         html.escape(f.get("unidad", ""))))
-        partes.append('<title>%s: %s %s</title></a>'
-                      % (html.escape(f["tema"]), format(f["poblacion"], ",").replace(",", "."),
-                         html.escape(f.get("unidad", ""))))
-    caso_fila = datos.get("caso") or {}
-    y = 12 + len(filas) * alto_fila
-    partes.append('<text x="0" y="%d" class="et">%s</text>'
-                  % (y + 14, html.escape(caso_fila.get("nota", "Este caso"))))
-    partes.append('<rect x="%d" y="%d" width="%d" height="14" rx="3" fill="none" '
-                  'stroke="#b4534b" stroke-dasharray="4 3"/>' % (barra_ini, y + 3, 120))
-    partes.append('<text x="%d" y="%d" class="eje" style="fill:#b4534b">sin dato público</text>'
-                  % (barra_ini + 128, y + 14))
+    orden = ["Decapeptyl", "Resto", "Dysport", "Cabometyx", "Somatuline"]  # abajo -> arriba
+    rubros = {
+        "Decapeptyl": "hormonización (análogo GnRH)",
+        "Resto": "resto",
+        "Dysport": "toxina botulínica",
+        "Cabometyx": "oncología",
+        "Somatuline": "neuroendocrino",
+    }
+    colores = {
+        "Decapeptyl": "#c2410c",
+        "Resto": "#eef1f5",
+        "Dysport": "#e2e8ef",
+        "Cabometyx": "#d7dfe9",
+        "Somatuline": "#c9d4e2",
+    }
+    partes = ['<svg viewBox="0 0 760 470" class="negocio-svg" role="img" '
+              'aria-label="Ventas de Ipsen por anio y por producto">']
+    # ---- panel A: barras apiladas ----
+    partes.append('<text x="10" y="18" class="nt">Ventas del grupo por producto (millones de €)</text>')
+    y_top, y_base = 34, 212
+    max_v, ypx = 4000.0, (212 - 34) / 4000.0
+    cx = {2023: 230, 2024: 470}
+    bw = 120
+    for nivel in (0, 1000, 2000, 3000, 4000):
+        y = y_base - nivel * ypx
+        partes.append('<line x1="54" y1="%.1f" x2="720" y2="%.1f" stroke="#e6e9ee"/>' % (y, y))
+        partes.append('<text x="46" y="%.1f" text-anchor="end" class="eje">%d</text>' % (y + 4, nivel))
+    for p in productos:
+        anio = p["anio"]
+        x = cx[anio] - bw / 2.0
+        acum = 0.0
+        for prod in orden:
+            v = p.get(prod, 0) or 0
+            if not v:
+                continue
+            h = v * ypx
+            y = y_base - acum - h
+            destacado = prod == "Decapeptyl"
+            titulo = "%s · %s: %s M€" % (anio, prod, _fmt_m(v))
+            partes.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" fill="%s" '
+                          'stroke="%s" stroke-width="%s">'
+                          '<title>%s · %s</title></rect>'
+                          % (x, y, bw, h, colores[prod],
+                             "#7c2d12" if destacado else "#b8c1cd",
+                             "1.6" if destacado else "0.6",
+                             html.escape(titulo), html.escape(rubros[prod])))
+            acum += v
+        partes.append('<text x="%.1f" y="%.1f" text-anchor="middle" class="nt">%s</text>'
+                      % (cx[anio], y_base - acum - 8, _fmt_m(acum)))
+        partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d</text>'
+                      % (cx[anio], y_base + 18, anio))
+    # ---- panel B: Decapeptyl ----
+    partes.append('<text x="10" y="262" class="nt">Decapeptyl, el rubro destacado (millones de €)</text>')
+    y2_top, y2_base = 278, 352
+    max_d, ypx2 = 600.0, (352 - 278) / 600.0
+    cxb = {2023: 170, 2024: 380, 2025: 590}
+    bw2 = 90
+    for nivel in (0, 200, 400, 600):
+        y = y2_base - nivel * ypx2
+        partes.append('<line x1="54" y1="%.1f" x2="720" y2="%.1f" stroke="#e6e9ee"/>' % (y, y))
+        partes.append('<text x="46" y="%.1f" text-anchor="end" class="eje">%d</text>' % (y + 4, nivel))
+    for d in deca:
+        anio, v, aprox = d["anio"], d.get("valor", 0), d.get("aprox")
+        x = cxb[anio] - bw2 / 2.0
+        h = v * ypx2
+        y = y2_base - h
+        titulo = "Decapeptyl %d: %s M€%s" % (anio, _fmt_m(v), " (estimación)" if aprox else "")
+        partes.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" fill="#c2410c" '
+                      'opacity="%s" stroke="#7c2d12" stroke-width="1.6">'
+                      '<title>%s</title></rect>'
+                      % (x, y, bw2, h, "0.72" if aprox else "1", html.escape(titulo)))
+        partes.append('<text x="%.1f" y="%.1f" text-anchor="middle" class="nt">%s</text>'
+                      % (cxb[anio], y - 6, ("≈" if aprox else "") + _fmt_m(v)))
+        partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d</text>'
+                      % (cxb[anio], y2_base + 18, anio))
+    # ---- leyenda ----
+    ly = 402
+    partes.append('<text x="10" y="%d" class="eje">Leyenda (rubro en el recuadro de cada barra):</text>' % ly)
+    lx = 10
+    for prod in orden:
+        destacado = prod == "Decapeptyl"
+        partes.append('<rect x="%d" y="%d" width="11" height="11" fill="%s" stroke="#b8c1cd" '
+                      'stroke-width="0.5"/>' % (lx, ly - 10, colores[prod]))
+        partes.append('<text x="%d" y="%d" class="%s">%s</text>'
+                      % (lx + 15, ly, "nd" if destacado else "et", html.escape(prod)))
+        lx += 150
     partes.append("</svg>")
     return "".join(partes)
+
+
+def svg_poblacion(caso):
+    """Histograma poblacional por edad + superficies acumuladas + barras sin edad."""
+    pop = caso.get("poblacion") or {}
+    edades = pop.get("edades") or []
+    if not edades:
+        return ""
+    superficies = pop.get("superficies") or []
+    barras = sorted([b for b in (pop.get("barras") or [])],
+                    key=lambda b: b.get("personas", 0) or 0, reverse=True)
+    hx0, hx1 = 52, 716
+    hy_top, hy_base = 40, 240
+    ancho_anio = (hx1 - hx0) / 95.0
+    max_c = max(c for _, c in edades)
+    bar_h_max = hy_base - hy_top
+    partes = []
+    partes.append('<text x="10" y="20" class="nt">Población de Uruguay por edad (Censo 2023)</text>')
+    for edad, cuenta in edades:
+        x = hx0 + edad * ancho_anio
+        w = 5 * ancho_anio
+        h = bar_h_max * cuenta / max_c
+        partes.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="#e3e9f0" '
+                      'stroke="#b9c4d2" stroke-width="0.5">'
+                      '<title>%d–%d años: %s personas</title></rect>'
+                      % (x, hy_base - h, w, h, edad, edad + 4, _fmt(cuenta)))
+    for s in superficies:
+        desde, hasta = s.get("desde"), s.get("hasta")
+        base = s.get("base") or sum(c for e, c in edades if desde <= e < hasta)
+        frac = (s.get("afectados", 0) / base) if base else 0
+        for edad, cuenta in edades:
+            if not (desde <= edad < hasta):
+                continue
+            x = hx0 + edad * ancho_anio
+            w = 5 * ancho_anio
+            h = frac * (bar_h_max * cuenta / max_c)
+            if h <= 0:
+                continue
+            titulo = "%s: %s personas (%.1f%% de %s personas de %d–%d años)" % (
+                s.get("etiqueta", ""), _fmt(s.get("afectados", 0)), frac * 100,
+                _fmt(base), desde, hasta)
+            if s.get("slug"):
+                partes.append('<a href="/tema/%s">' % html.escape(s["slug"]))
+            partes.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" '
+                          'fill="#0e7490" opacity="0.55" stroke="#0e7490" stroke-width="0.5">'
+                          '<title>%s</title></rect>' % (x, hy_base - h, w, h, html.escape(titulo)))
+            if s.get("slug"):
+                partes.append("</a>")
+    for edad in (0, 20, 40, 60, 80, 90):
+        x = hx0 + edad * ancho_anio
+        partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d%s</text>'
+                      % (x, hy_base + 16, edad, "+" if edad == 90 else ""))
+    partes.append('<text x="10" y="%d" class="eje">años →</text>' % (hy_base + 16))
+    ly = hy_base + 34
+    for s in superficies:
+        base = s.get("base") or 1
+        frac = s.get("afectados", 0) / base
+        partes.append('<rect x="10" y="%d" width="11" height="11" fill="#0e7490" opacity="0.55"/>'
+                      % (ly - 10))
+        partes.append('<text x="26" y="%d" class="et">%s: %s (%.1f%% de los %d+)</text>'
+                      % (ly, html.escape(s.get("etiqueta", "")), _fmt(s.get("afectados", 0)),
+                         frac * 100, s.get("desde", 0)))
+        ly += 16
+    by = hy_base + 54 + len(superficies) * 16
+    partes.append('<text x="10" y="%d" class="nt">Problemas sin edad — personas afectadas</text>' % by)
+    bx0, bmax = 210, 430.0
+    max_p = max((b.get("personas", 0) or 0 for b in barras), default=1)
+    row_h = 42
+    for i, b in enumerate(barras):
+        ry = by + 22 + i * row_h
+        personas = b.get("personas", 0) or 0
+        partes.append('<text x="16" y="%d" font-size="17">%s</text>'
+                      % (ry, html.escape(b.get("emoji", "•"))))
+        partes.append('<text x="48" y="%d" class="et">%s</text>'
+                      % (ry, html.escape(b.get("etiqueta", ""))))
+        partes.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="#c3cbd6"/>'
+                      % (bx0 - 22, ry - 6, bx0, ry - 6))
+        if personas > 0:
+            w = personas / max_p * bmax
+            if b.get("slug"):
+                partes.append('<a href="/tema/%s">' % html.escape(b["slug"]))
+            partes.append('<rect x="%d" y="%d" width="%.1f" height="15" rx="4" fill="#333d4b">'
+                          '<title>%s</title></rect>' % (bx0, ry - 11, w, html.escape(b.get("nota", ""))))
+            if b.get("slug"):
+                partes.append("</a>")
+            partes.append('<text x="%.1f" y="%d" class="et">%s personas</text>'
+                          % (bx0 + w + 8, ry, _fmt(personas)))
+        else:
+            partes.append('<rect x="%d" y="%d" width="%d" height="15" rx="4" fill="none" '
+                          'stroke="#b4534b" stroke-dasharray="4 3">'
+                          '<title>%s</title></rect>'
+                          % (bx0, ry - 11, 150, html.escape(b.get("nota", "Sin dato público."))))
+            partes.append('<text x="%d" y="%d" class="et" style="fill:#b4534b">sin dato público</text>'
+                          % (bx0 + 158, ry))
+    H = by + 24 + len(barras) * row_h + 10
+    return ('<svg viewBox="0 0 760 %d" class="poblacion-svg" role="img" '
+            'aria-label="Población por edad y magnitud de problemas sociales">' % int(H)
+            + "".join(partes) + "</svg>")
 
 
 def enriquecer(caso):
@@ -179,6 +349,8 @@ def enriquecer(caso):
     if caso.get("patron"):
         caso["patron"]["observado_html"] = marcar(caso["patron"].get("observado"), glosario, 2)
         caso["patron"]["no_probado_html"] = marcar(caso["patron"].get("no_probado"), glosario, 1)
+    if caso.get("negocio"):
+        caso["negocio"]["nota_html"] = marcar(caso["negocio"].get("nota"), glosario)
     return caso
 
 
