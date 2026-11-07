@@ -261,35 +261,50 @@ def svg_negocio(caso):
     partes.append('<rect x="%d" y="%d" width="11" height="3" fill="#c2410c"/>'
                   '<text x="%d" y="%d" class="nd">Decapeptyl (el bloqueador)</text>'
                   % (izq + 120, 246, izq + 136, 250))
-    # ---- panel B: mercado mundial de GnRH por molecula (2025) ----
-    partes.append('<text x="10" y="262" class="nt">El negocio completo: cuánto vende cada fármaco de la clase (2025, US$ M)</text>')
-    bx0, bmax = 150, 470.0
-    max_m = max(m["valor"] for m in mercado)
-    fila = 36
+    # ---- panel B: fracción del negocio total (barra apilada) ----
+    partes.append('<text x="10" y="262" class="nt">El negocio completo (2025): qué fracción es este fármaco</text>')
+    total = sum(m["valor"] for m in mercado)
+    x0b, x1b = 54, 720
+    ybar = 288
+    cx = x0b
     for i, m in enumerate(mercado):
-        ry = 286 + i * fila
+        w = m["valor"] / total * (x1b - x0b)
         destacado = m.get("destacado")
-        w = m["valor"] / max_m * bmax
-        color = "#c2410c" if destacado else "#d3dae4"
-        partes.append('<text x="12" y="%d" class="%s">%s</text>'
-                      % (ry, "nd" if destacado else "et", html.escape(m["molecula"])))
-        partes.append('<rect x="%d" y="%d" width="%.1f" height="18" rx="4" fill="%s" '
+        color = "#c2410c" if destacado else ("#e2e8ef" if i % 2 == 0 else "#cbd5e1")
+        partes.append('<rect x="%.1f" y="%d" width="%.1f" height="34" fill="%s" '
                       'stroke="%s" stroke-width="%s">'
-                      '<title>%s — %s</title></rect>'
-                      % (bx0, ry - 13, w, color,
-                         "#7c2d12" if destacado else "#b8c1cd",
+                      '<title>%s: US$ %s M (%.0f%% del total) — %s</title></rect>'
+                      % (cx, ybar, w, color, "#7c2d12" if destacado else "#b8c1cd",
                          "1.4" if destacado else "0.6",
-                         html.escape(m["molecula"]), html.escape(m["nota"])))
-        partes.append('<text x="%.1f" y="%d" class="%s">US$ %s M</text>'
-                      % (bx0 + w + 8, ry, "nd" if destacado else "et", _fmt(m["valor"])))
-    partes.append('<text x="12" y="%d" class="eje">%s</text>'
-                  % (286 + len(mercado) * fila + 8, html.escape(neg.get("fuente_mercado", ""))))
+                         html.escape(m["molecula"]), _fmt(m["valor"]),
+                         m["valor"] / total * 100, html.escape(m["nota"])))
+        if w > 55:
+            partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="et" '
+                          'fill="%s">%.0f%%</text>'
+                          % (cx + w / 2, ybar + 21, "#ffffff" if destacado else "#334155",
+                             m["valor"] / total * 100))
+        cx += w
+    # leyenda con valores visibles
+    ly = 342
+    col = 0
+    for m in mercado:
+        cx2 = 12 + (col % 2) * 370
+        yy = ly + (col // 2) * 16
+        color = "#c2410c" if m.get("destacado") else "#94a3b8"
+        partes.append('<rect x="%d" y="%d" width="10" height="10" fill="%s"/>' % (cx2, yy - 9, color))
+        partes.append('<text x="%d" y="%d" class="%s">%s · US$ %s M (%.0f%%)</text>'
+                      % (cx2 + 15, yy, "nd" if m.get("destacado") else "et",
+                         html.escape(m["molecula"]), _fmt(m["valor"]), m["valor"] / total * 100))
+        col += 1
+    ly += 30
+    partes.append('<text x="12" y="%d" class="eje">Decapeptyl (Ipsen, 543 M€) es la mayor parte del triptorelin. El uso como bloqueador en menores es una fracción aún menor, sin dato público.</text>' % ly)
+    partes.append('<text x="12" y="%d" class="eje">%s</text>' % (ly + 16, html.escape(neg.get("fuente_mercado", ""))))
     partes.append("</svg>")
     return "".join(partes)
 
 
 def svg_poblacion(caso):
-    """Histograma poblacional compacto: muertes y superficies apiladas, banda del caso punteada."""
+    """Histograma poblacional compacto: muertes, superficies y la banda del caso (dentro, punteada)."""
     pop = caso.get("poblacion") or {}
     edades = pop.get("edades") or []
     if not edades:
@@ -304,16 +319,21 @@ def svg_poblacion(caso):
     bar_h_max = hy_base - hy_top
     pat_id = "pt-%s" % (caso.get("slug", "x"))
     colores_muerte = ["#991b1b", "#b4530a", "#3f2d20"]
-    # capas: muertes (con mínimo de altura) + superficies
+    # capas: muertes + superficies + banda del caso (punteada)
     capas = []
     for i, m in enumerate(muertes):
         capas.append({
-            "etiqueta": m["etiqueta"], "corto": "%s %s" % (m.get("emoji", "•"), m["etiqueta"]),
-            "color": colores_muerte[i % 3], "desde": 0, "hasta": 95,
-            "afectados": m["cantidad"], "min_h": 5.0, "anio": m.get("anio", ""),
-            "sexo": m.get("sexo", ""),
+            "etiqueta": m["etiqueta"], "color": colores_muerte[i % 3],
+            "desde": 0, "hasta": 95, "afectados": m["cantidad"],
+            "min_h": 5.0, "anio": m.get("anio", ""), "sexo": m.get("sexo", ""),
         })
     capas += superficies
+    if caso_banda:
+        capas.append({
+            "etiqueta": caso_banda.get("etiqueta", ""), "color": "#dc2626",
+            "desde": caso_banda.get("desde"), "hasta": caso_banda.get("hasta"),
+            "afectados": caso_banda.get("afectados", 0), "min_h": 6.0, "punteado": True,
+        })
     partes = ['<svg viewBox="0 0 760 160" class="poblacion-svg" role="img" '
               'aria-label="Población de Uruguay por edad y problemas sociales">']
     partes.append('<pattern id="%s" width="5" height="5" patternUnits="userSpaceOnUse">'
@@ -345,30 +365,26 @@ def svg_poblacion(caso):
             if h <= 0:
                 continue
             color = s.get("color", "#0e7490")
-            if s.get("min_h") is not None:
+            if s.get("punteado"):
+                fill, opac, stroke, sw = "url(#%s)" % pat_id, 1.0, "#dc2626", "1.0"
+                titulo = s["etiqueta"]
+            elif s.get("min_h") is not None:
+                fill, opac, stroke, sw = color, 0.55, color, "0.4"
                 sexo = (" — %s" % s.get("sexo")) if s.get("sexo") else ""
                 titulo = "%s: %s por año (%s)%s" % (s["etiqueta"], _fmt(s["afectados"]), s.get("anio", ""), sexo)
             else:
+                fill, opac, stroke, sw = color, 0.55, color, "0.4"
                 titulo = "%s: %s personas (%.1f%% de su franja %d–%d)" % (
                     s.get("etiqueta", ""), _fmt(s.get("afectados", 0)), frac * 100, desde, hasta)
             if s.get("slug"):
                 partes.append('<a href="/tema/%s">' % html.escape(s["slug"]))
             partes.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s" '
-                          'opacity="0.55" stroke="%s" stroke-width="0.4">'
+                          'opacity="%s" stroke="%s" stroke-width="%s">'
                           '<title>%s</title></rect>'
-                          % (x, hy_base - acum - h, w, h, color, color, html.escape(titulo)))
+                          % (x, hy_base - acum - h, w, h, fill, opac, stroke, sw, html.escape(titulo)))
             if s.get("slug"):
                 partes.append("</a>")
             acum += h
-    # ---- banda del caso (punteada, arriba, sin superponerse) ----
-    if caso_banda:
-        desde, hasta = caso_banda.get("desde"), caso_banda.get("hasta")
-        xb = hx0 + desde * ancho_anio
-        wb = (hasta - desde) * ancho_anio
-        partes.append('<rect x="%.1f" y="6" width="%.1f" height="7" fill="url(#%s)" '
-                      'stroke="#dc2626" stroke-width="1">'
-                      '<title>%s</title></rect>'
-                      % (xb, wb, pat_id, html.escape(caso_banda.get("etiqueta", ""))))
     # ---- eje ----
     for edad in (0, 20, 40, 60, 80, 90):
         x = hx0 + edad * ancho_anio
