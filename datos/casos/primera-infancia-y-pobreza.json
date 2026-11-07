@@ -1,0 +1,525 @@
+{
+  "slug": "primera-infancia-y-pobreza",
+  "titulo": "Primera infancia: cuidados y pobreza en los primeros años",
+  "emoji": "👶",
+  "sector": "Social e infancia",
+  "pregunta": "¿Por qué la pobreza se concentra en los niños más pequeños mientras la cobertura de cuidados no llega a todos?",
+  "sintesis": "Uruguay tiene una de las mejores coberturas de primera infancia de la región, pero la pobreza sigue concentrándose en los hogares con niños de 0 a 6 años: 32% de ellos son pobres, frente al 16,6% del total. La oferta de cuidados creció décadas, pero se fragmentó entre INAU, ANEP y MIDES, y hoy se abre centros sin financiamiento mientras faltan cupos diarios en los barrios más vulnerables.",
+  "certeza": "indicios",
+  "mecanismo": "Una política exitosa en cobertura (CAIF desde 1988, Ley de Cuidados de 2015) se volvió un sistema fragmentado: cada organismo gestiona su parte, el Consejo Coordinador (CCEPI) no es vinculante, y la caída de la natalidad se usa como argumento para frenar la inversión. El resultado es que se mide cobertura, no calidad ni demanda insatisfecha, y la pobreza infantil no baja al ritmo del resto.",
+  "costo_duda": "Mientras se discute si la cobertura es suficiente, los primeros mil días de vida siguen siendo el período con mayor pobreza del país. Un niño pobre de 0 a 6 años tiene el doble de probabilidad de ser pobre que un adulto mayor. La falta de cupos diarios obliga a las madres a dejar de trabajar o a dejar al niño con familiares sin formación.",
+  "carga_prueba": "Hoy se pide a los críticos que demuestren dónde faltan cupos, pero no se exige a los organismos que publiquen listas de espera, asistencia real ni calidad. La frase «la pobreza se concentra en hogares con niños» se repite sin la tasa correspondiente, y el 79% de matrícula con financiamiento público mide cupos, no niños atendidos.",
+  "cierre": "La pregunta no es si Uruguay tiene suficientes centros. Es por qué, con 582 centros y 79% de matrícula financiada, uno de cada tres niños de 0 a 6 años sigue siendo pobre y falta cupo diario para los bebés.",
+  "nota_ia": "Este texto fue asistido por IA y revisado por humanos. Cada afirmación tiene fuente enlazada; las lecturas marcadas como interpretación son del sitio.",
+  "glosario": {
+    "CAIF": "Centros de Atención a la Infancia y la Familia: red pública de cuidados para niños de 0 a 3 años, gestionada por INAU con organizaciones de la sociedad civil. Inició en 1988.",
+    "INAU": "Instituto del Niño y Adolescente del Uruguay: organismo rector de la política de infancia, gestiona CAIF, CAPI y otros centros.",
+    "ANEP": "Administración Nacional de Educación Pública: gestiona la educación inicial (3 a 5 años) y la educación media.",
+    "DGEIP": "Dirección General de Educación Inicial y Primaria, dependiente de ANEP.",
+    "MIDES": "Ministerio de Desarrollo Social: mide la pobreza y coordina la política social.",
+    "SNIC": "Sistema Nacional Integrado de Cuidados, creado por la Ley 19.353 en 2015. Reconoce el cuidado como derecho social.",
+    "CCEPI": "Consejo Coordinador de la Educación en la Primera Infancia, creado por la Ley 18.437 (2008). No es vinculante y no tiene presupuesto propio.",
+    "pobreza": "Personas cuyo ingreso per cápita del hogar está por debajo de la línea de pobreza calculada por el INE.",
+    "matrícula": "Cantidad de niños inscritos en un centro educativo o de cuidados; no equivale a niños efectivamente atendidos.",
+    "cobertura": "Proporción de niños de una edad que asisten a un centro; en Uruguay se calcula sobre la población estimada.",
+    "primera infancia": "Período desde el nacimiento hasta los 6 años (o hasta el ingreso a la educación primaria).",
+    "Fondo de Primera Infancia": "Partida creada en la Rendición de Cuentas 2021 para financiar la apertura de nuevos CAIF a partir de 2022."
+  },
+  "cadena": [
+    {
+      "paso": "La pobreza se concentra en los hogares con niños pequeños",
+      "texto": "El 32% de los menores de 6 años es pobre (2024), frente al 16,6% del total de la población. En 2025 bajó al 29,1%, pero sigue siendo el doble que el promedio.",
+      "certeza": "probado",
+      "base": "fuente",
+      "fuente": "INE, Encuesta Continua de Hogares 2024-2025",
+      "fuente_url": "https://www.gub.uy/instituto-nacional-estadistica/comunicacion/publicaciones/estimacion-pobreza-metodo-del-ingreso-ano-2025"
+    },
+    {
+      "paso": "La cobertura de cuidados creció pero quedó fragmentada",
+      "texto": "Hay 582 centros INAU en 2024 (495 CAIF) y la cobertura pública de 0 a 3 años pasó del 46,4% al 58,3%. Pero INAU, ANEP y MIDES gestionan cada uno su parte, sin un rector único.",
+      "certeza": "probado",
+      "base": "fuente",
+      "fuente": "Sistema de Cuidados, Memoria Quinquenal 2020-2024",
+      "fuente_url": "https://www.gub.uy/sistema-cuidados/sites/sistema-cuidados/files/documentos/publicaciones/Sistema%20de%20Cuidados%20-%20Memoria%20Quinquenal%202020-2024.pdf"
+    },
+    {
+      "paso": "La caída de la natalidad se usa para frenar la inversión",
+      "texto": "Los nacimientos cayeron de 48.926 (2015) a 29.899 (2024). El gobierno argumenta que hay menos niños, pero quedan más de 25.000 personas en localidades sin ningún centro y más del 30% de los niños de 2 años sin cubrir.",
+      "certeza": "indicios",
+      "base": "causalidad",
+      "fuente": "El Observador, junio 2025; MSP, Estadísticas Vitales 2024",
+      "fuente_url": "https://www.elobservador.com.uy/una-pregunta-que-duele-el-presupuesto-borro-la-prioridad-este-gobierno-la-primera-infancia-n6028197"
+    },
+    {
+      "paso": "Se mide cobertura, no calidad ni demanda",
+      "texto": "El 79% de matrícula con financiamiento público mide cupos, no niños atendidos ni calidad. No hay datos sistémicos de listas de espera, asistencia ni desarrollo infantil por centro.",
+      "certeza": "probado",
+      "base": "fuente",
+      "fuente": "OMEP Uruguay, julio 2025; ANEP, Panorama de Educación en la Primera Infancia 2023",
+      "fuente_url": "https://www.omep.org.uy/wp-content/uploads/2025/07/DOC-OMEP-Para-digital.pdf"
+    }
+  ],
+  "cronologia": [
+    {
+      "fecha": "1988",
+      "pais": "Uruguay",
+      "hecho": "Se crean los primeros CAIF: atención integral a la primera infancia en alianza entre INAU y organizaciones de la sociedad civil.",
+      "fuente": "https://opp.gub.uy/sites/default/files/documentos/2023-12/Resumen%20Ejecutivo_Evaluaci%C3%B3n_CAIF_211223_0.pdf"
+    },
+    {
+      "fecha": "2008",
+      "pais": "Uruguay",
+      "hecho": "Ley General de Educación (18.437) crea el Consejo Coordinador de Educación en la Primera Infancia (CCEPI).",
+      "fuente": "https://www.gub.uy/ministerio-educacion-cultura/ccepi"
+    },
+    {
+      "fecha": "2015",
+      "pais": "Uruguay",
+      "hecho": "Ley 19.353 crea el Sistema Nacional Integrado de Cuidados (SNIC): el cuidado se reconoce como derecho social.",
+      "fuente": "https://siteal.iiep.unesco.org/bdnp/544/ley-193532015-creacion-sistema-nacional-integrado-cuidados-snic"
+    },
+    {
+      "fecha": "2021",
+      "pais": "Uruguay",
+      "hecho": "Rendición de Cuentas crea el Fondo de Primera Infancia, que financia la apertura de nuevos CAIF a partir de 2022.",
+      "fuente": "https://www.elobservador.com.uy/una-pregunta-que-duele-el-presupuesto-borro-la-prioridad-este-gobierno-la-primera-infancia-n6028197"
+    },
+    {
+      "fecha": "2023",
+      "pais": "Uruguay",
+      "hecho": "Se registran 571 centros de primera infancia en el país; 482 son CAIF (84% del total).",
+      "fuente": "https://www.elobservador.com.uy/nota/el-inau-en-la-atencion-de-la-primera-infancia-20243191720"
+    },
+    {
+      "fecha": "2024",
+      "pais": "Uruguay",
+      "hecho": "Nacimientos caen a 29.899, el mínimo desde 1888. Pobreza en menores de 6 años: 32%.",
+      "fuente": "https://www.debate.com.uy/actualidad/Uruguay-29.899-nacimientos-y-35.956-muertes-en-2024-20250410-0018.html"
+    },
+    {
+      "fecha": "2025",
+      "pais": "Uruguay",
+      "hecho": "INAU acumula déficit de US$ 60 millones: 130 centros abiertos o ampliados sin financiamiento asignado.",
+      "fuente": "https://www.elobservador.com.uy/nacional/inau-no-tiene-plata-los-caif-130-centros-fueron-abiertos-o-ampliados-financiamiento-asignado-segun-nuevo-gobierno-n6000911"
+    },
+    {
+      "fecha": "2026",
+      "pais": "Uruguay",
+      "hecho": "Plan Nacional de Cuidados 2026-2030: avance progresivo en el derecho universal al cuidado.",
+      "fuente": "https://www.gub.uy/sistema-cuidados/sites/sistema-cuidados/files/2026-04/PlanCuidados_2026%20%281%29%20%281%29_compressed.pdf"
+    }
+  ],
+  "intereses": [
+    {
+      "actor": "Familias vulnerables con niños pequeños",
+      "interes": "Necesitan cupos diarios, horarios extendidos y alimentación. Hoy el 60% de los niños en CAIF pertenece a familias vulnerables, pero faltan cupos diarios para bebés.",
+      "certeza": "probado",
+      "base": "fuente",
+      "nota": "Busqueda, marzo 2025; Sistema de Cuidados, Memoria Quinquenal."
+    },
+    {
+      "actor": "Organizaciones gestoras de CAIF",
+      "interes": "Reciben transferencias del INAU; el 42% del incremento presupuestal de 2025 solo blanquea gastos ya asignados, sin recursos nuevos.",
+      "certeza": "indicios",
+      "base": "causalidad",
+      "nota": "El Observador, diciembre 2025."
+    },
+    {
+      "actor": "ANEP / educación inicial",
+      "interes": "Busca universalizar la educación a los 3 años (90% en 2025) y coordinar con INAU, pero la rectoría sigue fragmentada.",
+      "certeza": "probado",
+      "base": "fuente",
+      "nota": "ANEP, Hoja de Ruta 2025-2026; OMEP, julio 2025."
+    },
+    {
+      "actor": "Gobierno (MEF / INAU)",
+      "interes": "Argumenta la caída de la natalidad para frenar la inversión, mientras abre centros sin financiamiento.",
+      "certeza": "indicios",
+      "base": "opinion",
+      "nota": "El Observador, junio y diciembre 2025."
+    }
+  ],
+  "patron": {
+    "observado": "Entre 2015 y 2025, la pobreza total bajó levemente pero la pobreza en menores de 6 años se mantuvo en torno al 30%, el doble que el promedio. La cobertura de cuidados creció al 58%, pero la demanda insatisfecha no se mide.",
+    "no_probado": "No hay documento público que muestre dónde sobran y dónde faltan cupos por barrio, ni la asistencia real de los niños inscritos.",
+    "base_observado": "fuente",
+    "base_no_probado": "fuente",
+    "como_probar": [
+      "Publicar listas de espera y asistencia real por centro y barrio.",
+      "Medir la pobreza infantil con la misma metodología que el INE y reportarla anualmente por edad."
+    ],
+    "hallazgo": [
+      {
+        "texto": "El 79% de matrícula con financiamiento público (2025) mide cupos, no niños atendidos ni calidad (OMEP, julio 2025).",
+        "fuente": "https://www.omep.org.uy/wp-content/uploads/2025/07/DOC-OMEP-Para-digital.pdf"
+      },
+      {
+        "texto": "Más de 25.000 personas viven en localidades sin ningún centro de primera infancia (El Observador, diciembre 2025).",
+        "fuente": "https://www.elobservador.com.uy/una-pregunta-que-duele-el-presupuesto-borro-la-prioridad-este-gobierno-la-primera-infancia-n6028197"
+      }
+    ]
+  },
+  "otra_posicion": [
+    {
+      "actor": "OMEP Uruguay",
+      "postura": "Pide un sistema unificado de gestión de educación y cuidados en la primera infancia, con rectoría única y supervisión efectiva, porque la fragmentación actual genera fugas presupuestales.",
+      "fuente": "https://www.omep.org.uy/wp-content/uploads/2025/07/DOC-OMEP-Para-digital.pdf"
+    },
+    {
+      "actor": "ANEP (Pablo Caggiani)",
+      "postura": "La universalización de la educación a los 3 años es prioritaria; en 2025 se llegó al 90% de cobertura y se busca atender a los 4.000-4.500 niños no escolarizados.",
+      "fuente": "https://www.anep.edu.uy/primaria-diseno-hoja-de-ruta-para-alentar-inscripciones-en-el-nivel-3-anos"
+    },
+    {
+      "actor": "Sistema de Cuidados / INAU",
+      "postura": "La cobertura pública de 0 a 3 años pasó del 46,4% al 58,3% entre 2020 y 2024; se abrieron 45 nuevos centros y se ampliaron 85, pero sin financiamiento para sostenerlos.",
+      "fuente": "https://www.gub.uy/sistema-cuidados/sites/sistema-cuidados/files/documentos/publicaciones/Sistema%20de%20Cuidados%20-%20Memoria%20Quinquenal%202020-2024.pdf"
+    }
+  ],
+  "manipulacion": [
+    {
+      "tecnica": "Mostrar cobertura como si fuera calidad",
+      "descripcion": "Se cita el 79% de matrícula con financiamiento público como logro, pero la matrícula mide cupos, no niños atendidos ni calidad.",
+      "senal": "Cifra de cobertura sin datos de asistencia ni resultados.",
+      "presente": "Sí: el resumen del tema repite el 79% sin aclarar que es matrícula."
+    },
+    {
+      "tecnica": "Usar la natalidad para frenar la inversión",
+      "descripcion": "La caída de los nacimientos (de 48.926 a 29.899) se presenta como razón para no invertir más, aunque la demanda de cupos diarios sigue sin cubrirse.",
+      "senal": "Argumento demográfico sin datos de demanda insatisfecha.",
+      "presente": "Sí: el presupuesto 2025 frenó la apertura de nuevos CAIF."
+    },
+    {
+      "tecnica": "Afirmar la pobreza sin la tasa",
+      "descripcion": "Se dice que la pobreza «se concentra» en hogares con niños, pero no se cita la tasa (32% en 2024, 29,1% en 2025).",
+      "senal": "Frase cualitativa sin número.",
+      "presente": "Sí: el resumen del tema no incluye la tasa."
+    }
+  ],
+  "cambiaria": [
+    "Un registro público de listas de espera y asistencia real por centro y barrio.",
+    "La tasa de pobreza infantil (0-6 años) publicada anualmente por el INE.",
+    "Datos de calidad (Iters/Ecers) digitalizados por centro.",
+    "El número de niños de 0 a 3 años sin cobertura pública, por departamento."
+  ],
+  "metodo": "Búsqueda realizada el 7/11/2026 en fuentes oficiales (INE, INAU, ANEP, Sistema de Cuidados, MEC) y prensa (El Observador, La diaria, OMEP).",
+  "faltantes": [
+    "Cuántos niños de 0 a 3 años no tienen cobertura pública, por barrio.",
+    "La asistencia real (días por semana) de los niños inscritos en CAIF.",
+    "La tasa de pobreza infantil por departamento y por edad.",
+    "Los resultados de calidad (Iters/Ecers) por centro, si existen.",
+    "El costo por cupo diario en cada modalidad."
+  ],
+  "fuentes": [
+    {
+      "titulo": "INE — Estimación de la pobreza por el método del ingreso, 2025",
+      "url": "https://www.gub.uy/instituto-nacional-estadistica/comunicacion/publicaciones/estimacion-pobreza-metodo-del-ingreso-ano-2025"
+    },
+    {
+      "titulo": "Sistema de Cuidados — Memoria Quinquenal 2020-2024",
+      "url": "https://www.gub.uy/sistema-cuidados/sites/sistema-cuidados/files/documentos/publicaciones/Sistema%20de%20Cuidados%20-%20Memoria%20Quinquenal%202020-2024.pdf"
+    },
+    {
+      "titulo": "El Observador — INAU sin fondos para CAIF (junio 2025)",
+      "url": "https://www.elobservador.com.uy/nacional/inau-no-tiene-plata-los-caif-130-centros-fueron-abiertos-o-ampliados-financiamiento-asignado-segun-nuevo-gobierno-n6000911"
+    },
+    {
+      "titulo": "El Observador — El presupuesto borró la prioridad (diciembre 2025)",
+      "url": "https://www.elobservador.com.uy/una-pregunta-que-duele-el-presupuesto-borro-la-prioridad-este-gobierno-la-primera-infancia-n6028197"
+    },
+    {
+      "titulo": "OMEP Uruguay — Políticas educativas para la primera infancia (julio 2025)",
+      "url": "https://www.omep.org.uy/wp-content/uploads/2025/07/DOC-OMEP-Para-digital.pdf"
+    },
+    {
+      "titulo": "ANEP — Hoja de Ruta universalización nivel 3 (2025)",
+      "url": "https://www.anep.edu.uy/primaria-diseno-hoja-de-ruta-para-alentar-inscripciones-en-el-nivel-3-anos"
+    },
+    {
+      "titulo": "ANEP — Panorama de la Educación en la Primera Infancia 2023",
+      "url": "https://www.gub.uy/ministerio-educacion-cultura/sites/ministerio-educacion-cultura/files/2024-12/Panorama%20de%20la%20Educaci%C3%B3n%20en%20la%20Primera%20Infancia%20e%20Inicial%202023.pdf"
+    },
+    {
+      "titulo": "MSP — Estadísticas Vitales 2024 (nacimientos)",
+      "url": "https://www.gub.uy/ministerio-salud-publica/comunicacion/noticias/acceso-datos-preliminares-estadisticas-vitales-del-ano-2024"
+    },
+    {
+      "titulo": "Busqueda — Cuidar para crecer: cobertura y calidad (marzo 2025)",
+      "url": "https://www.busqueda.com.uy/opinion-y-analisis/cuidar-crecer-cobertura-y-calidad-la-primera-infancia-n5397213"
+    },
+    {
+      "titulo": "La diaria — Políticas educativas para la primera infancia (agosto 2025)",
+      "url": "https://ladiaria.com.uy/educacion/articulo/2025/8/politicas-educativas-para-la-primera-infancia-entre-la-necesidad-de-fortalecer-la-coordinacion-y-las-distintas-culturas-institucionales/"
+    },
+    {
+      "titulo": "La diaria — Primera infancia y pobreza (setiembre 2025)",
+      "url": "https://ladiaria.com.uy/opinion/articulo/2025/9/primera-infancia-y-pobreza-que-estrategia-que-politicas"
+    }
+  ],
+  "poblacion": {
+    "fuente": "INE, Censo 2023: población por grupo quinquenal de edades.",
+    "total": 3499451,
+    "edades": [
+      [
+        0,
+        177587
+      ],
+      [
+        5,
+        230968
+      ],
+      [
+        10,
+        237623
+      ],
+      [
+        15,
+        238789
+      ],
+      [
+        20,
+        244026
+      ],
+      [
+        25,
+        259518
+      ],
+      [
+        30,
+        251233
+      ],
+      [
+        35,
+        243642
+      ],
+      [
+        40,
+        238024
+      ],
+      [
+        45,
+        238014
+      ],
+      [
+        50,
+        210944
+      ],
+      [
+        55,
+        193872
+      ],
+      [
+        60,
+        189910
+      ],
+      [
+        65,
+        165347
+      ],
+      [
+        70,
+        131676
+      ],
+      [
+        75,
+        103248
+      ],
+      [
+        80,
+        73372
+      ],
+      [
+        85,
+        44393
+      ],
+      [
+        90,
+        27265
+      ]
+    ],
+    "muertes": [],
+    "superficies": [
+      {
+        "etiqueta": "Niños 0-6 en pobreza",
+        "corto": "Pobreza 0-6",
+        "desde": 0,
+        "hasta": 5,
+        "afectados": 130000,
+        "base": 408555,
+        "color": "#b23a2e",
+        "nota": "32% de los menores de 6 años (2024); 29,1% en 2025. INE, ECH."
+      },
+      {
+        "etiqueta": "Sin cobertura pública 0-3",
+        "corto": "Sin cobertura",
+        "desde": 0,
+        "hasta": 5,
+        "afectados": 55500,
+        "base": 408555,
+        "color": "#a96b12",
+        "nota": "41,7% de la población de 0 a 3 años sin cobertura pública (2024). Sistema de Cuidados."
+      },
+      {
+        "etiqueta": "Sin cupo diario al año",
+        "corto": "Sin cupo diario",
+        "desde": 0,
+        "hasta": 5,
+        "afectados": 15000,
+        "base": 408555,
+        "color": "#2f5d8a",
+        "nota": "Cerca del 60% de los niños de 1 año en CAIF asiste solo una vez por semana. Busqueda, marzo 2025."
+      }
+    ],
+    "caso_banda": {
+      "desde": 0,
+      "hasta": 5,
+      "afectados": 130000,
+      "etiqueta": "Primera infancia (este caso)",
+      "punteado": true
+    }
+  },
+  "vinculos": {
+    "nota": "Quién es quién y quién depende de quién. Los vínculos marcados como «disputado» son lecturas del sitio.",
+    "organismos": [
+      {
+        "nombre": "INAU",
+        "rol": "Rector de la primera infancia",
+        "tipo": "publico"
+      },
+      {
+        "nombre": "Plan CAIF",
+        "rol": "Red de centros de atención a la infancia",
+        "tipo": "publico"
+      },
+      {
+        "nombre": "ANEP (DGEIP)",
+        "rol": "Educación inicial (3 a 5 años)",
+        "tipo": "publico"
+      },
+      {
+        "nombre": "MIDES",
+        "rol": "Mide pobreza y coordina política social",
+        "tipo": "publico"
+      },
+      {
+        "nombre": "MEC / CCEPI",
+        "rol": "Coordina educación en primera infancia",
+        "tipo": "publico"
+      },
+      {
+        "nombre": "Sistema de Cuidados (SNIC)",
+        "rol": "Marco legal del cuidado (Ley 19.353)",
+        "tipo": "publico"
+      }
+    ],
+    "vinculos": [
+      {
+        "origen": "INAU",
+        "destino": "Plan CAIF",
+        "tipo": "gestiona",
+        "evidencia": "INAU gestiona CAIF con organizaciones de la sociedad civil.",
+        "fuente": "https://www.elobservador.com.uy/nota/el-inau-en-la-atencion-de-la-primera-infancia-20243191720"
+      },
+      {
+        "origen": "MEC / CCEPI",
+        "destino": "ANEP (DGEIP)",
+        "tipo": "coordina",
+        "evidencia": "El CCEPI coordina educación en primera infancia pero no es vinculante.",
+        "fuente": "https://www.omep.org.uy/wp-content/uploads/2025/07/DOC-OMEP-Para-digital.pdf"
+      },
+      {
+        "origen": "MEC / CCEPI",
+        "destino": "INAU",
+        "tipo": "coordina",
+        "evidencia": "El CCEPI incluye a INAU, pero sin presupuesto propio.",
+        "fuente": "https://www.omep.org.uy/wp-content/uploads/2025/07/DOC-OMEP-Para-digital.pdf"
+      },
+      {
+        "origen": "MIDES",
+        "destino": "Sistema de Cuidados (SNIC)",
+        "tipo": "integra",
+        "evidencia": "MIDES integra el SNIC y mide la pobreza infantil.",
+        "fuente": "https://www.gub.uy/sistema-cuidados/comunicacion/publicaciones/conoce-sistema-nacional-integrado-cuidados"
+      },
+      {
+        "origen": "INAU",
+        "destino": "MIDES",
+        "tipo": "depende (financiamiento)",
+        "evidencia": "INAU depende del MEF para financiar los CAIF; el déficit de 2025 es de US$ 60 millones.",
+        "fuente": "https://www.elobservador.com.uy/nacional/inau-no-tiene-plata-los-caif-130-centros-fueron-abiertos-o-ampliados-financiamiento-asignado-segun-nuevo-gobierno-n6000911"
+      }
+    ]
+  },
+  "personas": [
+    {
+      "nombre": "Pablo Caggiani",
+      "rol": "Presidente de ANEP",
+      "profesion": "Docente y gestor educativo",
+      "nota": "Lidera la universalización de la educación a los 3 años (90% en 2025).",
+      "emoji": "👨‍🏫",
+      "vinculaciones": [
+        {
+          "tipo": "Organismo",
+          "detalle": "ANEP / DGEIP"
+        },
+        {
+          "tipo": "Objetivo",
+          "detalle": "Universalizar el nivel 3 para 2026."
+        }
+      ],
+      "hitos": [
+        {
+          "anio": "2025",
+          "x": 2025,
+          "hecho": "ANEP elabora la Hoja de Ruta 'Tender a la universalización del Nivel 3' para 2025-2026.",
+          "fuente": "https://www.anep.edu.uy/primaria-diseno-hoja-de-ruta-para-alentar-inscripciones-en-el-nivel-3-anos",
+          "relevante": true,
+          "emoji": "•"
+        },
+        {
+          "anio": "2025",
+          "x": 2025.5,
+          "hecho": "Cobertura de 3 años llega al 90% (desde 86% en 2024).",
+          "fuente": "https://www.anep.edu.uy/primaria-diseno-hoja-de-ruta-para-alentar-inscripciones-en-el-nivel-3-anos",
+          "relevante": true,
+          "emoji": "•"
+        }
+      ]
+    },
+    {
+      "nombre": "Guillermo Fossati",
+      "rol": "Ex presidente del INAU",
+      "profesion": "Gestor público",
+      "nota": "Presidió el INAU en la administración anterior; defendió la atención récord de 2024.",
+      "emoji": "🏛️",
+      "vinculaciones": [
+        {
+          "tipo": "Organismo",
+          "detalle": "INAU"
+        },
+        {
+          "tipo": "Período",
+          "detalle": "Administración 2020-2025."
+        }
+      ],
+      "hitos": [
+        {
+          "anio": "2024",
+          "x": 2024,
+          "hecho": "INAU atiende a 64.387 niños en centros de primera infancia (récord).",
+          "fuente": "https://www.gub.uy/sistema-cuidados/sites/sistema-cuidados/files/documentos/publicaciones/Sistema%20de%20Cuidados%20-%20Memoria%20Quinquenal%202020-2024.pdf",
+          "relevante": true,
+          "emoji": "•"
+        },
+        {
+          "anio": "2025",
+          "x": 2025,
+          "hecho": "Defiende la ampliación histórica del Plan CAIF y su costo.",
+          "fuente": "https://www.elobservador.com.uy/nacional/inau-no-tiene-plata-los-caif-130-centros-fueron-abiertos-o-ampliados-financiamiento-asignado-segun-nuevo-gobierno-n6000911",
+          "relevante": false,
+          "emoji": "•"
+        }
+      ]
+    }
+  ]
+}
