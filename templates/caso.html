@@ -17,12 +17,26 @@
     </div>
   </div>
 
+  <nav class="indice-caso" aria-label="Secciones del caso">
+    <a href="#s-sintesis">Resumen</a>
+    <a href="#s-cadena">Cadena</a>
+    <a href="#s-patron">Patrón</a>
+    <a href="#s-curvas">Evolución</a>
+    <a href="#s-vinculos">Vínculos</a>
+    <a href="#s-negocio">Negocio</a>
+    <a href="#s-poblacion">Dónde encaja</a>
+    <a href="#s-intereses">Quién gana</a>
+    <a href="#s-bios">Quién es</a>
+  </nav>
+
+  <section id="s-sintesis" class="bloque-seccion">
   <div class="bloque">
     <h4>En una frase</h4>
     <p>{{ c.sintesis_html|safe }}</p>
   </div>
+  </section>
 
-  <div class="bloque">
+  <div id="s-cadena" class="bloque">
     <h4>Cadena causal</h4>
     <ol class="cadena">
       {% for paso in c.cadena %}
@@ -46,7 +60,7 @@
   {% endif %}
 
   {% if c.patron %}
-  <div class="bloque">
+  <div id="s-patron" class="bloque">
     <h4>El patrón y la pregunta de fondo</h4>
     <p>{{ c.patron.observado_html|safe }}{% if c.patron.obs_base_etiqueta %} <span class="etiqueta base" tabindex="0" data-tip="De dónde sale esta afirmación.">{{ c.patron.obs_base_etiqueta }}</span>{% endif %}</p>
     <p class="chico suave">{{ c.patron.no_probado_html|safe }}{% if c.patron.nop_base_etiqueta %} <span class="etiqueta base" tabindex="0" data-tip="De dónde sale esta afirmación.">{{ c.patron.nop_base_etiqueta }}</span>{% endif %}</p>
@@ -68,28 +82,28 @@
   {% endif %}
 
   {% if c.curvas_svg %}
-  <div class="bloque">
+  <div id="s-curvas" class="bloque">
     <h4>El mismo camino, en el tiempo</h4>
     {{ c.curvas_svg|safe }}
   </div>
   {% endif %}
 
   {% if c.vinculos_svg %}
-  <div class="bloque">
+  <div id="s-vinculos" class="bloque">
     <h4>Quién es quién: organismos y vínculos</h4>
     {{ c.vinculos_svg|safe }}
   </div>
   {% endif %}
 
   {% if c.negocio_svg %}
-  <div class="bloque">
+  <div id="s-negocio" class="bloque">
     <h4>El negocio: <span class="palabra" tabindex="0" data-tip="{{ c.negocio.nota }}">{{ c.negocio.empresa }}</span></h4>
     {{ c.negocio_svg|safe }}
   </div>
   {% endif %}
 
   {% if c.poblacion_svg %}
-  <div class="bloque">
+  <div id="s-poblacion" class="bloque">
     <h4>Dónde encaja</h4>
     {{ c.poblacion_svg|safe }}
   </div>
@@ -109,7 +123,7 @@
   </div>
   {% endif %}
 
-  <div class="bloque">
+  <div id="s-intereses" class="bloque">
     <h4>Quién gana y quién pierde</h4>
     <p class="chico suave" style="margin:0 0 6px">
       Lo marcado como interpretación es una lectura de este sitio, no un hecho: se muestra para que se pueda discutir.
@@ -149,8 +163,9 @@
   </div>
 
   {% if c.parlamento %}
+  <details class="bloque-details">
+  <summary class="bloque-summary">Rastro parlamentario</summary>
   <div class="bloque">
-    <h4>Rastro parlamentario</h4>
     <div class="pila">
       {% for p in c.parlamento.registros %}
         <div class="hito-pais">
@@ -165,8 +180,10 @@
     </div>
     <p class="chico suave" style="margin-top:6px">{{ c.parlamento.nota }}</p>
   </div>
+  </details>
   {% endif %}
 
+  <section id="s-bios">
   {% if c.personas %}
     {% for p in c.personas %}
     <div class="bloque">
@@ -184,6 +201,7 @@
     </div>
     {% endfor %}
   {% endif %}
+  </section>
 
   {% if c.manipulacion %}
   <div class="bloque bandera">
@@ -229,14 +247,16 @@
   </div>
   {% endif %}
 
+  <details class="bloque-details">
+  <summary class="bloque-summary">Fuentes</summary>
   <div class="bloque">
-    <h4>Fuentes</h4>
     <ul class="chico" style="margin:6px 0 0 18px; line-height:1.8">
       {% for f in c.fuentes %}
         <li><a href="{{ f.url }}" target="_blank" rel="noopener">{{ f.titulo }}</a></li>
       {% endfor %}
     </ul>
   </div>
+  </details>
 
   {% if c.nota_ia %}
     <p class="chico suave" style="margin-top:10px">{{ c.nota_ia }}</p>

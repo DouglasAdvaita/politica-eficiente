@@ -142,7 +142,16 @@ textarea { min-height: 96px; resize: vertical; }
 .etiqueta.base::before { background: #c3cbd6; border-radius: 0; }
 .etiqueta.base[data-tip]:hover::before { background: var(--tinta); }
 
-/* ---------- popups de ayuda (tooltips) ---------- */
+[data-tip].tip-abierto::after {
+  content: attr(data-tip);
+  position: absolute; bottom: calc(100% + 6px); left: 50%;
+  transform: translateX(-50%);
+  background: #1a222d; color: #ffffff;
+  font-size: .74rem; font-weight: 400; letter-spacing: 0;
+  padding: 7px 10px; border-radius: 8px; width: max-content; max-width: 280px;
+  white-space: normal; line-height: 1.4; z-index: 70;
+  box-shadow: 0 4px 16px rgba(16, 24, 40, .22); text-align: left;
+}
 [data-tip] { position: relative; cursor: help; }
 .palabra {
   border-bottom: 1px dotted #9aa4b2; cursor: help;
@@ -251,7 +260,37 @@ textarea { min-height: 96px; resize: vertical; }
 .linea-tiempo li::before { content: ""; position: absolute; left: 54px; top: 14px; width: 10px; height: 10px; border-radius: 50%; background: #ffffff; border: 2px solid var(--tinta); z-index: 2; }
 .linea-tiempo p { margin: 0; font-size: .9rem; color: var(--texto); }
 
-/* ---------- caso: cadena causal ---------- */
+/* ---------- caso: índice de secciones ---------- */
+.indice-caso {
+  display: flex; flex-wrap: wrap; gap: 6px 4px; margin: 12px 0 18px;
+  padding: 8px 10px; border: 1px solid var(--borde); border-radius: 10px;
+  background: #f7f8fa;
+}
+.indice-caso a {
+  font-size: .78rem; font-weight: 600; color: var(--suave);
+  padding: 3px 9px; border-radius: 999px; background: #ffffff;
+  border: 1px solid var(--borde); text-decoration: none;
+}
+.indice-caso a:hover { color: var(--tinta); border-color: var(--tinta); }
+/* ---------- caso: bloques colapsables ---------- */
+.bloque-details { margin: 10px 0; border: 1px solid var(--borde); border-radius: 10px; overflow: hidden; }
+.bloque-details > .bloque { border-left: none; padding-left: 14px; margin: 0; }
+.bloque-summary {
+  cursor: pointer; padding: 10px 14px; font-weight: 700; font-size: .9rem;
+  color: var(--tinta); background: #f7f8fa; list-style: none;
+}
+.bloque-summary::-webkit-details-marker { display: none; }
+.bloque-summary::before { content: "▸ "; color: var(--suave); }
+.bloque-details[open] .bloque-summary::before { content: "▾ "; }
+.bloque-seccion { scroll-margin-top: 80px; }
+/* ---------- contraste y ritmo ---------- */
+.suave { color: #4a5360; }
+.bloque { margin: 18px 0; }
+/* ---------- badges de certeza con icono ---------- */
+.etiqueta.probado::before { background: var(--verde); }
+.etiqueta.sin_datos::before { background: var(--rojo); }
+.etiqueta.indicios::before, .etiqueta.parcial::before { background: var(--ambar); }
+.etiqueta.hipotesis::before, .etiqueta.interpretacion::before { background: var(--azul); }
 .cadena { list-style: none; margin: 10px 0 0; padding: 0 0 0 18px; border-left: 2px solid #e3e7ee; }
 .cadena li { position: relative; padding: 0 0 14px 12px; }
 .cadena li::before { content: ""; position: absolute; left: -7px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: #ffffff; border: 2px solid var(--tinta); }

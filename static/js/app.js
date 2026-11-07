@@ -31,8 +31,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Cualquier fila o tarjeta con data-href se abre con clic o Enter.
-  document.querySelectorAll("[data-href]:not(.nodo)").forEach((el) => {
+  // Tooltips táctiles: tocar/clic muestra el popup; tocar fuera lo cierra.
+  document.querySelectorAll("[data-tip]").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const abierto = el.classList.contains("tip-abierto");
+      document.querySelectorAll(".tip-abierto").forEach((x) => x.classList.remove("tip-abierto"));
+      if (!abierto) el.classList.add("tip-abierto");
+    });
+  });
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".tip-abierto").forEach((x) => x.classList.remove("tip-abierto"));
+  });
     const ir = () => { location.href = el.dataset.href; };
     el.addEventListener("click", ir);
     el.addEventListener("keydown", (e) => {
