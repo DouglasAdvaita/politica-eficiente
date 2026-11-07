@@ -379,6 +379,68 @@
   "negocio": {
     "empresa": "Ipsen",
     "nota": "Decapeptyl es el análogo de GnRH de Ipsen. Está registrado para cáncer de próstata avanzado, miomas, pubertad precoz central, endometriosis, infertilidad y cáncer de mama. La disforia de género no figura entre sus indicaciones y la empresa no publica ventas por indicación.",
+    "historico": [
+      {
+        "anio": 2005,
+        "total": 807,
+        "deca": 211,
+        "fuente": "PharmaTimes, resultados 2005"
+      },
+      {
+        "anio": 2009,
+        "total": 1112,
+        "fuente": "Ipsen, resultados 2009 (ingresos totales)"
+      },
+      {
+        "anio": 2010,
+        "total": 1170,
+        "fuente": "Ipsen, resultados 2010 (ingresos totales)"
+      },
+      {
+        "anio": 2018,
+        "total": 2225,
+        "deca": 372.6,
+        "fuente": "Ipsen, documento de registro 2018"
+      },
+      {
+        "anio": 2019,
+        "total": 2576,
+        "fuente": "Ipsen, resultados 2020"
+      },
+      {
+        "anio": 2020,
+        "total": 2592,
+        "fuente": "Ipsen, resultados 2020"
+      },
+      {
+        "anio": 2021,
+        "total": 2869,
+        "fuente": "Ipsen, resultados 2021"
+      },
+      {
+        "anio": 2022,
+        "total": 3025,
+        "fuente": "Ipsen, resultados 2022"
+      },
+      {
+        "anio": 2023,
+        "total": 3128,
+        "deca": 545.5,
+        "fuente": "Ipsen, estados financieros 2024"
+      },
+      {
+        "anio": 2024,
+        "total": 3401,
+        "deca": 535.9,
+        "fuente": "Ipsen, resultados 2024"
+      },
+      {
+        "anio": 2025,
+        "deca": 542.9,
+        "aprox": true,
+        "fuente": "prensa/DataM (estimación)"
+      }
+    ],
     "productos": [
       {
         "anio": 2023,
@@ -397,22 +459,57 @@
         "Resto": 458.9
       }
     ],
-    "decapeptyl": [
+    "otras_empresas": [
       {
-        "anio": 2023,
-        "valor": 545.5
+        "empresa": "AbbVie",
+        "producto": "Lupron / Lupron Depot-Ped",
+        "droga": "leuprolide",
+        "ventas": "US$ 783 M (2021); US$ 752 M (2020)",
+        "nota": "El mayor vendedor de análogos de GnRH en EE.UU.; indicado para pubertad precoz y, fuera de indicación, para bloquear la pubertad.",
+        "fuente": "Informes anuales de AbbVie"
       },
       {
-        "anio": 2024,
-        "valor": 535.9
+        "empresa": "Endo Pharmaceuticals",
+        "producto": "Supprelin LA",
+        "droga": "histrelin",
+        "ventas": "sin cifra pública individual",
+        "nota": "Implante anual; es el otro bloqueador de larga duración usado en menores en EE.UU.",
+        "fuente": "FDA / ficha técnica"
       },
       {
-        "anio": 2025,
-        "valor": 542.9,
-        "aprox": true
+        "empresa": "Tolmar",
+        "producto": "Fensolvi",
+        "droga": "leuprolide",
+        "ventas": "sin cifra pública individual",
+        "nota": "Leuprolide inyectable semestral.",
+        "fuente": "FDA / ficha técnica"
+      },
+      {
+        "empresa": "Azurity (ex-Arbor)",
+        "producto": "Triptodur",
+        "droga": "triptorelin",
+        "ventas": "sin cifra pública individual",
+        "nota": "Triptorelin semestral; fabricado por Debiopharm (Suiza), el originador de la molécula.",
+        "fuente": "FDA / DailyMed"
+      },
+      {
+        "empresa": "Ferring",
+        "producto": "Gonapeptyl Depot",
+        "droga": "triptorelin",
+        "ventas": "sin cifra pública individual",
+        "nota": "Triptorelin comercializado en Europa.",
+        "fuente": "ficha técnica (emc)"
+      },
+      {
+        "empresa": "Pfizer",
+        "producto": "Synarel",
+        "droga": "nafarelin",
+        "ventas": "sin cifra pública individual",
+        "nota": "Nafarelina, en aerosol nasal; también en la clase GnRH.",
+        "fuente": "FDA / ficha técnica"
       }
     ],
-    "fuente_total": "Ipsen, resultados anuales: ventas totales 3.400,6 M€ (2024) y 3.127,5 M€ (2023); el desglose por producto se publica solo para estos dos años.",
+    "fuente_total": "Serie 'desde 2005' con los años con dato público: Ipsen (reportes 2009-2024) y PharmaTimes (2005). Las barras apiladas por producto solo existen para 2023 y 2024.",
     "fuente_decapeptyl": "Decapeptyl 2023-2024 del reporte anual de Ipsen; 2025 es estimación de prensa/DataM (≈)."
   },
   "poblacion": {

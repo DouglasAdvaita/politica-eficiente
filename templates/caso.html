@@ -76,6 +76,26 @@
   </div>
   {% endif %}
 
+  {% if c.negocio.otras_empresas %}
+  <div class="bloque bandera">
+    <h4>¿Solo Ipsen?</h4>
+    <p class="chico suave" style="margin:0 0 6px">
+      No. Varias empresas venden análogos de GnRH aprobados para pubertad precoz y usados también, fuera de indicación, para bloquear la pubertad en menores. AbbVie (Lupron) es el mayor de todos:
+    </p>
+    <div class="pila">
+      {% for o in c.negocio.otras_empresas %}
+        <div class="participante">
+          <div style="flex:1">
+            <b>{{ o.empresa }}</b> — <span class="suave">{{ o.producto }}</span>
+            <p class="chico" style="margin:4px 0">{{ o.nota }}</p>
+            <p class="chico suave" style="margin:0">Ventas: {{ o.ventas }} · {{ o.fuente }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
   {% if c.poblacion_svg %}
   <div class="bloque">
     <h4>Dónde encaja</h4>

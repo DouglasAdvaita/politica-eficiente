@@ -138,11 +138,11 @@ def _fmt_m(n):
 
 
 def svg_negocio(caso):
-    """Ventas de la empresa por anio (barras apiladas por producto) y del rubro destacado."""
+    """Ventas de Ipsen desde 2005 (total y Decapeptyl) y desglose por producto."""
     neg = caso.get("negocio") or {}
+    historico = neg.get("historico") or []
     productos = neg.get("productos") or []
-    deca = neg.get("decapeptyl") or []
-    if not productos and not deca:
+    if not historico and not productos:
         return ""
     orden = ["Decapeptyl", "Resto", "Dysport", "Cabometyx", "Somatuline"]  # abajo -> arriba
     rubros = {
@@ -159,16 +159,62 @@ def svg_negocio(caso):
         "Cabometyx": "#d7dfe9",
         "Somatuline": "#c9d4e2",
     }
-    partes = ['<svg viewBox="0 0 760 470" class="negocio-svg" role="img" '
-              'aria-label="Ventas de Ipsen por anio y por producto">']
-    # ---- panel A: barras apiladas ----
-    partes.append('<text x="10" y="18" class="nt">Ventas del grupo por producto (millones de €)</text>')
-    y_top, y_base = 34, 212
-    max_v, ypx = 4000.0, (212 - 34) / 4000.0
+    partes = ['<svg viewBox="0 0 760 430" class="negocio-svg" role="img" '
+              'aria-label="Ventas de Ipsen desde 2005 y desglose por producto">']
+    # ---- panel A: serie desde 2005 ----
+    partes.append('<text x="10" y="18" class="nt">Ventas del grupo Ipsen desde 2005 (millones de €)</text>')
+    izq, der, y_top, y_base = 54, 720, 34, 212
+    x0, x1, max_v = 2004, 2026, 3600.0
+
+    def px(anio):
+        return izq + (anio - x0) / float(x1 - x0) * (der - izq)
+
+    def py(v):
+        return y_base - v / max_v * (y_base - y_top)
+
+    for nivel in (0, 1000, 2000, 3000):
+        y = py(nivel)
+        partes.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="#e6e9ee"/>' % (izq, y, der, y))
+        partes.append('<text x="%d" y="%.1f" text-anchor="end" class="eje">%d</text>' % (izq - 8, y + 4, nivel))
+    for anio in range(2004, 2026, 4):
+        partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d</text>'
+                      % (px(anio), y_base + 16, anio))
+    # total (pale) y Decapeptyl (destacado)
+    total_pts = [h for h in historico if h.get("total")]
+    deca_pts = [h for h in historico if h.get("deca")]
+    partes.append('<polyline points="%s" fill="none" stroke="#9aa4b2" stroke-width="1.6" opacity="0.85"/>'
+                  % " ".join("%.1f,%.1f" % (px(h["anio"]), py(h["total"])) for h in total_pts))
+    partes.append('<polyline points="%s" fill="none" stroke="#c2410c" stroke-width="2.4"/>'
+                  % " ".join("%.1f,%.1f" % (px(h["anio"]), py(h["deca"])) for h in deca_pts))
+    for h in total_pts:
+        t = "%d: grupo %s M€ — %s" % (h["anio"], _fmt_m(h["total"]), h.get("fuente", ""))
+        partes.append('<circle cx="%.1f" cy="%.1f" r="3.4" fill="#ffffff" stroke="#9aa4b2" '
+                      'stroke-width="1.6"><title>%s</title></circle>'
+                      % (px(h["anio"]), py(h["total"]), html.escape(t)))
+    for h in deca_pts:
+        aprox = h.get("aprox")
+        t = "Decapeptyl %d: %s M€%s — %s" % (h["anio"], _fmt_m(h["deca"]),
+                                             " (estimación)" if aprox else "", h.get("fuente", ""))
+        partes.append('<circle cx="%.1f" cy="%.1f" r="4" fill="#c2410c" stroke="#7c2d12" '
+                      'stroke-width="1.2"><title>%s</title></circle>'
+                      % (px(h["anio"]), py(h["deca"]), html.escape(t)))
+        partes.append('<text x="%.1f" y="%.1f" class="nd">%s</text>'
+                      % (px(h["anio"]) + 6, py(h["deca"]) - 4, ("≈" if aprox else "") + _fmt_m(h["deca"])))
+    # leyenda serie
+    partes.append('<rect x="%d" y="%d" width="11" height="3" fill="#9aa4b2"/>'
+                  '<text x="%d" y="%d" class="et">grupo (total)</text>'
+                  % (izq + 10, 226, izq + 26, 230))
+    partes.append('<rect x="%d" y="%d" width="11" height="3" fill="#c2410c"/>'
+                  '<text x="%d" y="%d" class="nd">Decapeptyl (análogo GnRH)</text>'
+                  % (izq + 120, 226, izq + 136, 230))
+    # ---- panel B: barras apiladas por producto ----
+    partes.append('<text x="10" y="262" class="nt">Ventas por producto (millones de €)</text>')
+    y2_top, y2_base = 278, 356
+    ypx2 = (y2_base - y2_top) / 4000.0
     cx = {2023: 230, 2024: 470}
     bw = 120
     for nivel in (0, 1000, 2000, 3000, 4000):
-        y = y_base - nivel * ypx
+        y = y2_base - nivel * ypx2
         partes.append('<line x1="54" y1="%.1f" x2="720" y2="%.1f" stroke="#e6e9ee"/>' % (y, y))
         partes.append('<text x="46" y="%.1f" text-anchor="end" class="eje">%d</text>' % (y + 4, nivel))
     for p in productos:
@@ -179,8 +225,8 @@ def svg_negocio(caso):
             v = p.get(prod, 0) or 0
             if not v:
                 continue
-            h = v * ypx
-            y = y_base - acum - h
+            h = v * ypx2
+            y = y2_base - acum - h
             destacado = prod == "Decapeptyl"
             titulo = "%s · %s: %s M€" % (anio, prod, _fmt_m(v))
             partes.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" fill="%s" '
@@ -192,34 +238,10 @@ def svg_negocio(caso):
                              html.escape(titulo), html.escape(rubros[prod])))
             acum += v
         partes.append('<text x="%.1f" y="%.1f" text-anchor="middle" class="nt">%s</text>'
-                      % (cx[anio], y_base - acum - 8, _fmt_m(acum)))
+                      % (cx[anio], y2_base - acum - 8, _fmt_m(acum)))
         partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d</text>'
-                      % (cx[anio], y_base + 18, anio))
-    # ---- panel B: Decapeptyl ----
-    partes.append('<text x="10" y="262" class="nt">Decapeptyl, el rubro destacado (millones de €)</text>')
-    y2_top, y2_base = 278, 352
-    max_d, ypx2 = 600.0, (352 - 278) / 600.0
-    cxb = {2023: 170, 2024: 380, 2025: 590}
-    bw2 = 90
-    for nivel in (0, 200, 400, 600):
-        y = y2_base - nivel * ypx2
-        partes.append('<line x1="54" y1="%.1f" x2="720" y2="%.1f" stroke="#e6e9ee"/>' % (y, y))
-        partes.append('<text x="46" y="%.1f" text-anchor="end" class="eje">%d</text>' % (y + 4, nivel))
-    for d in deca:
-        anio, v, aprox = d["anio"], d.get("valor", 0), d.get("aprox")
-        x = cxb[anio] - bw2 / 2.0
-        h = v * ypx2
-        y = y2_base - h
-        titulo = "Decapeptyl %d: %s M€%s" % (anio, _fmt_m(v), " (estimación)" if aprox else "")
-        partes.append('<rect x="%.1f" y="%.1f" width="%d" height="%.1f" fill="#c2410c" '
-                      'opacity="%s" stroke="#7c2d12" stroke-width="1.6">'
-                      '<title>%s</title></rect>'
-                      % (x, y, bw2, h, "0.72" if aprox else "1", html.escape(titulo)))
-        partes.append('<text x="%.1f" y="%.1f" text-anchor="middle" class="nt">%s</text>'
-                      % (cxb[anio], y - 6, ("≈" if aprox else "") + _fmt_m(v)))
-        partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d</text>'
-                      % (cxb[anio], y2_base + 18, anio))
-    # ---- leyenda ----
+                      % (cx[anio], y2_base + 18, anio))
+    # ---- leyenda producto ----
     ly = 402
     partes.append('<text x="10" y="%d" class="eje">Leyenda (rubro en el recuadro de cada barra):</text>' % ly)
     lx = 10
