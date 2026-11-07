@@ -125,8 +125,8 @@ def svg_curvas(caso):
                       '<title>%s: %s</title></rect>'
                       % (xa, max(xb - xa, 2), color,
                          html.escape(et["periodo"]), html.escape(et.get("descripcion", ""))))
-        partes.append('<text x="%.1f" y="30" text-anchor="middle" class="eje" '
-                      'fill="%s">%s</text>'
+        partes.append('<text x="%.1f" y="29" text-anchor="middle" class="eje" '
+                      'font-size="8.5" fill="%s">%s</text>'
                       % ((xa + xb) / 2, "#334155" if i < 4 else "#ffffff",
                          html.escape(et.get("etiqueta", ""))))
     # ---- rejilla y eje ----
@@ -257,10 +257,10 @@ def svg_negocio(caso):
                       % (px(h["anio"]) + 6, py(h["deca"]) - 4, ("≈" if aprox else "") + _fmt_m(h["deca"])))
     partes.append('<rect x="%d" y="%d" width="11" height="3" fill="#9aa4b2"/>'
                   '<text x="%d" y="%d" class="et">todo el grupo Ipsen</text>'
-                  % (izq + 10, 226, izq + 26, 230))
+                  % (izq + 10, 246, izq + 26, 250))
     partes.append('<rect x="%d" y="%d" width="11" height="3" fill="#c2410c"/>'
                   '<text x="%d" y="%d" class="nd">Decapeptyl (el bloqueador)</text>'
-                  % (izq + 120, 226, izq + 136, 230))
+                  % (izq + 120, 246, izq + 136, 250))
     # ---- panel B: mercado mundial de GnRH por molecula (2025) ----
     partes.append('<text x="10" y="262" class="nt">El negocio completo: cuánto vende cada fármaco de la clase (2025, US$ M)</text>')
     bx0, bmax = 150, 470.0

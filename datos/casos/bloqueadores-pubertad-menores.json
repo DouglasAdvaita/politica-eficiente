@@ -205,7 +205,7 @@
       },
       {
         "periodo": "2015-2020",
-        "etiqueta": "Auge como estándar",
+        "etiqueta": "Auge",
         "descripcion": "El NHS inglés lo convierte en estándar (2015); las derivaciones se disparan (GIDS de 97 en 2009 a 2.519 en 2019)."
       },
       {
@@ -215,7 +215,7 @@
       },
       {
         "periodo": "2024-2026",
-        "etiqueta": "Restricciones",
+        "etiqueta": "Restric.",
         "descripcion": "Reino Unido prohíbe (2024, indefinida); Queensland hasta 2031; Francia debate."
       }
     ],
@@ -707,10 +707,10 @@
         "nota": "Zoladex (AstraZeneca/TerSera). Próstata, mama, endometriosis."
       },
       {
-        "molecula": "Triptorelin",
+        "molecula": "Triptorelin = Decapeptyl",
         "valor": 952,
         "destacado": true,
-        "nota": "Decapeptyl (Ipsen), Trelstar/Triptodur (Debiopharm/Azurity). Es el bloqueador del caso."
+        "nota": "Decapeptyl (Ipsen) es triptorelin; también Trelstar/Triptodur. Es el bloqueador del caso."
       },
       {
         "molecula": "Otros GnRH",
