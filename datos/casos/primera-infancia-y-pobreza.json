@@ -23,7 +23,17 @@
     "matrícula": "Cantidad de niños inscritos en un centro educativo o de cuidados; no equivale a niños efectivamente atendidos.",
     "cobertura": "Proporción de niños de una edad que asisten a un centro; en Uruguay se calcula sobre la población estimada.",
     "primera infancia": "Período desde el nacimiento hasta los 6 años (o hasta el ingreso a la educación primaria).",
-    "Fondo de Primera Infancia": "Partida creada en la Rendición de Cuentas 2021 para financiar la apertura de nuevos CAIF a partir de 2022."
+    "Fondo de Primera Infancia": "Partida creada en la Rendición de Cuentas 2021 para financiar la apertura de nuevos CAIF a partir de 2022.",
+    "MEC": "Ministerio de Educación y Cultura.",
+    "CAPI": "Centros de Atención a la Primera Infancia, dependientes de INAU.",
+    "CCEI": "Centros Comunitarios de Educación Infantil.",
+    "BIS": "Becas de Integración Social: subsidio para que niños asistan a centros privados.",
+    "INE": "Instituto Nacional de Estadística: mide población, pobreza y nacimientos.",
+    "MSP": "Ministerio de Salud Pública.",
+    "MEF": "Ministerio de Economía y Finanzas.",
+    "OMEP": "Organización Mundial para la Educación Preescolar, filial Uruguay.",
+    "Iters": "Escala (Infant/Toddler Environment Rating Scale) que mide la calidad del ambiente de los centros de primera infancia.",
+    "Ecers": "Escala (Early Childhood Environment Rating Scale) que evalúa la calidad del entorno en la primera infancia."
   },
   "cadena": [
     {
@@ -63,7 +73,7 @@
     {
       "fecha": "1988",
       "pais": "Uruguay",
-      "hecho": "Se crean los primeros CAIF: atención integral a la primera infancia en alianza entre INAU y organizaciones de la sociedad civil.",
+      "hecho": "Se crean los primeros CAIF (Centros de Atención a la Infancia y la Familia): atención integral a la primera infancia en alianza entre INAU (Instituto del Niño y Adolescente del Uruguay) y organizaciones de la sociedad civil.",
       "fuente": "https://opp.gub.uy/sites/default/files/documentos/2023-12/Resumen%20Ejecutivo_Evaluaci%C3%B3n_CAIF_211223_0.pdf"
     },
     {
@@ -150,7 +160,7 @@
     ],
     "hallazgo": [
       {
-        "texto": "El 79% de matrícula con financiamiento público (2025) mide cupos, no niños atendidos ni calidad (OMEP, julio 2025).",
+        "texto": "El 79% de matrícula con financiamiento público (2025) mide cupos, no niños atendidos ni calidad (OMEP (Organización Mundial para la Educación Preescolar), julio 2025).",
         "fuente": "https://www.omep.org.uy/wp-content/uploads/2025/07/DOC-OMEP-Para-digital.pdf"
       },
       {
@@ -207,7 +217,7 @@
     "Cuántos niños de 0 a 3 años no tienen cobertura pública, por barrio.",
     "La asistencia real (días por semana) de los niños inscritos en CAIF.",
     "La tasa de pobreza infantil por departamento y por edad.",
-    "Los resultados de calidad (Iters/Ecers) por centro, si existen.",
+    "Los resultados de calidad (escalas Iters/Ecers, de calidad del ambiente infantil) por centro, si existen.",
     "El costo por cupo diario en cada modalidad."
   ],
   "fuentes": [
@@ -347,7 +357,7 @@
         "afectados": 130000,
         "base": 408555,
         "color": "#b23a2e",
-        "nota": "32% de los menores de 6 años (2024); 29,1% en 2025. INE, ECH."
+        "nota": "32% de los menores de 6 años (2024); 29,1% en 2025. INE (Instituto Nacional de Estadística), ECH (Encuesta Continua de Hogares)."
       },
       {
         "etiqueta": "Sin cobertura pública 0-3",
@@ -357,7 +367,7 @@
         "afectados": 55500,
         "base": 408555,
         "color": "#a96b12",
-        "nota": "41,7% de la población de 0 a 3 años sin cobertura pública (2024). Sistema de Cuidados."
+        "nota": "41,7% de la población de 0 a 3 años sin cobertura pública (2024). Sistema de Cuidados (SNIC, Sistema Nacional Integrado de Cuidados)."
       },
       {
         "etiqueta": "Sin cupo diario al año",
@@ -367,7 +377,7 @@
         "afectados": 15000,
         "base": 408555,
         "color": "#2f5d8a",
-        "nota": "Cerca del 60% de los niños de 1 año en CAIF asiste solo una vez por semana. Busqueda, marzo 2025."
+        "nota": "Cerca del 60% de los niños de 1 año en CAIF (Centros de Atención a la Infancia y la Familia) asiste solo una vez por semana. Busqueda, marzo 2025."
       }
     ],
     "caso_banda": {
@@ -417,35 +427,35 @@
         "origen": "INAU",
         "destino": "Plan CAIF",
         "tipo": "gestiona",
-        "evidencia": "INAU gestiona CAIF con organizaciones de la sociedad civil.",
+        "evidencia": "INAU (Instituto del Niño y Adolescente del Uruguay) gestiona CAIF (Centros de Atención a la Infancia y la Familia) con organizaciones de la sociedad civil.",
         "fuente": "https://www.elobservador.com.uy/nota/el-inau-en-la-atencion-de-la-primera-infancia-20243191720"
       },
       {
         "origen": "MEC / CCEPI",
         "destino": "ANEP (DGEIP)",
         "tipo": "coordina",
-        "evidencia": "El CCEPI coordina educación en primera infancia pero no es vinculante.",
+        "evidencia": "El CCEPI (Consejo Coordinador de Educación en la Primera Infancia) coordina educación en primera infancia pero no es vinculante.",
         "fuente": "https://www.omep.org.uy/wp-content/uploads/2025/07/DOC-OMEP-Para-digital.pdf"
       },
       {
         "origen": "MEC / CCEPI",
         "destino": "INAU",
         "tipo": "coordina",
-        "evidencia": "El CCEPI incluye a INAU, pero sin presupuesto propio.",
+        "evidencia": "El CCEPI (Consejo Coordinador de Educación en la Primera Infancia) incluye a INAU (Instituto del Niño y Adolescente del Uruguay), pero sin presupuesto propio.",
         "fuente": "https://www.omep.org.uy/wp-content/uploads/2025/07/DOC-OMEP-Para-digital.pdf"
       },
       {
         "origen": "MIDES",
         "destino": "Sistema de Cuidados (SNIC)",
         "tipo": "integra",
-        "evidencia": "MIDES integra el SNIC y mide la pobreza infantil.",
+        "evidencia": "MIDES (Ministerio de Desarrollo Social) integra el SNIC (Sistema Nacional Integrado de Cuidados) y mide la pobreza infantil.",
         "fuente": "https://www.gub.uy/sistema-cuidados/comunicacion/publicaciones/conoce-sistema-nacional-integrado-cuidados"
       },
       {
         "origen": "INAU",
         "destino": "MIDES",
         "tipo": "depende (financiamiento)",
-        "evidencia": "INAU depende del MEF para financiar los CAIF; el déficit de 2025 es de US$ 60 millones.",
+        "evidencia": "INAU (Instituto del Niño y Adolescente del Uruguay) depende del MEF (Ministerio de Economía y Finanzas) para financiar los CAIF (Centros de Atención a la Infancia y la Familia); el déficit de 2025 es de US$ 60 millones.",
         "fuente": "https://www.elobservador.com.uy/nacional/inau-no-tiene-plata-los-caif-130-centros-fueron-abiertos-o-ampliados-financiamiento-asignado-segun-nuevo-gobierno-n6000911"
       }
     ]
@@ -506,7 +516,7 @@
         {
           "anio": "2024",
           "x": 2024,
-          "hecho": "INAU atiende a 64.387 niños en centros de primera infancia (récord).",
+          "hecho": "INAU (Instituto del Niño y Adolescente del Uruguay) atiende a 64.387 niños en centros de primera infancia (récord).",
           "fuente": "https://www.gub.uy/sistema-cuidados/sites/sistema-cuidados/files/documentos/publicaciones/Sistema%20de%20Cuidados%20-%20Memoria%20Quinquenal%202020-2024.pdf",
           "relevante": true,
           "emoji": "•"
@@ -518,6 +528,14 @@
           "fuente": "https://www.elobservador.com.uy/nacional/inau-no-tiene-plata-los-caif-130-centros-fueron-abiertos-o-ampliados-financiamiento-asignado-segun-nuevo-gobierno-n6000911",
           "relevante": false,
           "emoji": "•"
+        },
+        {
+          "anio": "2024",
+          "x": 2024.5,
+          "hecho": "Se inauguran 28 nuevos CAIF (Centros de Atención a la Infancia y la Familia) en un solo año (récord de la administración).",
+          "fuente": "https://www.elobservador.com.uy/nacional/inau-no-tiene-plata-los-caif-130-centros-fueron-abiertos-o-ampliados-financiamiento-asignado-segun-nuevo-gobierno-n6000911",
+          "relevante": true,
+          "emoji": "🏗️"
         }
       ]
     }
