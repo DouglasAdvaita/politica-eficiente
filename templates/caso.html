@@ -187,6 +187,8 @@
     <div class="bloque">
       <h4 style="color:rgba(0,0,0,.8); text-transform:none; letter-spacing:0; font-weight:600; margin:0 0 4px">Quién es {{ p.nombre }}</h4>
       {{ p.bio_svg|safe }}
+      {% if p.confiabilidad %}<p class="chico" style="margin:6px 0 2px"><b>{{ p.emoji }} Confiabilidad:</b> {{ p.confiabilidad }}</p>{% endif %}
+      {% if p.reclamos %}<p class="chico suave" style="margin:0"><b>Reclamos/juicios:</b> {{ p.reclamos }}</p>{% endif %}
     </div>
     {% endfor %}
   {% endif %}
@@ -196,6 +198,8 @@
     <div class="bloque">
       <h4 style="color:rgba(0,0,0,.8); text-transform:none; letter-spacing:0; font-weight:600; margin:0 0 4px">La empresa: {{ e.nombre }}</h4>
       {{ e.bio_svg|safe }}
+      {% if e.confiabilidad %}<p class="chico" style="margin:6px 0 2px"><b>{{ e.emoji }} Confiabilidad:</b> {{ e.confiabilidad }}</p>{% endif %}
+      {% if e.reclamos %}<p class="chico suave" style="margin:0"><b>Reclamos/juicios:</b> {{ e.reclamos }}</p>{% endif %}
     </div>
     {% endfor %}
   {% endif %}

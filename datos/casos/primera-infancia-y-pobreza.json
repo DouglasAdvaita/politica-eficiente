@@ -494,7 +494,9 @@
           "relevante": true,
           "emoji": "•"
         }
-      ]
+      ],
+      "confiabilidad": "Gestor educativo; preside ANEP. Impulsa la universalización de la educación a los 3 años.",
+      "reclamos": "Ningún reclamo o juicio público conocido."
     },
     {
       "nombre": "Guillermo Fossati",
@@ -537,7 +539,9 @@
           "relevante": true,
           "emoji": "🏗️"
         }
-      ]
+      ],
+      "confiabilidad": "Ex presidente del INAU; administración 2020-2025.",
+      "reclamos": "Déficit de US$ 60 millones en el INAU (2025) por centros abiertos sin financiamiento."
     }
   ]
 }

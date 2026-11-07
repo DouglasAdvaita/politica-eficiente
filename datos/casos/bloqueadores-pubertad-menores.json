@@ -986,7 +986,9 @@
           "detalle": "Crítica de la OMS y de la «Agenda 2030»; a favor de la «soberanía individual»."
         }
       ],
-      "emoji": "🦷"
+      "emoji": "🦷",
+      "confiabilidad": "Odontóloga; primera legislatura (2025). Sin trayectoria técnica previa en salud.",
+      "reclamos": "Ningún reclamo o juicio público conocido."
     },
     {
       "nombre": "Hilary Cass",
@@ -1093,7 +1095,9 @@
           "emoji": "👑"
         }
       ],
-      "emoji": "🩺"
+      "emoji": "🩺",
+      "confiabilidad": "Pediatra con 40 años de trayectoria; ex presidenta del Royal College of Paediatrics; OBE y baronesa. Revisión independiente con revisión por pares.",
+      "reclamos": "Criticada por organizaciones trans por concluir que la evidencia sobre bloqueadores es débil; defendida por el NHS."
     }
   ],
   "vinculos": {
@@ -1268,7 +1272,9 @@
           "emoji": "⚖️"
         }
       ],
-      "emoji": "💊"
+      "emoji": "💊",
+      "confiabilidad": "Laboratorio francés controlado por la familia fundadora Beaufour desde 1929.",
+      "reclamos": "Sin juicios por Decapeptyl; multa en 2011 (€17 M) por competencia desleal en otro producto (Tanakan)."
     },
     {
       "nombre": "AbbVie",
@@ -1335,7 +1341,9 @@
           "emoji": "🧱"
         }
       ],
-      "emoji": "💊"
+      "emoji": "💊",
+      "confiabilidad": "Farmacéutica estadounidense, fabricante de Humira y Lupron.",
+      "reclamos": "Pago de US$ 875 M en 2001 por fraude en la venta de Lupron; acusada de inflar precios (2021)."
     }
   ]
 }
