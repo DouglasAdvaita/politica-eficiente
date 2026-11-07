@@ -186,16 +186,9 @@
     {% for p in c.personas %}
     <div class="bloque">
       <h4>Quién es {{ p.nombre }}</h4>
-      <p class="chico suave" style="margin:0 0 6px">{{ p.rol }} · {{ p.profesion }}. {{ p.nota }}</p>
-      <div class="bio-hitos">
-        {% for h in p.hitos %}
-          <div class="bio-hito">
-            <span class="anio">{{ h.anio }}</span>
-            <span class="chico" style="flex:1">{{ h.hecho }}{% if h.fuente %} <a class="chico" href="{{ h.fuente }}" target="_blank" rel="noopener">↗</a>{% endif %}</span>
-          </div>
-        {% endfor %}
-      </div>
-      <div class="chips" style="margin-top:8px">
+      <p class="chico suave" style="margin:0 0 6px">{{ p.nota }}</p>
+      {{ c.personas_svg[loop.index0]|safe }}
+      <div class="chips" style="margin-top:4px">
         {% for v in p.vinculaciones %}
           <span class="etiqueta base" tabindex="0" data-tip="{{ v.detalle }}">{{ v.tipo }}</span>
         {% endfor %}

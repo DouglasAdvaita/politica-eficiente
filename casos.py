@@ -146,13 +146,9 @@ def svg_curvas(caso):
         puntos = serie["puntos"]
         ultimo_nivel = puntos[-1]["nivel"]
         if destacado:
-            color, grosor, opac = "#1a222d", 2.6, 1.0
-        elif ultimo_nivel <= 1:
-            color, grosor, opac = "#b4534b", 1.5, 0.9
-        elif ultimo_nivel == 2:
-            color, grosor, opac = "#c9942f", 1.5, 0.9
+            color, grosor, opac = "#c2410c", 2.6, 1.0
         else:
-            color, grosor, opac = "#7a8a9d", 1.3, 0.8
+            color, grosor, opac = "#9aa4b2", 1.2, 0.72
         # trazo escalonado hasta el borde derecho
         paso = []
         for i, p in enumerate(puntos):
@@ -279,21 +275,52 @@ def svg_negocio(caso):
 
 
 def svg_poblacion(caso):
-    """Histograma poblacional por edad + superficies apiladas (con y sin edad)."""
+    """Histograma compacto: contexto en gris, el tema en color, muertes con sexo arriba."""
     pop = caso.get("poblacion") or {}
     edades = pop.get("edades") or []
     if not edades:
         return ""
     superficies = pop.get("superficies") or []
-    caso_note = pop.get("caso") or {}
     muertes = pop.get("muertes") or []
+    contexto = [s for s in superficies if s.get("afectados") is not None]
+    tema = [s for s in superficies if s.get("afectados") is None]
+    W = 760
     hx0, hx1 = 52, 716
-    hy_top, hy_base = 40, 240
+    hy_top, hy_base = 100, 240
     ancho_anio = (hx1 - hx0) / 95.0
     max_c = max(c for _, c in edades)
     bar_h_max = hy_base - hy_top
     partes = []
-    partes.append('<text x="10" y="20" class="nt">Población de Uruguay por edad (Censo 2023)</text>')
+    # ---- muertes arriba (hombres azul, mujeres rosado) ----
+    if muertes:
+        partes.append('<text x="10" y="18" class="eje">Muertes por año (2024) — azul hombres · rosado mujeres</text>')
+        ref = max((m.get("hombres") or 0) + (m.get("mujeres") or 0) + (m.get("total") or 0) for m in muertes) or 1
+        ry = 32
+        for m in muertes:
+            h, mu, tot = m.get("hombres"), m.get("mujeres"), m.get("total")
+            partes.append('<text x="10" y="%d" class="et">%s</text>' % (ry, html.escape(m["etiqueta"])))
+            if tot is not None:
+                w = max(tot / ref * 200.0, 4)
+                partes.append('<rect x="140" y="%d" width="%.1f" height="9" rx="2" fill="#94a3b8" opacity="0.85">'
+                              '<title>%s %s: %s — %s</title></rect>'
+                              % (ry - 7, w, html.escape(m["etiqueta"]), m.get("anio", ""), _fmt(tot),
+                                 html.escape(m.get("fuente", ""))))
+                partes.append('<text x="%.1f" y="%d" class="et">%s</text>' % (140 + w + 6, ry, _fmt(tot)))
+            else:
+                wh = max((h or 0) / ref * 200.0, 4)
+                wm = max((mu or 0) / ref * 200.0, 4)
+                partes.append('<rect x="140" y="%d" width="%.1f" height="9" fill="#3b82f6" opacity="0.9">'
+                              '<title>%s %s: %s hombres</title></rect>'
+                              % (ry - 7, wh, html.escape(m["etiqueta"]), m.get("anio", ""), _fmt(h or 0)))
+                partes.append('<rect x="%.1f" y="%d" width="%.1f" height="9" fill="#ec4899" opacity="0.9">'
+                              '<title>%s %s: %s mujeres — %s</title></rect>'
+                              % (140 + wh, ry - 7, wm, html.escape(m["etiqueta"]), m.get("anio", ""),
+                                 _fmt(mu or 0), html.escape(m.get("fuente", ""))))
+                partes.append('<text x="%.1f" y="%d" class="et">%s</text>'
+                              % (140 + wh + wm + 6, ry, _fmt((h or 0) + (mu or 0))))
+            ry += 16
+    # ---- titulo e histograma ----
+    partes.append('<text x="10" y="%d" class="nt">Población de Uruguay por edad (Censo 2023)</text>' % (hy_top - 12))
     for edad, cuenta in edades:
         x = hx0 + edad * ancho_anio
         w = 5 * ancho_anio
@@ -302,13 +329,13 @@ def svg_poblacion(caso):
                       'stroke="#b9c4d2" stroke-width="0.5">'
                       '<title>%d–%d años: %s personas</title></rect>'
                       % (x, hy_base - h, w, h, edad, edad + 4, _fmt(cuenta)))
-    # superficies apiladas: cada tramo de edad acumula las que lo cubren
+    # contexto en gris, apilado
     for edad, cuenta in edades:
         x = hx0 + edad * ancho_anio
         w = 5 * ancho_anio
         bar_h = bar_h_max * cuenta / max_c
         acum = 0.0
-        for s in superficies:
+        for s in contexto:
             desde, hasta = s.get("desde"), s.get("hasta")
             if not (desde <= edad < hasta):
                 continue
@@ -317,63 +344,45 @@ def svg_poblacion(caso):
             h = frac * bar_h
             if h <= 0:
                 continue
-            color = s.get("color", "#0e7490")
             titulo = "%s: %s personas (%.1f%% de su franja %d–%d)" % (
                 s.get("etiqueta", ""), _fmt(s.get("afectados", 0)), frac * 100, desde, hasta)
             if s.get("slug"):
                 partes.append('<a href="/tema/%s">' % html.escape(s["slug"]))
-            partes.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s" '
-                          'opacity="0.5" stroke="%s" stroke-width="0.4">'
+            partes.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="#94a3b8" '
+                          'opacity="0.42" stroke="#94a3b8" stroke-width="0.3">'
                           '<title>%s</title></rect>'
-                          % (x, hy_base - acum - h, w, h, color, color, html.escape(titulo)))
+                          % (x, hy_base - acum - h, w, h, html.escape(titulo)))
             if s.get("slug"):
                 partes.append("</a>")
             acum += h
+    # tema: banda vertical punteada en su franja de edad
+    for s in tema:
+        desde, hasta = s.get("desde"), s.get("hasta")
+        xa = hx0 + desde * ancho_anio
+        ancho = (hasta - desde) * ancho_anio
+        color = s.get("color", "#c2410c")
+        partes.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s" opacity="0.16" '
+                      'stroke="%s" stroke-dasharray="5 3" stroke-width="1.4">'
+                      '<title>%s: %s</title></rect>'
+                      % (xa, hy_top, ancho, bar_h_max, color, color,
+                         html.escape(s.get("etiqueta", "")), html.escape(s.get("nota", ""))))
+        partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="nd" fill="%s">%s · ?</text>'
+                      % (xa + ancho / 2, hy_top - 6, color, html.escape(s.get("etiqueta", ""))))
     for edad in (0, 20, 40, 60, 80, 90):
         x = hx0 + edad * ancho_anio
         partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d%s</text>'
-                      % (x, hy_base + 16, edad, "+" if edad == 90 else ""))
-    partes.append('<text x="10" y="%d" class="eje">años →</text>' % (hy_base + 16))
-    # leyenda con cada superficie
-    ly = hy_base + 34
-    for s in superficies:
-        desde, hasta = s.get("desde"), s.get("hasta")
-        base = s.get("base") or sum(c for e, c in edades if desde <= e < hasta)
-        frac = (s.get("afectados", 0) / base) if base else 0
-        color = s.get("color", "#0e7490")
-        franja = "toda la población" if (desde == 0 and hasta >= 95) else "%d–%d años" % (desde, hasta)
-        partes.append('<rect x="10" y="%d" width="11" height="11" fill="%s" opacity="0.5"/>' % (ly - 10, color))
-        partes.append('<text x="26" y="%d" class="et">%s: %s personas (%.1f%% · %s)</text>'
-                      % (ly, html.escape(s.get("etiqueta", "")), _fmt(s.get("afectados", 0)),
-                         frac * 100, franja))
-        ly += 16
-    if caso_note:
-        ly += 6
-        partes.append('<rect x="10" y="%d" width="11" height="11" fill="none" '
-                      'stroke="#b4534b" stroke-dasharray="3 2"/>' % (ly - 10))
-        partes.append('<text x="26" y="%d" class="et" style="fill:#b4534b">%s — %s</text>'
-                      % (ly, html.escape(caso_note.get("etiqueta", "")), html.escape(caso_note.get("nota", ""))))
-        ly += 16
-    # panel de muertes anuales (flujo, no stock)
-    if muertes:
-        ly += 8
-        partes.append('<text x="10" y="%d" class="nt">Muertes por año (2024) — otro tema que atender</text>' % ly)
-        ly += 16
-        max_m = max(m["cantidad"] for m in muertes)
-        for m in muertes:
-            w = m["cantidad"] / max_m * 330.0
-            partes.append('<text x="20" y="%d" font-size="15">%s</text>'
-                          % (ly, html.escape(m.get("emoji", "•"))))
-            partes.append('<text x="46" y="%d" class="et">%s</text>' % (ly, html.escape(m["etiqueta"])))
-            partes.append('<rect x="150" y="%d" width="%.1f" height="13" rx="3" fill="#475569" opacity="0.75">'
-                          '<title>%s: %s en %s</title></rect>'
-                          % (ly - 10, w, html.escape(m["etiqueta"]), _fmt(m["cantidad"]), m.get("anio", "")))
-            partes.append('<text x="%.1f" y="%d" class="et">%s</text>'
-                          % (150 + w + 8, ly, _fmt(m["cantidad"])))
-            ly += 20
-    H = ly + 10
+                      % (x, hy_base + 14, edad, "+" if edad == 90 else ""))
+    # leyenda compacta
+    ly = hy_base + 30
+    partes.append('<rect x="10" y="%d" width="11" height="11" fill="#94a3b8" opacity="0.45"/>' % (ly - 10))
+    partes.append('<text x="26" y="%d" class="et">contexto (pobreza, vivienda, desocupación, dependencia… — pasá el mouse para ver cada cifra)</text>' % ly)
+    ly += 16
+    partes.append('<rect x="10" y="%d" width="11" height="11" fill="none" stroke="#c2410c" stroke-dasharray="3 2"/>' % (ly - 10))
+    partes.append('<text x="26" y="%d" class="nd">este caso: menores en tratamiento (sin dato, edad aproximada 10-18)</text>' % ly)
+    ly += 16
+    H = ly + 8
     return ('<svg viewBox="0 0 760 %d" class="poblacion-svg" role="img" '
-            'aria-label="Población por edad y magnitud de problemas sociales">' % int(H)
+            'aria-label="Población por edad, contexto social y muertes por sexo">' % int(H)
             + "".join(partes) + "</svg>")
 
 
@@ -436,6 +445,64 @@ def svg_vinculos(caso):
         partes.append('<text x="%.1f" y="%.1f" text-anchor="middle" class="%s">%s</text>'
                       % (x, y + 4, "nd" if tipo.get(n) == "promotora" else "et",
                          html.escape(corto(n))))
+    partes.append("</svg>")
+    return "".join(partes)
+
+
+def _anio_float(txt):
+    s = str(txt)
+    partes = s.split("-")
+    if len(partes) == 2 and len(partes[0]) == 4 and len(partes[1]) == 4:
+        return (int(partes[0]) + int(partes[1])) / 2.0
+    y = int(partes[0])
+    if len(partes) >= 2 and partes[1].isdigit() and len(partes[1]) <= 2:
+        return y + (int(partes[1]) - 1) / 12.0
+    return y + 0.5
+
+
+def svg_bio(persona):
+    """Mini línea de tiempo de una persona: años con puntos y popups."""
+    hitos = persona.get("hitos") or []
+    if not hitos:
+        return ""
+    vals = [_anio_float(h["anio"]) for h in hitos]
+    x0, x1 = min(vals) - 0.5, max(vals) + 0.5
+    W, H = 760, 150
+    izq, der = 40, 30
+    py_dot, py_eje = 62, 96
+
+    def px(v):
+        return izq + (v - x0) / (x1 - x0) * (W - izq - der)
+
+    partes = ['<svg viewBox="0 0 %d %d" class="bio-svg" role="img" '
+              'aria-label="Línea de tiempo de %s">' % (W, H, html.escape(persona.get("nombre", "")))]
+    partes.append('<text x="10" y="18" class="nt">%s</text>'
+                  % html.escape(persona.get("nombre", "")))
+    partes.append('<text x="10" y="34" class="eje">%s · %s</text>'
+                  % (html.escape(persona.get("rol", "")), html.escape(persona.get("profesion", ""))))
+    partes.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="#c3cbd6"/>'
+                  % (izq, py_dot, W - der, py_dot))
+    # ticks por año
+    for v in sorted(set(int(v) for v in vals)):
+        partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d</text>'
+                      % (px(v + 0.5), py_eje + 14, v))
+    # puntos (escalonados si comparten año)
+    ocupados = {}
+    for h, v in zip(hitos, vals):
+        clave = int(v)
+        k = ocupados.get(clave, 0)
+        ocupados[clave] = k + 1
+        yy = py_dot - (k % 2) * 16
+        titulo = "%s — %s" % (h["anio"], h.get("hecho", ""))
+        if h.get("fuente"):
+            partes.append('<a href="%s" target="_blank" rel="noopener">' % html.escape(h["fuente"]))
+        partes.append('<circle cx="%.1f" cy="%.1f" r="5" fill="#2f5d8a" stroke="#ffffff" '
+                      'stroke-width="1.4"><title>%s</title></circle>'
+                      % (px(v), yy, html.escape(titulo)))
+        if h.get("fuente"):
+            partes.append("</a>")
+        partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%s</text>'
+                      % (px(v), py_eje, html.escape(h["anio"])))
     partes.append("</svg>")
     return "".join(partes)
 

@@ -264,8 +264,13 @@ textarea { min-height: 96px; resize: vertical; }
 .bio-hito .anio { flex: 0 0 56px; font-weight: 700; color: var(--tinta); font-size: .82rem; }
 .bio-hito .anio::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--azul); margin-right: 6px; }
 .curvas-svg { width: 100%; height: auto; margin: 6px 0 2px; }
-.curvas-svg .eje { font-size: 11px; fill: #6b7686; }
-.curvas-svg .et { font-size: 11px; fill: #333d4b; }
+.curvas-svg .eje { font-size: 9px; fill: #6b7686; }
+.curvas-svg .et { font-size: 9px; fill: #64748b; }
+.curvas-svg .nd { font-size: 9px; font-weight: 700; fill: #c2410c; }
+.bio-svg { width: 100%; height: auto; margin: 4px 0 2px; }
+.bio-svg .eje { font-size: 9px; fill: #6b7686; }
+.bio-svg .nt { font-size: 12px; font-weight: 600; fill: #1a222d; }
+.poblacion-svg .nd { font-size: 10px; font-weight: 700; fill: #c2410c; }
 .negocio-svg, .poblacion-svg { width: 100%; height: auto; margin: 6px 0 2px; }
 .negocio-svg .nt, .poblacion-svg .nt { font-size: 12px; font-weight: 600; fill: #1a222d; }
 .negocio-svg .eje, .poblacion-svg .eje { font-size: 10px; fill: #6b7686; }

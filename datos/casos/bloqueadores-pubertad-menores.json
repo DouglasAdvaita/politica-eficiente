@@ -801,7 +801,6 @@
         "afectados": 605400,
         "base": 3499451,
         "slug": null,
-        "color": "#dc2626",
         "nota": "605.400 personas bajo la línea de pobreza (INE, 2024). Se superpone con otras categorías."
       },
       {
@@ -811,7 +810,6 @@
         "afectados": 171500,
         "base": 3499451,
         "slug": "agua-y-saneamiento",
-        "color": "#16a34a",
         "nota": "171.500 personas sin acceso adecuado a agua o saneamiento (INE, Censo 2023)."
       },
       {
@@ -821,8 +819,7 @@
         "afectados": 100000,
         "base": 3499451,
         "slug": "alquileres-y-vivienda",
-        "color": "#ea580c",
-        "nota": "40.000 viviendas; a 2,5 personas por hogar ≈ 100.000 personas (estimación)."
+        "nota": "40.000 viviendas × 2,5 personas/hogar ≈ 100.000 personas."
       },
       {
         "etiqueta": "Personas desocupadas",
@@ -830,7 +827,6 @@
         "hasta": 65,
         "afectados": 141200,
         "slug": null,
-        "color": "#0ea5e9",
         "nota": "141.200 desocupados (INE, dic. 2024; desempleo 7,4%)."
       },
       {
@@ -840,7 +836,6 @@
         "afectados": 110000,
         "base": 545301,
         "slug": "cuidados-personas-mayores",
-        "color": "#0e7490",
         "nota": "110.000 en dependencia sobre 545.301 mayores de 65 (Censo 2023)."
       },
       {
@@ -849,7 +844,6 @@
         "hasta": 65,
         "afectados": 16570,
         "slug": "hacinamiento-carcelario",
-        "color": "#7c3aed",
         "nota": "16.570 personas privadas de libertad (2025)."
       },
       {
@@ -858,8 +852,18 @@
         "hasta": 20,
         "afectados": 5212,
         "slug": "secundaria-y-utu",
-        "color": "#d97706",
         "nota": "5.212 personas en edad escolar no matriculadas."
+      },
+      {
+        "etiqueta": "Menores en tratamiento (este caso)",
+        "desde": 10,
+        "hasta": 18,
+        "afectados": null,
+        "base": null,
+        "slug": null,
+        "tema": true,
+        "color": "#c2410c",
+        "nota": "Sin dato público de cuántos menores reciben bloqueadores u hormonas. Edad aproximada: 10-18."
       }
     ],
     "caso": {
@@ -869,24 +873,25 @@
     "muertes": [
       {
         "etiqueta": "Suicidios",
-        "cantidad": 764,
+        "hombres": 581,
+        "mujeres": 183,
         "anio": 2024,
-        "emoji": "💔",
-        "fuente": "https://www.gub.uy/ministerio-salud-publica/comunicacion/noticias/suicidios-uruguay-nueva-orientacion-politicas-publicas-ante-evolucion"
-      },
-      {
-        "etiqueta": "Siniestros de tránsito",
-        "cantidad": 434,
-        "anio": 2024,
-        "emoji": "🚗",
-        "fuente": "https://www.gub.uy/unidad-nacional-seguridad-vial/comunicacion/noticias/se-presentaron-datos-siniestralidad-vial-2024"
+        "fuente": "MSP, Estadísticas Vitales 2024 (76% hombres / 24% mujeres)"
       },
       {
         "etiqueta": "Homicidios",
-        "cantidad": 377,
+        "hombres": 334,
+        "mujeres": 45,
         "anio": 2024,
-        "emoji": "🔫",
-        "fuente": "https://www.gub.uy/ministerio-interior/sites/ministerio-interior/files/documentos/publicaciones/Homicidios%20anual%202024.pdf"
+        "fuente": "Ministerio del Interior, Homicidios 2024 (88% hombres / 12% mujeres)"
+      },
+      {
+        "etiqueta": "Siniestros de tránsito",
+        "hombres": null,
+        "mujeres": null,
+        "total": 434,
+        "anio": 2024,
+        "fuente": "UNASEV, siniestralidad vial 2024 (sin desglose por sexo)"
       }
     ]
   },
