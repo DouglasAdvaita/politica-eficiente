@@ -35,7 +35,7 @@
             </span>
           </div>
           <p>{{ paso.texto_html|safe }}</p>
-          {% if paso.fuente %}<p class="chico suave">Fuente: {{ paso.fuente }}</p>{% endif %}
+          {% if paso.fuente %}<p class="chico suave">Fuente: {% if paso.fuente_url %}<a href="{{ paso.fuente_url }}" target="_blank" rel="noopener">{{ paso.fuente }} ↗</a>{% else %}{{ paso.fuente }}{% endif %}</p>{% endif %}
         </li>
       {% endfor %}
     </ol>
@@ -66,6 +66,24 @@
     <p class="chico suave">{{ c.curvas.nota }}</p>
     {{ c.curvas_svg|safe }}
     <p class="chico suave">{{ c.curvas.escala }}</p>
+  </div>
+  {% endif %}
+
+  {% if c.vinculos_svg %}
+  <div class="bloque">
+    <h4>Quién es quién: organismos y sus vínculos</h4>
+    <p class="chico suave">{{ c.vinculos.nota }}</p>
+    {{ c.vinculos_svg|safe }}
+    <div class="pila" style="margin-top:6px">
+      {% for o in c.vinculos.organismos %}
+        <div class="participante">
+          <div style="flex:1">
+            <b>{{ o.nombre }}</b>
+            <p class="chico" style="margin:2px 0">{{ o.rol }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
   {% endif %}
 

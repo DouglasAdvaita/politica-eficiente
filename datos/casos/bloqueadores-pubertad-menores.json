@@ -12,28 +12,32 @@
       "texto": "La ley 19.684 (2018) reconoce el derecho a la atención integral de las personas trans, incluidos tratamientos médicos, y obliga al MSP a elaborar guías clínicas (artículos 20 y 21). La guía se actualizó en 2026 con un capítulo sobre infancias, adolescencias y diversidad sexual.",
       "certeza": "probado",
       "fuente": "Ley 19.684 (Parlamento) y guía del MSP",
-      "base": "fuente"
+      "base": "fuente",
+      "fuente_url": "https://www.impo.com.uy/bases/leyes/19684-2018"
     },
     {
       "paso": "Intervención",
       "texto": "La guía contempla análogos de GnRH para frenar la pubertad cuando ya comenzó y se cumplen condiciones clínicas, evaluadas con la escala de Tanner. No surge del texto una edad mínima de 10 años: esa lectura circuló y fue desmentida por verificación periodística.",
       "certeza": "probado",
       "fuente": "La diaria Verifica, 23/09/2026",
-      "base": "fuente"
+      "base": "fuente",
+      "fuente_url": "https://ladiaria.com.uy/verifica/articulo/2026/9/es-falso-que-el-msp-habilito-el-bloqueo-hormonal-a-ninos-a-partir-de-los-10-anos/"
     },
     {
       "paso": "Efecto observado",
       "texto": "No encontramos dato público sobre cuántos menores reciben bloqueadores en Uruguay ni sobre el seguimiento de resultados. En los países que sí llevan registro, las revisiones sistemáticas hallaron evidencia débil sobre beneficios y riesgos a largo plazo.",
       "certeza": "sin datos",
       "fuente": "Cass Review (2024) y ausencia de registro uruguayo",
-      "base": "fuente"
+      "base": "fuente",
+      "fuente_url": "https://cass.independent-review.uk/home/publications/final-report/"
     },
     {
       "paso": "Efecto no buscado",
       "texto": "La hipótesis es que un inicio temprano aumenta la probabilidad de pasar a hormonas y cirugía, y que volver atrás después es costoso. Hay indicios internacionales: la revisión Cass observó que, tras introducir los bloqueadores, creció la disposición a iniciar hormonas en la adolescencia, y Suecia y el Reino Unido restringieron. Lo que falta es el estudio uruguayo: no hay seguimiento local publicado.",
       "certeza": "indicios",
       "fuente": "Cass Review (2024); Socialstyrelsen (2022); NHS (2024)",
-      "base": "causalidad"
+      "base": "causalidad",
+      "fuente_url": "https://cass.independent-review.uk/home/publications/final-report/"
     }
   ],
   "cronologia": [
@@ -172,128 +176,63 @@
     }
   ],
   "curvas": {
-    "escala": "0 = prohibido · 1 = solo investigación o casos excepcionales · 2 = restringido con cautela · 3 = acceso con guía clínica",
-    "nota": "Cada punto es un cambio de norma documentado. Pasá el mouse o tocá el punto para ver el hecho y su fuente. El índice lo elabora este sitio y no mide cantidad de casos.",
+    "escala": "0 = prohibido · 1 = solo investigación o excepcional · 2 = restringido con cautela · 3 = acceso con guía clínica",
+    "nota": "Un punto por cada cambio de norma documentado; pasá el mouse o tocá el punto para ver el hecho y su fuente. Arriba, las etapas evolutivas. El índice lo elabora este sitio y mide la norma, no la cantidad de casos.",
+    "etapas": [
+      {
+        "periodo": "1987-1999",
+        "etiqueta": "Origen",
+        "descripcion": "Cohen-Kettenis funda la clínica de Utrecht (1987) y publica el primer caso de bloqueo puberal (1998); Tavistock abre el GIDS (1989)."
+      },
+      {
+        "periodo": "2000-2009",
+        "etiqueta": "Institucionalización",
+        "descripcion": "El protocolo holandés se codifica (2006); Endocrine Society publica su guía (2009); abren clínicas en Boston (2007) y Gante (2007)."
+      },
+      {
+        "periodo": "2010-2014",
+        "etiqueta": "Expansión",
+        "descripcion": "El estudio de de Vries (2011) y el WPATH SOC7 (2012) extienden el modelo fuera de Países Bajos."
+      },
+      {
+        "periodo": "2015-2020",
+        "etiqueta": "Auge como estándar",
+        "descripcion": "El NHS inglés lo convierte en estándar (2015); las derivaciones se disparan (GIDS de 97 en 2009 a 2.519 en 2019)."
+      },
+      {
+        "periodo": "2020-2024",
+        "etiqueta": "Revisión",
+        "descripcion": "Finlandia (2020), Suecia (2021-22), Cass Review (2022-24), Noruega y Dinamarca (2023) restringen o cuestionan."
+      },
+      {
+        "periodo": "2024-2026",
+        "etiqueta": "Restricciones",
+        "descripcion": "Reino Unido prohíbe (2024, indefinida); Queensland hasta 2031; Francia debate."
+      }
+    ],
     "series": [
       {
         "pais": "Uruguay",
         "destacado": true,
+        "nota": "Tiene guía clínica; sin dato público de cuántos menores se tratan ni de su intensidad.",
         "puntos": [
           {
             "anio": 2016,
-            "nivel": 2,
-            "hecho": "Guía clínica de hormonización del MSP",
+            "nivel": 3,
+            "hecho": "El MSP publica la Guía Clínica para la Hormonización en personas Trans.",
             "fuente": "https://www.gub.uy/ministerio-salud-publica/sites/ministerio-salud-publica/files/documentos/publicaciones/Gu%C3%ADa%20clinica%20para%20la%20Hormonizaci%C3%B3n%20en%20personas%20Trans%202016.pdf"
           },
           {
             "anio": 2018,
-            "nivel": 2,
-            "hecho": "Ley 19.684: atención integral y guías obligatorias",
-            "fuente": "https://parlamento.gub.uy/documentosyleyes/leyes/ley/19684"
+            "nivel": 3,
+            "hecho": "Ley Integral para Personas Trans (19.684): identidad de género y salud integral.",
+            "fuente": "https://www.impo.com.uy/bases/leyes/19684-2018"
           },
           {
             "anio": 2026,
-            "nivel": 2,
-            "hecho": "Guía actualizada; sin dato público de intensidad",
+            "nivel": 3,
+            "hecho": "El MSP actualiza la guía; se aclara que no habilita el bloqueo desde los 10 años. Sin dato de intensidad.",
             "fuente": "https://ladiaria.com.uy/verifica/articulo/2026/9/es-falso-que-el-msp-habilito-el-bloqueo-hormonal-a-ninos-a-partir-de-los-10-anos/"
-          }
-        ]
-      },
-      {
-        "pais": "Suecia",
-        "puntos": [
-          {
-            "anio": 2015,
-            "nivel": 3,
-            "hecho": "Guía nacional de atención",
-            "fuente": "https://socialstyrelsen.se/contentassets/444af6c0a5fb429c9b56fd51b931a816/2023-1-8330.pdf"
-          },
-          {
-            "anio": 2022,
-            "nivel": 1,
-            "hecho": "Riesgos probablemente superan beneficios; excepcional o investigación",
-            "fuente": "https://socialstyrelsen.se/contentassets/444af6c0a5fb429c9b56fd51b931a816/2023-1-8330.pdf"
-          }
-        ]
-      },
-      {
-        "pais": "Finlandia",
-        "puntos": [
-          {
-            "anio": 2015,
-            "nivel": 3,
-            "hecho": "Práctica con guía clínica",
-            "fuente": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10875134/"
-          },
-          {
-            "anio": 2020,
-            "nivel": 1,
-            "hecho": "Prioridad al apoyo psicosocial; tratamientos limitados",
-            "fuente": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10875134/"
-          }
-        ]
-      },
-      {
-        "pais": "Reino Unido",
-        "color": "#b4534b",
-        "puntos": [
-          {
-            "anio": 2015,
-            "nivel": 3,
-            "hecho": "Servicio nacional con acceso",
-            "fuente": "https://cass.independent-review.uk/home/publications/final-report/"
-          },
-          {
-            "anio": 2024,
-            "nivel": 1,
-            "hecho": "Cass Review: solo en investigación",
-            "fuente": "https://cass.independent-review.uk/home/publications/final-report/"
-          },
-          {
-            "anio": 2025,
-            "nivel": 0,
-            "hecho": "Prohibición indefinida de prescribir a menores",
-            "fuente": "https://www.gov.uk/government/news/ban-on-puberty-blockers-to-be-made-indefinite-on-experts-advice"
-          }
-        ]
-      },
-      {
-        "pais": "Noruega",
-        "puntos": [
-          {
-            "anio": 2015,
-            "nivel": 3,
-            "hecho": "Práctica con guía clínica",
-            "fuente": "https://apnews.com/article/fact-check-norway-not-ban-gender-affirming-care-956221436313"
-          },
-          {
-            "anio": 2023,
-            "nivel": 2,
-            "hecho": "Ukom recomienda tratarlos como experimentales",
-            "fuente": "https://apnews.com/article/fact-check-norway-not-ban-gender-affirming-care-956221436313"
-          },
-          {
-            "anio": 2024,
-            "nivel": 1,
-            "hecho": "Regiones sanitarias los restringen a estudios",
-            "fuente": "https://www.genderclinicnews.com/p/tighten-up"
-          }
-        ]
-      },
-      {
-        "pais": "Francia",
-        "puntos": [
-          {
-            "anio": 2015,
-            "nivel": 3,
-            "hecho": "Acceso con guía clínica",
-            "fuente": "https://bioethicsobservatory.org/2024/07/european-policies-regarding-minors-with-gender-dysphoria-a-comparative-analysis/47056/"
-          },
-          {
-            "anio": 2022,
-            "nivel": 2,
-            "hecho": "Academia de Medicina pide «la mayor reserva»",
-            "fuente": "https://bioethicsobservatory.org/2024/07/european-policies-regarding-minors-with-gender-dysphoria-a-comparative-analysis/47056/"
           }
         ]
       },
@@ -301,16 +240,310 @@
         "pais": "Países Bajos",
         "puntos": [
           {
+            "anio": 1987,
+            "nivel": 1,
+            "hecho": "Cohen-Kettenis funda en Utrecht la primera clínica europea para menores, con enfoque psicológico.",
+            "fuente": "https://genderinfo.nl/en/timeline/start-nederlandse-adolescentenzorg-1987/"
+          },
+          {
+            "anio": 1998,
+            "nivel": 1,
+            "hecho": "Primer caso publicado de supresión puberal con GnRHa, a los 13 años.",
+            "fuente": "https://genderinfo.nl/en/timeline/first-publication-on-puberty-suppression/"
+          },
+          {
+            "anio": 2006,
+            "nivel": 2,
+            "hecho": "Se publica el «protocolo holandés»: bloqueadores desde Tanner 2, hormonas a los 16, cirugía a los 18.",
+            "fuente": "https://doi.org/10.1530/eje.1.02231"
+          },
+          {
+            "anio": 2011,
+            "nivel": 3,
+            "hecho": "El estudio de de Vries consolida el protocolo como referencia internacional.",
+            "fuente": "https://dutchprotocol.com/protocol/origins/"
+          },
+          {
+            "anio": 2023,
+            "nivel": 2,
+            "hecho": "Debate médico y jurídico sobre la evidencia y los efectos cerebrales; sin cambio formal aún.",
+            "fuente": "https://segm.org/Dutch-protocol-debate-Netherlands"
+          }
+        ]
+      },
+      {
+        "pais": "Reino Unido",
+        "puntos": [
+          {
+            "anio": 1989,
+            "nivel": 1,
+            "hecho": "Di Ceglie funda el GIDS en St George's Hospital, primero en el Reino Unido.",
+            "fuente": "https://en.wikipedia.org/wiki/Gender_Identity_Development_Service"
+          },
+          {
+            "anio": 2011,
+            "nivel": 1,
+            "hecho": "GIDS y UCLH inician el Early Intervention Study con bloqueadores en 12-15 años.",
+            "fuente": "https://www.bbc.com/news/uk-54374165"
+          },
+          {
+            "anio": 2014,
+            "nivel": 3,
+            "hecho": "El NHS aprueba bloqueadores sin obligación de participar en el estudio.",
+            "fuente": "https://www.bbc.com/news/uk-54374165"
+          },
+          {
             "anio": 2015,
             "nivel": 3,
-            "hecho": "Protocolo holandés en uso",
-            "fuente": "https://bioethicsobservatory.org/2024/07/european-policies-regarding-minors-with-gender-dysphoria-a-comparative-analysis/47056/"
+            "hecho": "NHS England convierte la supresión puberal en estándar nacional.",
+            "fuente": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12966359/"
+          },
+          {
+            "anio": 2020,
+            "nivel": 2,
+            "hecho": "Bell v Tavistock cuestiona el consentimiento de menores; anulado en apelación (2021).",
+            "fuente": "https://www.judiciary.uk/wp-content/uploads/2022/07/Bell-v-Tavistock-judgment-170921.pdf"
+          },
+          {
+            "anio": 2022,
+            "nivel": 2,
+            "hecho": "El informe interino de Cass recomienda cerrar el GIDS.",
+            "fuente": "https://commonslibrary.parliament.uk/research-briefings/cbp-10596/"
+          },
+          {
+            "anio": 2024,
+            "nivel": 0,
+            "hecho": "El NHS deja de prescribir bloqueadores de rutina; prohibición temporal (mayo).",
+            "fuente": "https://healthmedia.blog.gov.uk/2024/12/11/puberty-blockers-what-you-need-to-know/"
+          },
+          {
+            "anio": 2026,
+            "nivel": 0,
+            "hecho": "La prohibición de bloqueadores en menores se hace indefinida.",
+            "fuente": "https://www.gov.uk/government/news/ban-on-puberty-blockers-to-be-made-indefinite-on-experts-advice"
+          }
+        ]
+      },
+      {
+        "pais": "Suecia",
+        "puntos": [
+          {
+            "anio": 2019,
+            "nivel": 2,
+            "hecho": "La agencia SBU concluye que el conocimiento a largo plazo es débil.",
+            "fuente": "https://segm.org/Sweden_ends_use_of_Dutch_protocol"
+          },
+          {
+            "anio": 2021,
+            "nivel": 1,
+            "hecho": "Karolinska deja de iniciar bloqueadores y hormonas en menores fuera de estudios.",
+            "fuente": "https://segm.org/Sweden_ends_use_of_Dutch_protocol"
+          },
+          {
+            "anio": 2022,
+            "nivel": 1,
+            "hecho": "Socialstyrelsen: los riesgos superan los beneficios; solo investigación o casos excepcionales.",
+            "fuente": "https://segm.org/segm-summary-sweden-prioritizes-therapy-curbs-hormones-for-gender-dysphoric-youth"
+          }
+        ]
+      },
+      {
+        "pais": "Finlandia",
+        "puntos": [
+          {
+            "anio": 2011,
+            "nivel": 3,
+            "hecho": "Servicios para menores en HUS (Helsinki) y TAYS (Tampere), siguiendo el protocolo holandés.",
+            "fuente": "https://genspect.org/finland-takes-another-look-at-youth-gender-medicine/"
+          },
+          {
+            "anio": 2020,
+            "nivel": 2,
+            "hecho": "COHERE recomienda psicoterapia primero; bloqueadores solo caso a caso.",
+            "fuente": "https://palveluvalikoima.fi/documents/1237350/22895008/Summary_minors_en.pdf"
+          }
+        ]
+      },
+      {
+        "pais": "Noruega",
+        "puntos": [
+          {
+            "anio": 2023,
+            "nivel": 2,
+            "hecho": "Ukom aconseja cautela ante la incertidumbre de la evidencia.",
+            "fuente": "https://tidsskriftet.no/en/2023/06/perspecives/what-constitutes-medically-professional-responsibility-and-diligent-care-children-and"
+          },
+          {
+            "anio": 2024,
+            "nivel": 1,
+            "hecho": "Bloqueadores limitados a ensayos clínicos para disforia en menores.",
+            "fuente": "https://www.euronews.com/2024/12/13/the-uk-is-the-latest-country-to-ban-puberty-blockers-for-trans-kids-why-is-europe-restrict"
+          }
+        ]
+      },
+      {
+        "pais": "Francia",
+        "puntos": [
+          {
+            "anio": 2022,
+            "nivel": 2,
+            "hecho": "La Academia de Medicina recomienda «la mayor reserva».",
+            "fuente": "https://www.euronews.com/2024/12/13/the-uk-is-the-latest-country-to-ban-puberty-blockers-for-trans-kids-why-is-europe-restrict"
+          },
+          {
+            "anio": 2025,
+            "nivel": 2,
+            "hecho": "La Haute Autorité de Santé publica recomendaciones solo para adultos; sin directriz nacional para menores.",
+            "fuente": "https://genderinfo.nl/en/policy-by-country/gender-care-france/"
+          }
+        ]
+      },
+      {
+        "pais": "Bélgica",
+        "puntos": [
+          {
+            "anio": 2007,
+            "nivel": 3,
+            "hecho": "El equipo pediátrico de género del Hospital de Gante inicia su actividad.",
+            "fuente": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12857706/"
+          },
+          {
+            "anio": 2020,
+            "nivel": 3,
+            "hecho": "Atención concentrada en Gante, Lovaina y Bruselas, con evaluación multidisciplinar.",
+            "fuente": "https://genderinfo.nl/en/policy-by-country/gender-care-belgium/"
+          }
+        ]
+      },
+      {
+        "pais": "Alemania",
+        "puntos": [
+          {
+            "anio": 2024,
+            "nivel": 3,
+            "hecho": "Borrador AWMF permite bloqueadores en Tanner 2 y hormonas desde los 16.",
+            "fuente": "https://segm.org/German-draft-guidelines-gender-dysphoria-children-adolescents-2024"
+          },
+          {
+            "anio": 2025,
+            "nivel": 3,
+            "hecho": "Se publica la directriz nacional S2k para menores.",
+            "fuente": "https://register.awmf.org/assets/guidelines/028_D_G_f_Kinder-_und_Jugendpsychiatrie_und_-psychotherapie/028-014eng_S2k_Geschlechtsinkongruenz-Geschlechtsdysphorie-Kinder-Jugendliche_2025-06.pdf"
+          }
+        ]
+      },
+      {
+        "pais": "España",
+        "puntos": [
+          {
+            "anio": 2023,
+            "nivel": 3,
+            "hecho": "Ley Trans: autodeterminación legal desde los 16; no regula el tratamiento médico de menores.",
+            "fuente": "https://apnews.com/article/spain-children-gender-6dbd1a1726e38f7bde9044c1be5bf959"
           },
           {
             "anio": 2024,
             "nivel": 3,
-            "hecho": "El Parlamento ordena investigar resultados",
-            "fuente": "https://bioethicsobservatory.org/2024/07/european-policies-regarding-minors-with-gender-dysphoria-a-comparative-analysis/47056/"
+            "hecho": "Bloqueadores disponibles en atención hospitalaria, sin prohibición nacional.",
+            "fuente": "https://www.euronews.com/2024/12/13/the-uk-is-the-latest-country-to-ban-puberty-blockers-for-trans-kids-why-is-europe-restrict"
+          }
+        ]
+      },
+      {
+        "pais": "Dinamarca",
+        "puntos": [
+          {
+            "anio": 2016,
+            "nivel": 3,
+            "hecho": "Servicio pediátrico de género centralizado en Rigshospitalet.",
+            "fuente": "https://segm.org/Denmark-sharply-restricts-youth-gender-transitions"
+          },
+          {
+            "anio": 2023,
+            "nivel": 2,
+            "hecho": "La Autoridad Sanitaria revisa su guía; la mayoría de los menores ya no recibe bloqueadores ni hormonas.",
+            "fuente": "https://tidsskriftet.no/en/2023/06/perspecives/what-constitutes-medically-professional-responsibility-and-diligent-care-children-and"
+          }
+        ]
+      },
+      {
+        "pais": "Estados Unidos",
+        "puntos": [
+          {
+            "anio": 2007,
+            "nivel": 3,
+            "hecho": "Boston Children's Hospital abre el primer gran programa pediátrico de género.",
+            "fuente": "https://undark.org/2022/04/06/the-evolution-of-pediatric-transgender-medicine/"
+          },
+          {
+            "anio": 2009,
+            "nivel": 3,
+            "hecho": "Endocrine Society recomienda supresión puberal en Tanner 2.",
+            "fuente": "https://pubmed.ncbi.nlm.nih.gov/19509099/"
+          },
+          {
+            "anio": 2021,
+            "nivel": 0,
+            "hecho": "Arkansas aprueba la primera prohibición estatal en menores.",
+            "fuente": "https://www.kff.org/lgbtq/gender-affirming-care-policy-tracker/"
+          },
+          {
+            "anio": 2024,
+            "nivel": 0,
+            "hecho": "Unos 26 estados prohíben o restringen; acceso dividido por jurisdicción.",
+            "fuente": "https://mapresearch.org/equality-map/bans-on-best-practice-medical-care-for-transgender-youth/"
+          }
+        ]
+      },
+      {
+        "pais": "Canadá",
+        "puntos": [
+          {
+            "anio": 2005,
+            "nivel": 2,
+            "hecho": "La clínica del CAMH introduce bloqueadores por primera vez en Canadá.",
+            "fuente": "https://genderreport.ca/puberty-blockers/"
+          },
+          {
+            "anio": 2015,
+            "nivel": 3,
+            "hecho": "El CAMH cierra su clínica infantil; la atención afirmativa se expande.",
+            "fuente": "https://www.ubcpress.ca/asset/78954/1/9780774866941_excerpt.pdf"
+          },
+          {
+            "anio": 2023,
+            "nivel": 3,
+            "hecho": "La Canadian Paediatric Society publica un enfoque afirmativo, bloqueadores desde Tanner 2.",
+            "fuente": "https://cps.ca/en/documents/position/an-affirming-approach-to-caring-for-transgender-and-gender-diverse-youth"
+          }
+        ]
+      },
+      {
+        "pais": "Australia",
+        "puntos": [
+          {
+            "anio": 2003,
+            "nivel": 2,
+            "hecho": "El Royal Children's Hospital de Melbourne recibe su primera derivación.",
+            "fuente": "https://www.rchfoundation.org.au/2021/12/leading-the-way-in-transgender-healthcare/"
+          },
+          {
+            "anio": 2015,
+            "nivel": 3,
+            "hecho": "El gobierno destina 6 millones de dólares al servicio de género del RCH.",
+            "fuente": "https://www.theguardian.com/society/2015/jun/01/transgender-unit-at-melbournes-royal-childrens-hospital-gets-6m-boost"
+          },
+          {
+            "anio": 2024,
+            "nivel": 2,
+            "hecho": "Revisión de Queensland pausa el inicio de bloqueadores y hormonas.",
+            "fuente": "https://statements.qld.gov.au/statements/104227"
+          },
+          {
+            "anio": 2025,
+            "nivel": 0,
+            "hecho": "Queensland: prohibición de bloqueadores al menos hasta 2031.",
+            "fuente": "https://www.theguardian.com/australia-news/2025/dec/19/queensland-ban-puberty-blockers-gender-dysphoria-2031"
           }
         ]
       }
@@ -562,27 +795,46 @@
     ],
     "superficies": [
       {
+        "etiqueta": "Personas en situación de pobreza",
+        "desde": 0,
+        "hasta": 95,
+        "afectados": 605400,
+        "base": 3499451,
+        "slug": null,
+        "color": "#dc2626",
+        "nota": "605.400 personas bajo la línea de pobreza (INE, 2024). Se superpone con otras categorías."
+      },
+      {
+        "etiqueta": "Sin acceso a agua potable o saneamiento",
+        "desde": 0,
+        "hasta": 95,
+        "afectados": 171500,
+        "base": 3499451,
+        "slug": "agua-y-saneamiento",
+        "color": "#16a34a",
+        "nota": "171.500 personas sin acceso adecuado a agua o saneamiento (INE, Censo 2023)."
+      },
+      {
         "etiqueta": "Déficit de vivienda",
         "desde": 0,
         "hasta": 95,
         "afectados": 100000,
         "base": 3499451,
         "slug": "alquileres-y-vivienda",
-        "color": "#c2410c",
-        "nota": "40.000 viviendas; a 2,5 personas por hogar son unas 100.000 personas (estimación)."
+        "color": "#ea580c",
+        "nota": "40.000 viviendas; a 2,5 personas por hogar ≈ 100.000 personas (estimación)."
       },
       {
-        "etiqueta": "Hogares sin baño de uso exclusivo",
-        "desde": 0,
-        "hasta": 95,
-        "afectados": 23618,
-        "base": 3499451,
-        "slug": "agua-y-saneamiento",
-        "color": "#16a34a",
-        "nota": "9.447 hogares; a 2,5 personas por hogar son unas 23.600 personas (estimación)."
+        "etiqueta": "Personas desocupadas",
+        "desde": 15,
+        "hasta": 65,
+        "afectados": 141200,
+        "slug": null,
+        "color": "#0ea5e9",
+        "nota": "141.200 desocupados (INE, dic. 2024; desempleo 7,4%)."
       },
       {
-        "etiqueta": "Personas de 65 años o más en dependencia",
+        "etiqueta": "Personas de 65+ en dependencia",
         "desde": 65,
         "hasta": 95,
         "afectados": 110000,
@@ -598,7 +850,7 @@
         "afectados": 16570,
         "slug": "hacinamiento-carcelario",
         "color": "#7c3aed",
-        "nota": "16.570 personas privadas de libertad (cierre 2025), sobre la población de 20 a 64 años."
+        "nota": "16.570 personas privadas de libertad (2025)."
       },
       {
         "etiqueta": "Fuera del sistema educativo",
@@ -607,13 +859,36 @@
         "afectados": 5212,
         "slug": "secundaria-y-utu",
         "color": "#d97706",
-        "nota": "5.212 personas en edad escolar no matriculadas, sobre la población de 5 a 19 años."
+        "nota": "5.212 personas en edad escolar no matriculadas."
       }
     ],
     "caso": {
       "etiqueta": "Este caso: menores en tratamiento",
-      "nota": "Sin dato público de cuántos menores reciben bloqueadores u hormonas."
-    }
+      "nota": "Sin dato público. Decapeptyl se vende en Uruguay (Adium), pero no hay cifra de cuántos menores lo reciben ni del gasto."
+    },
+    "muertes": [
+      {
+        "etiqueta": "Suicidios",
+        "cantidad": 764,
+        "anio": 2024,
+        "emoji": "💔",
+        "fuente": "https://www.gub.uy/ministerio-salud-publica/comunicacion/noticias/suicidios-uruguay-nueva-orientacion-politicas-publicas-ante-evolucion"
+      },
+      {
+        "etiqueta": "Siniestros de tránsito",
+        "cantidad": 434,
+        "anio": 2024,
+        "emoji": "🚗",
+        "fuente": "https://www.gub.uy/unidad-nacional-seguridad-vial/comunicacion/noticias/se-presentaron-datos-siniestralidad-vial-2024"
+      },
+      {
+        "etiqueta": "Homicidios",
+        "cantidad": 377,
+        "anio": 2024,
+        "emoji": "🔫",
+        "fuente": "https://www.gub.uy/ministerio-interior/sites/ministerio-interior/files/documentos/publicaciones/Homicidios%20anual%202024.pdf"
+      }
+    ]
   },
   "personas": [
     {
@@ -672,5 +947,95 @@
         }
       ]
     }
-  ]
+  ],
+  "vinculos": {
+    "nota": "Quién es quién y quién depende de quién. Los vínculos marcados como «disputado» tienen evidencia en debate: se muestran ambas posturas.",
+    "organismos": [
+      {
+        "nombre": "WPATH",
+        "rol": "Asociación profesional (ex-HBIGDA) que publica los Standards of Care (SOC-8), la guía más influyente que recomienda bloqueadores y hormonas en menores.",
+        "tipo": "promotora"
+      },
+      {
+        "nombre": "Endocrine Society",
+        "rol": "La mayor sociedad de endocrinología; su guía de 2017 (co-patrocinada por WPATH) recomienda supresión puberal en adolescentes.",
+        "tipo": "profesional"
+      },
+      {
+        "nombre": "HBIGDA",
+        "rol": "Antecesora directa de WPATH (1979-2006); según una denuncia judicial, creada para legitimar las intervenciones de Harry Benjamin.",
+        "tipo": "promotora"
+      },
+      {
+        "nombre": "SEGM",
+        "rol": "Society for Evidence-Based Gender Medicine (2019): crítica, sostiene que la evidencia es de baja calidad.",
+        "tipo": "critica"
+      },
+      {
+        "nombre": "Genspect",
+        "rol": "ONG crítica (2021, Stella O'Malley): enfoque no medicalizado, contra la transición médica en menores.",
+        "tipo": "critica"
+      }
+    ],
+    "vinculos": [
+      {
+        "origen": "WPATH",
+        "destino": "HBIGDA",
+        "tipo": "continuidad",
+        "evidencia": "WPATH se llamó HBIGDA de 1979 a 2006.",
+        "fuente": "https://en.wikipedia.org/wiki/World_Professional_Association_for_Transgender_Health"
+      },
+      {
+        "origen": "HBIGDA",
+        "destino": "Erickson Educational Foundation",
+        "tipo": "financiación histórica",
+        "evidencia": "Según una denuncia de la fiscalía de Florida, la fundación de Reed Erickson financió a Benjamin y creó HBIGDA.",
+        "fuente": "https://www.myfloridalegal.com/sites/default/files/complaint-filed.pdf",
+        "disputado": true
+      },
+      {
+        "origen": "WPATH",
+        "destino": "Endocrine Society",
+        "tipo": "se citan mutuamente",
+        "evidencia": "Cass (p.130): guías «estrechamente interconectadas»; WPATH co-patrocinó y aportó borradores a la guía de la Endocrine Society.",
+        "fuente": "https://www.congress.gov/119/meeting/house/118390/documents/HMKP-119-JU00-20250610-SD006.pdf"
+      },
+      {
+        "origen": "WPATH",
+        "destino": "industria",
+        "tipo": "conflictos de interés",
+        "evidencia": "Informe HHS (2025): el SOC-8 «permitió conflictos de interés financieros e intelectuales» y suprimió revisiones; WPATH lo niega.",
+        "fuente": "https://unherd.com/newsroom/wpath-medical-guidelines-plagued-by-conflicts-of-interest",
+        "disputado": true
+      },
+      {
+        "origen": "Cass Review / BMJ",
+        "destino": "WPATH y Endocrine Society",
+        "tipo": "circularidad detectada",
+        "evidencia": "Taylor et al. 2024 (BMJ): casi todas las 23 guías revisadas se basaban en ES 2009 y WPATH 2012, con «referencias circulares».",
+        "fuente": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12753552"
+      },
+      {
+        "origen": "SEGM",
+        "destino": "WPATH",
+        "tipo": "crítica",
+        "evidencia": "SEGM acusa a WPATH de suprimir revisiones sistemáticas que no respaldaban sus recomendaciones.",
+        "fuente": "https://segm.org/wpath-evidence-manipulation-risks-discrediting-WHO-transgender-guidelines"
+      },
+      {
+        "origen": "Genspect",
+        "destino": "WPATH",
+        "tipo": "crítica",
+        "evidencia": "Genspect se opuso al SOC-8 y promueve un enfoque no medicalizado.",
+        "fuente": "https://en.wikipedia.org/wiki/Genspect"
+      },
+      {
+        "origen": "SEGM",
+        "destino": "Genspect",
+        "tipo": "afiliación",
+        "evidencia": "Siete asesores de SEGM integran Genspect; SPLC designa a ambas como anti-LGBTQ.",
+        "fuente": "https://en.wikipedia.org/wiki/Society_for_Evidence-Based_Gender_Medicine"
+      }
+    ]
+  }
 }

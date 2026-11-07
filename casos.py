@@ -87,53 +87,99 @@ def marcar(texto, definiciones=None, limite=4):
 
 
 def svg_curvas(caso):
-    """Grafica el nivel de acceso por pais y por anio, con un punto por cambio de norma."""
+    """Evolucion del acceso por pais y anio, con etapas evolutivas (estilo serie temporal)."""
     curvas = caso.get("curvas") or {}
     series = curvas.get("series") or []
     if not series:
         return ""
+    etapas = curvas.get("etapas") or []
     anios = [p["anio"] for s in series for p in s["puntos"]]
     x0, x1 = min(anios) - 1, max(anios) + 1
-    W, H = 760, 330
-    izq, der, arriba, abajo = 44, 96, 18, 44
+    W, H = 780, 440
+    izq, der = 46, 158
+    y_top, y_base = 64, 376
+    plot_w = W - izq - der
 
     def px(anio):
-        return izq + (anio - x0) / (x1 - x0) * (W - izq - der)
+        return izq + (anio - x0) / float(x1 - x0) * plot_w
 
     def py(nivel):
-        return H - abajo - nivel / 3 * (H - arriba - abajo)
+        return y_base - nivel / 3.0 * (y_base - y_top)
 
+    def _parse_periodo(txt):
+        try:
+            a, b = txt.split("-")
+            return int(a), int(b)
+        except Exception:
+            return x0, x1
+
+    colores_etapa = ["#e8edf3", "#c9d4e2", "#a3b3c6", "#7c8da3", "#d9a441", "#b4534b"]
     partes = ['<svg viewBox="0 0 %d %d" class="curvas-svg" role="img" '
-              'aria-label="Nivel de acceso a bloqueadores por pais y anio">' % (W, H)]
+              'aria-label="Evolución del acceso a bloqueadores por país y año">' % (W, H)]
+    # ---- banda de etapas ----
+    for i, et in enumerate(etapas):
+        a, b = _parse_periodo(et["periodo"])
+        xa, xb = px(a), px(b)
+        color = colores_etapa[i % len(colores_etapa)]
+        partes.append('<rect x="%.1f" y="12" width="%.1f" height="26" fill="%s">'
+                      '<title>%s: %s</title></rect>'
+                      % (xa, max(xb - xa, 2), color,
+                         html.escape(et["periodo"]), html.escape(et.get("descripcion", ""))))
+        partes.append('<text x="%.1f" y="30" text-anchor="middle" class="eje" '
+                      'fill="%s">%s</text>'
+                      % ((xa + xb) / 2, "#334155" if i < 4 else "#ffffff",
+                         html.escape(et.get("etiqueta", ""))))
+    # ---- rejilla y eje ----
     for nivel in range(4):
         y = py(nivel)
         partes.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="#e6e9ee"/>'
-                      % (izq, y, W - der, y))
+                      % (izq, y, izq + plot_w, y))
         partes.append('<text x="%d" y="%.1f" text-anchor="end" class="eje">%d</text>'
                       % (izq - 8, y + 4, nivel))
-    for anio in range(x0, x1 + 1, 2):
+    for anio in range(1985, 2027, 5):
         partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d</text>'
-                      % (px(anio), H - abajo + 18, anio))
+                      % (px(anio), y_base + 16, anio))
+    # ---- series (escalonadas) ----
+    en_nivel = {}
     for serie in series:
         destacado = serie.get("destacado")
-        color = "#1a222d" if destacado else serie.get("color", "#9aa4b2")
-        grosor = "2.6" if destacado else "1.5"
-        puntos = " ".join("%.1f,%.1f" % (px(p["anio"]), py(p["nivel"]))
-                          for p in serie["puntos"])
+        puntos = serie["puntos"]
+        ultimo_nivel = puntos[-1]["nivel"]
+        if destacado:
+            color, grosor, opac = "#1a222d", 2.6, 1.0
+        elif ultimo_nivel <= 1:
+            color, grosor, opac = "#b4534b", 1.5, 0.9
+        elif ultimo_nivel == 2:
+            color, grosor, opac = "#c9942f", 1.5, 0.9
+        else:
+            color, grosor, opac = "#7a8a9d", 1.3, 0.8
+        # trazo escalonado hasta el borde derecho
+        paso = []
+        for i, p in enumerate(puntos):
+            if i == 0:
+                paso.append((px(p["anio"]), py(p["nivel"])))
+            else:
+                paso.append((px(p["anio"]), py(puntos[i - 1]["nivel"])))
+                paso.append((px(p["anio"]), py(p["nivel"])))
+        paso.append((izq + plot_w, py(puntos[-1]["nivel"])))
         partes.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="%s" '
-                      'opacity="%s"/>' % (puntos, color, grosor, "1" if destacado else ".85"))
-        for p in serie["puntos"]:
+                      'opacity="%s"/>' % (" ".join("%.1f,%.1f" % (a, b) for a, b in paso),
+                                          color, grosor, opac))
+        for p in puntos:
             titulo = "%s · %s: %s" % (p["anio"], serie["pais"], p.get("hecho", ""))
             enlace = p.get("fuente") or "#"
-            radio = 4.5 if destacado else 3.5
+            radio = 4.2 if destacado else 3.0
             partes.append('<a href="%s" target="_blank" rel="noopener">'
                           '<circle cx="%.1f" cy="%.1f" r="%s" fill="#ffffff" stroke="%s" '
-                          'stroke-width="2"><title>%s</title></circle></a>'
+                          'stroke-width="1.8"><title>%s</title></circle></a>'
                           % (html.escape(enlace), px(p["anio"]), py(p["nivel"]), radio, color,
                              html.escape(titulo)))
-        ultimo = serie["puntos"][-1]
-        partes.append('<text x="%.1f" y="%.1f" class="et">%s</text>'
-                      % (px(ultimo["anio"]) + 8, py(ultimo["nivel"]) + 4,
+        # etiqueta al final
+        k = en_nivel.get(ultimo_nivel, 0)
+        en_nivel[ultimo_nivel] = k + 1
+        ly = py(ultimo_nivel) + 4 + (k % 4) * 11
+        partes.append('<text x="%d" y="%.1f" class="%s">%s</text>'
+                      % (izq + plot_w + 8, ly, "nd" if destacado else "et",
                          html.escape(serie["pais"])))
     partes.append("</svg>")
     return "".join(partes)
@@ -240,6 +286,7 @@ def svg_poblacion(caso):
         return ""
     superficies = pop.get("superficies") or []
     caso_note = pop.get("caso") or {}
+    muertes = pop.get("muertes") or []
     hx0, hx1 = 52, 716
     hy_top, hy_base = 40, 240
     ancho_anio = (hx1 - hx0) / 95.0
@@ -307,10 +354,90 @@ def svg_poblacion(caso):
         partes.append('<text x="26" y="%d" class="et" style="fill:#b4534b">%s — %s</text>'
                       % (ly, html.escape(caso_note.get("etiqueta", "")), html.escape(caso_note.get("nota", ""))))
         ly += 16
+    # panel de muertes anuales (flujo, no stock)
+    if muertes:
+        ly += 8
+        partes.append('<text x="10" y="%d" class="nt">Muertes por año (2024) — otro tema que atender</text>' % ly)
+        ly += 16
+        max_m = max(m["cantidad"] for m in muertes)
+        for m in muertes:
+            w = m["cantidad"] / max_m * 330.0
+            partes.append('<text x="20" y="%d" font-size="15">%s</text>'
+                          % (ly, html.escape(m.get("emoji", "•"))))
+            partes.append('<text x="46" y="%d" class="et">%s</text>' % (ly, html.escape(m["etiqueta"])))
+            partes.append('<rect x="150" y="%d" width="%.1f" height="13" rx="3" fill="#475569" opacity="0.75">'
+                          '<title>%s: %s en %s</title></rect>'
+                          % (ly - 10, w, html.escape(m["etiqueta"]), _fmt(m["cantidad"]), m.get("anio", "")))
+            partes.append('<text x="%.1f" y="%d" class="et">%s</text>'
+                          % (150 + w + 8, ly, _fmt(m["cantidad"])))
+            ly += 20
     H = ly + 10
     return ('<svg viewBox="0 0 760 %d" class="poblacion-svg" role="img" '
             'aria-label="Población por edad y magnitud de problemas sociales">' % int(H)
             + "".join(partes) + "</svg>")
+
+
+def svg_vinculos(caso):
+    """Grafo de organismos y sus vínculos (quién financia/cita a quién)."""
+    v = caso.get("vinculos") or {}
+    organismos = v.get("organismos") or []
+    vinculos = v.get("vinculos") or []
+    if not organismos and not vinculos:
+        return ""
+    import math
+    tipo = {o["nombre"]: o.get("tipo", "") for o in organismos}
+    colores = {"promotora": "#b4534b", "profesional": "#64748b", "critica": "#0e7490"}
+    abrevia = {"Erickson Educational Foundation": "Erickson Foundation",
+               "Cass Review / BMJ": "Cass / BMJ"}
+
+    def corto(nombre):
+        return abrevia.get(nombre, nombre)
+
+    def color(nombre):
+        return colores.get(tipo.get(nombre, ""), "#94a3b8")
+
+    # nodos únicos (dividiendo destinos compuestos con " y ")
+    nodos = [o["nombre"] for o in organismos]
+    for lk in vinculos:
+        for n in (lk["origen"], lk["destino"]):
+            for parte in n.split(" y "):
+                if parte not in nodos:
+                    nodos.append(parte)
+    cx, cy, radio = 400, 200, 175
+    pos = {}
+    for i, n in enumerate(nodos):
+        ang = -math.pi / 2 + 2 * math.pi * i / len(nodos)
+        pos[n] = (cx + radio * math.cos(ang), cy + radio * math.sin(ang))
+    partes = ['<svg viewBox="0 0 800 400" class="vinculos-svg" role="img" '
+              'aria-label="Vínculos entre organismos">']
+    # aristas
+    for lk in vinculos:
+        for destino in lk["destino"].split(" y "):
+            if lk["origen"] in pos and destino in pos:
+                xa, ya = pos[lk["origen"]]
+                xb, yb = pos[destino]
+                mx, my = (xa + xb) / 2, (ya + yb) / 2
+                estilo = "stroke-dasharray=\"4 3\"" if lk.get("disputado") else ""
+                partes.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="#c3cbd6" '
+                              'stroke-width="1.2" %s>'
+                              '<title>%s → %s (%s): %s</title></line>'
+                              % (xa, ya, xb, yb, estilo, html.escape(lk["origen"]),
+                                 html.escape(destino), html.escape(lk["tipo"]),
+                                 html.escape(lk["evidencia"])))
+                partes.append('<text x="%.1f" y="%.1f" text-anchor="middle" class="eje">%s</text>'
+                              % (mx, my - 3, html.escape(lk["tipo"])))
+    # nodos
+    for n in nodos:
+        x, y = pos[n]
+        c = color(n)
+        partes.append('<rect x="%.1f" y="%.1f" width="%d" height="%d" rx="7" fill="%s" '
+                      'opacity="0.14" stroke="%s" stroke-width="1.2"/>'
+                      % (x - 70, y - 15, 140, 30, c, c))
+        partes.append('<text x="%.1f" y="%.1f" text-anchor="middle" class="%s">%s</text>'
+                      % (x, y + 4, "nd" if tipo.get(n) == "promotora" else "et",
+                         html.escape(corto(n))))
+    partes.append("</svg>")
+    return "".join(partes)
 
 
 def enriquecer(caso):
