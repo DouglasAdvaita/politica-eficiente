@@ -142,6 +142,9 @@ ciudadanía) y una `ruta` de pasos con estado. Hoy se guarda `tipo` (ley/propues
 - [ ] T28 — Contexto, lenguaje sencillo y política de fuentes · criterio: cada tema muestra el contexto faltante, traduce los términos difíciles y marca banderas rojas; ninguna fuente (medio masivo u oficial) se toma como verdad a priori y el sentir popular se registra como inteligencia colectiva, con control explícito de bots y contenido generado por IA.
 - [ ] T29 — Recolector de noticias con actualización diaria · criterio: un cron diario junta noticias de cada cargo desde Google News RSS y las guarda crudas con fecha, medio y enlace, deduplicadas por URL; la correlación con la biografía del cargo se procesa aparte, con revisión manual de las ambiguas.
 
+
+- [ ] T31 - Voto sin cuenta: permitir votar sin registro, identificando al votante por huella del navegador/SO (user-agent, resolucion, GPU, idioma) como identificador anonimo; controles anti-bot: tiempo minimo de lectura/permanencia en el tema antes de habilitar el voto, limite de votos por huella y por IP en una ventana de tiempo, y deteccion de patrones (votos instantaneos, mismas huellas repetidas). Los votos sin cuenta pesan menos o se marcan como 'no verificado' y no suman puntos de gamificacion. Objetivo: ampliar la participacion sin abrir la puerta a bots.
+
 ## Evidencia
 - `python probar_app.py` → `/`, `/temas`, `/mapa`, `/politicos`, `/registro`, `/ingresar`, `/salud`,
   `/tema/<slug>`, `/politico/<slug>`, `/perfil`, `/configuracion`, `/admin` y `/mapa` con filtros: **200**.

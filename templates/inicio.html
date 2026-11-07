@@ -37,7 +37,7 @@
         <p class="resumen">{{ (t.resumen or t.problema)|corto }}</p>
         <div class="barra-apoyo"><i style="width:{{ (100 * t.a_favor / (t.a_favor + t.en_contra)) if (t.a_favor + t.en_contra) else 0 }}%"></i></div>
         <div class="meta">
-          <span>{{ t.categoria|cat }}</span>
+          {% if t.fecha %}<span>{{ t.fecha }}</span>{% endif %}
         </div>
       </article>
     {% else %}
