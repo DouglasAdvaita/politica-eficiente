@@ -440,11 +440,11 @@ def svg_bio(persona):
     if not xs:
         return ""
     x0, x1 = min(xs) - 0.4, max(xs) + 0.4
-    W, H = 760, 62
-    izq, der, yline = 60, 20, 26
+    W, H = 760, 74
+    izq, der, yline = 60, 20, 42
     partes = ['<svg viewBox="0 0 %d %d" class="bio-svg" role="img" '
               'aria-label="Trayectoria de %s">' % (W, H, html.escape(nombre))]
-    partes.append('<text x="10" y="16" class="nt" font-size="6" fill="#1a222d" fill-opacity="0.5">%s <tspan fill-opacity="0.5">%s (%s)</tspan>'
+    partes.append('<text x="10" y="10" style="font-size:6px; fill:#1a222d; fill-opacity:.5">%s %s (%s)'
                   '<title>%s</title></text>'
                   % (html.escape(emoji), html.escape(rol), html.escape(profesion),
                      html.escape(resumen)))
@@ -461,7 +461,7 @@ def svg_bio(persona):
         partes.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="#9aa4b2" stroke-width="1"/>'
                       % (x, yline, x, yline + 5))
         partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje" '
-                      'font-size="6">%d</text>'
+                      'style="font-size:6px">%d</text>'
                       % (x, yline + 14, anio))
     for i, h in enumerate(hitos):
         x = px(h["x"])
