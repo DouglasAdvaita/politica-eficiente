@@ -923,37 +923,43 @@
           "anio": "2024-10",
           "hecho": "Elegida diputada por Identidad Soberana; asume como suplente de su padre en Montevideo.",
           "fuente": "https://www.elobservador.com.uy/gustavo-salle-partida-doble-la-hija-sera-la-otra-diputada-identidad-soberana-n5967809",
-          "x": 2024.8
+          "x": 2024.8,
+          "relevante": false
         },
         {
           "anio": "2025-02-15",
           "hecho": "Asume como Representante Nacional por Montevideo.",
           "fuente": "https://parlamento.gub.uy/camarasycomisiones/legisladores/13647",
-          "x": 2025.13
+          "x": 2025.13,
+          "relevante": false
         },
         {
           "anio": "2025-03",
           "hecho": "Impulsa una comisión preinvestigadora sobre la gestión del covid-19.",
           "fuente": "https://www.montevideo.com.uy/Noticias/Nicolle-Salle-propone-crear-una-comision-preinvestigadora-sobre-la-gestion-del-covid-19-uc918060",
-          "x": 2025.25
+          "x": 2025.25,
+          "relevante": false
         },
         {
           "anio": "2025",
           "hecho": "Integra las comisiones de Salud Pública y Asistencia Social, y de Adicciones.",
           "fuente": "https://parlamento.gub.uy/camarasycomisiones/legisladores/13647",
-          "x": 2025.5
+          "x": 2025.5,
+          "relevante": false
         },
         {
           "anio": "2025-2026",
           "hecho": "Presenta 204 pedidos de informes (salud, ambiente, bienestar animal, «Agenda 2030»).",
           "fuente": "https://www.busqueda.com.uy/politica/bases-subterraneas-tokenizacion-recursos-naturales-y-sobrediagnosticos-los-pedidos-informacion-identidad-soberana-n5413380",
-          "x": 2025.8
+          "x": 2025.8,
+          "relevante": false
         },
         {
           "anio": "2026",
           "hecho": "Pide informes sobre bloqueadores de pubertad y hormonización en menores (el rastro de este caso).",
           "fuente": "https://legislativo.parlamento.gub.uy/aresuelveref.aspx?FICHAASUNTO,175492",
-          "x": 2026.2
+          "x": 2026.2,
+          "relevante": true
         }
       ],
       "vinculaciones": [
@@ -1004,61 +1010,71 @@
           "anio": "1982",
           "x": 1982.0,
           "hecho": "Se gradúa de médica (MB BS) en el Royal Free Hospital, Londres.",
-          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass"
+          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass",
+          "relevante": false
         },
         {
           "anio": "1992",
           "x": 1992.0,
           "hecho": "Funda la clínica nacional de síndrome de Rett; consultora en neurodiscapacidad.",
-          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass"
+          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass",
+          "relevante": false
         },
         {
           "anio": "2009",
           "x": 2009.0,
           "hecho": "Consultora en Evelina London; impulsa los cuidados paliativos pediátricos.",
-          "fuente": "https://www.rcpch.ac.uk/about-us/our-team/hilary-cass-baroness-cass"
+          "fuente": "https://www.rcpch.ac.uk/about-us/our-team/hilary-cass-baroness-cass",
+          "relevante": false
         },
         {
           "anio": "2012-2015",
           "x": 2013.5,
           "hecho": "Presidenta del Royal College of Paediatrics and Child Health.",
-          "fuente": "https://www.rcpch.ac.uk/about-us/our-team/hilary-cass-baroness-cass"
+          "fuente": "https://www.rcpch.ac.uk/about-us/our-team/hilary-cass-baroness-cass",
+          "relevante": false
         },
         {
           "anio": "2015",
           "x": 2015.0,
           "hecho": "Recibe la OBE por servicios a la salud infantil.",
-          "fuente": "https://www.rcpch.ac.uk/about-us/our-team/hilary-cass-baroness-cass"
+          "fuente": "https://www.rcpch.ac.uk/about-us/our-team/hilary-cass-baroness-cass",
+          "relevante": false
         },
         {
           "anio": "2017-2020",
           "x": 2018.5,
           "hecho": "Presidenta de la British Academy of Childhood Disability.",
-          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass"
+          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass",
+          "relevante": false
         },
         {
           "anio": "2020-09",
           "x": 2020.7,
           "hecho": "Nombrada para dirigir la revisión independiente de los servicios de género del NHS (Cass Review).",
-          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass"
+          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass",
+          "relevante": true
         },
         {
           "anio": "2022-03",
           "x": 2022.2,
           "hecho": "Informe interino: recomienda cerrar el GIDS y crear centros regionales.",
-          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass"
+          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass",
+          "relevante": true
         },
         {
           "anio": "2024-04-10",
           "x": 2024.3,
           "hecho": "Informe final: evidencia «notablemente débil»; bloqueadores solo en investigación.",
-          "fuente": "https://inews.co.uk/news/hilary-cass-doctor-gender-2999450"
+          "fuente": "https://inews.co.uk/news/hilary-cass-doctor-gender-2999450",
+          "relevante": true
         },
         {
           "anio": "2024-08",
           "x": 2024.6,
           "hecho": "Nombrada Baronesa Cass, par vitalicio (crossbench).",
-          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass"
+          "fuente": "https://en.wikipedia.org/wiki/Hilary_Cass",
+          "relevante": false
         }
       ],
       "emoji": "🩺"
@@ -1183,43 +1199,50 @@
           "anio": "1929",
           "x": 1929,
           "hecho": "Henri Beaufour funda Laboratoires Beaufour.",
-          "fuente": "https://en.wikipedia.org/wiki/Ipsen"
+          "fuente": "https://en.wikipedia.org/wiki/Ipsen",
+          "relevante": false
         },
         {
           "anio": "1975",
           "x": 1975,
           "hecho": "Se crea la filial Ipsen.",
-          "fuente": "https://en.wikipedia.org/wiki/Ipsen"
+          "fuente": "https://en.wikipedia.org/wiki/Ipsen",
+          "relevante": false
         },
         {
           "anio": "1983",
           "x": 1983,
           "hecho": "Acuerdo con Debiopharm para fabricar y vender Decapeptyl (triptorelin).",
-          "fuente": "https://www.ipsen.com/wp-content/uploads/2019/04/IPSEN_DDR_2018_VA_clean1.pdf"
+          "fuente": "https://www.ipsen.com/wp-content/uploads/2019/04/IPSEN_DDR_2018_VA_clean1.pdf",
+          "relevante": true
         },
         {
           "anio": "2000",
           "x": 2000,
           "hecho": "Muere Albert Beaufour; el control pasa a los nietos Anne y Henri Beaufour.",
-          "fuente": "https://en.wikipedia.org/wiki/Ipsen"
+          "fuente": "https://en.wikipedia.org/wiki/Ipsen",
+          "relevante": false
         },
         {
           "anio": "2005",
           "x": 2005,
           "hecho": "Sale a bolsa en Euronext París.",
-          "fuente": "https://en.wikipedia.org/wiki/Ipsen"
+          "fuente": "https://en.wikipedia.org/wiki/Ipsen",
+          "relevante": false
         },
         {
           "anio": "2024",
           "x": 2024,
           "hecho": "Ventas 3.400,6 M€; Decapeptyl 535,9 M€ (4º producto).",
-          "fuente": "https://www.ipsen.com/wp-content/uploads/2025/02/Ipsen-PR_FY-2024-Results-announcement_13022025.pdf"
+          "fuente": "https://www.ipsen.com/wp-content/uploads/2025/02/Ipsen-PR_FY-2024-Results-announcement_13022025.pdf",
+          "relevante": true
         },
         {
           "anio": "2025",
           "x": 2025.9,
           "hecho": "Muere Henri Beaufour; su participación pasa a una fundación y un trust offshore.",
-          "fuente": "https://www.bloomberg.com/news/articles/2026-06-23/billionaire-french-pharma-heir-leaves-riches-to-mystery-charity"
+          "fuente": "https://www.bloomberg.com/news/articles/2026-06-23/billionaire-french-pharma-heir-leaves-riches-to-mystery-charity",
+          "relevante": true
         }
       ],
       "emoji": "💊"
@@ -1252,31 +1275,36 @@
           "anio": "2001",
           "x": 2001,
           "hecho": "TAP (Abbott+Takeda) paga US$875 M por fraude en Lupron: muestras gratis y sobornos a médicos.",
-          "fuente": "https://www.wiggin.com/publication/important-notice-regarding-united-states-v-tap-pharmaceuticals-products-inc/"
+          "fuente": "https://www.wiggin.com/publication/important-notice-regarding-united-states-v-tap-pharmaceuticals-products-inc/",
+          "relevante": true
         },
         {
           "anio": "2013",
           "x": 2013,
           "hecho": "AbbVie se separa de Abbott.",
-          "fuente": "https://en.wikipedia.org/wiki/AbbVie"
+          "fuente": "https://en.wikipedia.org/wiki/AbbVie",
+          "relevante": false
         },
         {
           "anio": "2020",
           "x": 2020,
           "hecho": "Paga US$24 M en California por el marketing de Humira.",
-          "fuente": "https://apnews.com/general-news-737be6e87acc7084f0dce59258ab20e6"
+          "fuente": "https://apnews.com/general-news-737be6e87acc7084f0dce59258ab20e6",
+          "relevante": true
         },
         {
           "anio": "2021",
           "x": 2021,
           "hecho": "Informe de la Cámara de EE.UU. la acusa de inflar precios; ICER señala subas de Humira y Lupron.",
-          "fuente": "https://www.nbcnews.com/politics/congress/pharmaceutical-company-abbvie-inflated-prices-two-major-drugs-house-oversight-n1267591"
+          "fuente": "https://www.nbcnews.com/politics/congress/pharmaceutical-company-abbvie-inflated-prices-two-major-drugs-house-oversight-n1267591",
+          "relevante": true
         },
         {
           "anio": "2023",
           "x": 2023,
           "hecho": "NYT: Humira generó US$114.000 M gracias al «patent thicket» (muro de patentes).",
-          "fuente": "https://www.nytimes.com/2023/01/28/business/humira-abbvie-monopoly.html"
+          "fuente": "https://www.nytimes.com/2023/01/28/business/humira-abbvie-monopoly.html",
+          "relevante": true
         }
       ],
       "emoji": "💊"

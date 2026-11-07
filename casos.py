@@ -506,12 +506,13 @@ def svg_bio(persona):
         y = yline - (4 + (i % 2) * 8)
         titulo = "%s: %s" % (h.get("anio", ""), h.get("hecho", ""))
         enlace = h.get("fuente") or "#"
+        color = "#c2410c" if h.get("relevante") else "#9aa4b2"
         partes.append('<a href="%s" target="_blank" rel="noopener">'
-                      '<circle cx="%.1f" cy="%.1f" r="3" fill="#1a222d" stroke="#ffffff" '
+                      '<circle cx="%.1f" cy="%.1f" r="3" fill="%s" stroke="#ffffff" '
                       'stroke-width="1.2"><title>%s</title></circle></a>'
-                      % (html.escape(enlace), x, y, html.escape(titulo)))
-        partes.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%d" stroke="#c3cbd6"/>'
-                      % (x, y + 3, x, yline))
+                      % (html.escape(enlace), x, y, color, html.escape(titulo)))
+        partes.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%d" stroke="%s"/>'
+                      % (x, y + 3, x, yline, color))
     partes.append("</svg>")
     return "".join(partes)
 
