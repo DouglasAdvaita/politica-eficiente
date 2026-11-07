@@ -405,6 +405,8 @@ def caso(slug):
     d["vinculos_svg"] = casosmod.svg_vinculos(d)
     for p in d.get("personas", []):
         p["bio_svg"] = casosmod.svg_bio(p)
+    for e in d.get("empresas", []):
+        e["bio_svg"] = casosmod.svg_bio(e)
     return render_template("caso.html", c=d)
 
 

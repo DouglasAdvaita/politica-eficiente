@@ -710,7 +710,7 @@
         "molecula": "Triptorelin = Decapeptyl",
         "valor": 952,
         "destacado": true,
-        "nota": "Decapeptyl (Ipsen) es triptorelin; también Trelstar/Triptodur. Es el bloqueador del caso."
+        "nota": "Decapeptyl (Ipsen) es UNA marca de triptorelin: vende 542,9 M€ (2025). Los 952 M US$ son TODO el triptorelin mundial (Decapeptyl + Trelstar + Triptodur), en dólares. Por eso no coinciden con los 542,9 M€."
       },
       {
         "molecula": "Otros GnRH",
@@ -1151,5 +1151,131 @@
         "fuente": "https://en.wikipedia.org/wiki/Society_for_Evidence-Based_Gender_Medicine"
       }
     ]
-  }
+  },
+  "empresas": [
+    {
+      "nombre": "Ipsen",
+      "rol": "Laboratorio francés que vende Decapeptyl",
+      "profesion": "Farmacéutica",
+      "nota": "Controlada por la familia fundadora Beaufour desde 1929. Decapeptyl (triptorelin) lo fabrica bajo licencia de Debiopharm desde 1983.",
+      "vinculaciones": [
+        {
+          "tipo": "Dueños",
+          "detalle": "Familia Beaufour (~56% del capital, ~73% de votos; Anne y Henri Beaufour en el directorio)."
+        },
+        {
+          "tipo": "Origen",
+          "detalle": "Fundada 1929 por Henri Beaufour; producto inicial de romero (Romarène)."
+        },
+        {
+          "tipo": "Sucesión",
+          "detalle": "Usó trusts en Bermudas/Luxemburgo; la fortuna de Henri Beaufour (fallecido 2025) fue a una fundación y un trust offshore."
+        },
+        {
+          "tipo": "Producto",
+          "detalle": "Decapeptyl (licencia de Debiopharm, 1983); ventas 535,9 M€ (2024)."
+        }
+      ],
+      "hitos": [
+        {
+          "anio": "1929",
+          "x": 1929,
+          "hecho": "Henri Beaufour funda Laboratoires Beaufour.",
+          "fuente": "https://en.wikipedia.org/wiki/Ipsen"
+        },
+        {
+          "anio": "1975",
+          "x": 1975,
+          "hecho": "Se crea la filial Ipsen.",
+          "fuente": "https://en.wikipedia.org/wiki/Ipsen"
+        },
+        {
+          "anio": "1983",
+          "x": 1983,
+          "hecho": "Acuerdo con Debiopharm para fabricar y vender Decapeptyl (triptorelin).",
+          "fuente": "https://www.ipsen.com/wp-content/uploads/2019/04/IPSEN_DDR_2018_VA_clean1.pdf"
+        },
+        {
+          "anio": "2000",
+          "x": 2000,
+          "hecho": "Muere Albert Beaufour; el control pasa a los nietos Anne y Henri Beaufour.",
+          "fuente": "https://en.wikipedia.org/wiki/Ipsen"
+        },
+        {
+          "anio": "2005",
+          "x": 2005,
+          "hecho": "Sale a bolsa en Euronext París.",
+          "fuente": "https://en.wikipedia.org/wiki/Ipsen"
+        },
+        {
+          "anio": "2024",
+          "x": 2024,
+          "hecho": "Ventas 3.400,6 M€; Decapeptyl 535,9 M€ (4º producto).",
+          "fuente": "https://www.ipsen.com/wp-content/uploads/2025/02/Ipsen-PR_FY-2024-Results-announcement_13022025.pdf"
+        },
+        {
+          "anio": "2025",
+          "x": 2025.9,
+          "hecho": "Muere Henri Beaufour; su participación pasa a una fundación y un trust offshore.",
+          "fuente": "https://www.bloomberg.com/news/articles/2026-06-23/billionaire-french-pharma-heir-leaves-riches-to-mystery-charity"
+        }
+      ]
+    },
+    {
+      "nombre": "AbbVie",
+      "rol": "Laboratorio que vende Lupron (leuprolide), el mayor GnRH en EE.UU.",
+      "profesion": "Farmacéutica",
+      "nota": "Lupron, el bloqueador de pubertad más vendido en EE.UU., estuvo en el centro de un fraude multimillonario; AbbVie también fue señalada por subir precios de Humira y Lupron.",
+      "vinculaciones": [
+        {
+          "tipo": "Producto",
+          "detalle": "Lupron (leuprolide), el análogo de GnRH más vendido (US$752-887 M/año)."
+        },
+        {
+          "tipo": "Fraude Lupron",
+          "detalle": "TAP (Abbott+Takeda) pagó US$875 M en 2001 por fraude en la venta de Lupron (multa penal récord US$290 M + US$560 M civil)."
+        },
+        {
+          "tipo": "Precios",
+          "detalle": "Informe de la Cámara de EE.UU. (2021): subió Humira +470% y Lupron; ICER señaló subas «no justificadas» de Humira y Lupron."
+        },
+        {
+          "tipo": "Origen",
+          "detalle": "Spin-off de Abbott en 2013; fabricante de Humira (el fármaco más vendido de la historia)."
+        }
+      ],
+      "hitos": [
+        {
+          "anio": "2001",
+          "x": 2001,
+          "hecho": "TAP (Abbott+Takeda) paga US$875 M por fraude en Lupron: muestras gratis y sobornos a médicos.",
+          "fuente": "https://www.wiggin.com/publication/important-notice-regarding-united-states-v-tap-pharmaceuticals-products-inc/"
+        },
+        {
+          "anio": "2013",
+          "x": 2013,
+          "hecho": "AbbVie se separa de Abbott.",
+          "fuente": "https://en.wikipedia.org/wiki/AbbVie"
+        },
+        {
+          "anio": "2020",
+          "x": 2020,
+          "hecho": "Paga US$24 M en California por el marketing de Humira.",
+          "fuente": "https://apnews.com/general-news-737be6e87acc7084f0dce59258ab20e6"
+        },
+        {
+          "anio": "2021",
+          "x": 2021,
+          "hecho": "Informe de la Cámara de EE.UU. la acusa de inflar precios; ICER señala subas de Humira y Lupron.",
+          "fuente": "https://www.nbcnews.com/politics/congress/pharmaceutical-company-abbvie-inflated-prices-two-major-drugs-house-oversight-n1267591"
+        },
+        {
+          "anio": "2023",
+          "x": 2023,
+          "hecho": "NYT: Humira generó US$114.000 M gracias al «patent thicket» (muro de patentes).",
+          "fuente": "https://www.nytimes.com/2023/01/28/business/humira-abbvie-monopoly.html"
+        }
+      ]
+    }
+  ]
 }

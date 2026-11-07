@@ -360,17 +360,15 @@ def svg_poblacion(caso):
             if s.get("slug"):
                 partes.append("</a>")
             acum += h
-    # ---- banda del caso (punteada, en su edad) ----
+    # ---- banda del caso (punteada, arriba, sin superponerse) ----
     if caso_banda:
         desde, hasta = caso_banda.get("desde"), caso_banda.get("hasta")
-        min_h = 6.0
         xb = hx0 + desde * ancho_anio
         wb = (hasta - desde) * ancho_anio
-        partes.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="url(#%s)" '
+        partes.append('<rect x="%.1f" y="6" width="%.1f" height="7" fill="url(#%s)" '
                       'stroke="#dc2626" stroke-width="1">'
                       '<title>%s</title></rect>'
-                      % (xb, hy_base - min_h, wb, min_h, pat_id,
-                         html.escape(caso_banda.get("etiqueta", ""))))
+                      % (xb, wb, pat_id, html.escape(caso_banda.get("etiqueta", ""))))
     # ---- eje ----
     for edad in (0, 20, 40, 60, 80, 90):
         x = hx0 + edad * ancho_anio
