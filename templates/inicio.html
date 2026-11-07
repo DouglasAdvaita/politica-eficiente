@@ -38,8 +38,6 @@
         <div class="barra-apoyo"><i style="width:{{ (100 * t.a_favor / (t.a_favor + t.en_contra)) if (t.a_favor + t.en_contra) else 0 }}%"></i></div>
         <div class="meta">
           <span>{{ t.categoria|cat }}</span>
-          <span>👍 {{ t.a_favor }}</span>
-          <span>👎 {{ t.en_contra }}</span>
         </div>
       </article>
     {% else %}
