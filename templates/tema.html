@@ -28,16 +28,8 @@
     </div>
   </div>
 
-  <div class="votar">
-    <form method="post" action="{{ url_for('votar', slug=t.slug) }}">
-      <input type="hidden" name="valor" value="1">
-      <button class="boton favor {% if mi_voto == 1 %}activo{% endif %}" type="submit">👍 A favor</button>
-    </form>
-    <form method="post" action="{{ url_for('votar', slug=t.slug) }}">
-      <input type="hidden" name="valor" value="-1">
-      <button class="boton contra {% if mi_voto == -1 %}activo{% endif %}" type="submit">👎 En contra</button>
-    </form>
-    <span class="chico suave">Un voto por tema; podés cambiarlo o quitarlo.</span>
+  <div class="votar" style="margin-top:14px">
+    <span class="chico suave">Resultado: 👍 {{ t.a_favor }} · 👎 {{ t.en_contra }}</span>
   </div>
 
   <div class="fila entre chico" style="margin-top:6px">
@@ -139,6 +131,21 @@
   {% if t.fuente_url %}
     <p class="chico suave">Fuente: <a href="{{ t.fuente_url }}" target="_blank" rel="noopener">abrir documento original ↗</a></p>
   {% endif %}
+
+  <div class="bloque" style="margin-top:18px">
+    <h4>Votá (después de leer)</h4>
+    <div class="votar">
+      <form method="post" action="{{ url_for('votar', slug=t.slug) }}">
+        <input type="hidden" name="valor" value="1">
+        <button class="boton favor {% if mi_voto == 1 %}activo{% endif %}" type="submit">👍 A favor</button>
+      </form>
+      <form method="post" action="{{ url_for('votar', slug=t.slug) }}">
+        <input type="hidden" name="valor" value="-1">
+        <button class="boton contra {% if mi_voto == -1 %}activo{% endif %}" type="submit">👎 En contra</button>
+      </form>
+      <span class="chico suave">Un voto por tema; podés cambiarlo o quitarlo. Resultado: 👍 {{ t.a_favor }} · 👎 {{ t.en_contra }}</span>
+    </div>
+  </div>
 </article>
 
 {% if posicionados %}
