@@ -32,6 +32,14 @@ def _ruta(slug):
     return os.path.join(CARPETA, slug + ".json")
 
 
+AURA_NOMBRES = set()
+try:
+    with open(os.path.join(os.path.dirname(__file__), "datos", "aura_nombres.json"), encoding="utf-8") as _f:
+        AURA_NOMBRES = set(json.load(_f))
+except Exception:
+    AURA_NOMBRES = set()
+
+
 def uno(slug):
     ruta = _ruta(slug)
     if not os.path.exists(ruta):
@@ -55,6 +63,9 @@ def uno(slug):
             caso["patron"].get("base_observado", ""), ("", ""))
         caso["patron"]["nop_base_clase"], caso["patron"]["nop_base_etiqueta"] = BASES.get(
             caso["patron"].get("base_no_probado", ""), ("", ""))
+    for _sec in ("personas", "empresas"):
+        for _p in caso.get(_sec, []) or []:
+            _p["aura"] = _p.get("nombre", "") in AURA_NOMBRES
     return enriquecer(caso)
 
 

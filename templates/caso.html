@@ -189,7 +189,7 @@
       {{ p.bio_svg|safe }}
       {% if p.confiabilidad %}<p class="chico" style="margin:6px 0 2px"><b>{{ p.emoji }} Confiabilidad:</b> {{ p.confiabilidad }}</p>{% endif %}
       {% if p.reclamos %}<p class="chico suave" style="margin:0"><b>Reclamos/juicios:</b> {{ p.reclamos }}</p>{% endif %}
-      <p class="chico" style="margin:4px 0 0"><a href="https://aurahumana.onrender.com/?persona={{ p.nombre }}" target="_blank" rel="noopener" data-tip="Ver diseño humano de {{ p.nombre }} en AuraHumana">🧬 Ver diseño humano de {{ p.nombre }} ↗</a></p>
+      {% if p.aura %}<p class="chico" style="margin:4px 0 0"><a href="https://aurahumana.onrender.com/?persona={{ p.nombre }}" target="_blank" rel="noopener" data-tip="Ver diseño humano de {{ p.nombre }} en AuraHumana">🧬 Ver diseño humano de {{ p.nombre }} ↗</a></p>{% endif %}
     </div>
     {% endfor %}
   {% endif %}
@@ -201,7 +201,7 @@
       {{ e.bio_svg|safe }}
       {% if e.confiabilidad %}<p class="chico" style="margin:6px 0 2px"><b>{{ e.emoji }} Confiabilidad:</b> {{ e.confiabilidad }}</p>{% endif %}
       {% if e.reclamos %}<p class="chico suave" style="margin:0"><b>Reclamos/juicios:</b> {{ e.reclamos }}</p>{% endif %}
-      <p class="chico" style="margin:4px 0 0"><a href="https://aurahumana.onrender.com/?persona={{ e.nombre }}" target="_blank" rel="noopener" data-tip="Ver diseño humano de {{ e.nombre }} en AuraHumana">🧬 Ver diseño humano de {{ e.nombre }} ↗</a></p>
+      {% if e.aura %}<p class="chico" style="margin:4px 0 0"><a href="https://aurahumana.onrender.com/?persona={{ e.nombre }}" target="_blank" rel="noopener" data-tip="Ver diseño humano de {{ e.nombre }} en AuraHumana">🧬 Ver diseño humano de {{ e.nombre }} ↗</a></p>{% endif %}
     </div>
     {% endfor %}
   {% endif %}
