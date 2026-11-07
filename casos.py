@@ -281,7 +281,7 @@ def svg_negocio(caso):
 
 
 def svg_poblacion(caso):
-    """Histograma poblacional compacto: muertes arriba, superficies apiladas y banda del caso punteada."""
+    """Histograma poblacional compacto: muertes y superficies apiladas, banda del caso punteada."""
     pop = caso.get("poblacion") or {}
     edades = pop.get("edades") or []
     if not edades:
@@ -290,25 +290,25 @@ def svg_poblacion(caso):
     muertes = pop.get("muertes") or []
     caso_banda = pop.get("caso_banda") or {}
     hx0, hx1 = 52, 716
-    hy_top, hy_base = 84, 252
+    hy_top, hy_base = 40, 252
     ancho_anio = (hx1 - hx0) / 95.0
     max_c = max(c for _, c in edades)
     bar_h_max = hy_base - hy_top
     pat_id = "pt-%s" % (caso.get("slug", "x"))
-    colores_muerte = ["#b4534b", "#c9942f", "#7c2d12"]
+    colores_muerte = ["#991b1b", "#b4530a", "#3f2d20"]
+    # capas: muertes (con mínimo de altura) + superficies
+    capas = []
+    for i, m in enumerate(muertes):
+        capas.append({
+            "etiqueta": m["etiqueta"], "corto": "%s %s" % (m.get("emoji", "•"), m["etiqueta"]),
+            "color": colores_muerte[i % 3], "desde": 0, "hasta": 95,
+            "afectados": m["cantidad"], "min_h": 5.0, "anio": m.get("anio", ""),
+        })
+    capas += superficies
     partes = ['<svg viewBox="0 0 760 320" class="poblacion-svg" role="img" '
               'aria-label="Población de Uruguay por edad y problemas sociales">']
     partes.append('<pattern id="%s" width="5" height="5" patternUnits="userSpaceOnUse">'
                   '<circle cx="2.5" cy="2.5" r="1.1" fill="#1a222d"/></pattern>' % pat_id)
-    # ---- muertes (franjas finas arriba, con mínimo de altura) ----
-    my = 26
-    for i, m in enumerate(muertes):
-        partes.append('<text x="12" y="%d" font-size="12">%s</text>' % (my + 5, html.escape(m.get("emoji", "•"))))
-        partes.append('<rect x="%d" y="%d" width="%d" height="5" rx="2.5" fill="%s">'
-                      '<title>%s: %s por año (%s)</title></rect>'
-                      % (hx0, my, hx1 - hx0, colores_muerte[i % 3],
-                         html.escape(m["etiqueta"]), _fmt(m["cantidad"]), m.get("anio", "")))
-        my += 10
     # ---- histograma ----
     for edad, cuenta in edades:
         x = hx0 + edad * ancho_anio
@@ -318,27 +318,33 @@ def svg_poblacion(caso):
                       'stroke="#b9c4d2" stroke-width="0.5">'
                       '<title>%d–%d años: %s personas</title></rect>'
                       % (x, hy_base - h, w, h, edad, edad + 4, _fmt(cuenta)))
+    # ---- capas apiladas desde la base ----
     for edad, cuenta in edades:
         x = hx0 + edad * ancho_anio
         w = 5 * ancho_anio
         bar_h = bar_h_max * cuenta / max_c
         acum = 0.0
-        for s in superficies:
+        for s in capas:
             desde, hasta = s.get("desde"), s.get("hasta")
             if not (desde <= edad < hasta):
                 continue
             base = s.get("base") or sum(c for e, c in edades if desde <= e < hasta)
             frac = (s.get("afectados", 0) / base) if base else 0
             h = frac * bar_h
+            if s.get("min_h") is not None:
+                h = max(h, s["min_h"])
             if h <= 0:
                 continue
             color = s.get("color", "#0e7490")
-            titulo = "%s: %s personas (%.1f%% de su franja %d–%d)" % (
-                s.get("etiqueta", ""), _fmt(s.get("afectados", 0)), frac * 100, desde, hasta)
+            if s.get("min_h") is not None:
+                titulo = "%s: %s por año (%s)" % (s["etiqueta"], _fmt(s["afectados"]), s.get("anio", ""))
+            else:
+                titulo = "%s: %s personas (%.1f%% de su franja %d–%d)" % (
+                    s.get("etiqueta", ""), _fmt(s.get("afectados", 0)), frac * 100, desde, hasta)
             if s.get("slug"):
                 partes.append('<a href="/tema/%s">' % html.escape(s["slug"]))
             partes.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s" '
-                          'opacity="0.5" stroke="%s" stroke-width="0.4">'
+                          'opacity="0.55" stroke="%s" stroke-width="0.4">'
                           '<title>%s</title></rect>'
                           % (x, hy_base - acum - h, w, h, color, color, html.escape(titulo)))
             if s.get("slug"):
@@ -347,7 +353,6 @@ def svg_poblacion(caso):
     # ---- banda del caso (punteada, en su edad) ----
     if caso_banda:
         desde, hasta = caso_banda.get("desde"), caso_banda.get("hasta")
-        base = sum(c for e, c in edades if desde <= e < hasta)
         min_h = 6.0
         xb = hx0 + desde * ancho_anio
         wb = (hasta - desde) * ancho_anio
@@ -362,14 +367,14 @@ def svg_poblacion(caso):
         partes.append('<text x="%.1f" y="%d" text-anchor="middle" class="eje">%d%s</text>'
                       % (x, hy_base + 16, edad, "+" if edad == 90 else ""))
     partes.append('<text x="10" y="%d" class="eje">edad</text>' % (hy_base + 16))
-    # ---- leyenda compacta (solo nombres; datos en los popups) ----
+    # ---- leyenda compacta ----
     ly = hy_base + 32
     col = 0
-    for s in superficies:
+    for s in capas:
         cx = 12 + (col % 2) * 370
         row = col // 2
         yy = ly + row * 15
-        partes.append('<rect x="%d" y="%d" width="10" height="10" fill="%s" opacity="0.5"/>'
+        partes.append('<rect x="%d" y="%d" width="10" height="10" fill="%s" opacity="0.55"/>'
                       % (cx, yy - 9, s.get("color", "#0e7490")))
         partes.append('<text x="%d" y="%d" class="et">%s</text>'
                       % (cx + 15, yy, html.escape(s.get("corto", s.get("etiqueta", "")))))
